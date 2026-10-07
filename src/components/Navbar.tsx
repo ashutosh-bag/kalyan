@@ -22,7 +22,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       }
 
       // Track active section for indicator
-      const sections = ['home', 'about', 'projects', 'blog', 'contact'];
+      const sections = ['home', 'spatial-showcase', 'about', 'projects', 'blog', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -41,6 +41,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
 
   const navItems = [
     { name: 'Home', href: '#home', id: 'home' },
+    { name: 'Showcase', href: '#spatial-showcase', id: 'spatial-showcase' },
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Blog', href: '#blog', id: 'blog' },

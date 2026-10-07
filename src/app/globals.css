@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Modern Cosmo';
-  src: url('/fonts/ModernCosmo.ttf') format('truetype');
+  font-family: 'Catalunya';
+  src: url('/fonts/Catalunya.otf') format('opentype');
   font-weight: 100 900;
   font-style: normal;
   font-display: block;
@@ -139,4 +139,62 @@ body {
 /* Glass & Vignette effects */
 .hero-vignette {
   background: radial-gradient(circle at center, transparent 40%, rgba(7, 8, 10, 0.6) 80%, rgba(7, 8, 10, 0.95) 100%);
+}
+
+/* Continuous Marquee Streams */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* Luxury 3D Perspective Card Support */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Glowing Hotspot Pulse */
+@keyframes hotspotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(200, 164, 126, 0.6);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(200, 164, 126, 0);
+  }
+}
+
+.animate-hotspot {
+  animation: hotspotPulse 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }

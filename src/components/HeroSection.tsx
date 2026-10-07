@@ -57,54 +57,54 @@ export default function HeroSection() {
           >
             <style>{`
               @font-face {
-                font-family: 'Modern Cosmo';
-                src: url('/fonts/ModernCosmo.ttf') format('truetype');
+                font-family: 'Catalunya';
+                src: url('/fonts/Catalunya.otf') format('opentype');
                 font-weight: 100 900;
                 font-style: normal;
                 font-display: block;
               }
               .kyn-letter-font {
-                font-family: 'Modern Cosmo', var(--font-modern-cosmo), 'Geist', sans-serif;
+                font-family: 'Catalunya', var(--font-catalunya), serif;
               }
             `}</style>
             <defs>
-              {/* Bigger & Compact letter positioning with Modern Cosmo font styling */}
-              {/* Letter K: Centered around x=280 */}
+              {/* Bigger & Compact letter positioning with Catalunya luxury serif font */}
+              {/* Letter K: Centered around x=315 */}
               <clipPath id="tight-kyn-k">
                 <text
-                  x="280"
-                  y="780"
+                  x="315"
+                  y="795"
                   textAnchor="middle"
                   className="kyn-letter-font"
-                  fontSize="1020"
+                  fontSize="1040"
                   letterSpacing="-10"
                 >
                   K
                 </text>
               </clipPath>
 
-              {/* Letter Y: Centered around x=880 */}
+              {/* Letter Y: Centered around x=905 */}
               <clipPath id="tight-kyn-y">
                 <text
-                  x="880"
-                  y="780"
+                  x="905"
+                  y="795"
                   textAnchor="middle"
                   className="kyn-letter-font"
-                  fontSize="1020"
+                  fontSize="1040"
                   letterSpacing="-10"
                 >
                   Y
                 </text>
               </clipPath>
 
-              {/* Letter N: Centered around x=1480 */}
+              {/* Letter N: Centered around x=1490 */}
               <clipPath id="tight-kyn-n">
                 <text
-                  x="1480"
-                  y="780"
+                  x="1490"
+                  y="795"
                   textAnchor="middle"
                   className="kyn-letter-font"
-                  fontSize="1020"
+                  fontSize="1040"
                   letterSpacing="-10"
                 >
                   N
@@ -189,28 +189,28 @@ export default function HeroSection() {
                 }}
               >
                 {/* 1st Loop (Infocity Penthouses & private libraries) */}
-                <image href={HERO_LETTER_IMAGES.N[0].url} x="1180" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
-                <image href={HERO_LETTER_IMAGES.N[1].url} x="1820" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
-                <image href={HERO_LETTER_IMAGES.N[2].url} x="2460" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
-                <image href={HERO_LETTER_IMAGES.N[3].url} x="3100" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[0].url} x="1160" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[1].url} x="1820" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[2].url} x="2480" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[3].url} x="3140" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
                 {/* 2nd Seamless Duplicate */}
-                <image href={HERO_LETTER_IMAGES.N[0].url} x="3740" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
-                <image href={HERO_LETTER_IMAGES.N[1].url} x="4380" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
-                <image href={HERO_LETTER_IMAGES.N[2].url} x="5020" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
-                <image href={HERO_LETTER_IMAGES.N[3].url} x="5660" y="0" width="640" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[0].url} x="3800" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[1].url} x="4460" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[2].url} x="5120" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
+                <image href={HERO_LETTER_IMAGES.N[3].url} x="5780" y="0" width="660" height="880" preserveAspectRatio="xMidYMid slice" />
               </g>
-              <rect x="1180" y="0" width="640" height="880" fill="rgba(7, 8, 10, 0.08)" />
+              <rect x="1160" y="0" width="660" height="880" fill="rgba(7, 8, 10, 0.08)" />
             </g>
 
             {/* =================================================================== */}
             {/* CONTINUOUS ARCHITECTURAL CONTOURS                                  */}
             {/* =================================================================== */}
             <text
-              x="280"
-              y="780"
+              x="315"
+              y="795"
               textAnchor="middle"
               className="kyn-letter-font pointer-events-none"
-              fontSize="1020"
+              fontSize="1040"
               letterSpacing="-10"
               fill="none"
               stroke="rgba(255, 255, 255, 0.35)"
@@ -220,11 +220,11 @@ export default function HeroSection() {
             </text>
 
             <text
-              x="880"
-              y="780"
+              x="905"
+              y="795"
               textAnchor="middle"
               className="kyn-letter-font pointer-events-none"
-              fontSize="1020"
+              fontSize="1040"
               letterSpacing="-10"
               fill="none"
               stroke="rgba(255, 255, 255, 0.35)"
@@ -234,11 +234,11 @@ export default function HeroSection() {
             </text>
 
             <text
-              x="1480"
-              y="780"
+              x="1490"
+              y="795"
               textAnchor="middle"
               className="kyn-letter-font pointer-events-none"
-              fontSize="1020"
+              fontSize="1040"
               letterSpacing="-10"
               fill="none"
               stroke="rgba(255, 255, 255, 0.35)"

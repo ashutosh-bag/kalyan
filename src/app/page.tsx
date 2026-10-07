@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
+import SpatialShowcase from '@/components/SpatialShowcase';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ServicesSection from '@/components/ServicesSection';
@@ -17,6 +18,9 @@ export default function Home() {
       <main id="main-content" className="flex-1 w-full">
         {/* Hero Section with SVG KYN Letters & Multi-Directional Sliding Interior Photos */}
         <HeroSection />
+
+        {/* Spatial Architecture & Dynamic Interior Visual Showcase */}
+        <SpatialShowcase />
 
         {/* About Section & Studio Ethos */}
         <AboutSection />

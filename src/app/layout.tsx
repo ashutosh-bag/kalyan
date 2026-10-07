@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const modernCosmo = localFont({
-  src: "../../public/fonts/ModernCosmo.ttf",
-  variable: "--font-modern-cosmo",
+const catalunya = localFont({
+  src: "../../public/fonts/Catalunya.otf",
+  variable: "--font-catalunya",
   display: "swap",
 });
 
@@ -134,7 +134,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${modernCosmo.variable} scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${catalunya.variable} scroll-smooth antialiased`}
     >
       <head>
         <script
