@@ -55,18 +55,29 @@ export default function HeroSection() {
             aria-label="KYN letters covering the whole screen bigger and compact with sliding interior design architecture inside"
             role="img"
           >
+            <style>{`
+              @font-face {
+                font-family: 'Modern Cosmo';
+                src: url('/fonts/ModernCosmo.ttf') format('truetype');
+                font-weight: 100 900;
+                font-style: normal;
+                font-display: block;
+              }
+              .kyn-letter-font {
+                font-family: 'Modern Cosmo', var(--font-modern-cosmo), 'Geist', sans-serif;
+              }
+            `}</style>
             <defs>
-              {/* Bigger & Compact letter positioning with tight, solid interlocking proximity */}
+              {/* Bigger & Compact letter positioning with Modern Cosmo font styling */}
               {/* Letter K: Centered around x=280 */}
               <clipPath id="tight-kyn-k">
                 <text
                   x="280"
                   y="780"
                   textAnchor="middle"
-                  fontFamily="'Geist', 'Arial Black', -apple-system, sans-serif"
+                  className="kyn-letter-font"
                   fontSize="1020"
-                  fontWeight="900"
-                  letterSpacing="-20"
+                  letterSpacing="-10"
                 >
                   K
                 </text>
@@ -78,10 +89,9 @@ export default function HeroSection() {
                   x="880"
                   y="780"
                   textAnchor="middle"
-                  fontFamily="'Geist', 'Arial Black', -apple-system, sans-serif"
+                  className="kyn-letter-font"
                   fontSize="1020"
-                  fontWeight="900"
-                  letterSpacing="-20"
+                  letterSpacing="-10"
                 >
                   Y
                 </text>
@@ -93,10 +103,9 @@ export default function HeroSection() {
                   x="1480"
                   y="780"
                   textAnchor="middle"
-                  fontFamily="'Geist', 'Arial Black', -apple-system, sans-serif"
+                  className="kyn-letter-font"
                   fontSize="1020"
-                  fontWeight="900"
-                  letterSpacing="-20"
+                  letterSpacing="-10"
                 >
                   N
                 </text>
@@ -200,14 +209,12 @@ export default function HeroSection() {
               x="280"
               y="780"
               textAnchor="middle"
-              fontFamily="'Geist', 'Arial Black', -apple-system, sans-serif"
+              className="kyn-letter-font pointer-events-none"
               fontSize="1020"
-              fontWeight="900"
-              letterSpacing="-20"
+              letterSpacing="-10"
               fill="none"
-              stroke="rgba(255, 255, 255, 0.3)"
+              stroke="rgba(255, 255, 255, 0.35)"
               strokeWidth="2.5"
-              className="pointer-events-none"
             >
               K
             </text>
@@ -216,14 +223,12 @@ export default function HeroSection() {
               x="880"
               y="780"
               textAnchor="middle"
-              fontFamily="'Geist', 'Arial Black', -apple-system, sans-serif"
+              className="kyn-letter-font pointer-events-none"
               fontSize="1020"
-              fontWeight="900"
-              letterSpacing="-20"
+              letterSpacing="-10"
               fill="none"
-              stroke="rgba(255, 255, 255, 0.3)"
+              stroke="rgba(255, 255, 255, 0.35)"
               strokeWidth="2.5"
-              className="pointer-events-none"
             >
               Y
             </text>
@@ -232,14 +237,12 @@ export default function HeroSection() {
               x="1480"
               y="780"
               textAnchor="middle"
-              fontFamily="'Geist', 'Arial Black', -apple-system, sans-serif"
+              className="kyn-letter-font pointer-events-none"
               fontSize="1020"
-              fontWeight="900"
-              letterSpacing="-20"
+              letterSpacing="-10"
               fill="none"
-              stroke="rgba(255, 255, 255, 0.3)"
+              stroke="rgba(255, 255, 255, 0.35)"
               strokeWidth="2.5"
-              className="pointer-events-none"
             >
               N
             </text>

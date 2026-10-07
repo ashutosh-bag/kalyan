@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Modern Cosmo';
+  src: url('/fonts/ModernCosmo.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
 :root {
   --bg-primary: #07080a;
   --bg-secondary: #0f1115;
