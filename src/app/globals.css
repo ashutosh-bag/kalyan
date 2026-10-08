@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: 'Bounce Dash';
+  src: url('/fonts/BounceDash.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
   font-family: 'Catalunya';
   src: url('/fonts/Catalunya.otf') format('opentype');
   font-weight: 100 900;
@@ -9,15 +17,15 @@
 }
 
 :root {
-  --bg-primary: #07080a;
-  --bg-secondary: #0f1115;
-  --bg-tertiary: #16181f;
-  --text-primary: #f8f8f6;
-  --text-muted: #8e95a0;
-  --accent-gold: #c8a47e;
-  --accent-gold-light: #e6cfb8;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(200, 164, 126, 0.4);
+  --bg-primary: #F7F3EB;
+  --bg-secondary: #EFE9DF;
+  --bg-tertiary: #E6DFD3;
+  --text-primary: #1A1815;
+  --text-muted: #68625A;
+  --accent-gold: #B68953;
+  --accent-gold-light: #DFC5A4;
+  --border-subtle: rgba(26, 24, 21, 0.08);
+  --border-hover: rgba(182, 137, 83, 0.4);
 }
 
 @theme inline {
@@ -29,8 +37,8 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
-  background-color: #07080a;
+  color-scheme: light;
+  background-color: #F7F3EB;
 }
 
 body {
@@ -41,8 +49,8 @@ body {
 }
 
 ::selection {
-  background: #c8a47e;
-  color: #07080a;
+  background: #DFC5A4;
+  color: #1A1815;
 }
 
 /* Custom Scrollbar */
@@ -50,14 +58,28 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #07080a;
+  background: #F7F3EB;
 }
 ::-webkit-scrollbar-thumb {
-  background: #222630;
+  background: #D9D1C5;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c8a47e;
+  background: #B68953;
+}
+
+/* Glass Navbar & Panel in Cream Theme */
+.glass-nav-scrolled {
+  background: rgba(247, 243, 235, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(26, 24, 21, 0.08);
+}
+
+.glass-panel {
+  background: rgba(247, 243, 235, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 /* Infinite Sliding Keyframes for KYN Letters */
@@ -138,7 +160,7 @@ body {
 
 /* Glass & Vignette effects */
 .hero-vignette {
-  background: radial-gradient(circle at center, transparent 40%, rgba(7, 8, 10, 0.6) 80%, rgba(7, 8, 10, 0.95) 100%);
+  background: radial-gradient(circle at center, transparent 40%, rgba(247, 243, 235, 0.6) 80%, rgba(247, 243, 235, 0.95) 100%);
 }
 
 /* Continuous Marquee Streams */

@@ -24,24 +24,24 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen min-h-[600px] max-h-screen bg-[#07080a] overflow-hidden select-none p-2 sm:p-3 md:p-4"
+      className="relative w-full h-screen min-h-[600px] max-h-screen bg-[#F7F3EB] overflow-hidden select-none p-2 sm:p-3 md:p-4"
       aria-label="KYN Interior Architecture Odisha"
     >
       {/* ========================================================================= */}
       {/* OUTER CORNER MARGINS & SLIM ARCHITECTURAL BLUEPRINT FRAME                 */}
       {/* ========================================================================= */}
-      <div className="relative w-full h-full border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between p-2 sm:p-4">
+      <div className="relative w-full h-full border border-[#1A1815]/10 rounded-sm overflow-hidden flex flex-col justify-between p-2 sm:p-4">
         
         {/* Corner registration marks */}
-        <div className="absolute top-2 left-2 text-[9px] text-white/30 font-mono tracking-widest pointer-events-none">+ 01</div>
-        <div className="absolute top-2 right-2 text-[9px] text-white/30 font-mono tracking-widest pointer-events-none">+ 02</div>
-        <div className="absolute bottom-2 left-2 text-[9px] text-white/30 font-mono tracking-widest pointer-events-none">+ 03</div>
-        <div className="absolute bottom-2 right-2 text-[9px] text-white/30 font-mono tracking-widest pointer-events-none">+ 04</div>
+        <div className="absolute top-2 left-2 text-[9px] text-[#1A1815]/40 font-mono tracking-widest pointer-events-none">+ 01</div>
+        <div className="absolute top-2 right-2 text-[9px] text-[#1A1815]/40 font-mono tracking-widest pointer-events-none">+ 02</div>
+        <div className="absolute bottom-2 left-2 text-[9px] text-[#1A1815]/40 font-mono tracking-widest pointer-events-none">+ 03</div>
+        <div className="absolute bottom-2 right-2 text-[9px] text-[#1A1815]/40 font-mono tracking-widest pointer-events-none">+ 04</div>
 
         {/* Ambient lighting glow */}
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[400px] bg-[#c8a47e]/12 rounded-full blur-[160px]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(7,8,10,0.6)_80%,#07080a_100%)]" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[400px] bg-[#B68953]/15 rounded-full blur-[160px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(247,243,235,0.45)_80%,#F7F3EB_100%)]" />
         </div>
 
         {/* ======================================================================= */}
@@ -50,25 +50,24 @@ export default function HeroSection() {
         <div className="absolute inset-0 w-full h-full pointer-events-auto">
           <svg
             viewBox="0 0 1800 880"
-            preserveAspectRatio="none"
-            className="w-full h-full"
-            aria-label="KYN letters covering the whole screen bigger and compact with sliding interior design architecture inside"
+            preserveAspectRatio="xMidYMid meet"
+            className="w-full h-full max-h-[85vh] sm:max-h-full"
+            aria-label="KYN letters with sliding interior design architecture inside"
             role="img"
           >
             <style>{`
               @font-face {
-                font-family: 'Catalunya';
-                src: url('/fonts/Catalunya.otf') format('opentype');
-                font-weight: 100 900;
+                font-family: 'Bounce Dash';
+                src: url('/fonts/BounceDash.otf') format('opentype');
+                font-weight: normal;
                 font-style: normal;
                 font-display: block;
               }
               .kyn-letter-font {
-                font-family: 'Catalunya', var(--font-catalunya), serif;
+                font-family: 'Bounce Dash', var(--font-bounce-dash), sans-serif;
               }
             `}</style>
             <defs>
-              {/* Bigger & Compact letter positioning with Catalunya luxury serif font */}
               {/* Letter K: Centered around x=315 */}
               <clipPath id="tight-kyn-k">
                 <text
@@ -213,7 +212,7 @@ export default function HeroSection() {
               fontSize="1040"
               letterSpacing="-10"
               fill="none"
-              stroke="rgba(255, 255, 255, 0.35)"
+              stroke="rgba(26, 24, 21, 0.3)"
               strokeWidth="2.5"
             >
               K
@@ -227,7 +226,7 @@ export default function HeroSection() {
               fontSize="1040"
               letterSpacing="-10"
               fill="none"
-              stroke="rgba(255, 255, 255, 0.35)"
+              stroke="rgba(26, 24, 21, 0.3)"
               strokeWidth="2.5"
             >
               Y
@@ -241,7 +240,7 @@ export default function HeroSection() {
               fontSize="1040"
               letterSpacing="-10"
               fill="none"
-              stroke="rgba(255, 255, 255, 0.35)"
+              stroke="rgba(26, 24, 21, 0.3)"
               strokeWidth="2.5"
             >
               N
@@ -250,25 +249,25 @@ export default function HeroSection() {
         </div>
 
         {/* Soft atmospheric gradient across top & bottom */}
-        <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-b from-[#07080a]/65 via-transparent to-[#07080a]/80" />
+        <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-b from-[#F7F3EB]/70 via-transparent to-[#F7F3EB]/85" />
 
         {/* ======================================================================= */}
         {/* IN BETWEEN / OVERLAY: TOP HOVER BADGE & REGIONAL CITATION               */}
         {/* ======================================================================= */}
         <div className="relative z-20 w-full pt-16 sm:pt-20 text-center pointer-events-none">
           {hoveredLetter ? (
-            <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-neutral-900/90 border border-[#c8a47e]/60 text-xs text-[#e6cfb8] backdrop-blur-md shadow-2xl animate-in fade-in zoom-in-95 pointer-events-auto">
-              <span className="font-semibold text-white">Letter {hoveredLetter}:</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-white/95 border border-[#B68953]/50 text-xs text-[#4A453F] backdrop-blur-md shadow-lg animate-in fade-in zoom-in-95 pointer-events-auto">
+              <span className="font-semibold text-[#1A1815]">Letter {hoveredLetter}:</span>
               <span>
-                {hoveredLetter === 'K' && 'Sliding Vertically Up &bull; Patia & Cuttack Monolithic Living Spaces'}
-                {hoveredLetter === 'Y' && 'Sliding Vertically Down &bull; Calacatta & Teak Kitchens, Courtyard Baths'}
-                {hoveredLetter === 'N' && 'Sliding Horizontally &bull; Infocity Penthouses & Private Odia Libraries'}
+                {hoveredLetter === 'K' && 'Sliding Vertically Up • Patia & Cuttack Monolithic Living Spaces'}
+                {hoveredLetter === 'Y' && 'Sliding Vertically Down • Calacatta & Teak Kitchens, Courtyard Baths'}
+                {hoveredLetter === 'N' && 'Sliding Horizontally • Infocity Penthouses & Private Odia Libraries'}
               </span>
             </div>
           ) : (
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-black/40 border border-white/10 backdrop-blur-md">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c8a47e] animate-ping" />
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-medium text-[#e6cfb8]">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/80 border border-[#1A1815]/10 backdrop-blur-md shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B68953] animate-ping" />
+              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-medium text-[#7A6B58]">
                 Bhubaneswar &bull; Cuttack &bull; Puri &bull; Odisha
               </span>
             </div>
@@ -278,68 +277,68 @@ export default function HeroSection() {
         {/* ======================================================================= */}
         {/* BOTTOM HUD: BRAND CITATION & CONTROLS (Within the corner margins)      */}
         {/* ======================================================================= */}
-        <div className="relative z-20 w-full flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/10 pt-2.5 pb-1">
+        <div className="relative z-20 w-full flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-[#1A1815]/10 pt-2.5 pb-1">
           
           {/* Left: Branding */}
           <div className="text-center sm:text-left">
-            <h1 className="text-xs sm:text-sm font-serif tracking-[0.2em] text-white uppercase font-light">
+            <h1 className="text-xs sm:text-sm font-serif tracking-[0.2em] text-[#1A1815] uppercase font-light">
               KYN Interior Architecture &bull; Odisha
             </h1>
-            <p className="text-[11px] text-neutral-400 tracking-wider font-light mt-0.5">
+            <p className="text-[11px] text-[#68625A] tracking-wider font-light mt-0.5">
               Turnkey Luxury Residences, Duplex Villas & Commercial Spaces
             </p>
           </div>
 
           {/* Center/Right: Interactive Controls */}
-          <div className="flex flex-wrap items-center justify-center gap-2 bg-neutral-950/80 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full shadow-2xl">
+          <div className="flex flex-wrap items-center justify-center gap-2 bg-white/90 backdrop-blur-md border border-[#1A1815]/10 px-4 py-1.5 rounded-full shadow-lg">
             {/* Play/Pause */}
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className="flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
+              className="flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-[#4A453F] hover:text-[#1A1815] hover:bg-black/5 transition-colors"
               title={isPlaying ? 'Pause sliding movement' : 'Resume sliding movement'}
               aria-label={isPlaying ? 'Pause movement' : 'Play movement'}
             >
               {isPlaying ? (
                 <>
-                  <Pause className="w-3.5 h-3.5 text-[#c8a47e]" />
+                  <Pause className="w-3.5 h-3.5 text-[#B68953]" />
                   <span>Pause</span>
                 </>
               ) : (
                 <>
-                  <Play className="w-3.5 h-3.5 text-[#c8a47e]" />
+                  <Play className="w-3.5 h-3.5 text-[#B68953]" />
                   <span>Play</span>
                 </>
               )}
             </button>
 
-            <span className="text-white/20">|</span>
+            <span className="text-[#1A1815]/20">|</span>
 
             {/* Reverse Direction */}
             <button
               onClick={() => setIsReversed(!isReversed)}
               className={`flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
-                isReversed ? 'text-[#e6cfb8] bg-white/10' : 'text-neutral-400 hover:text-white hover:bg-white/5'
+                isReversed ? 'text-[#B68953] bg-[#B68953]/10' : 'text-[#68625A] hover:text-[#1A1815] hover:bg-black/5'
               }`}
               title="Reverse continuous sliding directions"
             >
-              <RefreshCw className="w-3 h-3 text-[#c8a47e]" />
+              <RefreshCw className="w-3 h-3 text-[#B68953]" />
               <span>Reverse</span>
             </button>
 
-            <span className="text-white/20">|</span>
+            <span className="text-[#1A1815]/20">|</span>
 
             {/* Speed Toggle */}
-            <div className="flex items-center space-x-1 text-xs text-neutral-400">
-              <SlidersHorizontal className="w-3 h-3 text-[#c8a47e] mr-1 hidden sm:inline" />
-              <span className="hidden sm:inline text-[11px] uppercase tracking-wider text-neutral-400">Pace:</span>
+            <div className="flex items-center space-x-1 text-xs text-[#68625A]">
+              <SlidersHorizontal className="w-3 h-3 text-[#B68953] mr-1 hidden sm:inline" />
+              <span className="hidden sm:inline text-[11px] uppercase tracking-wider text-[#68625A]">Pace:</span>
               {(['slow', 'normal', 'fast'] as const).map((s) => (
                 <button
                   key={s}
                   onClick={() => setSpeed(s)}
                   className={`px-2 py-0.5 rounded text-[11px] capitalize transition-colors ${
                     speed === s
-                      ? 'bg-[#c8a47e]/20 text-[#e6cfb8] font-semibold border border-[#c8a47e]/40'
-                    : 'text-neutral-400 hover:text-neutral-200'
+                      ? 'bg-[#B68953] text-white font-medium shadow-sm'
+                      : 'text-[#68625A] hover:text-[#1A1815]'
                   }`}
                 >
                   {s}
@@ -352,13 +351,13 @@ export default function HeroSection() {
           <div className="hidden lg:flex items-center space-x-3">
             <a
               href="#projects"
-              className="px-4 py-1.5 bg-white text-neutral-950 hover:bg-[#e6cfb8] transition-all text-xs uppercase tracking-[0.2em] font-semibold rounded-sm shadow-lg"
+              className="px-4 py-1.5 bg-[#1A1815] text-[#F7F3EB] hover:bg-[#B68953] hover:text-white transition-all text-xs uppercase tracking-[0.2em] font-medium rounded-sm shadow-md"
             >
               Explore Projects
             </a>
             <a
               href="#about"
-              className="p-1.5 border border-white/20 hover:border-[#c8a47e] hover:text-[#c8a47e] text-neutral-300 rounded-sm transition-all"
+              className="p-1.5 border border-[#1A1815]/15 hover:border-[#B68953] hover:text-[#B68953] text-[#1A1815] rounded-sm transition-all"
               aria-label="Scroll to About"
             >
               <ArrowDown className="w-4 h-4 animate-bounce" />

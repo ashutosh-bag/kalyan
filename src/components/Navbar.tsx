@@ -96,128 +96,62 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Brand Logo: KYN */}
-          <Link
-            href="#home"
-            className="group flex items-center space-x-3 focus:outline-none"
-            aria-label="KYN Interior Design Agency Home"
-          >
-            <div className="relative flex items-center justify-center w-10 h-10 border border-white/20 rounded-sm bg-neutral-900/60 backdrop-blur-md transition-all duration-300 group-hover:border-[#c8a47e] group-hover:shadow-[0_0_20px_rgba(200,164,126,0.3)]">
-              <span className="font-serif tracking-widest text-lg font-bold text-white group-hover:text-[#c8a47e] transition-colors">
-                K
-              </span>
-              <div className="absolute -bottom-0.5 w-4 h-[1px] bg-[#c8a47e] opacity-70 group-hover:w-6 transition-all duration-300"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif tracking-[0.25em] text-lg font-semibold text-white uppercase group-hover:text-[#c8a47e] transition-colors">
-                KYN
-              </span>
-              <span className="text-[9px] tracking-[0.3em] uppercase text-neutral-400 font-sans">
-                Studio Interiors
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation items serialized: home, about, projects, blog, contact */}
-          <nav
-            aria-label="Primary Navigation"
-            className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-neutral-900/40 backdrop-blur-md border border-white/10 px-5 py-2 rounded-full shadow-lg"
-          >
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={`relative px-3.5 py-1.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-full ${
-                    isActive
-                      ? 'text-[#e0c8aa] bg-white/5 font-semibold'
-                      : 'text-neutral-300 hover:text-white hover:bg-white/5'
-                  }`}
-                >
-                  {item.name}
-                  {isActive && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c8a47e]"></span>
-                  )}
-                </a>
-              );
-            })}
-          </nav>
-
-          {/* Right Section: Social Icons (fb, ig, yt) + Consultation Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            
-            {/* Social media icons next to navigation */}
-            <div
-              className="flex items-center space-x-1.5 border-r border-white/15 pr-4 text-neutral-300"
-              aria-label="Social media channels"
+            {/* Brand Logo: KYN */}
+            <Link
+              href="#home"
+              className="group flex items-center space-x-3 focus:outline-none"
+              aria-label="KYN Interior Design Agency Home"
             >
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.ariaLabel}
-                  className="group relative p-2 text-neutral-400 hover:text-[#c8a47e] hover:bg-white/5 rounded-full transition-all duration-300"
-                  title={social.name}
-                >
-                  {social.svg}
-                  <span className="sr-only">{social.name}</span>
-                </a>
-              ))}
-            </div>
+              <div className="relative flex items-center justify-center w-10 h-10 border border-[#1A1815]/15 rounded-sm bg-white/90 shadow-sm transition-all duration-300 group-hover:border-[#B68953] group-hover:shadow-[0_0_15px_rgba(182,137,83,0.25)]">
+                <span className="font-serif tracking-widest text-lg font-bold text-[#1A1815] group-hover:text-[#B68953] transition-colors">
+                  K
+                </span>
+                <div className="absolute -bottom-0.5 w-4 h-[1px] bg-[#B68953] opacity-70 group-hover:w-6 transition-all duration-300"></div>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif tracking-[0.25em] text-lg font-semibold text-[#1A1815] uppercase group-hover:text-[#B68953] transition-colors">
+                  KYN
+                </span>
+                <span className="text-[9px] tracking-[0.3em] uppercase text-[#68625A] font-sans">
+                  Studio Interiors
+                </span>
+              </div>
+            </Link>
 
-            {/* Corporate CTA */}
-            <a
-              href="#contact"
-              onClick={onOpenConsultation}
-              className="group inline-flex items-center space-x-2 px-4 py-2 border border-[#c8a47e]/60 bg-[#c8a47e]/10 hover:bg-[#c8a47e] text-xs uppercase tracking-[0.2em] font-medium text-[#e0c8aa] hover:text-neutral-950 transition-all duration-300 rounded-sm shadow-[0_0_15px_rgba(200,164,126,0.15)] hover:shadow-[0_0_25px_rgba(200,164,126,0.4)]"
+            {/* Desktop Navigation items serialized: home, about, projects, blog, contact */}
+            <nav
+              aria-label="Primary Navigation"
+              className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/85 backdrop-blur-md border border-[#1A1815]/10 px-5 py-2 rounded-full shadow-md"
             >
-              <span>Inquire</span>
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-          </div>
+              {navItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-3.5 py-1.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-full ${
+                      isActive
+                        ? 'text-[#B68953] bg-[#F7F3EB] font-semibold shadow-xs'
+                        : 'text-[#5C564E] hover:text-[#1A1815] hover:bg-black/5'
+                    }`}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#B68953]"></span>
+                    )}
+                  </a>
+                );
+              })}
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-2 md:hidden">
-            <a
-              href="#contact"
-              className="px-2.5 py-1.5 border border-[#c8a47e]/50 bg-[#c8a47e]/10 text-[10px] uppercase tracking-wider text-[#e0c8aa] rounded-sm"
-            >
-              Inquire
-            </a>
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-neutral-300 hover:text-white bg-neutral-900/60 border border-white/10 rounded-sm focus:outline-none"
-              aria-label="Toggle Navigation Menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden glass-panel border-t border-white/10 mt-3 px-6 py-6 transition-all duration-300 animate-in fade-in slide-in-from-top-4">
-          <div className="flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-sm uppercase tracking-[0.25em] font-medium text-neutral-300 hover:text-[#c8a47e] py-1 border-b border-white/5 transition-colors"
+            {/* Right Section: Social Icons (fb, ig, yt) + Consultation Button */}
+            <div className="hidden lg:flex items-center space-x-4">
+              
+              {/* Social media icons next to navigation */}
+              <div
+                className="flex items-center space-x-1.5 border-r border-[#1A1815]/15 pr-4 text-[#5C564E]"
+                aria-label="Social media channels"
               >
-                {item.name}
-              </a>
-            ))}
-
-            {/* Mobile Social Links */}
-            <div className="pt-3 flex items-center justify-between border-t border-white/10">
-              <span className="text-xs uppercase tracking-wider text-neutral-400">Connect with KYN:</span>
-              <div className="flex items-center space-x-3 text-neutral-300">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
@@ -225,16 +159,82 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.ariaLabel}
-                    className="p-2 text-neutral-300 hover:text-[#c8a47e] bg-white/5 rounded-full"
+                    className="group relative p-2 text-[#68625A] hover:text-[#B68953] hover:bg-black/5 rounded-full transition-all duration-300"
+                    title={social.name}
                   >
                     {social.svg}
+                    <span className="sr-only">{social.name}</span>
                   </a>
                 ))}
               </div>
+
+              {/* Corporate CTA */}
+              <a
+                href="#contact"
+                onClick={onOpenConsultation}
+                className="group inline-flex items-center space-x-2 px-4 py-2 border border-[#B68953] bg-[#B68953] hover:bg-[#9E7445] text-xs uppercase tracking-[0.2em] font-medium text-white transition-all duration-300 rounded-sm shadow-md hover:shadow-lg"
+              >
+                <span>Inquire</span>
+                <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="flex items-center space-x-2 md:hidden">
+              <a
+                href="#contact"
+                className="px-2.5 py-1.5 border border-[#B68953] bg-[#B68953] text-[10px] uppercase tracking-wider text-white rounded-sm"
+              >
+                Inquire
+              </a>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-[#1A1815] hover:text-[#B68953] bg-white/80 border border-[#1A1815]/10 rounded-sm focus:outline-none"
+                aria-label="Toggle Navigation Menu"
+                aria-expanded={mobileMenuOpen}
+              >
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
             </div>
           </div>
         </div>
-      )}
+
+        {/* Mobile Drawer Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden glass-panel border-t border-[#1A1815]/10 mt-3 px-6 py-6 transition-all duration-300 animate-in fade-in slide-in-from-top-4 shadow-xl">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm uppercase tracking-[0.25em] font-medium text-[#4A453F] hover:text-[#B68953] py-1 border-b border-[#1A1815]/5 transition-colors"
+                >
+                  {item.name}
+                </a>
+              ))}
+
+              {/* Mobile Social Links */}
+              <div className="pt-3 flex items-center justify-between border-t border-[#1A1815]/10">
+                <span className="text-xs uppercase tracking-wider text-[#68625A]">Connect with KYN:</span>
+                <div className="flex items-center space-x-3 text-[#5C564E]">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.ariaLabel}
+                      className="p-2 text-[#5C564E] hover:text-[#B68953] bg-black/5 rounded-full"
+                    >
+                      {social.svg}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
     </header>
   );
 }

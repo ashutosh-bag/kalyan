@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const bounceDash = localFont({
+  src: "../../public/fonts/BounceDash.otf",
+  variable: "--font-bounce-dash",
+  display: "swap",
+});
+
 const catalunya = localFont({
   src: "../../public/fonts/Catalunya.otf",
   variable: "--font-catalunya",
@@ -22,7 +28,7 @@ const catalunya = localFont({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#07080a",
+  themeColor: "#F7F3EB",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -134,7 +140,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${catalunya.variable} scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
     >
       <head>
         <script
@@ -142,7 +148,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-[#07080a] text-[#f8f8f6] flex flex-col font-sans selection:bg-[#c8a47e] selection:text-neutral-950">
+      <body className="min-h-screen bg-[#F7F3EB] text-[#1A1815] flex flex-col font-sans selection:bg-[#DFC5A4] selection:text-[#1A1815]">
         {children}
       </body>
     </html>
