@@ -24,8 +24,7 @@ export async function GET(req: NextRequest) {
         (p) =>
           p.title.toLowerCase().includes(search) ||
           p.location.toLowerCase().includes(search) ||
-          p.description.toLowerCase().includes(search) ||
-          p.materials.some((m) => m.toLowerCase().includes(search))
+          (p.materials || []).some((m) => m.toLowerCase().includes(search))
       );
     }
 

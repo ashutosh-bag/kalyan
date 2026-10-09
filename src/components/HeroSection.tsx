@@ -24,8 +24,8 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen min-h-[600px] max-h-screen bg-[#F7F3EB] overflow-hidden select-none p-2 sm:p-3 md:p-4"
-      aria-label="KYN Interior Architecture Odisha"
+      className="relative w-full h-screen min-h-[600px] max-h-screen bg-[#FFF3E9] overflow-hidden select-none p-2 sm:p-3 md:p-4"
+      aria-label="Kalyan Design Studio Interior Architecture Odisha"
     >
       {/* ========================================================================= */}
       {/* OUTER CORNER MARGINS & SLIM ARCHITECTURAL BLUEPRINT FRAME                 */}
@@ -40,8 +40,8 @@ export default function HeroSection() {
 
         {/* Ambient lighting glow */}
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[400px] bg-[#B68953]/15 rounded-full blur-[160px]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(247,243,235,0.45)_80%,#F7F3EB_100%)]" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[400px] bg-[#FF8526]/15 rounded-full blur-[160px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(255,243,233,0.45)_80%,#FFF3E9_100%)]" />
         </div>
 
         {/* ======================================================================= */}

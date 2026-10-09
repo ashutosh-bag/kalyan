@@ -1,0 +1,478 @@
+{
+  "studioInfo": {
+    "name": "Kalyan Design Studio",
+    "legalName": "Kalyan Design Studio",
+    "tagline": "Best Interior Design Company in Bhubaneswar, Odisha",
+    "metaDescription": "Kalyan Design Studio, Bhubaneswar's top interior designer, transforms spaces with elegant, functional designs. Residential & commercial projects. Call now!",
+    "keywords": [
+      "Interior Design Bhubaneswar",
+      "Best Interior Designers in Odisha",
+      "Luxury Interior Design Odisha",
+      "Home Decor Services Bhubaneswar",
+      "Modular Kitchen Bhubaneswar",
+      "False Ceiling Odisha"
+    ],
+    "contact": {
+      "phone": "+91-0750404104",
+      "phoneDisplay": "+91 75040 41040",
+      "email": "info@kalyandesignstudio.com",
+      "address": {
+        "street": "3181/5466, Puri-NH Bypass, Baragada",
+        "locality": "Bhubaneswar",
+        "region": "Odisha",
+        "postalCode": "751018",
+        "country": "India",
+        "formattedAddress": "3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018"
+      },
+      "geo": {
+        "latitude": 20.296059,
+        "longitude": 85.824539
+      },
+      "openingHours": {
+        "days": "Monday – Saturday",
+        "hours": "10:00 AM – 8:00 PM",
+        "sunday": "Closed / By Appointment"
+      },
+      "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14703.497116044074!2d85.86106134999999!3d20.251747199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a76aa3db6109%3A0x9796e53a6bd98373!2sKalyan+Design+Studio!5e0!3m2!1sen!2sin!4v1633363360744!5m2!1sen!2sin",
+      "googleBusinessProfileUrl": "https://g.co/kgs/VwVxACj",
+      "socialLinks": {
+        "facebook": "https://www.facebook.com/kalyandesignstudio?mibextid=qi2Omg&rdid=MHLyk3ZtVcuF1RKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FrkDRD6iso3sg4iDR%2F%3Fmibextid%3Dqi2Omg",
+        "instagram": "https://www.instagram.com/kalyan_design_studio?igsh=N2U3ZmJ1N210Mmhs",
+        "youtube": "https://www.youtube.com/watch?si=yv5otNwI-2c43qK8&v=ACrraXQOfuQ&feature=youtu.be"
+      }
+    },
+    "branding": {
+      "logo": "/images/kalyan/branding/logo.png",
+      "logoWebp": "/images/kalyan/blog/LOGO.webp",
+      "footerBg": "/images/kalyan/branding/footer.png",
+      "contactBg": "/images/kalyan/assets/contactbackg-D9XEOEFC.png"
+    },
+    "designSystem": {
+      "typography": {
+        "primaryFont": {
+          "name": "Century751BT",
+          "cssClass": "font-century",
+          "file": "/fonts/Century-751-BT.ttf",
+          "usage": "Global Headings, Body Text, Navigation, Buttons"
+        },
+        "accentCalligraphicFont": {
+          "name": "Courgette",
+          "cssClass": "font-courgette",
+          "file": "/fonts/Courgette-Regular.ttf",
+          "usage": "Editorial Quotes, Section Taglines, Monogram Details"
+        },
+        "secondaryFont": {
+          "name": "Poppins / Sans-Serif",
+          "cssClass": "font-sans",
+          "usage": "Form Inputs, Captions, Labels"
+        }
+      },
+      "colorPalette": {
+        "primaryBrandOrange": "#FF8526",
+        "secondaryAmberGold": "#E79F30",
+        "primaryBackgroundPeach": "#FFF3E9",
+        "secondaryBackgroundLinen": "#F7EAE0",
+        "surfaceCardWhite": "#FFFFFF",
+        "contrastDarkBackground": "#08090B",
+        "primaryTextCharcoal": "#1A1815",
+        "mutedTextGray": "#5C564E",
+        "borderAccent": "rgba(255, 133, 38, 0.4)"
+      }
+    }
+  },
+  "about": {
+    "title": "About Kalyan Design Studio",
+    "overview": "With our projects spanning over the spheres of residential, commercial and corporate construction, we, at Kalyan Studio, aim to deliver excellence and timeless aesthetics. Our skillful interdisciplinary team works closely with our clients and engages in a diverse array of design styles from contemporary, modern, and classical to Scandinavian or baroque — truly a one-of-its-kind service.",
+    "residentialFocus": "Our full service, residential offering covers every detail of your house's interior designs. From space planning to furnishings, and everything between. At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves.",
+    "philosophy": "Our home interior design services are comprehensive and include everything — from space planning to custom furniture design, lighting design, material selection, and complete turnkey execution.",
+    "images": {
+      "heroAbout": "/images/kalyan/assets/aboutimg-9X_Cc2-O.png",
+      "showcase1": "/images/kalyan/branding/about1.png",
+      "showcase3": "/images/kalyan/assets/about3-ngrbtyb5.png",
+      "showcase4": "/images/kalyan/assets/about4-C1VobmmI.png",
+      "founderPortrait": "/images/kalyan/assets/kalyan.jpg-Bkaws5pr.jpeg"
+    }
+  },
+  "process": [
+    {
+      "step": 1,
+      "title": "BRIEFING",
+      "icon": "ri-lightbulb-flash-line",
+      "description": "We begin with an exhaustive questionnaire to fully grasp the vision, needs and expectations of the Client. Getting the brief right is key to success of the project."
+    },
+    {
+      "step": 2,
+      "title": "DESIGN",
+      "icon": "ri-edit-line",
+      "description": "Translating the brief into the design blueprint is the next step. We start with a 2-D floor plan followed by 3-D visualisation of the space. This helps paint a vivid picture of the eventual look and feel of the interiors for the client."
+    },
+    {
+      "step": 3,
+      "title": "EXECUTION",
+      "icon": "ri-megaphone-fill",
+      "description": "This is where the design comes to life. We undertake only end-end projects and aim for perfection in every inch. Along with our handpicked team of craftsmen and vendors from across the world, we deliver a globally-inspired functional work of art."
+    },
+    {
+      "step": 4,
+      "title": "HANDOVER",
+      "icon": "ri-key-2-fill",
+      "description": "This marks the culmination of an exciting journey for both the client and us as we handover the keys to their new home. A space all set to delight the occupants for years to come."
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-modular-kitchen",
+      "slug": "modular_kitchen",
+      "title": "MODULAR KITCHEN",
+      "subtitle": "Heart of the Home & Culinary Luxury",
+      "image": "/images/kalyan/assets/MODULARKITCHEN-DIgipoZG.png",
+      "icon": "ChefHat",
+      "summary": "Customized modular kitchens tailored for modern lifestyle, heavy cooking durability, and seamless spatial ergonomics.",
+      "description": "The kitchen is often one of the most used rooms in the house. The kitchen is the heartbeat of all festivity, a core to every family gathering, and the beat of every party. When the kitchen is well designed eating becomes an enjoyable experience. However, selecting the right kitchen design is never easy. It involves more significant purposes other than comfort and aesthetics. Most people start their days in their kitchens. We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details.",
+      "features": [
+        "Modular kitchens can be customized to fit any size or shape space",
+        "Wide variety of cabinets, quartz/granite countertops, and built-in appliances",
+        "Ergonomic work triangle optimizing refrigerator, sink, and cooking hob",
+        "Durable boiling water resistant (BWR) marine grade plywood carcass",
+        "Soft-close tandem drawers and corner carousel pull-outs"
+      ]
+    },
+    {
+      "id": "srv-3d-interior-models",
+      "slug": "3d_interiormodels",
+      "title": "3D INTERIOR MODELS",
+      "subtitle": "Photorealistic Virtual Walkthroughs",
+      "image": "/images/kalyan/assets/3DINTERIORMODELS-Bz_sO8Pe.png",
+      "icon": "Layers",
+      "summary": "High-fidelity 3D visualization and simulation empowering clients to experience spaces before execution begins.",
+      "description": "3D models are a potent tool for interior designers to effectively communicate designs to their clients via three-dimensional visualization, increasing project approval rates. 3D interior design shifts the control to the hands of clients by enabling them to alter or transform designs. We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details. Clients and designers can see a realistic representation of the interior design before construction or renovation begins.",
+      "features": [
+        "Apply realistic textures and materials to surfaces for walls, floors, and fabrics",
+        "Physically accurate lighting simulation with daytime and dusk scenes",
+        "360-degree virtual walkthrough and panoramic view inspection",
+        "Precision dimension checks reducing on-site structural modifications",
+        "Interactive material and color palette revisions"
+      ]
+    },
+    {
+      "id": "srv-tv-cabinet",
+      "slug": "tv_cabinet",
+      "title": "TV CABINET",
+      "subtitle": "Bespoke Media Consoles & Feature Walls",
+      "image": "/images/kalyan/assets/TVCABINEI-CzWsC3Up.png",
+      "icon": "Tv",
+      "summary": "Sophisticated entertainment units combining fluted panels, concealed cable management, and ambient backlighting.",
+      "description": "A TV cabinet is a piece of furniture specifically designed to house a television. It typically has a flat top surface on which the TV can be placed, and shelves or compartments below for storing electronics, movies, video games, or other media. TV cabinets can also have features like cable management holes, drawers, and cabinets for additional storage. We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details.",
+      "features": [
+        "Low-profile consoles designed for rooms with fireplaces or low focal points",
+        "High-wall storage integration with acoustic fluted panelling and display niches",
+        "Corner units engineered to maximize compact living room layouts",
+        "Concealed conduits for 100% invisible wiring and device integration",
+        "Dimmable warm LED cove profiles behind marble or charcoal louvers"
+      ]
+    },
+    {
+      "id": "srv-gypsum-ceiling",
+      "slug": "gypsum_celling",
+      "title": "GYPSUM CEILING",
+      "subtitle": "Architectural Drywall False Ceilings",
+      "image": "/images/kalyan/assets/GYPSUMCELLING-N_O6msDY.png",
+      "icon": "Sparkles",
+      "summary": "Acoustic absorption, thermal cooling efficiency, and designer cove lighting false ceiling installations.",
+      "description": "A gypsum ceiling, also known as a drywall ceiling or plasterboard ceiling, is a type of ceiling made from gypsum plasterboards. These are prefabricated panels made of gypsum, a naturally occurring mineral consisting of hydrated calcium sulfate. Gypsum ceilings can help to absorb sound, which can improve the acoustics of a room. This is especially beneficial in large, open spaces or rooms with hard surfaces, such as tile or concrete floors. Gypsum ceilings can also help to insulate a room, which can help to reduce heating and cooling costs.",
+      "features": [
+        "Superior acoustic dampening and echo reduction for living rooms & home theaters",
+        "Thermal insulation keeping Odisha homes significantly cooler during hot summers",
+        "Smooth, seamless surface ready for premium low-VOC paints and textures",
+        "Concealed architectural cove profiles for glare-free indirect lighting",
+        "Fire-resistant core conforming to modern safety specifications"
+      ]
+    },
+    {
+      "id": "srv-pvc-ceiling",
+      "slug": "pvc_ceiling",
+      "title": "PVC CEILING",
+      "subtitle": "Moisture & Termite Proof Ceiling Panels",
+      "image": "/images/kalyan/assets/7th-BwavL1Pi.png",
+      "icon": "Grid",
+      "summary": "Low-maintenance, waterproof PVC ceiling solutions ideal for balconies, kitchens, and contemporary living areas.",
+      "description": "PVC ceiling panels offer high durability and complete resistance to moisture and insects. Since PVC ceiling panels are made of lightweight engineered polymers, they are exceptionally easy to maintain. Regular wiping with a damp cloth is usually sufficient to keep them looking brand new. They come in a variety of colors, designs, and textures, allowing for flexibility in interior design choices — mimicking the look of teak wood, marble, or metallic finishes.",
+      "features": [
+        "100% moisture-proof and termite-resistant suitable for humid coastal climates",
+        "Available in rich natural wood-grain, charcoal, and metallic textured finishes",
+        "Zero painting required — retains fresh luster with simple damp cloth cleaning",
+        "Calibrated for energy-efficient recessed LED spot and magnetic track lights",
+        "Quick, dust-free installation with interlocking tongue-and-groove joints"
+      ]
+    },
+    {
+      "id": "srv-core-house-plan",
+      "slug": "core_house_plan",
+      "title": "CORE HOUSE PLAN",
+      "subtitle": "Comprehensive Architectural Blueprints",
+      "image": "/images/kalyan/assets/project5-CUTtopKF.png",
+      "icon": "Compass",
+      "summary": "Master architectural layouts, 2D floor plans, spatial zoning, and complete exterior elevations.",
+      "description": "Core House Planning outlines the structural layout of the house, including precise room dimensions, the arrangement of rooms (such as bedrooms, living areas, kitchen, bathrooms), and the overall flow of the space. This plan shows the entire property and its context, including the house, driveway, landscaping, and other features. Includes detailed exterior elevations from all sides illustrating architectural details and materials.",
+      "features": [
+        "Vastu-compliant spatial zoning and ventilation alignment",
+        "Complete 2D floor plans with exact millimeter dimensions",
+        "Exterior front, rear, and lateral 3D elevations",
+        "Comprehensive site plan including parking, entry gate, and landscaping",
+        "Plumbing, electrical, and MEP coordination drawings"
+      ]
+    },
+    {
+      "id": "srv-wardrobe",
+      "slug": "wardrobe",
+      "title": "WARDROBE",
+      "subtitle": "Bespoke Modern Closets & Dressing Suites",
+      "image": "/images/kalyan/assets/Wardrobe-DUVZi608.png",
+      "icon": "Box",
+      "summary": "Handcrafted modular wardrobes, floor-to-ceiling sliding systems, and luxury walk-in dressing rooms.",
+      "description": "The modern wardrobe with its hanging spaces, sliding shelves, and drawers evolved to optimize modern living. Our bespoke wardrobe designs ensure ample space for hanging longer items like coats, dresses, and sarees. Customize the interior layout based on your specific storage needs and the types of clothing and accessories you have, including mirrors, valet trays, and sensor-activated illumination.",
+      "features": [
+        "Floor-to-ceiling sliding and hinged wardrobe configurations",
+        "Double-hanging rods, adjustable shelving, and lockable safety lockers",
+        "Integrated full-length mirrors and sensor-activated internal strip lighting",
+        "Bespoke organizer drawers for watches, jewelry, belts, and ties",
+        "Anti-fungal, moisture-sealed internal edge-banded carcass"
+      ]
+    }
+  ],
+  "featuredProjects": [
+    {
+      "id": "kyn-fp-01",
+      "slug": "bhubaneswar-interior-design-project",
+      "title": "Bhubaneswar Interior Design Project",
+      "location": "Bhubaneswar, Odisha",
+      "category": "residential",
+      "image": "/images/kalyan/assets/my1-CiB3FE8i.png",
+      "description": "Discover the artistry of interior design in Bhubaneswar. Our project showcases modern aesthetics blended with functionality to create breathtaking spaces.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo1.png",
+        "/images/kalyan/gallery/photo2.png",
+        "/images/kalyan/gallery/photo3.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-02",
+      "slug": "ranga-bazar-bhubaneswar-interior-design",
+      "title": "Ranga Bazar, Bhubaneswar Interior Design",
+      "location": "Ranga Bazar, Bhubaneswar",
+      "category": "residential",
+      "image": "/images/kalyan/assets/my2-ZuwLd7VG.png",
+      "description": "Experience the transformation of indoor spaces in Ranga Bazar, Bhubaneswar. This project redefines elegance and functionality.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo4.png",
+        "/images/kalyan/gallery/photo5.png",
+        "/images/kalyan/gallery/photo6.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-03",
+      "slug": "3d-parlour-design-project",
+      "title": "3D Parlour Design Project",
+      "location": "Bhubaneswar, Odisha",
+      "category": "commercial",
+      "image": "/images/kalyan/assets/my3-DfYMVO0a.png",
+      "description": "Explore our 3D Parlour Design project that combines innovation with style for an unforgettable experience.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo7.png",
+        "/images/kalyan/gallery/photo8.png",
+        "/images/kalyan/gallery/photo9.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-04",
+      "slug": "nandan-vihar-bhubaneswar-interior-renovation",
+      "title": "Nandan Vihar, Bhubaneswar Interior Renovation",
+      "location": "Nandan Vihar, Bhubaneswar",
+      "category": "residential",
+      "image": "/images/kalyan/assets/my4-DDISAuaV.png",
+      "description": "Redefining interiors at Nandan Vihar, Bhubaneswar. This project emphasizes comfort and sophistication.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo10.png",
+        "/images/kalyan/gallery/photo11.png",
+        "/images/kalyan/gallery/photo12.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-05",
+      "slug": "sundarpada-basra-home-interior",
+      "title": "Sundarpada, Basra Home Interior",
+      "location": "Sundarpada, Basra, Bhubaneswar",
+      "category": "residential",
+      "image": "/images/kalyan/assets/my5-BeOxY4Xv.png",
+      "description": "Sundarpada, Basra's home interior project highlights minimalist design principles with a touch of modern charm.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo13.png",
+        "/images/kalyan/gallery/photo14.png",
+        "/images/kalyan/gallery/photo15.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-06",
+      "slug": "koraput-office-design",
+      "title": "Koraput Office Design",
+      "location": "Koraput, Odisha",
+      "category": "commercial",
+      "image": "/images/kalyan/assets/my6-BO-EvvWK.png",
+      "description": "Koraput office design project blends professional aesthetics with optimal functionality for a perfect workspace.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo16.png",
+        "/images/kalyan/gallery/photo17.png",
+        "/images/kalyan/gallery/photo18.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-07",
+      "slug": "cuttack-residential-interior",
+      "title": "Cuttack Residential Interior",
+      "location": "Cuttack, Odisha",
+      "category": "residential",
+      "image": "/images/kalyan/assets/my7-C6hJC8la.png",
+      "description": "Transforming homes in Cuttack with modern residential interior design ideas that cater to every need.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo19.png",
+        "/images/kalyan/gallery/photo20.png",
+        "/images/kalyan/gallery/photo21.png"
+      ]
+    },
+    {
+      "id": "kyn-fp-08",
+      "slug": "cuttack-second-site-design",
+      "title": "Cuttack Second Site Design",
+      "location": "Cuttack, Odisha",
+      "category": "residential",
+      "image": "/images/kalyan/assets/my8-Cg_lAXr_.png",
+      "description": "Explore our second interior design project in Cuttack, crafted with precision and artistic vision.",
+      "featured": true,
+      "gallery": [
+        "/images/kalyan/gallery/photo22.png",
+        "/images/kalyan/gallery/photo23.png",
+        "/images/kalyan/gallery/photo24.png"
+      ]
+    }
+  ],
+  "galleryPhotos": [
+    { "id": 1, "image": "/images/kalyan/gallery/photo1.png", "title": "Bhubaneswar Living Lounge", "category": "residential" },
+    { "id": 2, "image": "/images/kalyan/gallery/photo2.png", "title": "Master Bedroom Acoustic Suite", "category": "residential" },
+    { "id": 3, "image": "/images/kalyan/gallery/photo3.png", "title": "Contemporary Dining & Bar", "category": "residential" },
+    { "id": 4, "image": "/images/kalyan/gallery/photo4.png", "title": "Modular Chef Kitchen", "category": "residential" },
+    { "id": 5, "image": "/images/kalyan/gallery/photo5.png", "title": "Executive Workstation Corner", "category": "commercial" },
+    { "id": 6, "image": "/images/kalyan/gallery/photo6.png", "title": "Fluted Wall & Media Console", "category": "residential" },
+    { "id": 7, "image": "/images/kalyan/gallery/photo7.png", "title": "3D Commercial Parlour Reception", "category": "commercial" },
+    { "id": 8, "image": "/images/kalyan/gallery/photo8.png", "title": "Luxury Salon Styling Station", "category": "commercial" },
+    { "id": 9, "image": "/images/kalyan/gallery/photo9.png", "title": "Illuminated Wash & Spa Area", "category": "commercial" },
+    { "id": 10, "image": "/images/kalyan/gallery/photo10.png", "title": "Nandan Vihar Duplex Lounge", "category": "residential" },
+    { "id": 11, "image": "/images/kalyan/gallery/photo11.png", "title": "Minimalist Teak Foyer", "category": "residential" },
+    { "id": 12, "image": "/images/kalyan/gallery/photo12.png", "title": "Open Concept Living Area", "category": "residential" },
+    { "id": 13, "image": "/images/kalyan/gallery/photo13.png", "title": "Sundarpada Private Residence", "category": "residential" },
+    { "id": 14, "image": "/images/kalyan/gallery/photo14.png", "title": "Ambient Bedside Panelling", "category": "residential" },
+    { "id": 15, "image": "/images/kalyan/gallery/photo15.png", "title": "Walk-in Wardrobe Dressing Room", "category": "residential" },
+    { "id": 16, "image": "/images/kalyan/gallery/photo16.png", "title": "Koraput Executive Office", "category": "commercial" },
+    { "id": 17, "image": "/images/kalyan/gallery/photo17.png", "title": "Corporate Conference Room", "category": "commercial" },
+    { "id": 18, "image": "/images/kalyan/gallery/photo18.png", "title": "Reception & Waiting Lounge", "category": "commercial" },
+    { "id": 19, "image": "/images/kalyan/gallery/photo19.png", "title": "Cuttack Riverfront Residence", "category": "residential" },
+    { "id": 20, "image": "/images/kalyan/gallery/photo20.png", "title": "Architectural Gypsum False Ceiling", "category": "residential" },
+    { "id": 21, "image": "/images/kalyan/gallery/photo21.png", "title": "Custom TV Cabinet & Storage", "category": "residential" },
+    { "id": 22, "image": "/images/kalyan/gallery/photo22.png", "title": "Cuttack Heritage Bungalow", "category": "residential" },
+    { "id": 23, "image": "/images/kalyan/gallery/photo23.png", "title": "Warm Wood Grain Dining Hall", "category": "residential" },
+    { "id": 24, "image": "/images/kalyan/gallery/photo24.png", "title": "Children Study & Bedroom", "category": "residential" },
+    { "id": 25, "image": "/images/kalyan/gallery/photo25.png", "title": "Compact Apartment Kitchenette", "category": "residential" },
+    { "id": 26, "image": "/images/kalyan/gallery/photo26.png", "title": "Guest Suite Powder Room", "category": "residential" },
+    { "id": 27, "image": "/images/kalyan/gallery/photo27.png", "title": "Terrace Lounge & Sitting Area", "category": "residential" },
+    { "id": 28, "image": "/images/kalyan/gallery/photo28.png", "title": "Modern Puja Room Mandir Design", "category": "residential" }
+  ],
+  "interiorPackages": [
+    {
+      "id": "pkg-01",
+      "name": "Essential Turnkey Package",
+      "idealFor": "1BHK / 2BHK Starter Residences",
+      "image": "/images/kalyan/assets/img1-CC7S1ZnS.png",
+      "highlights": [
+        "Modular Kitchen with BWR plywood & soft close hardware",
+        "Gypsum false ceiling in living room with LED coves",
+        "Master bedroom wardrobe with internal mirrors",
+        "Full TV cabinet with cable management"
+      ]
+    },
+    {
+      "id": "pkg-02",
+      "name": "Premium Residence Package",
+      "idealFor": "3BHK & Duplex Homes",
+      "image": "/images/kalyan/assets/img2-DGLXbayj.png",
+      "highlights": [
+        "Luxury modular kitchen with quartz countertop & tandem boxes",
+        "Complete house false ceiling with perimeter lighting",
+        "Floor-to-ceiling wardrobes for 3 bedrooms",
+        "Fluted acoustic TV unit and dining partition screen"
+      ]
+    },
+    {
+      "id": "pkg-03",
+      "name": "Luxury Bespoke Villa Package",
+      "idealFor": "Villas, Penthouses & Commercial Spaces",
+      "image": "/images/kalyan/assets/img3-CT8lRwuI.png",
+      "highlights": [
+        "End-to-end custom architectural interior execution",
+        "Italian marble, seasoned Burma teak, and brass accents",
+        "3D photorealistic visualization & Vastu consultation",
+        "Smart lighting automation & dedicated site supervisor"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-01",
+      "question": "WHAT EXACTLY DOES AN INTERIOR DESIGNER DO?",
+      "answer": "An interior designer specializes in creating functional, aesthetically appealing, and safe interior spaces by strategically selecting materials, colors, furniture, lighting, and finishes. They work closely with clients to understand their preferences and requirements, ensuring the design aligns with both style and functionality while adhering to building codes and regulations."
+    },
+    {
+      "id": "faq-02",
+      "question": "WHAT IS THE ROLE OF THE INTERIOR DESIGNER?",
+      "answer": "The role of an interior designer involves conceptualizing and executing design solutions that enhance the functionality and visual appeal of interior spaces. They collaborate with clients to understand their needs, select appropriate materials, and ensure compliance with safety standards, while balancing aesthetics, practicality, and environmental considerations."
+    },
+    {
+      "id": "faq-03",
+      "question": "WHAT ARE THE 7 ELEMENTS OF INTERIOR DESIGN?",
+      "answer": "The seven key elements of interior design are space, line, form, light, color, texture, and pattern. These elements work together to create harmonious and functional interiors. By balancing these components, interior designers craft visually appealing, comfortable, and practical spaces that align with the client’s needs and preferences."
+    },
+    {
+      "id": "faq-04",
+      "question": "DOES INTERIOR DESIGN INCLUDES FURNITURE?",
+      "answer": "Yes, interior design includes furniture as a critical component. Furniture enhances functionality, defines space, and contributes to the overall aesthetic of a design. Interior designers select and arrange furniture to complement the design concept, ensuring it aligns with spatial planning, ergonomics, and the client’s style preferences."
+    },
+    {
+      "id": "faq-05",
+      "question": "WHY INTERIOR DESIGN?",
+      "answer": "Interior design is essential for creating functional, aesthetically pleasing environments that enhance the quality of life. It optimizes space, improves safety, and fosters comfort, reflecting personal or brand identity. By harmonizing elements like color, texture, and lighting, interior design transforms spaces into cohesive, purposeful environments tailored to users' needs."
+    }
+  ],
+  "blog": [
+    {
+      "id": "wp-post-743",
+      "slug": "the-psychology-of-colors-in-interior-design",
+      "title": "The Psychology of Colors in Interior Design: Unlocking the Power of Hue",
+      "excerpt": "Discover how the psychology of colors in interior design can transform your living spaces. Learn to create the perfect mood and atmosphere with strategic color choices.",
+      "date": "February 21, 2025",
+      "readTime": "6 min read",
+      "category": "Color Theory & Well-being",
+      "image": "/images/kalyan/blog/Warm-Colors-in-Interior-Design-1.jpg",
+      "author": {
+        "name": "Kalyan Design Studio Editorial",
+        "role": "Interior Architecture Team",
+        "avatar": "/images/kalyan/branding/logo.png"
+      },
+      "content": "Did you know we can see about 10 million different colors? This amazing ability is key in color psychology in interior design. Colors do more than just look good – they change how we feel in a space.\n\nColor psychology is all about how colors affect our mood and behavior. When we pick colors for our homes, we're not just picking paint. We're creating a feeling in our living spaces.\n\nKey Takeaways:\n- Colors have a significant psychological impact on human perception\n- Interior color schemes can influence mood and emotional well-being\n- Color psychology is a powerful design tool beyond aesthetic choices\n- Different hues trigger specific emotional and behavioral responses\n- Thoughtful color selection can transform residential and commercial atmospheres."
+    }
+  ]
+}

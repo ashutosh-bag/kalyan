@@ -27,32 +27,41 @@ const catalunya = localFont({
   display: "swap",
 });
 
+const century751 = localFont({
+  src: "../../public/fonts/Century-751-BT.ttf",
+  variable: "--font-century",
+  display: "swap",
+});
+
+const courgette = localFont({
+  src: "../../public/fonts/Courgette-Regular.ttf",
+  variable: "--font-courgette",
+  display: "swap",
+});
+
 export const viewport: Viewport = {
-  themeColor: "#F7F3EB",
+  themeColor: "#FFF3E9",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "KYN Studio | Architectural Interiors & Design — Bhubaneswar & Cuttack, Odisha",
+  title: "Kalyan Design Studio - Best Interior Design Company in Bhubaneswar, Odisha",
   description:
-    "KYN is a premier interior architecture studio in Odisha, crafting luxury villas, modern duplexes, and corporate spaces across Bhubaneswar, Cuttack, and Puri.",
+    "Kalyan Design Studio, Bhubaneswar's top interior designer, transforms spaces with elegant, functional designs. Residential & commercial projects. Call now!",
   keywords: [
-    "interior designer bhubaneswar",
-    "interior design company odisha",
-    "architectural interiors cuttack",
-    "luxury villa interior patia bhubaneswar",
-    "KYN studio",
-    "best interior designer in bhubaneswar",
-    "interior design cuttack",
-    "turnkey interior design odisha",
-    "vastu interior architect bhubaneswar",
+    "Interior Design Bhubaneswar",
+    "Best Interior Designers in Odisha",
+    "Luxury Interior Design Odisha",
+    "Home Decor Services Bhubaneswar",
+    "Modular Kitchen Bhubaneswar",
+    "False Ceiling Odisha",
   ],
-  authors: [{ name: "Studio KYN Architecture & Design Odisha" }],
-  creator: "Studio KYN",
-  publisher: "Studio KYN Pvt. Ltd.",
-  metadataBase: new URL("https://kynstudio.in"),
+  authors: [{ name: "Kalyan Design Studio" }],
+  creator: "Kalyan Design Studio",
+  publisher: "Kalyan Design Studio",
+  metadataBase: new URL("https://kalyandesignstudio.com"),
   alternates: {
     canonical: "/",
   },
@@ -140,7 +149,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
+      className={`${century751.variable} ${courgette.variable} ${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
     >
       <head>
         <script
@@ -148,7 +157,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-[#F7F3EB] text-[#1A1815] flex flex-col font-sans selection:bg-[#DFC5A4] selection:text-[#1A1815]">
+      <body className="min-h-screen bg-[#FFF3E9] text-[#1A1815] flex flex-col font-century selection:bg-[#FF8526] selection:text-white">
         {children}
       </body>
     </html>

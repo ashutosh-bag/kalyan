@@ -92,19 +92,25 @@ export default function ContactSection() {
 
   const offices = [
     {
-      city: 'Bhubaneswar Main Studio',
-      address: 'DLF Cybercity, IDCO Info Park, Patia, Bhubaneswar, Odisha 751024',
-      phone: '+91 674 297 4100',
+      city: 'Kalyan Design Studio — Bhubaneswar HQ',
+      address: '3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018',
+      phone: '+91-0750404104 / +91 75040 41040',
+      email: 'info@kalyandesignstudio.com',
+      hours: 'Mon – Sat: 10:00 AM – 8:00 PM',
     },
     {
-      city: 'Cuttack Design Atelier',
-      address: 'CDA Sector 9, Near Ring Road, Cuttack, Odisha 753014',
-      phone: '+91 9437 120 400',
+      city: 'Cuttack Regional Execution Atelier',
+      address: 'Serving CDA Sectors, Cantonment Road & Riverfront, Cuttack, Odisha',
+      phone: '+91 75040 41040',
+      email: 'info@kalyandesignstudio.com',
+      hours: 'By Site Appointment',
     },
     {
-      city: 'Puri Coastal Projects',
-      address: 'Marine Drive Road, VIP Area, Puri, Odisha 752002',
-      phone: '+91 9861 350 200',
+      city: 'Koraput & Puri Project Operations',
+      address: 'Turnkey Residential, Corporate & Hospitality Projects across Odisha',
+      phone: '+91 75040 41040',
+      email: 'info@kalyandesignstudio.com',
+      hours: 'By Site Appointment',
     },
   ];
 
@@ -230,11 +236,14 @@ export default function ContactSection() {
                     onChange={handleChange}
                     className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-[#c8a47e] transition-colors"
                   >
-                    <option value="Bespoke Residential Villa">Private Villa / Bungalow (Patia, CDA, Khandagiri)</option>
-                    <option value="Luxury Duplex / Penthouse">Luxury Duplex / Sky Penthouse</option>
-                    <option value="Corporate Office & Commercial">Corporate Tech Office (Infocity / Saheed Nagar)</option>
-                    <option value="Boutique Hospitality & Resort">Hospitality / Resort (Puri, Dhauli)</option>
-                    <option value="Complete Turnkey Renovation">Complete Turnkey Renovation & Remodeling</option>
+                    <option value="Modular Kitchen">Modular Kitchen</option>
+                    <option value="TV Cabinet & Media Unit">TV Cabinet & Media Unit</option>
+                    <option value="Custom Wardrobe & Closets">Custom Wardrobe & Closets</option>
+                    <option value="Gypsum / PVC False Ceiling">Gypsum / PVC False Ceiling</option>
+                    <option value="3D Interior Models & Visuals">3D Interior Models & Visuals</option>
+                    <option value="Core House Plan & Architecture">Core House Plan & Architecture</option>
+                    <option value="Full Turnkey Home Interior Package">Full Turnkey Home Interior Package</option>
+                    <option value="Commercial / Office Fit-out">Commercial / Office Fit-out</option>
                   </select>
                 </div>
               </div>

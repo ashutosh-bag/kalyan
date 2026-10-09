@@ -39,8 +39,8 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Patia Villa, Bhubaneswar',
     area: '1,450 sq ft',
     materials: ['Khandagiri Sandstone', 'Burma Teak', 'Acoustic Slatting', 'Concealed LED Coves'],
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80',
-    nightImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo1.png',
+    nightImage: '/images/kalyan/gallery/photo20.png',
     description: 'Sculpted with soaring ceilings, floor-to-ceiling thermal glazing, and an integrated sunken seating pavilion designed for entertaining.',
     hotspots: [
       { x: 26, y: 48, title: 'Khandagiri Sandstone Wall', desc: 'Hand-chiselled local stone with dry joint cladding that captures morning sunlight.' },
@@ -56,7 +56,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Chandrasekharpur Duplex, Bhubaneswar',
     area: '620 sq ft',
     materials: ['Bookmatched Calacatta Gold', 'Smoked Teak', 'Unlacquered Brass', 'Miele Appliances'],
-    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo4.png',
     description: 'A monolithic 4.2-meter bookmatched marble island serving as the architectural centerpiece of the open-plan residence.',
   },
   {
@@ -67,7 +67,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'CDA Sector 9, Cuttack',
     area: '1,100 sq ft',
     materials: ['Honed River Basalt', 'Custom Brass Filigree', 'Cast Terrazzo', 'Warm Cedar'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo19.png',
     description: 'Designed to capture prevailing Mahanadi river breezes with motorized glass pocket doors that dissolve indoor-outdoor thresholds.',
   },
   {
@@ -78,7 +78,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Infocity Penthouse, Bhubaneswar',
     area: '880 sq ft',
     materials: ['Textured Lime Plaster', 'Fluted Teak Headboard', 'Bouclé Upholstery', 'Bronze Glazing'],
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo2.png',
     description: 'A serene haven featuring acoustic plaster walls, ambient perimeter floor washes, and automated linen solar drapery.',
   },
   {
@@ -89,7 +89,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Puri Coastal Villa, Marine Drive',
     area: '480 sq ft',
     materials: ['Laterite Stone', 'Raw Basalt Slates', 'Brushed Gunmetal', 'Living Fern Wall'],
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo15.png',
     description: 'An indoor-outdoor wellness retreat illuminated by an internal bamboo lightwell and rain shower system.',
   },
   {
@@ -100,7 +100,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Saheed Nagar Estate, Bhubaneswar',
     area: '540 sq ft',
     materials: ['Indian Rosewood', 'Solid Brass Framing', 'Cognac Saddle Leather', 'Acoustic Felt'],
-    image: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo6.png',
     description: 'Custom millwork library wall with integrated rolling ladder, discreet humidor, and architectural task lighting.',
   },
   {
@@ -111,7 +111,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Jaydev Vihar Residence, Bhubaneswar',
     area: '720 sq ft',
     materials: ['Solid Monolithic Oak', 'Brushed Champagne Brass', 'Handwoven Odia Silk', 'Fluted Glass'],
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo3.png',
     description: 'Seating for twelve surrounded by bespoke fluted cabinetry, custom temperature-controlled wine display, and botanical reflections.',
   },
   {
@@ -122,28 +122,28 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Patia Luxury Villa, Bhubaneswar',
     area: 'Central Void',
     materials: ['Structural Glass', 'Engineered Teak Treads', 'Concealed Steel Core', 'Micro-cement'],
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/kalyan/gallery/photo11.png',
     description: 'A gravity-defying floating stair sculptural element connecting all three residential tiers with integrated riser illumination.',
   }
 ];
 
 // Marquee Stream Photos (Row 1 and Row 2)
 const STREAM_ROW_1 = [
-  { url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80', title: 'Patia Monolithic Villa Living', loc: 'Bhubaneswar' },
-  { url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80', title: 'Calacatta Marble Culinary Island', loc: 'Bhubaneswar' },
-  { url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', title: 'Mahanadi Riverfront Living Room', loc: 'Cuttack' },
-  { url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80', title: 'Infocity Master Bedroom Sanctuary', loc: 'Bhubaneswar' },
-  { url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80', title: 'Courtyard Minimalist Pavilion', loc: 'Cuttack' },
-  { url: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80', title: 'Sky Duplex Mezzanine Lounge', loc: 'Cuttack' },
+  { url: '/images/kalyan/gallery/photo1.png', title: 'Bhubaneswar Living Lounge', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo4.png', title: 'Modular Chef Kitchen', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo19.png', title: 'Mahanadi Riverfront Living Room', loc: 'Cuttack' },
+  { url: '/images/kalyan/gallery/photo2.png', title: 'Master Bedroom Acoustic Suite', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo7.png', title: '3D Commercial Parlour Design', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo10.png', title: 'Nandan Vihar Duplex Lounge', loc: 'Bhubaneswar' },
 ];
 
 const STREAM_ROW_2 = [
-  { url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80', title: 'Sculpted Artisanal Dining Hall', loc: 'Bhubaneswar' },
-  { url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80', title: 'Laterite Stone Spa Bath', loc: 'Puri' },
-  { url: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80', title: 'Private Executive Library & Joinery', loc: 'Bhubaneswar' },
-  { url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80', title: 'Cantilevered Teak Staircase', loc: 'Bhubaneswar' },
-  { url: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80', title: 'Warm Teak Guest Suite', loc: 'Puri' },
-  { url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80', title: 'Executive Penthouse Study', loc: 'Rourkela' },
+  { url: '/images/kalyan/gallery/photo13.png', title: 'Sundarpada Private Residence', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo16.png', title: 'Koraput Corporate Office Headquarters', loc: 'Koraput' },
+  { url: '/images/kalyan/gallery/photo22.png', title: 'Cuttack Heritage Bungalow Living', loc: 'Cuttack' },
+  { url: '/images/kalyan/gallery/photo6.png', title: 'Fluted Wall & Media Console', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo28.png', title: 'Modern Mandir & Sacred Puja Niche', loc: 'Bhubaneswar' },
+  { url: '/images/kalyan/gallery/photo21.png', title: 'Custom TV Cabinet & Media Storage', loc: 'Cuttack' },
 ];
 
 export default function SpatialShowcase() {

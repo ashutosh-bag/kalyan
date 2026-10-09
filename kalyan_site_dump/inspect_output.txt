@@ -1,0 +1,1866 @@
+
+==============================================
+CHUNK: HomePage-BgbsSmIE.js (Size: 44178 chars)
+==============================================
+Found 240 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] ./OneProject-pPzOi-sx.js
+[3] ./TransitionEffect-BQDln96Q.js
+[4] /assets/aboutimg-9X_Cc2-O.png
+[5] /assets/gg1-DtHpufY2.png
+[6] /assets/gg2-CMv5Ld9X.png
+[7] /assets/kk1-CiuMHIoo.png
+[8] /assets/kk2-1EypKmCq.png
+[9] /assets/oo2-rS0nPjmx.png
+[10] /assets/oo3-CiU3wIec.png
+[11] /assets/oo4-DLB_pEqh.png
+[12] /assets/oo5-D62wu78I.png
+[13] toEdge fromEdge lock unlock
+[14] .${d.trim().replace(/([\.:!+\/])/g,"\\$1").replace(/ /g,".")}
+[15] ${h}-bullet-active
+[16] ${h}-progressbar-fill
+[17] ${h}-progressbar-opposite
+[18] ${h}-horizontal
+[19] ${a==="prev"?"previous":"next"}ElementSibling
+[20] ${a==="prev"?"previous":"next"}ElementSibling
+[21] ${L*(a.dynamicMainBullets+4)}px
+[22] ${a.bulletActiveClass}${k}
+[23] ${a.bulletActiveClass}-main
+[24] ${a.bulletActiveClass}-main
+[25] translate3d(0,0,0) scaleX(${N}) scaleY(${F})
+[26] ${s.params.speed}ms
+[27] <${t.bulletElement} ${s.isElement?'part="bullet"':""} class="${t.bulletClass}"></${t.bulletElement}>
+[28] <span class="${t.currentClass}"></span> / <span class="${t.totalClass}"></span>
+[29] <span class="${t.progressbarFillClass}"></span>
+[30] ${t.modifierClass}${t.type}-dynamic
+[31] [data-swiper-slide-index="${s.realIndex+c}"]
+[32] slideChange update resize observerUpdate
+[33] bg-[#FFF3E9]  overflow-hidden
+[34] max-w-screen-xl lg:mt-16 md:mt-12 sm:mt-12 mt-12 lg:mx-auto md:mx-5 sm:mx-5 mx-0
+[35] flex justify-center items-center
+[36] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[37] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[38] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[39] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[40] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[41] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[42] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[43] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[44] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[45] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[46] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[47] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[48] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[49] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[50] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[51] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[52] ml-[15%] lg:mt-8 mt-5 mb-12
+[53] w-full h-auto opacity-100 transition-opacity duration-300
+[54] w-full h-auto opacity-100 transition-opacity duration-300
+[55] w-full h-auto opacity-100 transition-opacity duration-300
+[56] w-full h-auto opacity-100 transition-opacity duration-300
+[57] w-full h-auto opacity-100 transition-opacity duration-300
+[58] w-full h-auto opacity-100 transition-opacity duration-300
+[59] w-full h-auto opacity-100 transition-opacity duration-300
+[60] w-full h-auto opacity-100 transition-opacity duration-300
+[61] max-w-screen-xl lg:mx-auto md:mx-7 sm:mx-5 lg:mt-24 md:mt-16 mt-12
+[62] lg:text-5xl md:text-4xl text-2xl font-medium
+[63] mt-4 lg:text-base text-sm
+[64] With our projects spanning over the spheres of residential, commercial and corporate construction, we, at Kalyan Studio, aim to deliver excellence and
+[65] mt-4 lg:text-base text-sm
+[66] Learn more about our
+[67] page to understand our values and services.
+[68] max-w-screen-xl lg:mx-auto mx-5 lg:mt-28 md:mt-28 sm:mt-28 mt-20
+[69] flex justify-between items-start lg:gap-10 md:gap-10 lg:flex-row md:flex-row flex-col
+[70] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[71] About Kalyan Design Studio
+[72] w-full h-full opacity-100  object-cover transition-opacity duration-500 ${o.about1?"opacity-0":"opacity-100"}
+[73] lg:text-3xl md:text-3xl sm:text-3xl text-2xl font-bold text-center lg:text-start md:text-start lg:mt-0 md:mt-0 mt-5
+[74] lg:text-lg md:text-sm font-medium lg:w-[40vw] md:w-[35vw] lg:mt-10 md:mt-10 mt-4
+[75] Our full service, residential offering covers every detail of your house's interior designs. From space planning to furnishings, and everything betwee
+[76] lg:text-lg md:text-sm font-medium lg:w-[40vw] md:w-[35vw] lg:mt-7 md:mt-7 mt-4
+[77] At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves. Our po
+[78] lg:text-lg md:text-sm font-medium lg:w-[40vw] md:w-[35vw] lg:mt-7 md:mt-7 mt-4
+[79] Our home interior design services are comprehensive and include everything - from space planning to custom furniture design, lighting design, material
+[80] lg:text-3xl md:text-3xl sm:text-3xl text-2xl font-bold lg:mt-8 md:mt-8 mt-5 text-center lg:text-start md:text-start
+[81] For more inspiration,
+[82] https://g.co/kgs/VwVxACj
+[83] noopener noreferrer
+[84] check out this.
+[85] /assets/img1-CC7S1ZnS.png
+[86] /assets/img2-DGLXbayj.png
+[87] /assets/img3-CT8lRwuI.png
+[88] /assets/img4-MGQ2mDGt.png
+[89] /assets/img5-Bgitb3Bt.png
+[90] /assets/img6-ClJGhyhD.png
+[91] /assets/img7-iZ-qW3CR.png
+[92] /assets/img10-D6Daae-R.png
+[93] /assets/img11-BuAADeBG.png
+[94] /assets/img12-CnGX0D8a.png
+[95] /assets/newimg8-BqfkerF6.png
+[96] /assets/newimg9-XV0W4WBw.png
+[97] /assets/newimg10-DwGVxI1Z.png
+[98] /assets/newbird-Bspfbj9l.gif
+[99] /assets/aaa-CxQn9xkF.gif
+[100] Email sent successfully
+[101] Message sent successfully
+[102] Error sending email:
+[103] Failed to send message
+[104] btn btn-primary lg:mx-9 md:mx-11 sm:mx-8 lg:px-9 md:px-8 md:py-2 sm:py-2 mx-8 px-6 py-2 sm:px-7 mt-2 mb-5 lg:py-2.5 bg-[#FF8526] md:text-xl lg:text-2x
+[105] modal d-block fixed z-[999] bg-opacity-50 bg-black inset-0 overflow-y-auto overflow-x-hidden flex justify-center items-center
+[106] modal-dialog modal-dialog-centered relative p-4 w-full max-w-2xl max-h-full
+[107] modal-content bg-[#FFF3E9] relative rounded-lg shadow
+[108] modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 bg-[#FF8526]
+[109] modal-title lg:text-2xl md:text-2xl text-lg block w-[100%] text-center font-semibold text-white
+[110] Add Your Information
+[111] text-white hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 d
+[112] m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6
+[113] modal-body p-4 md:p-5 space-y-4
+[114] w-full flex flex-col space-y-4
+[115] border border-gray-300 p-3 rounded shadow-md focus-within:ring-2 focus-within:ring-[#FF8526]
+[116] text-sm lg:text-base font-medium
+[117] w-full focus:outline-none bg-transparent
+[118] Enter your Name
+[119] border border-gray-300 p-3 rounded shadow-md focus-within:ring-2 focus-within:ring-[#FF8526]
+[120] text-sm lg:text-base font-medium
+[121] w-full focus:outline-none bg-transparent
+[122] Enter your phone number
+[123] border border-gray-300 p-3 rounded shadow-md focus-within:ring-2 focus-within:ring-[#FF8526]
+[124] text-sm lg:text-base font-medium
+[125] w-full focus:outline-none bg-transparent
+[126] Enter your email address
+[127] border border-gray-300 p-3 rounded shadow-md focus-within:ring-2 focus-within:ring-[#FF8526]
+[128] text-sm lg:text-base font-medium
+[129] mt-2 lg:w-[78vw] w-80 outline-none bg-transparent
+[130] bg-[#FF8526] w-full text-white py-2 rounded font-bold hover:bg-[#FF8526] mt-4
+[131] Kalyan Design Studio - Best Interior Design Company in Bhubaneswar, Odisha
+[132] Interior Design Bhubaneswar, Best Interior Designers in Odisha, Luxury Interior Design Odisha, Home Decor Services Bhubaneswar
+[133] Kalyan Design Studio
+[134] https://kalyandesignstudio.com/
+[135] Kalyan Design Studio - Best Interior Design Services in Bhubaneswar, Odisha
+[136] Located at 3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Kalyan Design Studio provides top-notch interior design solutions tailored to your taste.
+[137] https://kalyandesignstudio.com/assets/logo-BcKVRhIZ.png
+[138] https://kalyandesignstudio.com/
+[139] Kalyan Design Studio
+[140] business:contact_data:street_address
+[141] 3181/5466, Puri-NH Bypass, Baragada
+[142] business:contact_data:locality
+[143] business:contact_data:region
+[144] business:contact_data:postal_code
+[145] business:contact_data:country_name
+[146] business:contact_data:email
+[147] info@kalyandesignstudio.com
+[148] business:contact_data:phone_number
+[149] place:location:latitude
+[150] place:location:longitude
+[151] max-w-screen-xl lg:mx-auto mx-5 lg:mt-16 md:mt-16 sm:mt-20 mt-16
+[152] max-w-screen-xl lg:mx-auto md:mx-14 sm:mx-6 mx-3
+[153] flex justify-center items-center lg:gap-10 gap-3
+[154] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[155] Living Room Interior Design
+[156] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[157] sm:w-10 sm:h-10 w-6 h-6  border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[158] Modern Kitchen Design
+[159] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[160] sm:w-10 sm:h-10 w-6 h-6  border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[161] Modern Kitchen Design
+[162] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[163] absolute overflow-hidden lg:-left-5 md:-left-10 sm:-left-5 -left-4 lg:-mt-64 md:-mt-56 sm:-mt-40 -mt-10 lg:w-40 md:w-32 sm:w-16 sm:h-40 lg:h-52 bg-opa
+[164] Decorative Animation
+[165] flex justify-between items-center
+[166] text-black lg:text-5xl  md:text-4xl sm:text-3xl text-2xl text-center lg:text-start sm:text-start md:text-start font-semibold
+[167] object-cover lg:w-52 md:w-40 sm:w-32 w-28
+[168] Decorative Bird Animation
+[169] flex bg-white items-center font-Poppins rounded-full justify-center
+[170] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[171] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[172] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[173] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[174] /servicesdetailspage/modular_kitchen
+[175] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[176] MODULAR KITCHEN
+[177] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[178] card relative w-auto h-auto cursor-pointer rounded-[10px]
+[179] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[180] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[181] MODULAR KITCHEN
+[182] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[183] /servicesdetailspage/tv_cabinet
+[184] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[185] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[186] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[187] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[188] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[189] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[190] /servicesdetailspage/wardrobe
+[191] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[192] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[193] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[194] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[195] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[196] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[197] /servicesdetailspage/core_house_plan
+[198] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[199] CORE HOUSE PLAN
+[200] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[201] card relative w-auto h-auto cursor-pointer rounded-[10px]
+[202] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[203] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[204] CORE HOUSE PLAN
+[205] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[206] /servicesdetailspage/gypsum_celling
+[207] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[208] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[209] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[210] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[211] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[212] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[213] /servicesdetailspage/3d_interiormodels
+[214] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[215] 3D INTERIOR MODELS
+[216] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[217] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[218] sm:w-10 sm:h-10 w-6 h-6 border-2 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[219] w-full h-full object-cover transition-opacity duration-500 ${d.about1?"opacity-0":"opacity-100"}
+[220] 3D INTERIOR MODELS
+[221] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[222] /servicesdetailspage/pvc_ceiling
+[223] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[224] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[225] lg:mt-20 md:mt-16 mt-10
+[226] text-black lg:text-5xl  md:text-4xl sm:text-3xl text-2xl text-start lg:text-start sm:text-start md:text-start font-semibold
+[227] lg:mt-16 md:mt-10 mt-6 flex items-center justify-evenly lg:hidden md:hidden
+[228] flex justify-center items-center h-full
+[229] Interior Design Package 1
+[230] flex justify-center items-center h-full
+[231] Interior Design Package 2
+[232] flex justify-center items-center h-full
+[233] Interior Design Package 3
+[234] lg:mt-16 md:mt-10 mt-6 items-center justify-between gap-12 lg:flex md:flex hidden
+[235] flex justify-center items-center h-full
+[236] Interior Design Package 1
+[237] flex justify-center items-center h-full
+[238] Interior Design Package 2
+[239] flex justify-center items-center h-full
+[240] Interior Design Package 3
+
+==============================================
+CHUNK: About-8A2Y7KQ0.js (Size: 3326 chars)
+==============================================
+Found 32 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] ./TransitionEffect-BQDln96Q.js
+[3] /assets/about1-DOsQhLi_.png
+[4] /assets/about3-ngrbtyb5.png
+[5] /assets/about4-C1VobmmI.png
+[6] /assets/kalyan.jpg-Bkaws5pr.jpeg
+[7] flex justify-center items-center
+[8] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[9] w-full h-full object-cover transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[10] lg:mt-20 mt-10 md:mt-14 sm:mt-14
+[11] max-w-screen-xl lg:mx-auto mx-5 lg:mt-16 mt-10 md:mt-14 sm:mt-14
+[12] text-3xl font-bold
+[13] grid lg:grid-cols-4 gap-8 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 lg:mt-16 md:mt-12 sm:mt-12 mt-8
+[14] flex flex-col items-center
+[15] text-5xl text-[#FF8526] ri-lightbulb-flash-line
+[16] text-2xl mt-2 font-bold
+[17] mt-2 text-center
+[18] We begin with an exhaustive questionnaire to fully grasp the vision, needs and expectations of the Client. Getting the brief right is key to success o
+[19] flex flex-col items-center
+[20] text-5xl text-[#FF8526]  ri-edit-line
+[21] text-2xl mt-2 font-bold
+[22] mt-2 text-center
+[23] Translating the brief into the design blueprint is the next step. We start with a 2-D floor plan followed by 3-D visualisation of the space. This help
+[24] flex flex-col items-center
+[25] text-5xl text-[#FF8526] ri-megaphone-fill
+[26] text-2xl mt-2 font-bold
+[27] mt-2 text-center
+[28] flex flex-col items-center
+[29] text-5xl text-[#FF8526] ri-key-2-fill
+[30] text-2xl mt-2 font-bold
+[31] mt-2 text-center
+[32] This marks the culmination of an exciting journey for both the client and us as we handover the keys to their new home. A space all set to delight the
+
+==============================================
+CHUNK: Services-DDCxGdDO.js (Size: 9774 chars)
+==============================================
+Found 69 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] ./Accordion-Bns_zlL8.js
+[3] ./TransitionEffect-BQDln96Q.js
+[4] /assets/3DINTERIORMODELS-Bz_sO8Pe.png
+[5] /assets/7th-BwavL1Pi.png
+[6] /assets/project5-CUTtopKF.png
+[7] /assets/GYPSUMCELLING-N_O6msDY.png
+[8] /assets/MODULARKITCHEN-DIgipoZG.png
+[9] /assets/TVCABINEI-CzWsC3Up.png
+[10] /assets/Wardrobe-DUVZi608.png
+[11] max-w-screen-xl lg:mx-auto mx-5 lg:mt-20 md:mt-14 sm:mt-24 mt-20
+[12] text-center lg:text-3xl md:text-2xl sm:text-2xl text-xl font-medium
+[13] Interior Design services offered by
+[14] Kalyan Design Studios
+[15] mt-4 lg:text-base md:text-base sm:text-base text-xs text-center font-medium
+[16] flex justify-center lg:gap-6 md:gap-6 sm:gap-6 gap-2 mt-10 lg:mt-16 md:mt-12 items-start
+[17] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[18] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[19] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[20] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[21] /servicesdetailspage/modular_kitchen
+[22] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[23] MODULAR KITCHEN
+[24] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[25] card relative w-auto h-auto  cursor-pointer rounded-[10px] lg:mt-6 md:mt-6 sm:mt-6 mt-3
+[26] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[27] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[28] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[29] /servicesdetailspage/3d_interiormodels
+[30] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[31] 3D INTERIOR MODELS
+[32] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[33] card relative w-auto h-auto cursor-pointer rounded-[10px]
+[34] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[35] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[36] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[37] /servicesdetailspage/tv_cabinet
+[38] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[39] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[40] card relative w-auto h-auto cursor-pointer rounded-[10px] lg:mt-6 md:mt-6 sm:mt-6 mt-2
+[41] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[42] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[43] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[44] /servicesdetailspage/gypsum_celling
+[45] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[46] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[47] card relative w-auto h-auto  cursor-pointer rounded-[10px] lg:mt-6 md:mt-6 sm:mt-6 mt-2
+[48] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[49] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[50] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[51] /servicesdetailspage/core_house_plan
+[52] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[53] CORE HOUSE PLAN
+[54] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[55] card relative w-auto h-auto  cursor-pointer rounded-[10px]
+[56] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[57] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[58] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[59] /servicesdetailspage/wardrobe
+[60] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[61] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[62] card relative w-auto h-auto  cursor-pointer rounded-[10px] lg:mt-6 md:mt-6 sm:mt-6 mt-3
+[63] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[64] w-full h-full object-cover opacity-100 hover:opacity-40 transition-opacity duration-500 ${t.about1?"opacity-0":"opacity-100"}
+[65] second-content absolute inset-0 flex justify-center items-center opacity-0 h-full transition-all duration-400 text-0 hover:opacity-100 hover:h-full ho
+[66] /servicesdetailspage/pvc_ceiling
+[67] lg:text-2xl md:text-xl sm:text-base text-[8px]
+[68] flex justify-center items-center lg:text-9xl md:text-8xl sm:text-8xl text-5xl
+[69] lg:mt-20 md:mt-10 mt-10 text-3xl lg:text-4xl md:text-4xl font-bold
+
+==============================================
+CHUNK: ServicesDetailsPage-BnoqAY4x.js (Size: 86356 chars)
+==============================================
+Found 165 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] ./OneProject-pPzOi-sx.js
+[3] ./Accordion-Bns_zlL8.js
+[4] this hasn't been initialised - super() hasn't been called
+[5] Linear,Quad,Cubic,Quart,Quint,Strong
+[6] onComplete,onUpdate,onStart,onRepeat,onReverseComplete,onInterrupt
+[7] not eligible for reset
+[8] repeat,repeatDelay,yoyo,repeatRefresh,yoyoEase,autoRevert
+[9] ,id,stagger,delay,duration,paused,scrollTrigger
+[10] not found. https://gsap.com
+[11] staggerTo,staggerFrom,staggerFromTo
+[12] parent,duration,ease,delay,overwrite,runBackwards,startAt,yoyo,immediateRender,repeat,repeatDelay,data,paused,reversed,lazy,callbackScope,stringFilter
+[13] effect requires
+[14] to,from,fromTo,delayedCall,set,killTweensOf
+[15] opacity,visibility
+[16] O,Moz,ms,Ms,Webkit
+[17] border-width:0;line-height:0;position:absolute;padding:0
+[18] matrix(1, 0, 0, 1, 0, 0)
+[19] translate(0, 0)
+[20] perspective,force3D,transformOrigin,svgOrigin
+[21] padding,margin,Width,Radius
+[22] x,y,z,scale,scaleX,scaleY,xPercent,yPercent
+[23] rotation,rotationX,rotationY,skewX,skewY
+[24] transform,transformOrigin,svgOrigin,force3D,smoothOrigin,transformPerspective
+[25] 0:translateX,1:translateY,2:translateZ,8:rotate,8:rotationZ,8:rotateZ,9:rotateX,10:rotateY
+[26] x,y,z,top,right,bottom,left,width,height,fontSize,padding,margin,perspective
+[27] /assets/new1-Do0z5gfM.png
+[28] /assets/new5-jo7oswbv.png
+[29] /assets/new7-BczNz5kV.png
+[30] /assets/new10-CvJho01g.png
+[31] /assets/new11-USki4gVq.png
+[32] /assets/new12-UjOFCwn0.png
+[33] /assets/new13-DCDKJfUD.png
+[34] /assets/photo4-DO-7sOiP.png
+[35] /assets/photo5-B4vPDWUT.png
+[36] /assets/photo6-D4Qdy94s.png
+[37] /assets/photo7-BLsl1zq7.png
+[38] /assets/photo9-CPynoyb4.png
+[39] /assets/photo10-BeAMB-Ro.png
+[40] /assets/photo11-D5dWPZXN.png
+[41] /assets/photo12-jauFfmAh.png
+[42] /assets/photo13-3SNEt4Oe.png
+[43] /assets/photo14-BgoPN5F-.png
+[44] /assets/photo16-CYtCv23t.png
+[45] /assets/photo17-BcWVtUp5.png
+[46] /assets/photo18-DnKBpmCD.png
+[47] /assets/photo19-CWrnK6-U.png
+[48] /assets/photo20-B1HYX0M0.png
+[49] /assets/photo17-BcWVtUp5.png
+[50] /assets/photo23-BAqyUyvm.png
+[51] /assets/photo24-C1oNOuSa.png
+[52] /assets/photo25-CmpwNA7A.png
+[53] /assets/photo26-D0hZEw2M.png
+[54] /assets/photo27-DcDX3owB.png
+[55] /assets/photo28-OuLaQ5VW.png
+[56] /assets/photo29-DbxMv2T1.png
+[57] /assets/photo30-C5w-okTY.png
+[58] /assets/photo32-Bfmi9rHy.png
+[59] /assets/photo33-DrFHLto1.png
+[60] /assets/photo34-BfdaLEFZ.png
+[61] /assets/photo35-P6oLltOY.png
+[62] /assets/photo36-CCLSmKz-.png
+[63] /assets/photo37-DLD0vomf.png
+[64] /assets/photo39-C-T0vV3C.png
+[65] /assets/photo40-B7f1fgJx.png
+[66] /assets/photo41-Cl2TRRN1.png
+[67] /assets/photo42-qk_N6HVL.png
+[68] /assets/photo43-23jucv_1.png
+[69] /assets/photo44-jcAJGBfo.png
+[70] /assets/photo41-Cl2TRRN1.png
+[71] A gypsum ceiling, also known as a drywall ceiling or plasterboard ceiling, is a type of ceiling made from gypsum plasterboards. These are prefabricate
+[72] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[73] Improved aesthetics:
+[74] Gypsum ceilings can be painted or finished in a variety of ways to create a desired look. They can also be used to create different levels and soffits
+[75] Better acoustics::
+[76] Gypsum ceilings can help to absorb sound, which can improve the acoustics of a room. This is especially beneficial in large, open spaces or rooms with
+[77] Increased energy efficiency:
+[78] Gypsum ceilings can help to insulate a room, which can help to reduce heating and cooling costs.
+[79] A TV cabinet is a piece of furniture specifically designed to house a television. It typically has a flat top surface on which the TV can be placed, a
+[80] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[81] These cabinets are designed to sit low to the ground, often just a few inches high. They are a good option for rooms with a fireplace or other focal p
+[82] High cabinets can provide more storage space, but they can also make a room feel smaller. They are a good option for rooms with limited floor space.
+[83] Corner cabinets:
+[84] Corner cabinets are a great way to maximize space in a small living room. They can be used to house a TV, as well as other electronics and media.
+[85] MODULAR KITCHEN
+[86] The kitchen is often one of the most used rooms in the house. The kitchen is the heartbeat of all festivity, a core to every family gathering, and the
+[87] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[88] Modular kitchens can be customized to fit any size or shape space. You can choose from a variety of cabinets, countertops, and appliances to create a 
+[89] Modular kitchens are a relatively affordable option compared to custom-designed kitchens.
+[90] The name of wardrobe was then given to a room in which the wall-space was filled with closets and lockers, the drawer being a comparatively modern inv
+[91] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[92] Ensure there's enough room for hanging longer items like coats, dresses, and trousers. Use double rods if space allows for maximizing hanging capacity
+[93] Personalization:
+[94] Customize the interior layout based on your specific storage needs and the types of clothing and accessories you have.
+[95] Consider adding a mirror on the inside of a door for convenience when trying on clothes.
+[96] CORE HOUSE PLAN
+[97] A gypsum ceiling, also known as a drywall ceiling or plasterboard ceiling, is a type of ceiling made from gypsum plasterboards. These are prefabricate
+[98] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[99] This outlines the layout of the house, including room dimensions, the arrangement of rooms (such as bedrooms, living areas, kitchen, bathrooms), and t
+[100] This plan shows the entire property and its context, including the house, driveway, landscaping, and other features. It may also include topographical
+[101] These are drawings that show the exterior views of the house from all sides, including the front, back, and sides. They illustrate the architectural d
+[102] 3D INTERIOR MODELS
+[103] 3D models are a potent tool for interior designers to effectively communicate designs to their clients via three-dimensional visualization, increasing
+[104] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[105] Materials and Textures:
+[106] Apply textures and materials to surfaces to achieve realistic appearances for walls, floors, fabrics, and other finishes.
+[107] Architecture and construction:
+[108] Clients and designers can see a realistic representation of the interior design before construction or renovation begins.
+[109] Since the PVC ceiling panels are made of plastic, they may get damaged when subjected to heat. Hence, avoid using heat-emitting bulbs for any ceiling-
+[110] We aimed to make the compact space look spacious by utilizing natural light and open-ended layouts with a finer eye to the details,
+[111] Materials and Textures::
+[112] Apply textures and materials to surfaces to achieve realistic appearances for walls, floors, fabrics, and other finishes.
+[113] Low Maintenance:
+[114] They are easy to clean and maintain. Regular wiping with a damp cloth is usually sufficient to keep them looking new.
+[115] They come in a variety of colors, designs, and textures, allowing for flexibility in interior design choices. They can mimic the look of wood, metal, 
+[116] /assets/img2-C7NY-vPE.png
+[117] /assets/img4-BeYc8g_g.png
+[118] /assets/img6-CrG3VEZB.png
+[119] /assets/newnew-D3lh-aLy.gif
+[120] max-w-screen-xl lg:mx-auto mx-5 lg:mt-24 md:mt-16 mt-24
+[121] font-bold lg:text-4xl md:text-3xl text-2xl
+[122] lg:mt-6 md:mt-6 sm:mt-6 mt-3  font-medium lg:text-xl md:text-base sm:text-base tracking-wider
+[123] max-w-screen-xl overflow-hidden lg:mx-auto mx-5 flex justify-end
+[124] lg:w-32  md:w-24 sm:w-24 w-16 object-cover
+[125] lg:-mt-4 md:-mt-4 -mt-2
+[126] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[127] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[128] max-w-screen-xl lg:mx-auto mx-5 mt-8 lg:mt-16 md:mt-16 sm:mt-16
+[129] lg:text-3xl font-courgette text-center tracking-wider
+[130] max-w-screen-xl lg:mx-auto mx-5
+[131] font-bold lg:text-4xl md:text-3xl text-2xl mt-12 lg:mt-20
+[132] mt-6 font-medium lg:text-lg md:text-base sm:text-base
+[133] hidden absolute right-0 -mt-52 lg:block md:block sm:block
+[134] lg:w-32 md:w-20 sm:w-20
+[135] max-w-screen-xl lg:mx-auto mx-5
+[136] flex justify-between md:mt-10 mt-10 lg:gap-8 md:gap-5 sm:gap-5 gap-3 items-center
+[137] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[138] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[139] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[140] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[141] max-w-screen-xl lg:mx-auto mx-5
+[142] font-bold lg:text-4xl md:text-3xl text-2xl mt-12 lg:mt-20
+[143] mt-4 font-medium lg:text-lg md:text-base sm:text-base
+[144] max-w-screen-xl lg:mx-auto mx-5
+[145] flex mt-10 justify-between lg:gap-8 md:gap-5 sm:gap-5 gap-3 items-center
+[146] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[147] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[148] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[149] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[150] flex justify-between items-center mt-12
+[151] font-bold lg:text-4xl md:text-3xl text-2xl
+[152] mt-4 font-medium lg:text-lg md:text-base sm:text-base
+[153] hidden overflow-hidden lg:block md:block sm:block
+[154] lg:w-16 pt-10 mx-10 w-10
+[155] flex justify-between mt-8 lg:mt-0 md:mt-0 sm:mt-0 lg:gap-8 md:gap-5 sm:gap-5 gap-3 items-center
+[156] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[157] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[158] w-10 h-10 border-4 border-[#FF8526] border-t-transparent rounded-full animate-spin
+[159] w-full h-full object-cover transition-opacity duration-500 ${r.about1?"opacity-0":"opacity-100"}
+[160] max-w-screen-xl lg:mx-auto mx-5 mt-12
+[161] flex justify-between items-center
+[162] font-bold lg:text-3xl md:text-3xl sm:text-3xl text-2xl
+[163] Our Latest Project
+[164] lg:w-44 md:w-36 sm:w-32 w-20
+[165] text-3xl lg:text-4xl md:text-4xl font-bold lg:mt-16 mb-8
+
+==============================================
+CHUNK: Projects-CUr6-c60.js (Size: 241120 chars)
+==============================================
+Found 586 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] ./TransitionEffect-BQDln96Q.js
+[3] ./Accordion-Bns_zlL8.js
+[4] react.strict_mode
+[5] react.server_context
+[6] react.forward_ref
+[7] react.suspense_list
+[8] react.offscreen
+[9] react.module.reference
+[10] @babel/helpers - typeof
+[11] 1 argument required, but only 0 present.
+[12] parameter 1 is not of type "Element".
+[13] 1 argument required, but only 0 present.
+[14] parameter 1 is not of type "Element".
+[15] 1 argument required, but only 0 present.
+[16] this hasn't been initialised - super() hasn't been called
+[17] Invalid attempt to spread non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.
+[18] Invalid attempt to destructure non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.
+[19] Warning: There may be circular references
+[20] Previous 5 Pages
+[21] Previous 3 Pages
+[22] Choose a decade
+[23] M/D/YYYY HH:mm:ss
+[24] Previous month (PageUp)
+[25] Next month (PageDown)
+[26] Last year (Control + left)
+[27] Next year (Control + right)
+[28] ${label} is not a valid ${type}
+[29] Select all items
+[30] Search in filters
+[31] Select current page
+[32] Invert current page
+[33] Select all data
+[34] Click to sort descending
+[35] Click to sort ascending
+[36] Click to cancel sorting
+[37] Select current page
+[38] Remove current page
+[39] Select all data
+[40] Deselect all data
+[41] Remove all data
+[42] Invert current page
+[43] Field validation error for ${label}
+[44] Please enter ${label}
+[45] ${label} must be one of [${enum}]
+[46] ${label} cannot be a blank character
+[47] ${label} date format is invalid
+[48] ${label} cannot be converted to a date
+[49] ${label} is an invalid date
+[50] ${label} must be ${len} characters
+[51] ${label} must be at least ${min} characters
+[52] ${label} must be up to ${max} characters
+[53] ${label} must be between ${min}-${max} characters
+[54] ${label} must be equal to ${len}
+[55] ${label} must be minimum ${min}
+[56] ${label} must be maximum ${max}
+[57] ${label} must be between ${min}-${max}
+[58] Must be ${len} ${label}
+[59] At least ${min} ${label}
+[60] At most ${max} ${label}
+[61] The amount of ${label} must be between ${min}-${max}
+[62] ${label} does not match the pattern ${pattern}
+[63] QR code expired
+[64] [-\\+]?\\d*\\.\\d+%?
+[65] -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe
+[66] 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace
+[67] cubic-bezier(0.08, 0.82, 0.17, 1)
+[68] cubic-bezier(0.78, 0.14, 0.15, 0.86)
+[69] cubic-bezier(0.215, 0.61, 0.355, 1)
+[70] cubic-bezier(0.645, 0.045, 0.355, 1)
+[71] cubic-bezier(0.12, 0.4, 0.29, 1.46)
+[72] cubic-bezier(0.71, -0.46, 0.88, 0.6)
+[73] cubic-bezier(0.755, 0.05, 0.855, 0.06)
+[74] cubic-bezier(0.23, 1, 0.32, 1)
+[75] ${(r+t).toFixed(1)}s
+[76] ${(r+t*2).toFixed(1)}s
+[77] ${(r+t*3).toFixed(1)}s
+[78] -ant-${Date.now()}-${Math.random()}
+[79] ${l}-color-disabled
+[80] ${l}-color-hover
+[81] ${l}-color-active
+[82] ${l}-color-outline
+[83] ${l}-color-deprecated-bg
+[84] ${l}-color-deprecated-border
+[85] :root {
+    ${Object.keys(r).map(o=>
+[86] ${ef}-dynamic-theme
+[87] obj_${this.getObjectID(a)}
+[88] ${typeof a}_${a}
+[89] color ${e.motionDurationSlow}
+[90] &:active, &:hover
+[91] [class^="${t}"], [class*=" ${t}"]
+[92] &::before, &::after
+[93] ${fe(e.lineWidthFocus)} solid ${e.colorPrimaryBorder}
+[94] outline-offset 0s, outline 0s
+[95] &:focus-visible
+[96] max(${r.map(a=>fe(a)).join(",")})
+[97] min(${r.map(a=>fe(a)).join(",")})
+[98] .${e} .${e}-icon
+[99] ${[t,e.replace(/([A-Z]+)([A-Z][a-z]+)/g,"$1-$2").replace(/([a-z])([A-Z])/g,"$1-$2")].filter(Boolean).join("-")}
+[100] var(${qn(H,Wo(i,h.prefix))})
+[101] ${a}${f.slice(0,1).toUpperCase()}${f.slice(1)}
+[102] css-var-${o.replace(/:/g,"")}
+[103] [@ant-design/icons]
+[104] @ant-design-icons
+[105] icon should be icon definiton, but got
+[106] ::-webkit-scrollbar
+[107] ::-webkit-scrollbar {
+[108] html body {
+  overflow-y: hidden;
+[109] width: calc(100% -
+[110] ${i}${e}-enter,
+      ${i}${e}-appear
+[111] ${i}${e}-enter${e}-enter-active,
+      ${i}${e}-appear${e}-appear-active
+[112] ${i}${e}-leave${e}-leave-active
+[113] ${n}-enter,
+      ${n}-appear
+[114] [data-menu-id='
+[115] `attribute` of Menu.Item is deprecated. Please pass attribute directly.
+[116] translateX(50%)
+[117] translateX(-50%)
+[118] translateX(-100%)
+[119] translateY(-50%)
+[120] translateY(-100%)
+[121] :(a==null?void 0:a.addAriaLabel)||
+[122] ,{event:l})}},n.addIcon||
+[123] &&!s.isValidElement(a)?o=a:o.right=a,r===
+[124] &&(i=o.right),r===
+[125] &&(i=o.left),i?s.createElement(
+[126] ),id:I,tabIndex:-1,role:
+[127] :k,selectedKeys:[M],
+[128] ).concat(te),role:
+[129] ).concat(te),disabled:Z},s.createElement(
+[130] ,null,U),ne&&s.createElement(
+[131] ,m);a.length||(z.visibility=
+[132] ,z.order=1);var V=Se(O({},
+[133] ),h)),q=o?null:s.createElement(xm,se({prefixCls:R,overlay:P,visible:a.length?b:!1,onVisibleChange:w,overlayClassName:Se(V,x),mouseEnterDelay:.1,mouseL
+[134] ?s.createElement(
+[135] ,null,l):l},[l,v]),E=s.createElement(
+[136] )},v),l&&j),S&&s.createElement(
+[137] })}),P=N(F,2),L=P[0],W=P[1],z=s.useState([0,0]),V=N(z,2),q=V[0],G=V[1],Y=s.useState([0,0]),Z=N(Y,2),ee=Z[0],te=Z[1],U=s.useState([0,0]),ne=N(U,2),de=n
+[138] .concat(hc(Tt),
+[139] ,{ref:Rn(t,b),role:
+[140] ,extra:u,prefixCls:g}),s.createElement(fr,{onResize:ce},s.createElement(
+[141] ),lt)),ref:E},s.createElement(fr,{onResize:ce},s.createElement(
+[142] ),transition:tt?
+[143] :null})}),s.createElement(
+[144] ).concat(l),role:
+[145] ,tabIndex:o?0:-1,
+[146] ),n),ref:t},u)}),bh=[
+[147] ))},s.createElement(
+[148] ).concat(i),O({},
+[149] ?e:{}),t.tabPaneMotion&&t.tabPane===void 0&&(t.tabPane=!0),!t.tabPaneMotion&&t.tabPane&&(t.tabPane=!1),t}var Eh=[
+[150] in X})},[o]),R=l===
+[151] ).concat(h),O(O(O({},
+[152] ?t:{}),r.tabPane&&(r.tabPaneMotion=Object.assign(Object.assign({},Nh),{motionName:bv(e,
+[153] :{opacity:1,transition:`opacity ${r}`}},
+[154] :{opacity:0,transition:`opacity ${r}`}}}}},[ns(e,
+[155] )]]},$h=e=>{const{componentCls:t,tabsCardPadding:r,cardBg:n,cardGutter:a,colorBorderSecondary:i,itemSelectedColor:o}=e;return{[`${t}-card`]:{[`> ${t}-
+[156] }},[`&${t}-top, &${t}-bottom`]:{[`> ${t}-nav, > div > ${t}-nav`]:{[`${t}-tab + ${t}-tab`]:{marginLeft:{_skip_check_:!0,value:fe(a)}}}},[`&${t}-top`]:{
+[157] ,top:-9999,left:{_skip_check_:!0,value:-9999},zIndex:e.zIndexPopup,display:
+[158] },[`${t}-dropdown-menu`]:{maxHeight:e.tabsDropdownHeight,margin:0,padding:`${fe(n)} 0`,overflowX:
+[159] ,textAlign:{_skip_check_:!0,value:
+[160] },listStyleType:
+[161] ,backgroundColor:e.colorBgContainer,backgroundClip:
+[162] ,borderRadius:e.borderRadiusLG,outline:
+[163] ,boxShadow:e.boxShadowSecondary,
+[164] :Object.assign(Object.assign({},vf),{display:
+[165] ,minWidth:e.tabsDropdownWidth,margin:0,padding:`${fe(e.paddingXXS)} ${fe(e.paddingSM)}`,color:e.colorText,fontWeight:
+[166] ,fontSize:e.fontSize,lineHeight:e.lineHeight,cursor:
+[167] ,transition:`all ${e.motionDurationSlow}`,
+[168] :{flex:1,whiteSpace:
+[169] ,marginLeft:{_skip_check_:!0,value:e.marginSM},color:e.colorTextDescription,fontSize:e.fontSizeSM,background:
+[170] ,border:0,cursor:
+[171] :{background:e.controlItemBgHover},
+[172] :{color:e.colorTextDisabled,background:
+[173] }}})}})}},kh=e=>{const{componentCls:t,margin:r,colorBorderSecondary:n,horizontalMargin:a,verticalItemPadding:i,verticalItemMargin:o,calc:l}=e;return{[
+[174] ,[`> ${t}-nav, > div > ${t}-nav`]:{margin:a,
+[175] ,right:{_skip_check_:!0,value:0},left:{_skip_check_:!0,value:0},borderBottom:`${fe(e.lineWidth)} ${e.lineType} ${n}`,content:
+[176] },[`${t}-ink-bar`]:{height:e.lineWidthBold,
+[177] :{transition:`width ${e.motionDurationSlow}, left ${e.motionDurationSlow},
+            right ${e.motionDurationSlow}`}},[`${t}-nav-wrap`]:{
+[178] :{top:0,bottom:0,width:e.controlHeight},
+[179] :{left:{_skip_check_:!0,value:0},boxShadow:e.boxShadowTabsOverflowLeft},
+[180] :{right:{_skip_check_:!0,value:0},boxShadow:e.boxShadowTabsOverflowRight},[`&${t}-nav-wrap-ping-left::before`]:{opacity:1},[`&${t}-nav-wrap-ping-right
+[181] :{bottom:0},[`${t}-ink-bar`]:{bottom:0}}},[`${t}-bottom`]:{[`> ${t}-nav, > div > ${t}-nav`]:{order:1,marginTop:r,marginBottom:0,
+[182] :{top:0},[`${t}-ink-bar`]:{top:0}},[`> ${t}-content-holder, > div > ${t}-content-holder`]:{order:0}},[`${t}-left, ${t}-right`]:{[`> ${t}-nav, > div > 
+[183] ,minWidth:l(e.controlHeight).mul(1.25).equal(),[`${t}-tab`]:{padding:i,textAlign:
+[184] },[`${t}-tab + ${t}-tab`]:{margin:o},[`${t}-nav-wrap`]:{flexDirection:
+[185] :{right:{_skip_check_:!0,value:0},left:{_skip_check_:!0,value:0},height:e.controlHeight},
+[186] :{top:0,boxShadow:e.boxShadowTabsOverflowTop},
+[187] :{bottom:0,boxShadow:e.boxShadowTabsOverflowBottom},[`&${t}-nav-wrap-ping-top::before`]:{opacity:1},[`&${t}-nav-wrap-ping-bottom::after`]:{opacity:1}}
+[188] :{transition:`height ${e.motionDurationSlow}, top ${e.motionDurationSlow}`}},[`${t}-nav-list, ${t}-nav-operations`]:{flex:
+[189] ,flexDirection:
+[190] }}},[`${t}-left`]:{[`> ${t}-nav, > div > ${t}-nav`]:{[`${t}-ink-bar`]:{right:{_skip_check_:!0,value:0}}},[`> ${t}-content-holder, > div > ${t}-content
+[191] :{[`> ${t}-nav`]:{[`${t}-tab`]:{padding:a,fontSize:e.titleFontSizeSM}}},
+[192] :{[`> ${t}-nav`]:{[`${t}-tab`]:{padding:i,fontSize:e.titleFontSizeLG}}}},[`${t}-card`]:{[`&${t}-small`]:{[`> ${t}-nav`]:{[`${t}-tab`]:{padding:r}},[`&
+[193] ,WebkitTouchCallout:
+[194] ,WebkitTapHighlightColor:
+[195] ,padding:o,fontSize:e.titleFontSize,background:
+[196] ,border:0,outline:
+[197] :Object.assign({
+[198] :{color:r}},Rl(e)),
+[199] ,transition:`all ${e.motionDurationSlow}`,[`${d}-icon:not(:last-child)`]:{marginInlineEnd:e.marginSM}},
+[200] ,marginRight:{_skip_check_:!0,value:e.calc(e.marginXXS).mul(-1).equal()},marginLeft:{_skip_check_:!0,value:e.marginXS},color:e.colorTextDescription,fo
+[201] ,transition:`all ${e.motionDurationSlow}`,
+[202] :{color:e.colorTextHeading}},
+[203] :{color:n},[`&${d}-active ${d}-btn`]:{color:l,textShadow:e.tabsActiveTextShadow},[`&${d}-disabled`]:{color:e.colorTextDisabled,cursor:
+[204] },[`&${d}-disabled ${d}-btn, &${d}-disabled ${t}-remove`]:{
+[205] :{color:e.colorTextDisabled}},[`& ${d}-remove ${a}`]:{margin:0},[`${a}:not(:last-child)`]:{marginRight:{_skip_check_:!0,value:e.marginSM}}},[`${d} + $
+[206] ,[`${t}-nav`]:{[`${t}-tab`]:{margin:{_skip_check_:!0,value:r},[`${t}-tab:last-of-type`]:{marginLeft:{_skip_check_:!0,value:0}},[n]:{marginRight:{_skip
+[207] },[`${t}-menu-item`]:{[`${t}-dropdown-rtl`]:{textAlign:{_skip_check_:!0,value:
+[208] }}}}},Dh=e=>{const{componentCls:t,tabsCardPadding:r,cardHeight:n,cardGutter:a,itemHoverColor:i,itemActiveColor:o,colorBorderSecondary:l}=e;return{[t]:
+[209] ,[`> ${t}-nav, > div > ${t}-nav`]:{position:
+[210] ,[`${t}-nav-wrap`]:{position:
+[211] ,zIndex:1,opacity:0,transition:`opacity ${e.motionDurationSlow}`,content:
+[212] ,pointerEvents:
+[213] }},[`${t}-nav-list`]:{position:
+[214] ,transition:`opacity ${e.motionDurationSlow}`},[`${t}-nav-operations`]:{display:
+[215] },[`${t}-nav-operations-hidden`]:{position:
+[216] ,pointerEvents:
+[217] },[`${t}-nav-more`]:{position:
+[218] ,padding:r,background:
+[219] ,border:0,color:e.colorText,
+[220] ,right:{_skip_check_:!0,value:0},bottom:0,left:{_skip_check_:!0,value:0},height:e.calc(e.controlHeightLG).div(8).equal(),transform:
+[221] }},[`${t}-nav-add`]:Object.assign({minWidth:n,minHeight:n,marginLeft:{_skip_check_:!0,value:a},padding:`0 ${fe(e.paddingXS)}`,background:
+[222] ,border:`${fe(e.lineWidth)} ${e.lineType} ${l}`,borderRadius:`${fe(e.borderRadiusLG)} ${fe(e.borderRadiusLG)} 0 0`,outline:
+[223] ,color:e.colorText,transition:`all ${e.motionDurationSlow} ${e.motionEaseInOut}`,
+[224] :{color:o}},Rl(e))},[`${t}-extra-content`]:{flex:
+[225] },[`${t}-ink-bar`]:{position:
+[226] ,background:e.inkBarColor,pointerEvents:
+[227] }}),Oh(e)),{[`${t}-content`]:{position:
+[228] },[`${t}-content-holder`]:{flex:
+[229] ,minWidth:0,minHeight:0},[`${t}-tabpane`]:{outline:
+[230] }}}),[`${t}-centered`]:{[`> ${t}-nav, > div > ${t}-nav`]:{[`${t}-nav-wrap`]:{[`&:not([class*='${t}-nav-wrap-ping'])`]:{justifyContent:
+[231] ,horizontalItemMarginRTL:
+[232] ,e=>{const t=ro(e,{tabsCardPadding:e.cardPadding,dropdownEdgeChildVerticalPadding:e.paddingXXS,tabsActiveTextShadow:
+[233] ]),{prefixCls:H}=k,{direction:F,tabs:P,getPrefixCls:L,getPopupContainer:W}=s.useContext(Mn),z=L(
+[234] ,H),V=pv(z),[q,G,Y]=Fh(z,V);let Z;m===
+[235] &&(Z={onEdit:(he,Ke)=>{let{key:X,event:je}=Ke;C==null||C(he===
+[236] ].includes(m),[`${z}-editable-card`]:m===
+[237] ,children:[c.jsx(yc,{}),c.jsxs(
+[238] ,children:[c.jsxs(
+[239] ,children:c.jsxs(uo,{defaultActiveKey:
+[240] ,children:[c.jsxs(Ns,{tab:c.jsx(
+[241] }),children:[c.jsxs(
+[242] ,children:[c.jsxs(
+[243] ,children:[c.jsxs(
+[244] ,children:[c.jsx(
+[245] ,children:c.jsx(
+[246] ,children:c.jsxs(
+[247] ,children:[e.about1&&c.jsx(
+[248] }`,onLoad:()=>r(
+[249] })]})})}),c.jsx(
+[250] ,children:c.jsx(
+[251] ,{children:c.jsx(
+[252] ,children:c.jsx(
+[253] })})})})]}),c.jsxs(
+[254] ,children:[c.jsx(
+[255] ,children:c.jsx(
+[256] ,children:c.jsxs(
+[257] ,children:[e.about1&&c.jsx(
+[258] }`,onLoad:()=>r(
+[259] })]})})}),c.jsx(
+[260] ,children:c.jsx(
+[261] ,{children:c.jsx(
+[262] ,children:c.jsx(
+[263] })})})})]})]}),c.jsxs(
+[264] ,children:[c.jsxs(
+[265] ,children:[c.jsx(
+[266] ,children:c.jsx(
+[267] ,children:c.jsx(
+[268] ,children:c.jsx(
+[269] ,{children:c.jsx(
+[270] ,children:c.jsx(
+[271] })})})})]}),c.jsxs(
+[272] ,children:[c.jsx(
+[273] ,children:c.jsx(
+[274] ,children:c.jsx(
+[275] ,children:c.jsx(
+[276] ,{children:c.jsx(
+[277] ,children:c.jsx(
+[278] })})})})]}),c.jsxs(
+[279] ,children:[c.jsx(
+[280] ,children:c.jsx(
+[281] ,children:c.jsx(
+[282] ,children:c.jsx(
+[283] ,{children:c.jsx(
+[284] ,children:c.jsx(
+[285] })})})})]})]}),c.jsxs(
+[286] ,children:[c.jsxs(
+[287] ,children:[c.jsx(
+[288] ,children:c.jsx(
+[289] ,children:c.jsxs(
+[290] ,children:[e.about1&&c.jsx(
+[291] }`,onLoad:()=>r(
+[292] })]})})}),c.jsx(
+[293] ,children:c.jsx(
+[294] ,{children:c.jsx(
+[295] ,children:c.jsx(
+[296] })})})})]}),c.jsxs(
+[297] ,children:[c.jsx(
+[298] ,children:c.jsx(
+[299] ,children:c.jsxs(
+[300] ,children:[e.about1&&c.jsx(
+[301] }`,onLoad:()=>r(
+[302] })]})})}),c.jsx(
+[303] ,children:c.jsx(
+[304] ,{children:c.jsx(
+[305] ,children:c.jsx(
+[306] })})})})]})]})]}),c.jsxs(
+[307] ,children:[c.jsxs(
+[308] ,children:[c.jsxs(
+[309] ,children:[c.jsx(
+[310] ,children:c.jsx(
+[311] ,children:c.jsx(
+[312] ,children:c.jsx(
+[313] ,{children:c.jsx(
+[314] ,children:c.jsx(
+[315] })})})})]}),c.jsxs(
+[316] ,children:[c.jsx(
+[317] ,children:c.jsx(
+[318] ,children:c.jsx(
+[319] ,children:c.jsx(
+[320] ,{children:c.jsx(
+[321] ,children:c.jsx(
+[322] })})})})]})]}),c.jsxs(
+[323] ,children:[c.jsxs(
+[324] ,children:[c.jsx(
+[325] ,children:c.jsx(
+[326] ,children:c.jsx(
+[327] ,children:c.jsx(
+[328] ,{children:c.jsx(
+[329] ,children:c.jsx(
+[330] })})})})]}),c.jsxs(
+[331] ,children:[c.jsx(
+[332] ,children:c.jsx(
+[333] ,children:c.jsx(
+[334] ,children:c.jsx(
+[335] ,{children:c.jsx(
+[336] ,children:c.jsx(
+[337] })})})})]}),c.jsxs(
+[338] ,children:[c.jsx(
+[339] ,children:c.jsx(
+[340] ,children:c.jsx(
+[341] ,children:c.jsx(
+[342] ,{children:c.jsx(
+[343] ,children:c.jsx(
+[344] })})})})]})]}),c.jsxs(
+[345] ,children:[c.jsxs(
+[346] ,children:[c.jsx(
+[347] ,children:c.jsx(
+[348] ,children:c.jsx(
+[349] ,children:c.jsx(
+[350] ,{children:c.jsx(
+[351] ,children:c.jsx(
+[352] })})})})]}),c.jsxs(
+[353] ,children:[c.jsx(
+[354] ,children:c.jsx(
+[355] ,children:c.jsx(
+[356] ,children:c.jsx(
+[357] ,{children:c.jsx(
+[358] ,children:c.jsx(
+[359] })})})})]})]})]}),c.jsxs(
+[360] ,children:[c.jsxs(
+[361] ,children:[c.jsxs(
+[362] ,children:[c.jsx(
+[363] ,children:c.jsx(
+[364] ,children:c.jsx(
+[365] ,children:c.jsx(
+[366] ,{children:c.jsx(
+[367] ,children:c.jsx(
+[368] })})})})]}),c.jsxs(
+[369] ,children:[c.jsx(
+[370] ,children:c.jsx(
+[371] ,children:c.jsx(
+[372] ,children:c.jsx(
+[373] ,{children:c.jsx(
+[374] ,children:c.jsx(
+[375] })})})})]})]}),c.jsxs(
+[376] ,children:[c.jsxs(
+[377] ,children:[c.jsx(
+[378] ,children:c.jsx(
+[379] ,children:c.jsx(
+[380] ,children:c.jsx(
+[381] ,{children:c.jsx(
+[382] ,children:c.jsx(
+[383] })})})})]}),c.jsxs(
+[384] ,children:[c.jsx(
+[385] ,children:c.jsx(
+[386] ,children:c.jsx(
+[387] ,children:c.jsx(
+[388] ,{children:c.jsx(
+[389] ,children:c.jsx(
+[390] })})})})]}),c.jsxs(
+[391] ,children:[c.jsx(
+[392] ,children:c.jsx(
+[393] ,children:c.jsx(
+[394] ,children:c.jsx(
+[395] ,{children:c.jsx(
+[396] ,children:c.jsx(
+[397] })})})})]})]}),c.jsxs(
+[398] ,children:[c.jsxs(
+[399] ,children:[c.jsx(
+[400] ,children:c.jsx(
+[401] ,children:c.jsx(
+[402] ,children:c.jsx(
+[403] ,{children:c.jsx(
+[404] ,children:c.jsx(
+[405] })})})})]}),c.jsxs(
+[406] ,children:[c.jsx(
+[407] ,children:c.jsx(
+[408] ,children:c.jsx(
+[409] ,children:c.jsx(
+[410] ,{children:c.jsx(
+[411] ,children:c.jsx(
+[412] })})})})]})]})]}),c.jsxs(
+[413] ,children:[c.jsxs(
+[414] ,children:[c.jsxs(
+[415] ,children:[c.jsx(
+[416] ,children:c.jsx(
+[417] ,children:c.jsx(
+[418] ,children:c.jsx(
+[419] ,{children:c.jsx(
+[420] ,children:c.jsx(
+[421] })})})})]}),c.jsxs(
+[422] ,children:[c.jsx(
+[423] ,children:c.jsx(
+[424] ,children:c.jsx(
+[425] ,children:c.jsx(
+[426] ,{children:c.jsx(
+[427] ,children:c.jsx(
+[428] })})})})]})]}),c.jsxs(
+[429] ,children:[c.jsxs(
+[430] ,children:[c.jsx(
+[431] ,children:c.jsx(
+[432] ,children:c.jsx(
+[433] ,children:c.jsx(
+[434] ,{children:c.jsx(
+[435] ,children:c.jsx(
+[436] })})})})]}),c.jsxs(
+[437] ,children:[c.jsx(
+[438] ,children:c.jsx(
+[439] ,children:c.jsx(
+[440] ,children:c.jsx(
+[441] ,{children:c.jsx(
+[442] ,children:c.jsx(
+[443] })})})})]}),c.jsxs(
+[444] ,children:[c.jsx(
+[445] ,children:c.jsx(
+[446] ,children:c.jsx(
+[447] ,children:c.jsx(
+[448] ,{children:c.jsx(
+[449] ,children:c.jsx(
+[450] })})})})]})]}),c.jsxs(
+[451] ,children:[c.jsxs(
+[452] ,children:[c.jsx(
+[453] ,children:c.jsx(
+[454] ,children:c.jsx(
+[455] ,children:c.jsx(
+[456] ,{children:c.jsx(
+[457] ,children:c.jsx(
+[458] })})})})]}),c.jsxs(
+[459] ,children:[c.jsx(
+[460] ,children:c.jsx(
+[461] ,children:c.jsx(
+[462] ,children:c.jsx(
+[463] ,{children:c.jsx(
+[464] ,children:c.jsx(
+[465] })})})})]})]})]}),c.jsxs(
+[466] ,children:[c.jsxs(
+[467] ,children:[c.jsxs(
+[468] ,children:[c.jsx(
+[469] ,children:c.jsx(
+[470] ,children:c.jsx(
+[471] ,children:c.jsx(
+[472] ,{children:c.jsx(
+[473] ,children:c.jsx(
+[474] })})})})]}),c.jsxs(
+[475] ,children:[c.jsx(
+[476] ,children:c.jsx(
+[477] ,children:c.jsx(
+[478] ,children:c.jsx(
+[479] ,{children:c.jsx(
+[480] ,children:c.jsx(
+[481] })})})})]})]}),c.jsxs(
+[482] ,children:[c.jsxs(
+[483] ,children:[c.jsx(
+[484] ,children:c.jsx(
+[485] ,children:c.jsx(
+[486] ,children:c.jsx(
+[487] ,{children:c.jsx(
+[488] ,children:c.jsx(
+[489] })})})})]}),c.jsxs(
+[490] ,children:[c.jsx(
+[491] ,children:c.jsx(
+[492] ,children:c.jsx(
+[493] ,children:c.jsx(
+[494] ,{children:c.jsx(
+[495] ,children:c.jsx(
+[496] })})})})]}),c.jsxs(
+[497] ,children:[c.jsx(
+[498] ,children:c.jsx(
+[499] ,children:c.jsx(
+[500] ,children:c.jsx(
+[501] ,{children:c.jsx(
+[502] ,children:c.jsx(
+[503] })})})})]})]}),c.jsxs(
+[504] ,children:[c.jsxs(
+[505] ,children:[c.jsx(
+[506] ,children:c.jsx(
+[507] ,children:c.jsx(
+[508] ,children:c.jsx(
+[509] ,{children:c.jsx(
+[510] ,children:c.jsx(
+[511] })})})})]}),c.jsxs(
+[512] ,children:[c.jsx(
+[513] ,children:c.jsx(
+[514] ,children:c.jsx(
+[515] ,children:c.jsx(
+[516] ,{children:c.jsx(
+[517] ,children:c.jsx(
+[518] })})})})]})]})]}),c.jsx(
+[519] ,children:c.jsx(
+[520] ,children:c.jsx(mo,{})})]},
+[521] ),c.jsxs(Ns,{tab:c.jsx(
+[522] }),children:[c.jsxs(
+[523] ,children:[c.jsxs(
+[524] ,children:[c.jsxs(
+[525] ,children:[c.jsx(
+[526] ,children:c.jsx(
+[527] ,children:c.jsxs(
+[528] ,children:[e.about1&&c.jsx(
+[529] }`,onLoad:()=>r(
+[530] })]})})}),c.jsx(
+[531] ,children:c.jsx(
+[532] ,{children:c.jsx(
+[533] ,children:c.jsx(
+[534] })})})})]}),c.jsxs(
+[535] ,children:[c.jsx(
+[536] ,children:c.jsx(
+[537] ,children:c.jsxs(
+[538] ,children:[e.about1&&c.jsx(
+[539] }`,onLoad:()=>r(
+[540] })]})})}),c.jsx(
+[541] ,children:c.jsx(
+[542] ,{children:c.jsx(
+[543] ,children:c.jsx(
+[544] })})})})]})]}),c.jsxs(
+[545] ,children:[c.jsxs(
+[546] ,children:[c.jsx(
+[547] ,children:c.jsx(
+[548] ,children:c.jsxs(
+[549] ,children:[e.about1&&c.jsx(
+[550] }`,onLoad:()=>r(
+[551] })]})})}),c.jsx(
+[552] ,children:c.jsx(
+[553] ,{children:c.jsx(
+[554] ,children:c.jsx(
+[555] })})})})]}),c.jsxs(
+[556] ,children:[c.jsx(
+[557] ,children:c.jsx(
+[558] ,children:c.jsx(
+[559] ,children:c.jsx(
+[560] ,{children:c.jsx(
+[561] ,children:c.jsx(
+[562] })})})})]}),c.jsxs(
+[563] ,children:[c.jsx(
+[564] ,children:c.jsx(
+[565] ,children:c.jsx(
+[566] ,children:c.jsx(
+[567] ,{children:c.jsx(
+[568] ,children:c.jsx(
+[569] })})})})]})]}),c.jsxs(
+[570] ,children:[c.jsxs(
+[571] ,children:[c.jsx(
+[572] ,children:c.jsx(
+[573] ,children:c.jsx(
+[574] ,children:c.jsx(
+[575] ,{children:c.jsx(
+[576] ,children:c.jsx(
+[577] })})})})]}),c.jsxs(
+[578] ,children:[c.jsx(
+[579] ,children:c.jsx(
+[580] ,children:c.jsx(
+[581] ,children:c.jsx(
+[582] ,{children:c.jsx(
+[583] ,children:c.jsx(
+[584] })})})})]})]})]}),c.jsx(
+[585] ,children:c.jsx(
+[586] ,children:c.jsx(mo,{})})]},
+
+==============================================
+CHUNK: OneProject-pPzOi-sx.js (Size: 106077 chars)
+==============================================
+Found 384 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://f
+[3] Invariant Violation
+[4] Expected WrappedComponent to be a React component.
+[5] You may only call rewind() on the server. Call peek() to read the current state.
+[6] react-fast-compare cannot handle circular refs
+[7] Object.assign cannot be called with null or undefined
+[8] this hasn't been initialised - super() hasn't been called
+[9] ).replace(/'/g,
+[10] +e+' should be of type
+[11] . Instead found type
+[12] )&&!(m===z.REL&&p[m].toLowerCase()===
+[13] ?window.requestAnimationFrame&&window.requestAnimationFrame.bind(window)||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||Ce:glob
+[14] ):[],l=[].concat(s),a=Object.keys(r),o=0;o<a.length;o++){var c=a[o],d=r[c]||
+[15] ;i.getAttribute(c)!==d&&i.setAttribute(c,d),s.indexOf(c)===-1&&s.push(c);var u=l.indexOf(c);u!==-1&&l.splice(u,1)}for(var p=l.length-1;p>=0;p--)i.remo
+[16] )&&i.setAttribute(H,a.join(
+[17] :o[d];c.setAttribute(d,u)}c.setAttribute(H,
+[18] ),a=s.innerHTML||s.cssText||
+[19] ?t[r]=e[r]:Fe(e[r])&&Fe(t[r])&&Object.keys(e[r]).length>0&&Re(t[r],e[r])})}const rt={body:{},addEventListener(){},removeEventListener(){},activeElemen
+[20] },location:{hash:
+[21] ?(t(),null):setTimeout(t,0)},cancelAnimationFrame(t){typeof setTimeout>
+[22] ),t.trim().split(
+[23] ).length>6&&(n=n.split(
+[24] ).map(a=>a.replace(
+[25] )),s=new r.WebKitCSSMatrix(n===
+[26] :n)):(s=l.MozTransform||l.OTransform||l.MsTransform||l.msTransform||l.transform||l.getPropertyValue(
+[27] ),i=s.toString().split(
+[28] &&(r.WebKitCSSMatrix?n=s.m41:i.length===16?n=parseFloat(i[12]):n=parseFloat(i[4])),e===
+[29] &&t!==null&&t.constructor&&Object.prototype.toString.call(t).slice(8,-1)===
+[30] &&typeof window.HTMLElement<
+[31] ,n.cancelAnimationFrame(e.cssModeFrameID);const c=r>s?
+[32] ,r))}e&&t.addEventListener(
+[33] ]+parseFloat(i.getComputedStyle(t,null).getPropertyValue(e===
+[34] ))+parseFloat(i.getComputedStyle(t,null).getPropertyValue(e===
+[35] ];return!d&&h&&r.touch&&v.indexOf(`${a}x${o}`)>=0&&(d=s.match(/(Version)\/([\d.]+)/),d||(d=[0,1,
+[36] ]),h=!1),c&&!f&&(l.os=
+[37] ,l.android=!0),(d||p||u)&&(l.os=
+[38] )>=0&&a.indexOf(
+[39] )<0&&a.indexOf(
+[40] )<0}if(i()){const a=String(t.navigator.userAgent);if(a.includes(
+[41] )){const[o,c]=a.split(
+[42] ))},o=()=>{!e||e.destroyed||!e.initialized||(s=new ResizeObserver(u=>{l=n.requestAnimationFrame(()=>{const{width:p,height:f}=e;let h=p,v=f;u.forEach(w
+[43] ,()=>{if(e.params.resizeObserver&&typeof n.ResizeObserver<
+[44] ){o();return}n.addEventListener(
+[45] ,a),n.addEventListener(
+[46] ,()=>{c(),n.removeEventListener(
+[47] ,a),n.removeEventListener(
+[48] ,h[0])};l.requestAnimationFrame?l.requestAnimationFrame(v):l.setTimeout(v,0)});f.observe(d,{attributes:typeof u.attributes>
+[49] ?!0:u.attributes,childList:typeof u.childList>
+[50] ?!0:u.childList,characterData:typeof u.characterData>
+[51] ?!0:u.characterData}),s.push(f)},o=()=>{if(e.params.observer){if(e.params.observeParents){const d=br(e.hostEl);for(let u=0;u<d.length;u+=1)a(d[u])}a(e
+[52] ,c)}var Ar={on(t,e,r){const i=this;if(!i.eventsListeners||i.destroyed||typeof e!=
+[53] ).forEach(s=>{i.eventsListeners[s]||(i.eventsListeners[s]=[]),i.eventsListeners[s][n](e)}),i},once(t,e,r){const i=this;if(!i.eventsListeners||i.destro
+[54] ).forEach(i=>{typeof e>
+[55] ||Array.isArray(s[0])?(e=s[0],r=s.slice(1,s.length),i=t):(e=s[0].events,r=s[0].data,i=s[0].context||t),r.unshift(i),(Array.isArray(e)?e:e.split(
+[56] &&t.params.width!==null?e=t.params.width:e=i.clientWidth,typeof t.params.height<
+[57] &&t.params.height!==null?r=t.params.height:r=i.clientHeight,!(e===0&&t.isHorizontal()||r===0&&t.isVertical())&&(e=e-parseInt(X(i,
+[58] )||0,10)-parseInt(X(i,
+[59] )||0,10),r=r-parseInt(X(i,
+[60] )||0,10)-parseInt(X(i,
+[61] &&(v=r.slidesOffsetBefore.call(t));let w=r.slidesOffsetAfter;typeof w==
+[62] &&(w=r.slidesOffsetAfter.call(t));const m=t.snapGrid.length,b=t.slidesGrid.length;let g=r.spaceBetween,T=-v,y=0,A=0;if(typeof s>
+[63] )return;typeof g==
+[64] )>=0?g=parseFloat(g.replace(
+[65] ))/100*s:typeof g==
+[66] }),r.centeredSlides&&r.cssMode&&(le(i,
+[67] ));const N=r.grid&&r.grid.rows>1&&t.grid;N?t.grid.initSlides(d):t.grid&&t.grid.unsetSlides();let C;const E=r.slidesPerView===
+[68] &&r.breakpoints&&Object.keys(r.breakpoints).filter(S=>typeof r.breakpoints[S].slidesPerView<
+[69] ).length>0;for(let S=0;S<u;S+=1){C=0;let x;if(d[S]&&(x=d[S]),N&&t.grid.updateSlide(S,x,d),!(d[S]&&X(x,
+[70] )){if(r.slidesPerView===
+[71] ),r.roundLengths)C=t.isHorizontal()?ke(x,
+[72] );else{const D=e(M,
+[73] ),k=M.getPropertyValue(
+[74] )]=`${C}px`);d[S]&&(d[S].swiperSlideSize=C),h.push(C),r.centeredSlides?(T=T+C/2+y/2+g,y===0&&S!==0&&(T=T-s/2-g),S===0&&(T=T-s/2-g),Math.abs(T)<1/1e3&&
+[75] )]=`${t.virtualSize+g}px`),N&&t.grid.updateWrapperSize(C,p),!r.centeredSlides){const S=[];for(let x=0;x<p.length;x+=1){let M=p[x];r.roundLengths&&(M=M
+[76] :t.getDirectionLabel(
+[77] ,`${-p[0]}px`),le(i,
+[78] ,`${t.size/2-h[h.length-1]/2}px`);const S=-t.snapGrid[0],x=-t.slidesGrid[0];t.snapGrid=t.snapGrid.map(M=>M+S),t.slidesGrid=t.slidesGrid.map(M=>M+x)}if
+[79] ),p.length!==m&&(t.params.watchOverflow&&t.checkOverflow(),t.emit(
+[80] )),f.length!==b&&t.emit(
+[81] ),r.watchSlidesProgress&&t.updateSlidesOffset(),t.emit(
+[82] ),!o&&!r.cssMode&&(r.effect===
+[83] ?e.setTransition(t):t===!0&&e.setTransition(e.params.speed);const l=a=>i?e.slides[e.getSlideIndexByData(a)]:e.slides[a];if(e.params.slidesPerView!==
+[84] &&e.params.slidesPerView>1)if(e.params.centeredSlides)(e.visibleSlides||[]).forEach(a=>{r.push(a)});else for(s=0;s<Math.ceil(e.params.slidesPerView);s
+[85] &&e.updateSlidesOffset();let l=-t;n&&(l=t),e.visibleSlidesIndexes=[],e.visibleSlides=[];let a=r.spaceBetween;typeof a==
+[86] )>=0?a=parseFloat(a.replace(
+[87] ))/100*e.size:typeof a==
+[88] ){const d=e.rtlTranslate?-1:1;t=e&&e.translate&&e.translate*d||0}const r=e.params,i=e.maxTranslate()-e.minTranslate();let{progress:n,isBeginning:s,isE
+[89] ),l&&!c&&e.emit(
+[90] ),(o&&!s||c&&!l)&&e.emit(
+[91] ]`)}else o=a(`[data-swiper-slide-index=
+[92] ]`);else l?(o=e.filter(u=>u.column===n)[0],d=e.filter(u=>u.column===n+1)[0],c=e.filter(u=>u.column===n-1)[0]):o=e[n];o&&(l||(d=yr(o,`.${r.slideClass},
+[93] :`.${t.params.slideClass}`,i=e.closest(r());if(i){let n=i.querySelector(`.${t.params.lazyPreloaderClass}`);!n&&t.isElement&&(i.shadowRoot?n=i.shadowRo
+[94] ]');r&&r.removeAttribute(
+[95] )},Le=t=>{if(!t||t.destroyed||!t.params)return;let e=t.params.lazyPreloadPrevNext;const r=t.slides.length;if(!r||!e||e<0)return;e=Math.min(e,r);const 
+[96] &&(o=Dr(e)),i.indexOf(r)>=0)c=i.indexOf(r);else{const f=Math.min(n.slidesPerGroupSkip,o);c=f+Math.floor((o-f)/n.slidesPerGroup)}if(c>=i.length&&(c=i.l
+[97] ));return}if(o===s&&e.params.loop&&e.virtual&&e.params.virtual.enabled){e.realIndex=d(o);return}const u=e.grid&&n.grid&&n.grid.rows>1;let p;if(e.virtu
+[98] ),10);Number.isNaN(h)&&(h=Math.max(e.slides.indexOf(f),0)),p=Math.floor(h/n.grid.rows)}else if(e.slides[o]){const f=e.slides[o].getAttribute(
+[99] );f?p=parseInt(f,10):p=o}else p=o;Object.assign(e,{previousSnapIndex:a,snapIndex:c,previousRealIndex:l,realIndex:p,previousIndex:s,activeIndex:o}),e.i
+[100] ),(e.initialized||e.params.runCallbacksOnInit)&&(l!==p&&e.emit(
+[101] }),!0;a.scrollTo({[u?
+[102] ))):(s.setTransition(e),s.setTranslate(d),r&&(s.emit(
+[103] ,s.onTranslateToWrapperTransitionEnd),s.onTranslateToWrapperTransitionEnd=null,delete s.onTranslateToWrapperTransitionEnd,s.animating=!1,r&&s.emit(
+[104] ))}),s.wrapperEl.addEventListener(
+[105] ),e.emit(`transition${n}`),r&&s!==l){if(a===
+[106] ){e.emit(`slideResetTransition${n}`);return}e.emit(`slideChangeTransition${n}`),a===
+[107] &&(t=parseInt(t,10));const s=this;let l=t;l<0&&(l=0);const{params:a,snapGrid:o,slidesGrid:c,previousIndex:d,activeIndex:u,rtlTranslate:p,wrapperEl:f,e
+[108] &&(e=s.params.speed);const v=Math.min(s.params.slidesPerGroupSkip,l);let w=v+Math.floor((l-v)/s.params.slidesPerGroup);w>=o.length&&(w=o.length-1);con
+[109] ?T>=y&&T<A-(A-y)/2?l=g:T>=y&&T<A&&(l=g+1):T>=y&&(l=g)}if(s.initialized&&l!==u&&(!s.allowSlideNext&&(p?m>s.translate&&m>s.minTranslate():m<s.translate&
+[110] ),s.updateProgress(m);let b;if(l>u?b=
+[111] &&s.setTranslate(m),b!==
+[112] ,s._immediateVirtual=!0),y&&!s._cssModeVirtualInitialSet&&s.params.initialSlide>0?(s._cssModeVirtualInitialSet=!0,requestAnimationFrame(()=>{f[g?
+[113] }),!0;f.scrollTo({[g?
+[114] ,s.onSlideToWrapperTransitionEnd),s.onSlideToWrapperTransitionEnd=null,delete s.onSlideToWrapperTransitionEnd,s.transitionEnd(r,b))}),s.wrapperEl.addE
+[115] &&(t=parseInt(t,10));const n=this;if(n.destroyed)return;typeof e>
+[116] &&(e=n.params.speed);const s=n.grid&&n.params.grid&&n.params.grid.rows>1;let l=t;if(n.params.loop)if(n.virtual&&n.params.virtual.enabled)l=l+n.virtual
+[117] )*1===p)[0].column}else a=n.getSlideIndexByData(l);const o=s?Math.ceil(n.slides.length/n.params.grid.rows):n.slides.length,{centeredSlides:c}=n.params
+[118] ?d=n.slidesPerViewDynamic():(d=Math.ceil(parseFloat(n.params.slidesPerView,10)),c&&d%2===0&&(d=d+1));let u=o-a<d;if(c&&(u=u||a<Math.ceil(d/2)),i&&c&&n
+[119] &&!s&&(u=!1),u){const p=c?a<n.activeIndex?
+[120] :a-n.activeIndex-1<n.params.slidesPerView?
+[121] ;n.loopFix({direction:p,slideTo:!0,activeSlideIndex:p===
+[122] ?a+1:a-o+1,slideRealIndex:p===
+[123] ?n.realIndex:void 0})}if(s){const p=l*n.params.grid.rows;l=n.slides.filter(f=>f.getAttribute(
+[124] &&(t=i.params.speed);let a=s.slidesPerGroup;s.slidesPerView===
+[125] &&s.slidesPerGroup===1&&s.slidesPerGroupAuto&&(a=Math.max(i.slidesPerViewDynamic(
+[126] ,!0),1));const o=i.activeIndex<s.slidesPerGroupSkip?1:a,c=i.virtual&&s.virtual.enabled;if(s.loop){if(l&&!c&&s.loopPreventsSliding)return!1;if(i.loopFi
+[127] &&(t=i.params.speed);const d=i.virtual&&n.virtual.enabled;if(n.loop){if(c&&!d&&n.loopPreventsSliding)return!1;i.loopFix({direction:
+[128] &&n.cssMode){let m;s.forEach((b,g)=>{f>=b&&(m=g)}),typeof m<
+[129] &&(v=s[m>0?m-1:m])}let w=0;if(typeof v<
+[130] &&(w=l.indexOf(v),w<0&&(w=i.activeIndex-1),n.slidesPerView===
+[131] &&n.slidesPerGroup===1&&n.slidesPerGroupAuto&&(w=w-i.slidesPerViewDynamic(
+[132] ?t.slidesPerViewDynamic():e.slidesPerView;let n=t.clickedIndex,s;const l=t.isElement?
+[133] :`.${e.slideClass}`;if(e.loop){if(t.animating)return;s=parseInt(t.clickedSlide.getAttribute(
+[134] ),10),e.centeredSlides?n<t.loopedSlides-i/2||n>t.slides.length-t.loopedSlides+i/2?(t.loopFix(),n=t.getSlideIndex(q(r,`${l}[data-swiper-slide-index=
+[135] ]`)[0]),Ae(()=>{t.slideTo(n)})):t.slideTo(n):n>t.slides.length-i?(t.loopFix(),n=t.getSlideIndex(q(r,`${l}[data-swiper-slide-index=
+[136] ,p)})},s=e.grid&&r.grid&&r.grid.rows>1,l=r.slidesPerGroup*(s?r.grid.rows:1),a=e.slides.length%l!==0,o=s&&e.slides.length%r.grid.rows!==0,c=d=>{for(let
+[137] ,[r.slideBlankClass]):Ie(
+[138] ,[r.slideClass,r.slideBlankClass]);e.slidesEl.append(p)}};if(a){if(r.loopAddBlankSlides){const d=l-e.slides.length%l;c(d),e.recalcSlides(),e.updateSli
+[139] );n()}else if(o){if(r.loopAddBlankSlides){const d=r.grid.rows-e.slides.length%r.grid.rows;c(d),e.recalcSlides(),e.updateSlides()}else fe(
+[140] );n()}else n();e.loopFix({slideRealIndex:t,direction:r.centeredSlides?void 0:
+[141] );const{slides:c,allowSlidePrev:d,allowSlideNext:u,slidesEl:p,params:f}=o,{centeredSlides:h}=f;if(o.allowSlidePrev=!0,o.allowSlideNext=!0,o.virtual&&f
+[142] );return}let v=f.slidesPerView;v===
+[143] ?v=o.slidesPerViewDynamic():(v=Math.ceil(parseFloat(f.slidesPerView,10)),h&&v%2===0&&(v=v+1));const w=f.slidesPerGroupAuto?v:f.slidesPerGroup;let m=w;
+[144] ):b&&f.grid.fill===
+[145] );const g=[],T=[];let y=o.activeIndex;typeof s>
+[146] ?s=o.getSlideIndex(c.filter(P=>P.classList.contains(f.slideActiveClass))[0]):y=s;const A=i===
+[147] ||!i;let C=0,E=0;const S=b?Math.ceil(c.length/f.grid.rows):c.length,M=(b?c[s].column:s)+(h&&typeof n>
+[148] ?-v/2+.5:0);if(M<m){C=Math.max(m-M,w);for(let P=0;P<m-M;P+=1){const _=P-Math.floor(P/S)*S;if(b){const D=S-_-1;for(let $=c.length-1;$>=0;$-=1)c[$].colu
+[149] ?o.updateSlides():b&&(g.length>0&&N||T.length>0&&A)&&o.slides.forEach((P,_)=>{o.grid.updateSlide(_,P,o.slides)}),f.watchSlidesProgress&&o.updateSlides
+[150] ){const P=o.slidesGrid[y],D=o.slidesGrid[y+C]-P;a?o.setTranslate(o.translate-D):(o.slideTo(y+Math.ceil(C),0,!1,!0),n&&(o.touchEventsData.startTranslat
+[151] ){const P=o.slidesGrid[y],D=o.slidesGrid[y-E]-P;a?o.setTranslate(o.translate-D):(o.slideTo(y-E,0,!1,!0),n&&(o.touchEventsData.startTranslate=o.touchEv
+[152] ?n.getAttribute(
+[153] )*1:n.swiperSlideIndex;i[s]=n}),t.slides.forEach(n=>{n.removeAttribute(
+[154] ){if(n.pointerId!==null&&n.pointerId!==i.pointerId)return;n.pointerId=i.pointerId}else i.type===
+[155] &&i.targetTouches.length===1&&(n.touchId=i.targetTouches[0].identifier);if(i.type===
+[156] ){$e(e,i,i.targetTouches[0].pageX);return}const{params:s,touches:l,enabled:a}=e;if(!a||!s.simulateTouch&&i.pointerType===
+[157] ||e.animating&&s.preventInteractionOnTransition)return;!e.animating&&s.cssMode&&s.loop&&e.loopFix();let o=i.target;if(s.touchEventsTarget===
+[158] &&!e.wrapperEl.contains(o)||
+[159] in i&&i.which===3||
+[160] in i&&i.button>0||n.isTouched&&n.isMoved)return;const c=!!s.noSwipingClass&&s.noSwipingClass!==
+[161] ,d=i.composedPath?i.composedPath():i.path;c&&i.target&&i.target.shadowRoot&&d&&(o=d[0]);const u=s.noSwipingSelector?s.noSwipingSelector:`.${s.noSwipin
+[162] &&(n.isTouched=!1)),r.activeElement&&r.activeElement.matches(n.focusableElements)&&r.activeElement!==o&&r.activeElement.blur();const w=v&&e.allowTouch
+[163] )return;let o=t;if(o.originalEvent&&(o=o.originalEvent),o.type===
+[164] &&(i.touchId!==null||o.pointerId!==i.pointerId))return;let c;if(o.type===
+[165] ){if(c=[...o.changedTouches].filter(A=>A.identifier===i.touchId)[0],!c||c.identifier!==i.touchId)return}else c=o;if(!i.isTouched){i.startMoving&&i.isS
+[166] ,o);return}const d=c.pageX,u=c.pageY;if(o.preventedByNestedSwiper){s.startX=d,s.startY=u;return}if(!r.allowTouchMove){o.target.matches(i.focusableElem
+[167] ,o),s.previousX=s.currentX,s.previousY=s.currentY,s.currentX=d,s.currentY=u;const p=s.currentX-s.startX,f=s.currentY-s.startY;if(r.params.threshold&&M
+[168] ){let A;r.isHorizontal()&&s.currentY===s.startY||r.isVertical()&&s.currentX===s.startX?i.isScrolling=!1:p*p+f*f>=25&&(A=Math.atan2(Math.abs(f),Math.ab
+[169] ,o),typeof i.startMoving>
+[170] &&(s.currentX!==s.startX||s.currentY!==s.startY)&&(i.startMoving=!0),i.isScrolling||o.type===
+[171] &&i.preventTouchMoveFromPointerMove){i.isTouched=!1;return}if(!i.startMoving)return;r.allowClick=!1,!n.cssMode&&o.cancelable&&o.preventDefault(),n.tou
+[172] ,r.touchesDirection=v>0?
+[173] ;const m=r.params.loop&&!n.cssMode,b=r.touchesDirection===
+[174] &&r.allowSlideNext||r.touchesDirection===
+[175] &&r.allowSlidePrev;if(!i.isMoved){if(m&&b&&r.loopFix({direction:r.swipeDirection}),i.startTranslate=r.getTranslate(),r.setTransition(0),r.animating){c
+[176] ,{bubbles:!0,cancelable:!0,detail:{bySwiperTouchMove:!0}});r.wrapperEl.dispatchEvent(A)}i.allowMomentumBounce=!1,n.grabCursor&&(r.allowSlideNext===!0|
+[177] ,o)}let g;if(new Date().getTime(),i.isMoved&&i.allowThresholdMove&&w!==r.touchesDirection&&m&&b&&Math.abs(h)>=1){Object.assign(s,{startX:d,startY:u,cu
+[178] ,o),i.isMoved=!0,i.currentTranslate=h+i.startTranslate;let T=!0,y=n.resistanceRatio;if(n.touchReleaseOnEdges&&(y=0),h>0?(m&&b&&!g&&i.allowThresholdMov
+[179] ,setTranslate:!0,activeSlideIndex:0}),i.currentTranslate>r.minTranslate()&&(T=!1,n.resistance&&(i.currentTranslate=r.minTranslate()-1+(-r.minTranslate
+[180] ,setTranslate:!0,activeSlideIndex:r.slides.length-(n.slidesPerView===
+[181] ?r.slidesPerViewDynamic():Math.ceil(parseFloat(n.slidesPerView,10)))}),i.currentTranslate<r.maxTranslate()&&(T=!1,n.resistance&&(i.currentTranslate=r.
+[182] &&i.currentTranslate<i.startTranslate&&(i.currentTranslate=i.startTranslate),!r.allowSlidePrev&&r.swipeDirection===
+[183] ){if(n=[...i.changedTouches].filter(y=>y.identifier===r.touchId)[0],!n||n.identifier!==r.touchId)return}else{if(r.touchId!==null||i.pointerId!==r.poin
+[184] ].includes(i.type)&&!([
+[185] ].includes(i.type)&&(e.browser.isSafari||e.browser.isWebView)))return;r.pointerId=null,r.touchId=null;const{params:l,touches:a,rtlTranslate:o,slidesGr
+[186] )return;if(r.allowTouchCallbacks&&e.emit(
+[187] ,i),r.allowTouchCallbacks=!1,!r.isTouched){r.isMoved&&l.grabCursor&&e.setGrabCursor(!1),r.isMoved=!1,r.startMoving=!1;return}l.grabCursor&&r.isMoved&&
+[188] ,i),p<300&&u-r.lastClickTime<300&&e.emit(
+[189] ,i)}if(r.lastClickTime=K(),Ae(()=>{e.destroyed||(e.allowClick=!0)}),!r.isTouched||!r.isMoved||!e.swipeDirection||a.diff===0&&!r.loopSwapReset||r.curre
+[190] ?(h||f>=c[y]&&f<c[y+A])&&(v=y,w=c[y+A]-c[y]):(h||f>=c[y])&&(v=y,w=c[c.length-1]-c[c.length-2])}let m=null,b=null;l.rewind&&(e.isBeginning?b=l.virtual&
+[191] &&(g>=l.longSwipesRatio?e.slideTo(l.rewind&&e.isEnd?m:v+T):e.slideTo(v)),e.swipeDirection===
+[192] &&(g>1-l.longSwipesRatio?e.slideTo(v+T):b!==null&&g<0&&Math.abs(g)>l.longSwipesRatio?e.slideTo(b):e.slideTo(v))}else{if(!l.shortSwipes){e.slideTo(e.ac
+[193] &&e.slideTo(m!==null?m:v+T),e.swipeDirection===
+[194] ))}const at=(t,e)=>{const r=te(),{params:i,el:n,wrapperEl:s,device:l}=t,a=!!i.nested,o=e===
+[195] ,c=e;!n||typeof n==
+[196] ,t.onDocumentTouchStart,{passive:!1,capture:a}),n[o](
+[197] ,t.onTouchStart,{passive:!1}),n[o](
+[198] ,t.onTouchStart,{passive:!1}),r[o](
+[199] ,t.onTouchMove,{passive:!1,capture:a}),r[o](
+[200] ,t.onTouchMove,{passive:!1,capture:a}),r[o](
+[201] ,t.onTouchEnd,{passive:!0}),r[o](
+[202] ,t.onTouchEnd,{passive:!0}),r[o](
+[203] ,t.onTouchEnd,{passive:!0}),r[o](
+[204] ,t.onTouchEnd,{passive:!0}),r[o](
+[205] ,t.onTouchEnd,{passive:!0}),r[o](
+[206] ,t.onTouchEnd,{passive:!0}),r[o](
+[207] ,t.onTouchEnd,{passive:!0}),(i.preventClicks||i.preventClicksPropagation)&&n[o](
+[208] ,t.onClick,!0),i.cssMode&&s[o](
+[209] ,t.onScroll),i.updateOnWindowResize?t[c](l.ios||l.android?
+[210] ||!o.grid.fill&&i.grid.fill===
+[211] )&&n.classList.add(`${i.containerModifierClass}grid-column`),t.emitContainerClasses()),u&&!p?t.unsetGrabCursor():!u&&p&&t.setGrabCursor(),[
+[212] ].forEach(g=>{if(typeof o[g]>
+[213] )return;const T=i[g]&&i[g].enabled,y=o[g]&&o[g].enabled;T&&!y&&t[g].disable(),!T&&y&&t[g].enable()});const h=o.direction&&o.direction!==i.direction,v=
+[214] ,o),r&&(v?(t.loopDestroy(),t.loopCreate(e),t.updateSlides()):!w&&b?(t.loopCreate(e),t.updateSlides()):w&&!b&&t.loopDestroy()),t.emit(
+[215] &&!r)return;let i=!1;const n=V(),s=e===
+[216] ?n.innerHeight:r.clientHeight,l=Object.keys(t).map(a=>{if(typeof a==
+[217] )===0){const o=parseFloat(a.substr(1));return{value:s*o,point:a}}return{value:a,point:a}});l.sort((a,o)=>parseInt(a.value,10)-parseInt(o.value,10));fo
+[218] ?Object.keys(i).forEach(n=>{i[n]&&r.push(e+n)}):typeof i==
+[219] :t.params.freeMode&&r.freeMode.enabled},{autoheight:r.autoHeight},{rtl:i},{grid:r.grid&&r.grid.rows>1},{
+[220] :r.grid&&r.grid.rows>1&&r.grid.fill===
+[221] },{android:s.android},{ios:s.ios},{
+[222] :r.cssMode},{centered:r.cssMode&&r.centeredSlides},{
+[223] )}var Li={checkOverflow:Ii},_e={init:!0,direction:
+[224] ,oneWayMovement:!1,swiperElementNodeName:
+[225] ,touchEventsTarget:
+[226] ,initialSlide:0,speed:300,cssMode:!1,updateOnWindowResize:!0,resizeObserver:!0,nested:!1,createElements:!1,eventsPrefix:
+[227] ,enabled:!0,focusableElements:
+[228] ,width:null,height:null,preventInteractionOnTransition:!1,userAgent:null,url:null,edgeSwipeDetection:!1,edgeSwipeThreshold:20,autoHeight:!1,setWrapper
+[229] ,breakpoints:void 0,breakpointsBase:
+[230] ,spaceBetween:0,slidesPerView:1,slidesPerGroup:1,slidesPerGroupSkip:0,slidesPerGroupAuto:!1,centeredSlides:!1,centeredSlidesBounds:!1,slidesOffsetBefo
+[231] ,noSwipingSelector:null,passiveListeners:!0,maxBackfaceHiddenSlides:10,containerModifierClass:
+[232] ,slideBlankClass:
+[233] ,slideActiveClass:
+[234] ,slideVisibleClass:
+[235] ,slideFullyVisibleClass:
+[236] ,slideNextClass:
+[237] ,slidePrevClass:
+[238] ,lazyPreloaderClass:
+[239] ||s===null){F(e,i);return}if(t[n]===!0&&(t[n]={enabled:!0}),n===
+[240] &&t[n]&&t[n].enabled&&!t[n].prevEl&&!t[n].nextEl&&(t[n].auto=!0),[
+[241] ].indexOf(n)>=0&&t[n]&&t[n].enabled&&!t[n].el&&(t[n].auto=!0),!(n in t&&
+[242] in s)){F(e,i);return}typeof t[n]==
+[243] in t[n])&&(t[n].enabled=!0),t[n]||(t[n]={enabled:!1}),F(e,i)}}const Ee={eventsEmitter:Ar,update:Fr,translate:Yr,transition:Kr,slide:ni,loop:li,grabCur
+[244] ?r=n[0]:[e,r]=n,r||(r={}),r=F({},r),e&&!r.el&&(r.el=e);const l=te();if(r.el&&typeof r.el==
+[245] )*1===e)[0])}recalcSlides(){const e=this,{slidesEl:r,params:i}=e;e.slides=q(r,`.${i.slideClass}, swiper-slide`)}enable(){const e=this;e.enabled||(e.en
+[246] ))}disable(){const e=this;e.enabled&&(e.enabled=!1,e.params.grabCursor&&e.unsetGrabCursor(),e.emit(
+[247] ))}setProgress(e,r){const i=this;e=Math.min(Math.max(e,0),1);const n=i.minTranslate(),l=(i.maxTranslate()-n)*e+n;i.translateTo(l,typeof r>
+[248] ).filter(i=>i.indexOf(
+[249] )===0||i.indexOf(e.params.containerModifierClass)===0);e.emit(
+[250] ).filter(i=>i.indexOf(
+[251] )===0||i.indexOf(r.params.slideClass)===0).join(
+[252] ,i,n)}),e.emit(
+[253] ,r)}slidesPerViewDynamic(e,r){e===void 0&&(e=
+[254] ),r===void 0&&(r=!1);const i=this,{params:n,slides:s,slidesGrid:l,slidesSizesGrid:a,size:o,activeIndex:c}=i;let d=1;if(typeof n.slidesPerView==
+[255] ||i.slidesPerView>1)&&e.isEnd&&!i.centeredSlides){const l=e.virtual&&i.virtual.enabled?e.virtual.slides:e.slides;s=e.slideTo(l.length-1,0,!1,!0)}else 
+[256] ||(i.el.classList.remove(`${i.params.containerModifierClass}${n}`),i.el.classList.add(`${i.params.containerModifierClass}${e}`),i.emitContainerClasses
+[257] ),r&&i.update()),i}changeLanguageDirection(e){const r=this;r.rtl&&e===
+[258] ,r.rtlTranslate=r.params.direction===
+[259] &&r.rtl,r.rtl?(r.el.classList.add(`${r.params.containerModifierClass}rtl`),r.el.dir=
+[260] ):(r.el.classList.remove(`${r.params.containerModifierClass}rtl`),r.el.dir=
+[261] ),r.update())}mount(e){const r=this;if(r.mounted)return!0;let i=e||r.params.el;if(typeof i==
+[262] &&(i=document.querySelector(i)),!i)return!1;i.swiper=r,i.parentNode&&i.parentNode.host&&i.parentNode.host.nodeName===r.params.swiperElementNodeName.to
+[263] ).trim().split(
+[264] )}`;let l=i&&i.shadowRoot&&i.shadowRoot.querySelector?i.shadowRoot.querySelector(n()):q(i,n())[0];return!l&&r.params.createElements&&(l=Ie(
+[265] ,r.params.wrapperClass),i.append(l),q(i,`.${r.params.slideClass}`).forEach(a=>{l.append(a)})),Object.assign(r,{el:i,wrapperEl:l,slidesEl:r.isElement&&
+[266] ,rtlTranslate:r.params.direction===
+[267] &&(i.dir.toLowerCase()===
+[268] ),wrongRTL:X(l,
+[269] ),r.params.breakpoints&&r.setBreakpoint(),r.addClasses(),r.updateSize(),r.updateSlides(),r.params.watchOverflow&&r.checkOverflow(),r.params.grabCursor
+[270] ]')),n.forEach(s=>{s.complete?ce(r,s):s.addEventListener(
+[271] ,l=>{ce(r,l.target)})}),Le(r),r.initialized=!0,Le(r),r.emit(
+[272] ||i.destroyed||(i.emit(
+[273] ),i.initialized=!1,i.detachEvents(),n.loop&&i.loopDestroy(),r&&(i.removeClasses(),s&&typeof s!=
+[274] &&s.removeAttribute(
+[275] ),l&&l.removeAttribute(
+[276] ),a&&a.length&&a.forEach(o=>{o.classList.remove(n.slideVisibleClass,n.slideFullyVisibleClass,n.slideActiveClass,n.slideNextClass,n.slidePrevClass),o.r
+[277] ),o.removeAttribute(
+[278] ),Object.keys(i.eventsListeners).forEach(o=>{i.off(o)}),e!==!1&&(i.el&&typeof i.el!=
+[279] &&t!==null&&t.constructor&&Object.prototype.toString.call(t).slice(8,-1)===
+[280] ];Object.keys(e).filter(i=>r.indexOf(i)<0).forEach(i=>{typeof t[i]>
+[281] &&typeof t.navigation.prevEl>
+[282] );const e=t.split(
+[283] ),t?t.includes(
+[284] )?t:`swiper-wrapper ${t}`:
+[285] ),{params:d,pagination:u,navigation:p,scrollbar:f,virtual:h,thumbs:v}=e;let w,m,b,g,T,y,A,N;n.includes(
+[286] )&&i.thumbs&&i.thumbs.swiper&&d.thumbs&&!d.thumbs.swiper&&(w=!0),n.includes(
+[287] )&&i.controller&&i.controller.control&&d.controller&&!d.controller.control&&(m=!0),n.includes(
+[288] )&&i.pagination&&(i.pagination.el||o)&&(d.pagination||d.pagination===!1)&&u&&!u.el&&(b=!0),n.includes(
+[289] )&&i.scrollbar&&(i.scrollbar.el||a)&&(d.scrollbar||d.scrollbar===!1)&&f&&!f.el&&(g=!0),n.includes(
+[290] )&&i.navigation&&(i.navigation.prevEl||l)&&(i.navigation.nextEl||s)&&(d.navigation||d.navigation===!1)&&p&&!p.prevEl&&!p.nextEl&&(T=!0);const C=E=>{e[
+[291] ?(e.isElement&&(e[E].prevEl.remove(),e[E].nextEl.remove()),d[E].prevEl=void 0,d[E].nextEl=void 0,e[E].prevEl=void 0,e[E].nextEl=void 0):(e.isElement&&
+[292] )&&e.isElement&&(d.loop&&!i.loop?y=!0:!d.loop&&i.loop?A=!0:N=!0),c.forEach(E=>{if(Q(d[E])&&Q(i[E]))Object.assign(d[E],i[E]),(E===
+[293] in i[E]&&!i[E].enabled&&C(E);else{const S=i[E];(S===!0||S===!1)&&(E===
+[294] )?S===!1&&C(E):d[E]=i[E]}}),c.includes(
+[295] )&&!m&&e.controller&&e.controller.control&&d.controller&&d.controller.control&&(e.controller.control=d.controller.control),n.includes(
+[296] )&&r&&h&&d.virtual.enabled?(h.slides=r,h.update(!0)):n.includes(
+[297] )&&h&&d.virtual.enabled&&(r&&(h.slides=r),h.update(!0)),n.includes(
+[298] )&&r&&d.loop&&(N=!0),w&&v.init()&&v.update(!0),m&&(e.controller.control=d.controller.control),b&&(e.isElement&&(!o||typeof o==
+[299] )&&(o=document.createElement(
+[300] ),o.classList.add(
+[301] ),e.el.appendChild(o)),o&&(d.pagination.el=o),u.init(),u.render(),u.update()),g&&(e.isElement&&(!a||typeof a==
+[302] )&&(a=document.createElement(
+[303] ),a.classList.add(
+[304] ),e.el.appendChild(a)),a&&(d.scrollbar.el=a),f.init(),f.updateSize(),f.setTranslate()),T&&(e.isElement&&((!s||typeof s==
+[305] )&&(s=document.createElement(
+[306] ),s.classList.add(
+[307] ),s.innerHTML=e.hostEl.constructor.nextButtonSvg,s.part.add(
+[308] ),e.el.appendChild(s)),(!l||typeof l==
+[309] )&&(l=document.createElement(
+[310] ),l.classList.add(
+[311] ),l.innerHTML=e.hostEl.constructor.prevButtonSvg,l.part.add(
+[312] ),e.el.appendChild(l))),s&&(d.navigation.nextEl=s),l&&(d.navigation.prevEl=l),p.init(),p.update()),n.includes(
+[313] )&&(e.allowSlideNext=i.allowSlideNext),n.includes(
+[314] )&&(e.allowSlidePrev=i.allowSlidePrev),n.includes(
+[315] ||(l.indexOf(o)>=0?Q(t[o])?(r[o]={},n[o]={},ee(r[o],t[o]),ee(n[o],t[o])):(r[o]=t[o],n[o]=t[o]):o.search(/on[A-Z]/)===0&&typeof t[o]==
+[316] ?e?i[`${o[2].toLowerCase()}${o.substr(3)}`]=t[o]:r.on[`${o[2].toLowerCase()}${o.substr(3)}`]=t[o]:s[o]=t[o])}),[
+[317] ),i.length!==r.length&&l(
+[318] ).map(o=>o.replace(/_/,
+[319] ].push(i)}else r[
+[320] ,children:s,onSwiper:l,...a}=t===void 0?{}:t,o=!1;const[c,d]=L.useState(
+[321] ),[u,p]=L.useState(null),[f,h]=L.useState(!1),v=L.useRef(!1),w=L.useRef(null),m=L.useRef(null),b=L.useRef(null),g=L.useRef(null),T=L.useRef(null),y=L.
+[322] ,_);const $=()=>{o||!x||!m.current||Object.keys(x).forEach(B=>{m.current.on(B,x[B])})},he=()=>{!x||!m.current||Object.keys(x).forEach(B=>{m.current.of
+[323] }`)},S),j.createElement(Vi.Provider,{value:m.current},P[
+[324] ]),dt(C)&&j.createElement(j.Fragment,null,j.createElement(
+[325] }),j.createElement(
+[326] })),ut(C)&&j.createElement(
+[327] }),ct(C)&&j.createElement(
+[328] ]))});ht.displayName=
+[329] ,swiper:s,zoom:l,lazy:a,virtualIndex:o,swiperSlideIndex:c,...d}=t===void 0?{}:t;const u=L.useRef(null),[p,f]=L.useState(
+[330] &&(u.current.swiperSlideIndex=c),e&&(e.current=u.current),!(!u.current||!s)){if(s.destroyed){p!==
+[331] ,w),()=>{s&&s.off(
+[332] ,w)}}}),ne(()=>{s&&u.current&&!s.destroyed&&f(s.getSlideClasses(u.current))},[s]);const m={isActive:p.indexOf(
+[333] )>=0,isVisible:p.indexOf(
+[334] )>=0,isPrev:p.indexOf(
+[335] )>=0,isNext:p.indexOf(
+[336] )>=0},b=()=>typeof i==
+[337] :o,onLoad:g},d),l&&j.createElement(qe.Provider,{value:m},j.createElement(
+[338] ?l:void 0},b(),a&&!h&&j.createElement(
+[339] }))),!l&&j.createElement(qe.Provider,{value:m},b(),a&&!h&&j.createElement(
+[340] })))});gt.displayName=
+[341] ],time:o.touchStartTime}),o.velocities.push({position:c[e.isHorizontal()?
+[342] ?g=f[C]:g=f[C-1],g=-g}if(N&&n(
+[343] ,()=>{e.loopFix()}),e.velocity!==0){if(p?m=Math.abs((-g-e.translate)/e.velocity):m=Math.abs((g-e.translate)/e.velocity),d.freeMode.sticky){const C=Mat
+[344] ),e.setTransition(d.speed),setTimeout(()=>{e.setTranslate(y),ve(u,()=>{!e||e.destroyed||e.transitionEnd()})},0))})):e.velocity?(i(
+[345] ),e.updateProgress(g),e.setTransition(m),e.setTranslate(g),e.transitionStart(!0,e.swipeDirection),e.animating||(e.animating=!0,ve(u,()=>{!e||e.destroy
+[346] );(!d.freeMode.momentum||w>=d.longSwipesMs)&&(i(
+[347] ),e.updateProgress(),e.updateActiveIndex(),e.updateSlidesClasses())}Object.assign(e,{freeMode:{onTouchStart:s,onTouchMove:l,onTouchEnd:a}})}const Hi=
+[348] ,Ji=()=>{const t=L.useRef(null),[e,r]=L.useState(0),[i,n]=L.useState(0),s=[
+[349] ,()=>{const o=a.realIndex;n(o);const c=o/(a.slides.length-1)*100;r(c)}),()=>{}},[]),I.jsxs(
+[350] ,{children:[I.jsxs(Oe,{children:[I.jsx(
+[351] ,{children:s[i]}),I.jsx(
+[352] ,children:`
+            {
+[353] ,
+[354] ,
+[355] ,
+[356] ,
+[357] }
+          `})]}),I.jsxs(
+[358] ,children:[I.jsxs(
+[359] ,children:[I.jsxs(
+[360] ,children:[I.jsx(
+[361] ,children:s[i]}),I.jsx(
+[362] ,children:l[i]}),I.jsx(
+[363] ,children:I.jsxs(Tt,{to:
+[364] })]})})]}),I.jsx(
+[365] ,children:I.jsx(ht,{ref:t,slidesPerView:3,spaceBetween:10,freeMode:!0,loop:!0,pagination:{clickable:!0},navigation:{nextEl:
+[366] }
+                  `,children:[I.jsx(
+[367] ,{src:a,alt:`${s[o]} thumbnail`,loading:
+[368] }),i!==o&&I.jsx(
+[369] })]},o))})})]}),I.jsxs(
+[370] ,children:[I.jsx(
+[371] ,{children:I.jsxs(
+[372] ,children:[i+1,
+[373] ,children:I.jsx(
+[374] ,children:[I.jsx(
+[375] ,onClick:()=>t.current.swiper.slidePrev(),children:I.jsx(
+[376] ,children:I.jsx(
+[377] ,{strokeLinecap:
+[378] ,strokeLinejoin:
+[379] ,strokeWidth:2,d:
+[380] ,onClick:()=>t.current.swiper.slideNext(),children:I.jsx(
+[381] ,children:I.jsx(
+[382] ,{strokeLinecap:
+[383] ,strokeLinejoin:
+[384] ,strokeWidth:2,d:
+
+==============================================
+CHUNK: Accordion-Bns_zlL8.js (Size: 3035 chars)
+==============================================
+Found 11 interesting strings:
+[1] ./index-ClApAU9A.js
+[2] text-black  border rounded-sm  border-gray-500
+[3] w-full  p-2 text-left  focus:outline-none focus:shadow-outline-blue transition duration-300 ease-in-out
+[4] font-semibold text-sm sm:text-sm md:text-sm lg:text-sm
+[5] mr-3 ${t?"ri-close-line":"ri-add-circle-line"}
+[6] mt-2 rounded-md overflow-hidden lg:text-base md:text-base sm:text-base text-xs transition-max-height duration-300 ease-in-out ${t?"max-h-screen":"max-
+[7] WHAT EXACTLY DOES AN INTERIOR DESIGNER DO?
+[8] WHAT IS THE ROLE OF THE INTERIOR DESIGNER?
+[9] WHAT ARE THE 7 ELEMENTS OF INTERIOR DESIGN?
+[10] DOES INTERIOR DESIGN INCLUDES FURNITURE?
+[11] WHY INTERIOR DESIGN?
+
+==============================================
+CHUNK: index-ClApAU9A.js (Size: 203651 chars)
+==============================================
+Found 253 interesting strings:
+[1] assets/HomePage-BgbsSmIE.js
+[2] assets/OneProject-pPzOi-sx.js
+[3] assets/OneProject-BfFWe5y2.css
+[4] assets/TransitionEffect-BQDln96Q.js
+[5] assets/HomePage-Dqxp1wvX.css
+[6] assets/Services-DDCxGdDO.js
+[7] assets/Accordion-Bns_zlL8.js
+[8] assets/ServicesDetailsPage-BnoqAY4x.js
+[9] assets/About-8A2Y7KQ0.js
+[10] assets/Projects-CUr6-c60.js
+[11] link[rel="modulepreload"]
+[12] react.strict_mode
+[13] react.forward_ref
+[14] Objects are not valid as a React child (found:
+[15] [object Object]
+[16] object with keys {
+[17] ). If you meant to render a collection of children, use an array instead.
+[18] act(...) is not supported in production builds of React.
+[19] React.Children.only expected to receive a single React element child.
+[20] React.cloneElement(...): The argument must be a React element, but you passed
+[21] forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported
+[22] https://reactjs.org/docs/error-decoder.html?invariant=
+[23] Minified React error #
+[24] for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+[25] allowFullScreen async autoFocus autoPlay controls default defer disabled disablePictureInPicture disableRemotePlayback formNoValidate hidden loop noMo
+[26] xlink:actuate xlink:arcrole xlink:role xlink:show xlink:title xlink:type
+[27] react.strict_mode
+[28] react.forward_ref
+[29] react.suspense_list
+[30] react.offscreen
+[31] mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend composit
+[32] abort auxClick cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durati
+[33] change click focusin focusout input keydown keyup selectionchange
+[34] focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange
+[35] compositionend focusout keydown keypress keyup mousedown
+[36] compositionstart focusout keydown keypress keyup mousedown
+[37] compositionupdate focusout keydown keypress keyup mousedown
+[38] abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange r
+[39] cancel close invalid load scroll toggle
+[40] __reactContainer$
+[41] __reactListeners$
+[42] __reactHandles$
+[43] [object Object]
+[44] object with keys {
+[45] Error generating stack:
+[46] <script><\/script>
+[47] react-mount-point-unstable
+[48] ][type="radio"]
+[49] 18.3.1-next-f1338f8080-20240426
+[50] 18.3.1-next-f1338f8080-20240426
+[51] meta[property=csp-nonce]
+[52] link[href="${u}"]${a}
+[53] Unable to preload CSS for ${u}
+[54] vite:preloadError
+[55] No window.location.(origin|href) available to create URL for href:
+[56] A history only accepts one active listener
+[57] Absolute route path "
+[58] " nested under path
+[59] " is not valid. An absolute child route path
+[60] must start with the combined path of all its parent routes.
+[61] Index routes must not have child routes. Please remove
+[62] all child routes from route path "
+[63] " will be treated as if it were
+[64] " because the `*` character must
+[65] always follow a `/` in the pattern. To get rid of this warning,
+[66] please change the route path to "
+[67] (?:\\/(.+)|\\/*)$
+[68] " could not be decoded because it is is a malformed URL segment. This is probably due to a bad percent
+[69] Cannot include a '
+[70] ' character in a manually specified
+[71] ].  Please separate it out to the
+[72] ` field. Alternatively you may provide the full path as
+[73] a string in <Link to="..."> and the router will parse it for you.
+[74] rgba(200,200,200, 0.5)
+[75] Unexpected Application Error!
+[76] React Router caught the following error during render
+[77] M368 368 144 144m224 0L144 368
+[78] /assets/logo-BcKVRhIZ.png
+[79] https://api.emailjs.com
+[80] [object Object]
+[81] https://api.emailjs.com
+[82] The public key is required. Visit https://dashboard.emailjs.com/admin/account
+[83] The service ID is required. Visit https://dashboard.emailjs.com/admin
+[84] The template ID is required. Visit https://dashboard.emailjs.com/admin/templates
+[85] [object Object]
+[86] The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/
+[87] Unavailable For Headless Browser
+[88] The BlockList list has to be an array
+[89] The BlockList watchVariable has to be a string
+[90] The LimitRate throttle has to be a positive number
+[91] The LimitRate ID has to be a string
+[92] Too Many Requests
+[93] /api/v1.0/email/send
+[94] application/json
+[95] /api/v1.0/email/send-form
+[96] (prefers-reduced-motion: reduce)
+[97] from {
+  transform: scale(0) rotate(45deg);
+	opacity: 0;
+}
+to {
+ transform: scale(1) rotate(45deg);
+  opacity: 1;
+}
+[98] from {
+  transform: scale(0);
+  opacity: 0;
+}
+to {
+  transform: scale(1);
+  opacity: 1;
+}
+[99] from {
+  transform: scale(0) rotate(90deg);
+	opacity: 0;
+}
+to {
+  transform: scale(1) rotate(90deg);
+	opacity: 1;
+}
+[100] width: 20px;
+  opacity: 0;
+  height: 20px;
+  border-radius: 10px;
+  background: ${e=>e.primary||"#ff4b4b"};
+  position: relative;
+  transform: rotate(
+[101] from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+[102] from {
+  transform: scale(0) rotate(45deg);
+	opacity: 0;
+}
+to {
+  transform: scale(1) rotate(45deg);
+	opacity: 1;
+}
+[103] 0% {
+	height: 0;
+	width: 0;
+	opacity: 0;
+}
+40% {
+  height: 0;
+	width: 6px;
+	opacity: 1;
+}
+100% {
+  opacity: 1;
+  height: 10px;
+}
+[104] position: absolute;
+[105] position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  min-height: 20px;
+[106] from {
+  transform: scale(0.6);
+  opacity: 0.4;
+}
+to {
+  transform: scale(1);
+  opacity: 1;
+}
+[107] position: relative;
+  transform: scale(0.6);
+  opacity: 0.4;
+  min-width: 20px;
+  animation: ${gv} 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+[108] 0% {transform: translate3d(0,${e*-200}%,0) scale(.6); opacity:.5;}
+100% {transform: translate3d(0,0,0) scale(1); opacity:1;}
+[109] 0% {transform: translate3d(0,0,-1px) scale(1); opacity:1;}
+100% {transform: translate3d(0,${e*-150}%,-1px) scale(.6); opacity:0;}
+[110] 0%{opacity:0;} 100%{opacity:1;}
+[111] 0%{opacity:1;} 100%{opacity:0;}
+[112] ${rt(r)} 0.35s cubic-bezier(.21,1.02,.73,1) forwards
+[113] ${rt(l)} 0.4s forwards cubic-bezier(.06,.71,.55,1)
+[114] all 230ms cubic-bezier(.21,1.02,.73,1)
+[115] translateY(${t*(n?1:-1)}px)
+[116] z-index: 9999;
+  > * {
+    pointer-events: auto;
+  }
+[117] Message sent successfully
+[118] Failed to send message
+[119] font-Poppins text-black
+[120] md:text-lg lg:text-xl cursor-pointer
+[121] fixed inset-0 flex items-start justify-end z-50 overflow-y-auto bg-gray-800 bg-opacity-75
+[122] relative bg-white shadow-lg lg:w-[65%] md:w-[70%] lg:h-[80%] md:h-screen sm:h-screen p-6 mt-0 mr-0
+[123] flex items-center justify-end mb-6
+[124] text-black border-2 border-black rounded-full text-sm w-8 h-8 flex items-center justify-center
+[125] m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6
+[126] flex lg:flex-row flex-col justify-evenly lg:items-start items-center lg:mx-4 md:mx-4 sm:mx-4
+[127] flex justify-between gap-3 items-center mt-6
+[128] text-2xl ri-map-pin-line
+[129] w-64 text-base font-medium
+[130] 3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar - 751018, Odisha
+[131] text-2xl ri-phone-line
+[132] +91 075040 41040
+[133] flex text-xl gap-5 mt-1
+[134] https://www.facebook.com/kalyandesignstudio?mibextid=qi2Omg&rdid=MHLyk3ZtVcuF1RKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FrkDRD6iso3sg4iDR%
+[135] noopener noreferrer
+[136] https://www.instagram.com/kalyan_design_studio?igsh=N2U3ZmJ1N210Mmhs
+[137] noopener noreferrer
+[138] https://www.youtube.com/watch?si=yv5otNwI-2c43qK8&v=ACrraXQOfuQ&feature=youtu.be
+[139] noopener noreferrer
+[140] flex flex-col justify-center lg:mt-0 md:mt-10 mt-10 items-center
+[141] text-xl font-semibold
+[142] For inquiries, please leave us your details.
+[143] flex mt-14 lg:flex-row md:flex-row sm:flex-row flex-col lg:gap-14 md:gap-10 sm:gap-11 gap-10
+[144] outline-none border-b text-base border-black bg-transparent text-black placeholder:text-black lg:w-[12vw] md:w-[25vw] sm:w-[30vw] w-80
+[145] outline-none text-base border-b border-black bg-transparent text-black placeholder:text-black lg:w-[12vw] md:w-[25vw] sm:w-[30vw] w-80
+[146] flex text-base lg:flex-row md:flex-row sm:flex-row flex-col lg:gap-14 md:gap-10 sm:gap-11 gap-10 mt-10
+[147] outline-none border-b border-black bg-transparent text-black placeholder:text-black lg:w-[12vw] md:w-[25vw] sm:w-[30vw] w-80
+[148] outline-none border-b border-black bg-transparent text-black placeholder:text-black lg:w-[12vw] md:w-[25vw] sm:w-[30vw] w-80
+[149] flex flex-col mt-10 text-base
+[150] outline-none border-b border-black bg-transparent text-black placeholder:text-black lg:w-[28vw] md:w-[53vw] sm:w-[65vw] w-80
+[151] Modular Kitchen
+[152] Modular Kitchen
+[153] 3d Interior Models
+[154] 3d Interior Models
+[155] Core House Plan
+[156] Core House Plan
+[157] outline-none mt-10 border-b border-black bg-transparent text-black placeholder:text-black lg:w-[28vw] md:w-[53vw] sm:w-[65vw] w-80
+[158] flex justify-center items-center lg:mt-12 md:mt-12 sm:mt-12 mt-10
+[159] lg:w-[28vw] md:w-[52vw] sm:w-[65vw] w-80 h-10 text-xl rounded bg-[#FF8526] lg:mb-20 md:mb-20 sm:mb-20 mb-12 text-white
+[160] /assets/newimg3-BJCNK8mq.png
+[161] max-w-screen-xl mx-auto font-century mt-8
+[162] lg:flex bg-white z-40  md:flex hidden lg:justify-between justify-evenly items-center
+[163] lg:w-44 md:w-32 w-20
+[164] flex lg:gap-7 md:gap-5  md:text-lg lg:text-xl font-medium text-black cursor-pointer
+[165] https://kalyandesignstudio.com/blog/
+[166] noopener noreferrer
+[167] https://www.facebook.com/kalyandesignstudio?mibextid=qi2Omg&rdid=MHLyk3ZtVcuF1RKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FrkDRD6iso3sg4iDR%
+[168] noopener noreferrer
+[169] text-2xl ri-facebook-fill
+[170] https://www.instagram.com/kalyan_design_studio?igsh=N2U3ZmJ1N210Mmhs
+[171] noopener noreferrer
+[172] text-2xl ri-instagram-line
+[173] https://www.youtube.com/watch?si=yv5otNwI-2c43qK8&v=ACrraXQOfuQ&feature=youtu.be
+[174] noopener noreferrer
+[175] text-2xl ri-youtube-line
+[176] absolute lg:-top-7 md:-top-5 top-14 right-0 w-10 lg:w-32 md:w-32
+[177] fixed top-0 bg-white z-40 flex justify-between items-center w-full lg:hidden md:hidden
+[178] text-3xl bg-white text-[#FF8526] mr-6 rounded-full cursor-pointer shadow-2xl border border-gray-100
+[179] fixed h-full z-40 w-screen lg:hidden bg-black bg-opacity-50 backdrop-blur-sm top-0 right-0 cursor-pointer
+[180] text-black bg-white flex-col absolute right-0 top-0 h-screen p-8 gap-8 z-40 w-full flex
+[181] text-2xl   text-black absolute top-7 right-7 rounded-full cursor-pointer shadow-2xl border border-black
+[182] flex justify-center items-center flex-col mt-16 text-2xl font-medium
+[183] https://kalyandesignstudio.com/blog/
+[184] noopener noreferrer
+[185] flex mt-7 gap-7
+[186] https://www.facebook.com/kalyandesignstudio?mibextid=qi2Omg&rdid=MHLyk3ZtVcuF1RKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FrkDRD6iso3sg4iDR%
+[187] noopener noreferrer
+[188] text-2xl ri-facebook-fill
+[189] https://www.instagram.com/kalyan_design_studio?igsh=N2U3ZmJ1N210Mmhs
+[190] noopener noreferrer
+[191] text-2xl ri-instagram-line
+[192] https://www.youtube.com/watch?si=yv5otNwI-2c43qK8&v=ACrraXQOfuQ&feature=youtu.be
+[193] noopener noreferrer
+[194] text-2xl ri-youtube-line
+[195] /assets/footer-DTry5ypL.png
+[196] relative w-full h-96 bg-cover bg-center mt-20
+[197] max-w-screen-xl lg:mx-auto mx-5
+[198] absolute inset-0 flex items-center lg:flex-row md:flex-row sm:flex-row flex-col justify-evenly text-white
+[199] flex flex-col justify-center items-center
+[200] text-[#FF8526] font-bold lg:text-3xl md:text-2xl lg:mt-0 md:mt-0 mt-10 text-2xl
+[201] Kalyan Design Studio
+[202] flex justify-center items-start gap-2 mt-2
+[203] lg:text-lg md:text-sm sm:text-xs
+[204] 3181/5466, Puri-NH Bypass, Baragada
+[205] Bhubaneswar, Odisha 751018
+[206] flex text-xl gap-5 mt-3
+[207] https://www.facebook.com/kalyandesignstudio?mibextid=qi2Omg&rdid=MHLyk3ZtVcuF1RKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FrkDRD6iso3sg4iDR%
+[208] noopener noreferrer
+[209] https://www.instagram.com/kalyan_design_studio?igsh=N2U3ZmJ1N210Mmhs
+[210] noopener noreferrer
+[211] https://www.youtube.com/watch?si=yv5otNwI-2c43qK8&v=ACrraXQOfuQ&feature=youtu.be
+[212] noopener noreferrer
+[213] flex justify-center gap-2 items-start lg:text-xl mt-5 md:text-xl sm:text-base
+[214] overflow-hidden w-full lg:w-96 md:w-72 sm:w-52 mt-8
+[215] https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14703.497116044074!2d85.86106134999999!3d20.251747199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1
+[216] React Spinners:
+[217] is not a valid css value. Defaulting to
+[218] @keyframes
+[219] 0% {transform: rotate(0deg)} 50% {transform: rotate(180deg)} 100% {transform: rotate(360deg)}
+[220] s 0s infinite cubic-bezier(0.7, -0.13, 0.22, 0.86)
+[221] /assets/contactbackg-D9XEOEFC.png
+[222] Message sent successfully
+[223] Failed to send message
+[224] relative w-full lg:h-[45vw] md:h-[60vw] sm:h-[55vw] h-screen bg-cover bg-center lg:mt-20 md:mt-20 mt-10
+[225] absolute inset-0 flex justify-center items-center
+[226] lg:w-[75vw] md:w-[75vw] sm:w-[75vw] w-full h-fit bg-white shadow-2xl rounded
+[227] font-bold lg:text-2xl md:text-2xl sm:text-2xl text-xl text-center lg:mt-11 md:mt-10 sm:mt-10 mt-8
+[228] BOOK A CONSULTATION
+[229] mt-2 lg:mx-10 md:mx-8 sm:mx-5 mx-2 text-center text-xs lg:text-sm
+[230] Take the first step towards making your dream home a reality by meeting our in-house design expert to discuss your design. Simply fill in the form bel
+[231] lg:mt-4 md:mt-4 sm:mt-4 mt-6 border-black
+[232] flex items-center flex-col justify-center mt-10
+[233] flex lg:flex-row md:flex-row sm:flex-row flex-col lg:gap-20 md:gap-20 sm:gap-11 gap-10
+[234] outline-none border-b border-black bg-transparent text-black placeholder-text-black lg:w-[30vw] md:w-[30vw] sm:w-[30vw] w-80 placeholder:text-black
+[235] outline-none border-b border-black bg-transparent text-black placeholder-text-black lg:w-[30vw] md:w-[30vw] sm:w-[30vw] w-80 placeholder:text-black
+[236] flex lg:flex-row md:flex-row sm:flex-row flex-col lg:gap-20 md:gap-20 sm:gap-11 gap-10 mt-10
+[237] outline-none border-b border-black bg-transparent text-black placeholder-text-black lg:w-[30vw] md:w-[30vw] sm:w-[30vw] w-80 placeholder:text-black
+[238] outline-none border-b border-black bg-transparent text-black placeholder-text-black lg:w-[30vw] md:w-[30vw] sm:w-[30vw] w-80
+[239] Modular Kitchen
+[240] Modular Kitchen
+[241] 3d Interior Models
+[242] 3d Interior Models
+[243] Core House Plan
+[244] Core House Plan
+[245] flex justify-center items-center lg:mt-12 md:mt-12 sm:mt-12 mt-10
+[246] w-64 h-10 text-xl rounded bg-[#FF8526] lg:mb-20 md:mb-20 sm:mb-20 mb-12 text-white
+[247] ./HomePage-BgbsSmIE.js
+[248] ./Services-DDCxGdDO.js
+[249] ./ServicesDetailsPage-BnoqAY4x.js
+[250] ./About-8A2Y7KQ0.js
+[251] ./Projects-CUr6-c60.js
+[252] Caveat Brush, cursive
+[253] /servicesdetailspage/:category

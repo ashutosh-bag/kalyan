@@ -13,19 +13,19 @@ export default function BlogSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c8a47e]"></span>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#e0c8aa] font-medium">Monograph & Journal</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF8526]"></span>
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#FF8526] font-medium">Studio Journal & Insights</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-white">
-              Architectural Perspectives
+              Interior Design Perspectives
             </h2>
             <p className="text-neutral-400 text-sm sm:text-base font-light mt-2 max-w-xl">
-              Discourses on material provenance, acoustic sanctuary, and the evolving language of contemporary luxury.
+              Insights on color psychology, spatial harmony, and contemporary living by Kalyan Design Studio.
             </p>
           </div>
           
-          <div className="text-xs uppercase tracking-widest text-[#c8a47e] font-light">
-            Published quarterly by KYN Studio
+          <div className="text-xs uppercase tracking-widest text-[#FF8526] font-light">
+            Kalyan Design Studio Journal
           </div>
         </div>
 
@@ -34,7 +34,7 @@ export default function BlogSection() {
           {BLOG_POSTS.map((post) => (
             <article
               key={post.id}
-              className="group flex flex-col justify-between rounded-sm bg-neutral-900/40 border border-white/10 hover:border-[#c8a47e]/60 overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-xl"
+              className="group flex flex-col justify-between rounded-sm bg-neutral-900/40 border border-white/10 hover:border-[#FF8526]/60 overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-xl"
             >
               <div>
                 {/* Image */}
@@ -46,7 +46,7 @@ export default function BlogSection() {
                     loading="lazy"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-neutral-950/80 backdrop-blur-md border border-white/15 text-[10px] uppercase tracking-[0.2em] font-medium text-[#e0c8aa] rounded-sm">
+                    <span className="px-3 py-1 bg-neutral-950/80 backdrop-blur-md border border-white/15 text-[10px] uppercase tracking-[0.2em] font-medium text-[#FF8526] rounded-sm">
                       {post.category}
                     </span>
                   </div>
@@ -56,7 +56,7 @@ export default function BlogSection() {
                 <div className="p-6">
                   <div className="flex items-center space-x-3 text-[11px] text-neutral-400 font-light mb-3">
                     <span className="flex items-center space-x-1">
-                      <Calendar className="w-3 h-3 text-[#c8a47e]" />
+                      <Calendar className="w-3 h-3 text-[#FF8526]" />
                       <span>{post.date}</span>
                     </span>
                     <span>&bull;</span>
@@ -82,7 +82,7 @@ export default function BlogSection() {
                   <img
                     src={post.author.avatar}
                     alt={post.author.name}
-                    className="w-8 h-8 rounded-full object-cover border border-[#c8a47e]/40"
+                    className="w-8 h-8 rounded-full object-cover border border-[#FF8526]/40"
                   />
                   <div className="flex flex-col">
                     <span className="text-xs text-white font-medium">{post.author.name}</span>
@@ -90,7 +90,7 @@ export default function BlogSection() {
                   </div>
                 </div>
 
-                <div className="p-2 text-neutral-400 group-hover:text-[#c8a47e] transition-colors">
+                <div className="p-2 text-neutral-400 group-hover:text-[#FF8526] transition-colors">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>

@@ -21,7 +21,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF7F2] border-t border-[#1A1815]/10 relative">
+    <section id="services" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] border-t border-[#1A1815]/10 relative">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
@@ -61,6 +61,18 @@ export default function ServicesSection() {
                 <h4 className="text-xs uppercase tracking-wider text-[#7A7369] font-light mb-4">
                   {srv.subtitle}
                 </h4>
+
+                {srv.image && (
+                  <div className="w-full h-44 mb-4 rounded-sm overflow-hidden bg-[#FAF7F2] border border-[#1A1815]/10 relative">
+                    <img
+                      src={srv.image}
+                      alt={srv.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+
                 <p className="text-xs sm:text-sm text-[#5C564E] font-light leading-relaxed mb-6">
                   {srv.description}
                 </p>

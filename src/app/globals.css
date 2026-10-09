@@ -16,41 +16,84 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'Century751BT';
+  src: url('/fonts/Century-751-BT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Courgette';
+  src: url('/fonts/Courgette-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --bg-primary: #F7F3EB;
-  --bg-secondary: #EFE9DF;
-  --bg-tertiary: #E6DFD3;
+  --bg-primary: #FFF3E9;
+  --bg-secondary: #F7EAE0;
+  --bg-tertiary: #EFE2D6;
   --text-primary: #1A1815;
-  --text-muted: #68625A;
-  --accent-gold: #B68953;
-  --accent-gold-light: #DFC5A4;
+  --text-muted: #5C564E;
+  --accent-gold: #FF8526;
+  --accent-gold-light: #FFA65C;
+  --kalyan-orange: #FF8526;
+  --kalyan-amber: #E79F30;
+  --kalyan-peach: #FFF3E9;
   --border-subtle: rgba(26, 24, 21, 0.08);
-  --border-hover: rgba(182, 137, 83, 0.4);
+  --border-hover: rgba(255, 133, 38, 0.4);
 }
 
 @theme inline {
+  --font-sans: 'Century751BT', sans-serif;
+  --font-serif: 'Century751BT', serif;
+  --font-century: 'Century751BT', sans-serif;
+  --font-courgette: 'Courgette', cursive, sans-serif;
   --color-primary: var(--bg-primary);
   --color-secondary: var(--bg-secondary);
   --color-gold: var(--accent-gold);
   --color-gold-light: var(--accent-gold-light);
+  --color-kalyan-orange: #FF8526;
+  --color-kalyan-peach: #FFF3E9;
+  --color-kalyan-amber: #E79F30;
+}
+
+.font-century {
+  font-family: 'Century751BT', sans-serif !important;
+}
+
+.font-courgette {
+  font-family: 'Courgette', cursive, sans-serif !important;
+}
+
+.font-serif {
+  font-family: 'Century751BT', Georgia, serif !important;
 }
 
 html {
   scroll-behavior: smooth;
   color-scheme: light;
-  background-color: #F7F3EB;
+  background-color: #FFF3E9;
+  font-family: 'Century751BT', sans-serif;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Century751BT', sans-serif;
   overflow-x: hidden;
 }
 
+p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+  font-family: inherit;
+}
+
 ::selection {
-  background: #DFC5A4;
-  color: #1A1815;
+  background: #FF8526;
+  color: #FFFFFF;
 }
 
 /* Custom Scrollbar */

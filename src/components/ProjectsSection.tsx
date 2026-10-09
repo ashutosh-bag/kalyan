@@ -38,7 +38,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#F8F4EE] border-t border-[#1A1815]/10 relative">
+    <section id="projects" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] border-t border-[#1A1815]/10 relative">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
@@ -130,14 +130,14 @@ export default function ProjectsSection() {
                 {/* Materials preview */}
                 <div className="pt-4 mt-4 border-t border-[#1A1815]/10 flex items-center justify-between">
                   <div className="flex flex-wrap gap-1.5">
-                    {proj.materials.slice(0, 2).map((m, i) => (
+                    {(proj.materials || []).slice(0, 2).map((m, i) => (
                       <span key={i} className="text-[10px] text-[#5C564E] font-light bg-[#F7F3EB] border border-[#1A1815]/5 px-2 py-0.5 rounded-sm">
                         {m}
                       </span>
                     ))}
-                    {proj.materials.length > 2 && (
+                    {(proj.materials || []).length > 2 && (
                       <span className="text-[10px] text-[#5C564E] font-light bg-[#F7F3EB] border border-[#1A1815]/5 px-1.5 py-0.5 rounded-sm">
-                        +{proj.materials.length - 2}
+                        +{(proj.materials || []).length - 2}
                       </span>
                     )}
                   </div>
@@ -216,33 +216,37 @@ export default function ProjectsSection() {
                       {selectedProject.title}
                     </h3>
                     <p className="text-xs text-[#B68953] font-medium mt-1">
-                      {selectedProject.location} &bull; {selectedProject.year} &bull; {selectedProject.areaSqFt.toLocaleString()} sq ft
+                      {selectedProject.location} {selectedProject.year ? `• ${selectedProject.year}` : ''} {selectedProject.areaSqFt ? `• ${selectedProject.areaSqFt.toLocaleString()} sq ft` : ''}
                     </p>
                   </div>
 
                   <div className="space-y-4 text-[#5C564E] text-xs sm:text-sm font-light leading-relaxed border-t border-b border-[#1A1815]/10 py-4">
                     <p>{selectedProject.description}</p>
-                    <div>
-                      <span className="text-[11px] uppercase tracking-wider text-[#7A7369] block mb-1">
-                        Commissioning Client:
-                      </span>
-                      <span className="text-[#1A1815] font-medium">{selectedProject.client}</span>
-                    </div>
+                    {selectedProject.client && (
+                      <div>
+                        <span className="text-[11px] uppercase tracking-wider text-[#7A7369] block mb-1">
+                          Commissioning Client:
+                        </span>
+                        <span className="text-[#1A1815] font-medium">{selectedProject.client}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Materials palette */}
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#7A7369] block mb-2">
-                      Key Material Specifications:
-                    </span>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedProject.materials.map((mat, i) => (
-                        <span key={i} className="text-xs bg-white border border-[#1A1815]/10 text-[#4A453F] px-3 py-1 rounded-sm">
-                          {mat}
-                        </span>
-                      ))}
+                  {(selectedProject.materials || []).length > 0 && (
+                    <div>
+                      <span className="text-[11px] uppercase tracking-wider text-[#7A7369] block mb-2">
+                        Key Material Specifications:
+                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {(selectedProject.materials || []).map((mat, i) => (
+                          <span key={i} className="text-xs bg-white border border-[#1A1815]/10 text-[#4A453F] px-3 py-1 rounded-sm">
+                            {mat}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   <div className="pt-2">
                     <a
