@@ -120,26 +120,26 @@ export default function ContactSection() {
         
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c8a47e]"></span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#e0c8aa] font-medium">Commissions in Odisha</span>
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF8526] animate-pulse"></span>
+            <span className="text-xs uppercase tracking-widest text-[#FF8526] font-century font-bold">Commissions in Odisha</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-white mb-4">
-            Begin Your Architectural Project
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bounce text-white mb-4 tracking-wide">
+            Begin Your Architectural <span className="text-[#FF8526]">Project</span>
           </h2>
-          <p className="text-neutral-400 text-sm sm:text-base font-light">
-            We accept select residential and commercial projects across Bhubaneswar, Cuttack, Puri, Rourkela, and Eastern India to maintain obsessive craftsmanship.
+          <p className="text-neutral-300 text-sm sm:text-base font-century leading-relaxed">
+            Schedule your free site measurement and 3D interior design consultation across Bhubaneswar, Cuttack, and Puri.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Contact & Consultation Form (Col 1-7) */}
-          <div className="lg:col-span-7 bg-neutral-900/40 border border-white/10 p-8 sm:p-10 rounded-sm shadow-2xl backdrop-blur-md">
-            <h3 className="text-xl font-serif text-white font-normal mb-6 flex items-center justify-between">
-              <span>Project Consultation Form</span>
-              <span className="text-xs uppercase tracking-widest text-[#c8a47e] font-mono flex items-center">
-                <ShieldCheck className="w-3.5 h-3.5 mr-1" /> Confidential
+          <div className="lg:col-span-7 bg-neutral-900/60 border border-white/10 p-8 sm:p-10 rounded-2xl shadow-2xl backdrop-blur-md">
+            <h3 className="text-2xl font-bounce text-white mb-6 flex items-center justify-between">
+              <span>Book Site Visit &amp; Consultation</span>
+              <span className="text-xs uppercase tracking-wider text-[#FF8526] font-century font-bold flex items-center">
+                <ShieldCheck className="w-4 h-4 mr-1 text-[#FF8526]" /> Confidential
               </span>
             </h3>
 
@@ -309,17 +309,17 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 bg-[#c8a47e] hover:bg-[#e0c8aa] text-neutral-950 text-xs uppercase tracking-[0.25em] font-semibold rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(200,164,126,0.25)] flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-2xl rounded-xl transition-all duration-300 shadow-xl flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer hover:scale-[1.02]"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-neutral-950 border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     <span>Processing Submission...</span>
                   </>
                 ) : (
                   <>
-                    <Send className="w-4 h-4" />
-                    <span>Submit Project Inquiry</span>
+                    <Send className="w-5 h-5 text-white" />
+                    <span>Submit &amp; Get Free Quote</span>
                   </>
                 )}
               </button>

@@ -27,9 +27,11 @@ export default function Footer() {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'Packages', href: '#packages' },
+    { name: 'Showcase', href: '#spatial-showcase' },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -78,16 +80,20 @@ export default function Footer() {
           
           {/* Brand & Studio Info (Col 1-5) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center w-10 h-10 border border-[#c8a47e]/60 rounded-sm bg-neutral-900">
-                <span className="font-serif tracking-widest text-lg font-bold text-white">K</span>
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+              <div className="p-1.5 rounded-2xl bg-black border-2 border-[#FF8526] shadow-[0_4px_28px_rgba(255,133,38,0.4)] w-fit overflow-hidden">
+                <img
+                  src="/images/kalyan/branding/logo.gif"
+                  alt="Kalyan Design Studio Animated Logo"
+                  className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif tracking-[0.2em] text-lg font-semibold text-white uppercase">
+                <span className="font-bounce text-2xl text-white">
                   Kalyan Design Studio
                 </span>
-                <span className="text-[9px] tracking-[0.25em] uppercase text-[#c8a47e]">
-                  Bhubaneswar &bull; Cuttack &bull; Odisha
+                <span className="text-xs tracking-widest font-century uppercase text-[#FF8526] font-bold mt-1">
+                  Architecture &bull; Interiors &bull; Odisha
                 </span>
               </div>
             </div>

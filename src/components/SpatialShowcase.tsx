@@ -213,37 +213,39 @@ export default function SpatialShowcase() {
         {/* ================================================================= */}
         {/* HEADER: CLIENT-FOCUSED ARCHITECTURAL SHOWCASE TITLE               */}
         {/* ================================================================= */}
+        {/* SECTION HEADER                                                    */}
+        {/* ================================================================= */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#1A1815]/10 backdrop-blur-md shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[#B68953] animate-pulse" />
-              <span className="text-[11px] uppercase tracking-[0.25em] text-[#8B7355] font-medium">
+            <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#FF8526]/30 backdrop-blur-md shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#FF8526] animate-pulse" />
+              <span className="text-xs uppercase tracking-widest font-century font-semibold text-[#FF8526]">
                 Spatial Architecture Showcase
               </span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1815] tracking-tight leading-tight">
-              Bespoke Spaces Crafted with <span className="italic text-[#B68953] font-normal">Living Light</span> & Texture
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bounce text-black tracking-wide leading-tight">
+              Bespoke Spaces Crafted with <span className="text-[#FF8526]">Living Light</span> & Texture
             </h2>
             
-            <p className="text-sm sm:text-base text-[#5C564E] font-light leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5C564E] font-century leading-relaxed">
               Explore our master commissions across Odisha. Touch, inspect, and experience how organic regional stone, custom joinery, and circadian illumination synthesize into extraordinary living environments.
             </p>
           </div>
 
           {/* Quick Stats / Highlights */}
-          <div className="flex items-center gap-6 sm:gap-10 border-l border-[#1A1815]/15 pl-6 sm:pl-8 py-2">
+          <div className="flex items-center gap-6 sm:gap-10 border-l border-[#FF8526]/30 pl-6 sm:pl-8 py-2">
             <div>
-              <div className="text-2xl sm:text-3xl font-serif text-[#1A1815] font-light">100%</div>
-              <div className="text-[11px] uppercase tracking-wider text-[#68625A]">Bespoke Millwork</div>
+              <div className="text-2xl sm:text-3xl font-bounce text-[#1A1815]">100%</div>
+              <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Bespoke Millwork</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-serif text-[#B68953] font-light">45+</div>
-              <div className="text-[11px] uppercase tracking-wider text-[#68625A]">Odisha Villas</div>
+              <div className="text-2xl sm:text-3xl font-bounce text-[#FF8526]">350+</div>
+              <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Odisha Homes</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-serif text-[#1A1815] font-light">Vastu</div>
-              <div className="text-[11px] uppercase tracking-wider text-[#68625A]">Precision Flow</div>
+              <div className="text-2xl sm:text-3xl font-bounce text-[#1A1815]">Vastu</div>
+              <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Precision Flow</div>
             </div>
           </div>
         </div>
@@ -254,21 +256,25 @@ export default function SpatialShowcase() {
         <div className="mb-24">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#B68953]/15 border border-[#B68953]/30 flex items-center justify-center text-[#B68953]">
-                <Sun className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-full bg-[#FF8526]/15 border border-[#FF8526]/30 flex items-center justify-center text-[#FF8526]">
+                <Sun className="w-4 h-4 text-[#FF8526]" />
               </div>
               <div>
-                <h3 className="text-lg font-medium text-[#1A1815]">Circadian Lighting & Atmosphere Morph</h3>
-                <p className="text-xs text-[#68625A]">Drag slider to experience Natural Daylight vs. 2400K Evening Illumination</p>
+                <h3 className="text-xl sm:text-2xl font-bounce text-black">
+                  Circadian Lighting &amp; Atmosphere <span className="text-[#FF8526]">Morph</span>
+                </h3>
+                <p className="text-xs sm:text-sm font-century text-[#5C564E]">
+                  Drag slider to experience Natural Daylight vs. 2400K Evening Illumination
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 bg-white/90 border border-[#1A1815]/10 rounded-full px-3 py-1 text-xs text-[#5C564E] shadow-sm">
-              <span className={`flex items-center gap-1.5 transition-colors ${sliderPosition > 50 ? 'text-[#B68953] font-medium' : 'text-[#8A847C]'}`}>
+            <div className="flex items-center gap-2 bg-white/95 border border-[#FF8526]/30 rounded-full px-3.5 py-1 text-xs text-[#5C564E] shadow-sm font-century">
+              <span className={`flex items-center gap-1.5 transition-colors ${sliderPosition > 50 ? 'text-[#FF8526] font-bold' : 'text-[#8A847C]'}`}>
                 <Sun className="w-3.5 h-3.5" /> Day View ({Math.round(sliderPosition)}%)
               </span>
               <span className="text-[#1A1815]/20">|</span>
-              <span className={`flex items-center gap-1.5 transition-colors ${sliderPosition <= 50 ? 'text-[#B68953] font-medium' : 'text-[#8A847C]'}`}>
+              <span className={`flex items-center gap-1.5 transition-colors ${sliderPosition <= 50 ? 'text-[#FF8526] font-bold' : 'text-[#8A847C]'}`}>
                 <Moon className="w-3.5 h-3.5" /> Night View ({Math.round(100 - sliderPosition)}%)
               </span>
             </div>
@@ -358,11 +364,11 @@ export default function SpatialShowcase() {
             {/* Bottom Caption Overlay */}
             <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-col sm:flex-row sm:items-end justify-between gap-4 pointer-events-none">
               <div className="max-w-xl">
-                <span className="text-xs uppercase tracking-widest text-[#B68953] font-semibold">Featured Masterwork</span>
-                <h4 className="text-xl sm:text-2xl font-serif text-white font-medium drop-shadow-md">
+                <span className="text-xs uppercase tracking-widest text-[#FF8526] font-century font-bold">Featured Masterwork</span>
+                <h4 className="text-xl sm:text-3xl font-bounce text-white drop-shadow-md">
                   The Patia Monolithic Villa — Double-Height Atrium
                 </h4>
-                <p className="text-xs text-neutral-200 font-light mt-1 drop-shadow">
+                <p className="text-xs sm:text-sm text-neutral-200 font-century mt-1 drop-shadow">
                   Custom travertine hearth, fluted Burma teak acoustic slats, and circadian concealed coves calibrated for dawn-to-dusk wellness.
                 </p>
               </div>
@@ -373,9 +379,9 @@ export default function SpatialShowcase() {
                   e.stopPropagation();
                   setSelectedItem(SHOWCASE_ITEMS[0]);
                 }}
-                className="pointer-events-auto inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 hover:bg-[#B68953] hover:text-white backdrop-blur-md border border-white/20 text-xs font-medium text-[#1A1815] transition-all shadow-lg"
+                className="pointer-events-auto inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-base transition-all shadow-xl hover:scale-105 cursor-pointer"
               >
-                <Maximize2 className="w-3.5 h-3.5" /> Inspect Full Space
+                <Maximize2 className="w-4 h-4 text-white" /> Inspect Full Space
               </button>
             </div>
           </div>
@@ -387,11 +393,11 @@ export default function SpatialShowcase() {
         <div className="mb-28">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#B68953] tracking-widest uppercase mb-1">
+              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#FF8526] tracking-widest uppercase mb-1">
                 <Layers className="w-3.5 h-3.5" /> Kinetic Visual Streams
               </div>
-              <h3 className="text-2xl sm:text-3xl font-serif font-light text-[#1A1815]">
-                Continuous Stream of Curated Interiors
+              <h3 className="text-2xl sm:text-4xl font-bounce text-black">
+                Continuous Stream of <span className="text-[#FF8526]">Curated Interiors</span>
               </h3>
             </div>
 
@@ -526,16 +532,16 @@ export default function SpatialShowcase() {
         <div>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#B68953] tracking-widest uppercase mb-1">
+              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#FF8526] tracking-widest uppercase mb-1">
                 <Compass className="w-3.5 h-3.5" /> Spatial Categories
               </div>
-              <h3 className="text-2xl sm:text-3xl font-serif font-light text-[#1A1815]">
-                Detailed Architectural Studies
+              <h3 className="text-2xl sm:text-4xl font-bounce text-black">
+                Detailed Interior <span className="text-[#FF8526]">Studies &amp; Models</span>
               </h3>
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 bg-white/90 border border-[#1A1815]/10 rounded-full p-1.5 backdrop-blur-lg shadow-sm">
+            <div className="flex flex-wrap items-center gap-2 bg-white/95 border border-[#FF8526]/20 rounded-full p-1.5 backdrop-blur-lg shadow-sm">
               {[
                 { id: 'all', label: 'All Sanctuaries' },
                 { id: 'living', label: 'Grand Living' },
@@ -547,10 +553,10 @@ export default function SpatialShowcase() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveCategory(tab.id as any)}
-                  className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
+                  className={`px-4 py-2 rounded-full text-xs font-century transition-all cursor-pointer ${
                     activeCategory === tab.id
-                      ? 'bg-[#B68953] text-white shadow-xs font-semibold'
-                      : 'text-[#68625A] hover:text-[#1A1815] hover:bg-black/5'
+                      ? 'bg-[#FF8526] text-white shadow-md font-bold'
+                      : 'text-[#68625A] hover:text-[#FF8526] hover:bg-black/5 font-medium'
                   }`}
                 >
                   {tab.label}
@@ -715,11 +721,11 @@ export default function SpatialShowcase() {
               {/* Consultation Call to Action */}
               <div className="border-t border-[#1A1815]/10 pt-6 mt-6">
                 <a
-                  href="#contact"
+                  href="#packages"
                   onClick={() => setSelectedItem(null)}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-[#B68953] hover:bg-[#9E7445] text-white font-medium text-sm transition-colors shadow-lg"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-xl transition-all shadow-lg hover:scale-[1.02] cursor-pointer"
                 >
-                  Commission a Similar Space <ArrowUpRight className="w-4 h-4" />
+                  Get Quote on this Design <ArrowUpRight className="w-5 h-5 text-white" />
                 </a>
               </div>
             </div>

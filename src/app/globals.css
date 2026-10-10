@@ -52,6 +52,7 @@
   --font-serif: 'Century751BT', serif;
   --font-century: 'Century751BT', sans-serif;
   --font-courgette: 'Courgette', cursive, sans-serif;
+  --font-bounce: 'Bounce Dash', cursive, sans-serif;
   --color-primary: var(--bg-primary);
   --color-secondary: var(--bg-secondary);
   --color-gold: var(--accent-gold);
@@ -61,16 +62,36 @@
   --color-kalyan-amber: #E79F30;
 }
 
+.font-bounce, .font-bounce-dash {
+  font-family: 'Bounce Dash', var(--font-bounce-dash), 'Century751BT', sans-serif !important;
+}
+
 .font-century {
-  font-family: 'Century751BT', sans-serif !important;
+  font-family: 'Century751BT', var(--font-century), Georgia, serif !important;
 }
 
 .font-courgette {
-  font-family: 'Courgette', cursive, sans-serif !important;
+  font-family: 'Courgette', var(--font-courgette), cursive, sans-serif !important;
 }
 
 .font-serif {
   font-family: 'Century751BT', Georgia, serif !important;
+}
+
+/* Image Pop & Vivid Styling */
+.vivid-image {
+  filter: contrast(1.06) saturate(1.18) brightness(1.02);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vivid-image:hover {
+  filter: contrast(1.1) saturate(1.25) brightness(1.05);
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF8526 0%, #E79F30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 html {
@@ -262,4 +283,68 @@ p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 
 .animate-hotspot {
   animation: hotspotPulse 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Floating Micro-Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.6deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-0.6deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(255, 133, 38, 0.25), 0 0 0 1px rgba(255, 133, 38, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(255, 133, 38, 0.5), 0 0 0 2px rgba(255, 133, 38, 0.4);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 4.5s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmerEffect 3s ease-in-out infinite;
+}
+
+/* Glowing Border Accent */
+.border-glow-orange {
+  border: 1px solid rgba(255, 133, 38, 0.35);
+  box-shadow: 0 4px 24px -2px rgba(255, 133, 38, 0.15);
+}
+
+.border-glow-orange:hover {
+  border-color: rgba(255, 133, 38, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(255, 133, 38, 0.25);
 }

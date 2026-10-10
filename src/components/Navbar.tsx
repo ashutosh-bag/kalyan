@@ -41,6 +41,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
 
   const navItems = [
     { name: 'Home', href: '#home', id: 'home' },
+    { name: 'Packages', href: '#packages', id: 'packages' },
     { name: 'Showcase', href: '#spatial-showcase', id: 'spatial-showcase' },
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Projects', href: '#projects', id: 'projects' },
@@ -89,120 +90,133 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       id="main-navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'glass-nav-scrolled py-3.5 shadow-2xl'
-          : 'bg-transparent py-6'
+          ? 'glass-nav-scrolled py-1.5 sm:py-2 shadow-2xl'
+          : 'bg-transparent py-2 sm:py-3'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-            {/* Brand Logo: KYN */}
-            <Link
-              href="#home"
-              className="group flex items-center space-x-3 focus:outline-none"
-              aria-label="KYN Interior Design Agency Home"
+          {/* Official Animated Brand Logo: Kalyan Design Studio (logo.gif) */}
+          <Link
+            href="#home"
+            className="group flex items-center focus:outline-none flex-shrink-0"
+            aria-label="Kalyan Design Studio Home"
+          >
+            <div className="relative flex items-center justify-center rounded-2xl bg-black border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.45)] group-hover:border-[#FF9E4A] group-hover:shadow-[0_4px_32px_rgba(255,133,38,0.7)] transition-all duration-300 overflow-hidden p-1 flex-shrink-0">
+              <img
+                src="/images/kalyan/branding/logo.gif"
+                alt="Kalyan Design Studio Animated Logo"
+                className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+                  isScrolled
+                    ? 'h-14 sm:h-16 md:h-16'
+                    : 'h-16 sm:h-20 md:h-22'
+                }`}
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Navigation items serialized: home, about, projects, blog, contact */}
+          <nav
+            aria-label="Primary Navigation"
+            className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/85 backdrop-blur-md border border-[#1A1815]/10 px-4 py-2 rounded-full shadow-md"
+          >
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-3.5 py-1.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-full ${
+                    isActive
+                      ? 'text-[#B68953] bg-[#F7F3EB] font-semibold shadow-xs'
+                      : 'text-[#5C564E] hover:text-[#1A1815] hover:bg-black/5'
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#B68953]"></span>
+                  )}
+                </a>
+              );
+            })}
+          </nav>
+
+          {/* Right Section: Social Icons (fb, ig, yt) + Consultation Button */}
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+            
+            {/* Social media icons next to navigation */}
+            <div
+              className="hidden xl:flex items-center space-x-1.5 border-r border-[#1A1815]/15 pr-4 text-[#5C564E]"
+              aria-label="Social media channels"
             >
-              <div className="relative flex items-center justify-center w-10 h-10 border border-[#1A1815]/15 rounded-sm bg-white/90 shadow-sm transition-all duration-300 group-hover:border-[#B68953] group-hover:shadow-[0_0_15px_rgba(182,137,83,0.25)]">
-                <span className="font-serif tracking-widest text-lg font-bold text-[#1A1815] group-hover:text-[#B68953] transition-colors">
-                  K
-                </span>
-                <div className="absolute -bottom-0.5 w-4 h-[1px] bg-[#B68953] opacity-70 group-hover:w-6 transition-all duration-300"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif tracking-[0.25em] text-lg font-semibold text-[#1A1815] uppercase group-hover:text-[#B68953] transition-colors">
-                  KYN
-                </span>
-                <span className="text-[9px] tracking-[0.3em] uppercase text-[#68625A] font-sans">
-                  Studio Interiors
-                </span>
-              </div>
-            </Link>
-
-            {/* Desktop Navigation items serialized: home, about, projects, blog, contact */}
-            <nav
-              aria-label="Primary Navigation"
-              className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/85 backdrop-blur-md border border-[#1A1815]/10 px-5 py-2 rounded-full shadow-md"
-            >
-              {navItems.map((item) => {
-                const isActive = activeSection === item.id;
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={`relative px-3.5 py-1.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-full ${
-                      isActive
-                        ? 'text-[#B68953] bg-[#F7F3EB] font-semibold shadow-xs'
-                        : 'text-[#5C564E] hover:text-[#1A1815] hover:bg-black/5'
-                    }`}
-                  >
-                    {item.name}
-                    {isActive && (
-                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#B68953]"></span>
-                    )}
-                  </a>
-                );
-              })}
-            </nav>
-
-            {/* Right Section: Social Icons (fb, ig, yt) + Consultation Button */}
-            <div className="hidden lg:flex items-center space-x-4">
-              
-              {/* Social media icons next to navigation */}
-              <div
-                className="flex items-center space-x-1.5 border-r border-[#1A1815]/15 pr-4 text-[#5C564E]"
-                aria-label="Social media channels"
-              >
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.ariaLabel}
-                    className="group relative p-2 text-[#68625A] hover:text-[#B68953] hover:bg-black/5 rounded-full transition-all duration-300"
-                    title={social.name}
-                  >
-                    {social.svg}
-                    <span className="sr-only">{social.name}</span>
-                  </a>
-                ))}
-              </div>
-
-              {/* Corporate CTA */}
-              <a
-                href="#contact"
-                onClick={onOpenConsultation}
-                className="group inline-flex items-center space-x-2 px-4 py-2 border border-[#B68953] bg-[#B68953] hover:bg-[#9E7445] text-xs uppercase tracking-[0.2em] font-medium text-white transition-all duration-300 rounded-sm shadow-md hover:shadow-lg"
-              >
-                <span>Inquire</span>
-                <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.ariaLabel}
+                  className="group relative p-2 text-[#68625A] hover:text-[#B68953] hover:bg-black/5 rounded-full transition-all duration-300"
+                  title={social.name}
+                >
+                  {social.svg}
+                  <span className="sr-only">{social.name}</span>
+                </a>
+              ))}
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="flex items-center space-x-2 md:hidden">
-              <a
-                href="#contact"
-                className="px-2.5 py-1.5 border border-[#B68953] bg-[#B68953] text-[10px] uppercase tracking-wider text-white rounded-sm"
-              >
-                Inquire
-              </a>
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-[#1A1815] hover:text-[#B68953] bg-white/80 border border-[#1A1815]/10 rounded-sm focus:outline-none"
-                aria-label="Toggle Navigation Menu"
-                aria-expanded={mobileMenuOpen}
-              >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
-            </div>
+            {/* Corporate CTA: Get Quote */}
+            <a
+              href="#packages"
+              onClick={onOpenConsultation}
+              className="group relative inline-flex items-center space-x-2 px-5 py-2.5 bg-[#FF8526] hover:bg-[#f57410] font-courgette text-base text-white transition-all duration-300 rounded-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 overflow-hidden"
+            >
+              <span className="relative z-10 text-white drop-shadow-xs">Get Quote</span>
+              <ArrowUpRight className="relative z-10 w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <a
+              href="#packages"
+              className="px-3 py-1.5 bg-[#FF8526] font-courgette text-sm text-white rounded-lg shadow-sm"
+            >
+              Get Quote
+            </a>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-[#1A1815] hover:text-[#B68953] bg-white/80 border border-[#1A1815]/10 rounded-sm focus:outline-none"
+              aria-label="Toggle Navigation Menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Drawer Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden glass-panel border-t border-[#1A1815]/10 mt-3 px-6 py-6 transition-all duration-300 animate-in fade-in slide-in-from-top-4 shadow-xl">
+      {/* Mobile Drawer Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden glass-panel border-t border-[#1A1815]/10 mt-3 px-6 py-6 transition-all duration-300 animate-in fade-in slide-in-from-top-4 shadow-xl">
             <div className="flex flex-col space-y-4">
+              <div className="flex flex-col items-center justify-center pb-4 border-b border-[#1A1815]/10 text-center">
+                <div className="rounded-2xl bg-black border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.4)] p-1.5 overflow-hidden mb-3">
+                  <img
+                    src="/images/kalyan/branding/logo.gif"
+                    alt="Kalyan Design Studio Animated Logo"
+                    className="h-24 w-auto object-contain"
+                  />
+                </div>
+                <span className="font-bounce text-xl text-[#1A1815] leading-tight">
+                  Kalyan Design Studio
+                </span>
+                <span className="text-[11px] uppercase tracking-widest font-century text-[#FF8526] font-bold mt-1">
+                  Architecture &bull; Interiors &bull; Odisha
+                </span>
+              </div>
               {navItems.map((item) => (
                 <a
                   key={item.name}

@@ -43,7 +43,7 @@ export const STUDIO_INFO: StudioInfo = {
     },
   },
   branding: {
-    logo: '/images/kalyan/branding/logo.png',
+    logo: '/images/kalyan/branding/logo.gif',
     logoWebp: '/images/kalyan/blog/LOGO.webp',
     footerBg: '/images/kalyan/branding/footer.png',
     contactBg: '/images/kalyan/assets/contactbackg-D9XEOEFC.png',
