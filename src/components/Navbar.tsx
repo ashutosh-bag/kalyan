@@ -230,7 +230,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
 
               {/* Mobile Social Links */}
               <div className="pt-3 flex items-center justify-between border-t border-[#1A1815]/10">
-                <span className="text-xs uppercase tracking-wider text-[#68625A]">Connect with KYN:</span>
+                <span className="text-xs uppercase tracking-wider text-[#68625A]">Connect with Kalyan:</span>
                 <div className="flex items-center space-x-3 text-[#5C564E]">
                   {socialLinks.map((social) => (
                     <a

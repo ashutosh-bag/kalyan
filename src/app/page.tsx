@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main id="main-content" className="flex-1 w-full">
-        {/* Hero Section with SVG KYN Letters & Multi-Directional Sliding Interior Photos */}
+        {/* Hero Section with Responsive SVG KALYAN Letters & Multi-Directional Sliding Interior Photos */}
         <HeroSection />
 
         {/* Client's Signature Full Interior Packages Section (1 BHK, 2 BHK, 3 BHK) */}

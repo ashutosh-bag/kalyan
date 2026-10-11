@@ -61,12 +61,48 @@ export const HERO_LETTER_IMAGES = {
       title: 'Master Bedroom Aesthetic Suite — Kalyan Design Studio',
     },
     {
+      url: '/images/kalyan/assets/photo6-D4Qdy94s.png',
+      title: 'Monolithic Villa Living Hall — Kalyan Studio',
+    },
+    {
+      url: '/images/kalyan/assets/photo10-BeAMB-Ro.png',
+      title: 'Contemporary Residence Foyer & Entrance',
+    },
+  ],
+  A1: [
+    {
+      url: '/images/kalyan/assets/my1-CiB3FE8i.png',
+      title: 'Luxury Residence Patia Architecture',
+    },
+    {
+      url: '/images/kalyan/assets/photo16-CYtCv23t.png',
+      title: 'Architectural Dining Suite & Lounge',
+    },
+    {
+      url: '/images/kalyan/assets/photo20-B1HYX0M0.png',
+      title: 'Grand Double-Height Atrium Residence',
+    },
+    {
+      url: '/images/kalyan/assets/my2-ZuwLd7VG.png',
+      title: 'Prestige Living & Dining Hall',
+    },
+  ],
+  L: [
+    {
       url: '/images/kalyan/assets/gg1-DtHpufY2.png',
       title: 'Signature Modular Kitchen Showcase',
     },
     {
-      url: '/images/kalyan/assets/kk1-CiuMHIoo.png',
-      title: 'Artisan Wood Paneling & Ambient Illuminations',
+      url: '/images/kalyan/assets/photo35-P6oLltOY.png',
+      title: 'Italian Quartz & Calacatta Island Kitchen',
+    },
+    {
+      url: '/images/kalyan/assets/photo24-C1oNOuSa.png',
+      title: 'Minimalist Modular Kitchen Units',
+    },
+    {
+      url: '/images/kalyan/assets/MODULARKITCHEN-DIgipoZG.png',
+      title: 'Bespoke Marine-Ply Kitchen Cabinets',
     },
   ],
   Y: [
@@ -87,22 +123,40 @@ export const HERO_LETTER_IMAGES = {
       title: 'Contemporary Accent Ceilings & Lighting',
     },
   ],
+  A2: [
+    {
+      url: '/images/kalyan/assets/kk1-CiuMHIoo.png',
+      title: 'Artisan Wood Paneling & Ambient Illuminations',
+    },
+    {
+      url: '/images/kalyan/assets/photo25-CmpwNA7A.png',
+      title: 'Bespoke Master Suite Wardrobes',
+    },
+    {
+      url: '/images/kalyan/assets/photo28-OuLaQ5VW.png',
+      title: 'Walk-In Dressing Suite & Joinery',
+    },
+    {
+      url: '/images/kalyan/assets/photo42-qk_N6HVL.png',
+      title: 'Executive Lounge & Acoustic Paneling',
+    },
+  ],
   N: [
     {
-      url: '/images/kalyan/assets/oo2-rS0nPjmx.png',
-      title: 'Signature Kalyan Master Living Suite',
+      url: '/images/kalyan/assets/photo7-BLsl1zq7.png',
+      title: 'Penthouse Living Room Panoramic Suite',
     },
     {
-      url: '/images/kalyan/assets/oo4-DLB_pEqh.png',
-      title: 'Grand Residential Entry & Foyer Design',
+      url: '/images/kalyan/assets/photo13-3SNEt4Oe.png',
+      title: 'Executive Study & Private Odia Library',
     },
     {
-      url: '/images/kalyan/assets/oo5-D62wu78I.png',
-      title: 'Executive Corporate Penthouse & Lounge',
+      url: '/images/kalyan/assets/photo23-BAqyUyvm.png',
+      title: 'Bespoke Home Theater & Entertainment Room',
     },
     {
-      url: '/images/kalyan/assets/oo3-CiU3wIec.png',
-      title: 'Bhubaneswar Premium Residence by Kalyan',
+      url: '/images/kalyan/assets/photo26-D0hZEw2M.png',
+      title: 'Luxury Architectural Detailing & Finish',
     },
   ],
 };

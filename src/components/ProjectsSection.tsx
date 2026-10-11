@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Project } from '@/lib/types';
 import { PROJECTS } from '@/lib/data';
 import { getProjects } from '@/lib/api-client';
-import { X, ArrowRight, MapPin, Calendar, Maximize2, Sparkles, Filter } from 'lucide-react';
+import { X, ArrowRight, ArrowLeft, MapPin, Calendar, Maximize2, Sparkles, Filter } from 'lucide-react';
 
 export default function ProjectsSection() {
   const [projects, setProjects] = useState<Project[]>(PROJECTS);
@@ -28,6 +28,24 @@ export default function ProjectsSection() {
     }
     loadFiltered();
   }, [selectedCategory]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedProject(null);
+      }
+    };
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedProject]);
 
   const categories = [
     { label: 'All Projects', value: 'all' },
@@ -153,112 +171,145 @@ export default function ProjectsSection() {
 
         {/* Modal: Project Detail & Gallery */}
         {selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-10 bg-black/75 backdrop-blur-md animate-in fade-in duration-300">
-            <div className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto bg-[#FAF7F2] border border-[#1A1815]/15 rounded-sm shadow-2xl p-6 sm:p-8 lg:p-10 text-[#1A1815]">
-              
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-white/90 border border-[#1A1815]/15 text-[#1A1815] hover:text-white hover:bg-[#B68953] transition-colors focus:outline-none shadow-sm"
-                aria-label="Close project modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 lg:p-10 bg-black/80 backdrop-blur-md animate-in fade-in duration-300"
+            onClick={() => setSelectedProject(null)}
+          >
+            <div
+              className="relative w-full max-w-5xl max-h-[92vh] flex flex-col bg-[#FAF7F2] border border-[#1A1815]/15 rounded-2xl shadow-2xl overflow-hidden text-[#1A1815]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Sticky Top Header Bar with Back Button & Close */}
+              <div className="sticky top-0 z-30 flex items-center justify-between px-4 sm:px-6 py-3.5 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#1A1815]/10 shadow-xs">
+                <button
+                  type="button"
+                  onClick={() => setSelectedProject(null)}
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#1A1815]/15 text-[#1A1815] hover:text-[#FF8526] hover:border-[#FF8526]/50 transition-colors text-xs sm:text-sm font-century font-medium shadow-xs cursor-pointer active:scale-95"
+                  aria-label="Back to projects"
+                >
+                  <ArrowLeft className="w-4 h-4 text-[#FF8526]" />
+                  <span>Back to Projects</span>
+                </button>
 
-              {/* Modal Content */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                {/* Gallery Showcase (Col 1-7) */}
-                <div className="lg:col-span-7 flex flex-col space-y-4">
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-sm border border-[#1A1815]/15 bg-[#1A1815]">
-                    <img
-                      src={
-                        activeGalleryIndex === 0
-                          ? selectedProject.image
-                          : selectedProject.gallery[activeGalleryIndex - 1] || selectedProject.image
-                      }
-                      alt={selectedProject.title}
-                      className="w-full h-full object-cover transition-all duration-500"
-                    />
-                  </div>
+                <div className="flex items-center gap-2">
+                  <span className="hidden sm:inline-block text-[11px] uppercase tracking-wider font-century text-[#8B7355] font-semibold bg-white/80 px-2.5 py-1 rounded-md border border-[#1A1815]/10">
+                    {selectedProject.category}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedProject(null)}
+                    className="w-9 h-9 rounded-full bg-white border border-[#1A1815]/15 text-[#1A1815] hover:text-white hover:bg-[#FF8526] flex items-center justify-center transition-colors focus:outline-none shadow-xs cursor-pointer"
+                    aria-label="Close project modal"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
 
-                  {/* Thumbnail Row */}
-                  <div className="flex space-x-3 overflow-x-auto pb-2">
-                    <button
-                      onClick={() => setActiveGalleryIndex(0)}
-                      className={`relative w-20 h-14 rounded-sm overflow-hidden flex-shrink-0 border-2 transition-all ${
-                        activeGalleryIndex === 0 ? 'border-[#B68953]' : 'border-transparent opacity-60 hover:opacity-100'
-                      }`}
-                    >
-                      <img src={selectedProject.image} alt="Thumbnail Cover" className="w-full h-full object-cover" />
-                    </button>
-                    {selectedProject.gallery.map((img, i) => (
+              {/* Scrollable Modal Content */}
+              <div className="overflow-y-auto p-4 sm:p-8 lg:p-10 flex-1">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  
+                  {/* Gallery Showcase (Col 1-7) */}
+                  <div className="lg:col-span-7 flex flex-col space-y-4">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#1A1815]/15 bg-[#1A1815]">
+                      <img
+                        src={
+                          activeGalleryIndex === 0
+                            ? selectedProject.image
+                            : selectedProject.gallery[activeGalleryIndex - 1] || selectedProject.image
+                        }
+                        alt={selectedProject.title}
+                        className="w-full h-full object-cover transition-all duration-500"
+                      />
+                    </div>
+
+                    {/* Thumbnail Row */}
+                    <div className="flex space-x-3 overflow-x-auto pb-2">
                       <button
-                        key={i}
-                        onClick={() => setActiveGalleryIndex(i + 1)}
-                        className={`relative w-20 h-14 rounded-sm overflow-hidden flex-shrink-0 border-2 transition-all ${
-                          activeGalleryIndex === i + 1 ? 'border-[#B68953]' : 'border-transparent opacity-60 hover:opacity-100'
+                        onClick={() => setActiveGalleryIndex(0)}
+                        className={`relative w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all cursor-pointer ${
+                          activeGalleryIndex === 0 ? 'border-[#FF8526] scale-102 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
                         }`}
                       >
-                        <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                        <img src={selectedProject.image} alt="Thumbnail Cover" className="w-full h-full object-cover" />
                       </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Project Specs (Col 8-12) */}
-                <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-                  <div>
-                    <span className="text-[11px] uppercase tracking-[0.25em] text-[#8B7355] font-medium">
-                      {selectedProject.category}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-serif font-light text-[#1A1815] mt-1">
-                      {selectedProject.title}
-                    </h3>
-                    <p className="text-xs text-[#B68953] font-medium mt-1">
-                      {selectedProject.location} {selectedProject.year ? `• ${selectedProject.year}` : ''} {selectedProject.areaSqFt ? `• ${selectedProject.areaSqFt.toLocaleString()} sq ft` : ''}
-                    </p>
+                      {selectedProject.gallery.map((img, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setActiveGalleryIndex(i + 1)}
+                          className={`relative w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all cursor-pointer ${
+                            activeGalleryIndex === i + 1 ? 'border-[#FF8526] scale-102 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
+                          }`}
+                        >
+                          <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="space-y-4 text-[#5C564E] text-xs sm:text-sm font-light leading-relaxed border-t border-b border-[#1A1815]/10 py-4">
-                    <p>{selectedProject.description}</p>
-                    {selectedProject.client && (
+                  {/* Project Specs (Col 8-12) */}
+                  <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+                    <div>
+                      <span className="text-[11px] uppercase tracking-[0.25em] text-[#FF8526] font-semibold font-century">
+                        {selectedProject.category}
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl font-bounce text-[#1A1815] mt-1">
+                        {selectedProject.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#FF8526] font-medium font-century mt-1">
+                        {selectedProject.location} {selectedProject.year ? `• ${selectedProject.year}` : ''} {selectedProject.areaSqFt ? `• ${selectedProject.areaSqFt.toLocaleString()} sq ft` : ''}
+                      </p>
+                    </div>
+
+                    <div className="space-y-4 text-[#5C564E] text-xs sm:text-sm font-century leading-relaxed border-t border-b border-[#1A1815]/10 py-4">
+                      <p>{selectedProject.description}</p>
+                      {selectedProject.client && (
+                        <div>
+                          <span className="text-[11px] uppercase tracking-wider text-[#7A7369] font-semibold block mb-1">
+                            Commissioning Client:
+                          </span>
+                          <span className="text-[#1A1815] font-medium">{selectedProject.client}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Materials palette */}
+                    {(selectedProject.materials || []).length > 0 && (
                       <div>
-                        <span className="text-[11px] uppercase tracking-wider text-[#7A7369] block mb-1">
-                          Commissioning Client:
+                        <span className="text-[11px] uppercase tracking-wider text-[#7A7369] font-semibold block mb-2 font-century">
+                          Key Material Specifications:
                         </span>
-                        <span className="text-[#1A1815] font-medium">{selectedProject.client}</span>
+                        <div className="flex flex-wrap gap-2">
+                          {(selectedProject.materials || []).map((mat, i) => (
+                            <span key={i} className="text-xs bg-white border border-[#1A1815]/10 text-[#4A453F] px-3 py-1 rounded-lg font-century">
+                              {mat}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     )}
-                  </div>
 
-                  {/* Materials palette */}
-                  {(selectedProject.materials || []).length > 0 && (
-                    <div>
-                      <span className="text-[11px] uppercase tracking-wider text-[#7A7369] block mb-2">
-                        Key Material Specifications:
-                      </span>
-                      <div className="flex flex-wrap gap-2">
-                        {(selectedProject.materials || []).map((mat, i) => (
-                          <span key={i} className="text-xs bg-white border border-[#1A1815]/10 text-[#4A453F] px-3 py-1 rounded-sm">
-                            {mat}
-                          </span>
-                        ))}
-                      </div>
+                    <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedProject(null)}
+                        className="inline-flex items-center justify-center py-3 px-4 bg-white border border-[#1A1815]/15 hover:bg-[#1A1815]/5 text-[#1A1815] font-century font-medium text-sm rounded-xl transition-all cursor-pointer"
+                      >
+                        <ArrowLeft className="w-4 h-4 mr-2 text-[#FF8526]" />
+                        Back to Projects
+                      </button>
+                      <a
+                        href="#packages"
+                        onClick={() => setSelectedProject(null)}
+                        className="flex-1 inline-flex items-center justify-center py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-xl rounded-xl transition-all shadow-lg hover:scale-[1.01] cursor-pointer text-center"
+                      >
+                        Get Quote on this Project
+                      </a>
                     </div>
-                  )}
-
-                  <div className="pt-2">
-                    <a
-                      href="#packages"
-                      onClick={() => setSelectedProject(null)}
-                      className="inline-flex items-center justify-center w-full py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-xl rounded-xl transition-all shadow-lg hover:scale-[1.02] cursor-pointer"
-                    >
-                      Get Quote on this Project
-                    </a>
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
           </div>

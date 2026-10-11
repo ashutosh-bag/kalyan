@@ -5,6 +5,7 @@ import {
   Sparkles, 
   Maximize2, 
   X, 
+  ArrowLeft,
   Sun, 
   Moon, 
   Layers, 
@@ -659,12 +660,25 @@ export default function SpatialShowcase() {
             className="relative w-full max-w-5xl bg-[#FAF7F2] border border-[#1A1815]/15 rounded-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Mobile Back Button */}
+            <div className="absolute top-4 left-4 z-30">
+              <button
+                type="button"
+                onClick={() => setSelectedItem(null)}
+                aria-label="Back to showcase"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-[#1A1815]/15 text-[#1A1815] hover:text-[#FF8526] text-xs font-century font-medium shadow-md transition-all active:scale-95 cursor-pointer"
+              >
+                <ArrowLeft className="w-3.5 h-3.5 text-[#FF8526]" />
+                <span>Back</span>
+              </button>
+            </div>
+
             {/* Close Button */}
             <button
               type="button"
               onClick={() => setSelectedItem(null)}
               aria-label="Close modal"
-              className="absolute top-4 right-4 z-30 w-10 h-10 rounded-full bg-white/90 border border-[#1A1815]/15 text-[#1A1815] hover:bg-[#B68953] hover:text-white flex items-center justify-center transition-colors shadow-md"
+              className="absolute top-4 right-4 z-30 w-10 h-10 rounded-full bg-white/90 border border-[#1A1815]/15 text-[#1A1815] hover:bg-[#FF8526] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>

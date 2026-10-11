@@ -94,14 +94,14 @@ export default function ContactSection() {
     {
       city: 'Kalyan Design Studio — Bhubaneswar HQ',
       address: '3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018',
-      phone: '+91-0750404104 / +91 75040 41040',
+      phone: '+91-750404104 / +9175040 41040',
       email: 'info@kalyandesignstudio.com',
       hours: 'Mon – Sat: 10:00 AM – 8:00 PM',
     },
     {
       city: 'Cuttack Regional Execution Atelier',
       address: 'Serving CDA Sectors, Cantonment Road & Riverfront, Cuttack, Odisha',
-      phone: '+91 75040 41040',
+      phone: '+9175040 41040',
       email: 'info@kalyandesignstudio.com',
       hours: 'By Site Appointment',
     },
@@ -117,7 +117,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#0d0f14] border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 mb-4">
@@ -133,7 +133,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Contact & Consultation Form (Col 1-7) */}
           <div className="lg:col-span-7 bg-neutral-900/60 border border-white/10 p-8 sm:p-10 rounded-2xl shadow-2xl backdrop-blur-md">
             <h3 className="text-2xl font-bounce text-white mb-6 flex items-center justify-between">
@@ -146,11 +146,10 @@ export default function ContactSection() {
             {/* Alert Status Feedback */}
             {statusMessage && (
               <div
-                className={`p-4 rounded-sm mb-6 flex items-start space-x-3 text-xs sm:text-sm ${
-                  statusMessage.type === 'success'
+                className={`p-4 rounded-sm mb-6 flex items-start space-x-3 text-xs sm:text-sm ${statusMessage.type === 'success'
                     ? 'bg-emerald-950/40 border border-emerald-500/40 text-emerald-200'
                     : 'bg-rose-950/40 border border-rose-500/40 text-rose-200'
-                }`}
+                  }`}
               >
                 {statusMessage.type === 'success' ? (
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -170,7 +169,7 @@ export default function ContactSection() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                
+
                 {/* Full Name */}
                 <div>
                   <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
@@ -333,7 +332,7 @@ export default function ContactSection() {
 
           {/* Global Presence & Direct Contacts (Col 8-12) */}
           <div className="lg:col-span-5 flex flex-col space-y-8">
-            
+
             {/* Odisha Studios */}
             <div className="bg-neutral-900/30 border border-white/10 p-8 rounded-sm">
               <h4 className="text-xs uppercase tracking-[0.25em] text-[#e0c8aa] font-medium mb-6">
