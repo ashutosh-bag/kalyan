@@ -32,6 +32,7 @@ export default function Footer() {
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Services', href: '#services' },
+    { name: 'Google Reviews', href: '#google-reviews' },
     { name: 'Contact', href: '#contact' },
   ];
 

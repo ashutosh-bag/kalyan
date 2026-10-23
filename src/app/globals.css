@@ -165,6 +165,44 @@ p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select {
   }
 }
 
+/* Precise Desktop Loop: 4 items of height 560 = 2240px */
+@keyframes slideDeskUp {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-2240px);
+  }
+}
+
+@keyframes slideDeskDown {
+  0% {
+    transform: translateY(-2240px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Precise Mobile Loop: 4 items of height 360 = 1440px */
+@keyframes slideMobUp {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-1440px);
+  }
+}
+
+@keyframes slideMobDown {
+  0% {
+    transform: translateY(-1440px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 @keyframes slideHorizontalContinuous {
   0% {
     transform: translateX(0%);
@@ -241,7 +279,10 @@ p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 .animate-marquee-left {
   display: flex;
   width: max-content;
-  animation: marqueeLeft 45s linear infinite;
+  animation-name: marqueeLeft;
+  animation-duration: 45s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   will-change: transform;
 }
 
@@ -252,7 +293,10 @@ p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 .animate-marquee-right {
   display: flex;
   width: max-content;
-  animation: marqueeRight 45s linear infinite;
+  animation-name: marqueeRight;
+  animation-duration: 45s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   will-change: transform;
 }
 

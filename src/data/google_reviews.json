@@ -1,0 +1,93 @@
+{
+  "placeInfo": {
+    "name": "Kalyan Design Studio",
+    "placeId": "ChIJCWPbk2qnnTkRc4PaaT7llpc",
+    "googleBusinessUrl": "https://g.co/kgs/VwVxACj",
+    "googleWriteReviewUrl": "https://g.co/kgs/VwVxACj",
+    "rating": 4.9,
+    "userRatingsTotal": 82,
+    "lastSynced": "2026-10-23T10:00:00Z"
+  },
+  "reviews": [
+    {
+      "id": "rev-01",
+      "authorName": "Sradharani Behura",
+      "authorInitials": "SB",
+      "rating": 5,
+      "relativeTime": "5 months ago",
+      "reviewText": "Very satisfied with the interior work and finishing. The team understood our ideas well and delivered a clean and beautiful result within budget.",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-02",
+      "authorName": "Jay prakash",
+      "authorInitials": "JP",
+      "rating": 4,
+      "relativeTime": "4 months ago",
+      "reviewText": "Had a good experience overall. The work was completed nicely with good attention to detail, and the team was supportive throughout the project. Loved the final look of the space.",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-03",
+      "authorName": "Jyoshna Padhi",
+      "authorInitials": "JP",
+      "rating": 5,
+      "relativeTime": "10 months ago",
+      "reviewText": "Kalyan Design Studio is one of the top interior designers in Bhubaneswar. They designed my living room with a perfect blend of style and comfort. Truly impressed with their creativity!",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-04",
+      "authorName": "D_TOX",
+      "authorInitials": "DT",
+      "rating": 4,
+      "relativeTime": "11 months ago",
+      "reviewText": "Kalyan Design Studio is one of the top interior designers in Bhubaneswar. They designed my living room with a perfect blend of style and comfort. Truly impressed with their creativity!",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-05",
+      "authorName": "sudeep rautray",
+      "authorInitials": "SR",
+      "rating": 4,
+      "relativeTime": "3 years ago",
+      "reviewText": "Thanks Kalyan. Beyond good wallpaper catalogues that you have, customer service and turnaround time as really appreciated. Good service and team is polite and honest.",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-06",
+      "authorName": "Prativa PP",
+      "authorInitials": "PP",
+      "rating": 5,
+      "relativeTime": "6 years ago",
+      "reviewText": "Dev gave me great advice and creative ideas to totally transform my duplex and keeping me advised throughout actually. The result was stylish, balanced and colourful, giving me great comfort and relaxation after a busy day's work.",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-07",
+      "authorName": "Saubhagya Anupam Patnaik",
+      "authorInitials": "SA",
+      "rating": 5,
+      "relativeTime": "a year ago",
+      "reviewText": "Kalyan Design Studio is best in its business! Professional, skilled and timely works! Pocket friendly!",
+      "verified": true,
+      "source": "Google Maps"
+    },
+    {
+      "id": "rev-08",
+      "authorName": "PRIYADARSHAN PATASAHANI",
+      "authorInitials": "PP",
+      "rating": 5,
+      "relativeTime": "6 years ago",
+      "reviewText": "Fit my exact style. The interior designer they teamed me up with could not have been more perfect. Extremely talented and her aesthetic fit my exact style. I can''t wait to do another room with Decorist! Thank you so much for helping me create such a beautiful room!",
+      "verified": true,
+      "source": "Google Maps"
+    }
+  ]
+}

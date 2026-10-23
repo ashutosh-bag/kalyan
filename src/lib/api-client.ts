@@ -64,3 +64,62 @@ export async function getProjects(category?: string, search?: string): Promise<P
     return list;
   }
 }
+
+export async function getGoogleReviews(
+  category?: string,
+  sync: boolean = false
+): Promise<{
+  reviews: import('./types').GoogleReview[];
+  placeInfo: import('./types').GooglePlaceReviewsData['placeInfo'];
+  categories: import('./types').GooglePlaceReviewsData['categories'];
+}> {
+  try {
+    const params = new URLSearchParams();
+    if (category && category !== 'all') params.append('category', category);
+    if (sync) params.append('sync', 'true');
+
+    const url = `${BASE_URL}/api/reviews${params.toString() ? `?${params.toString()}` : ''}`;
+    const res = await fetch(url, { cache: 'no-store' });
+
+    if (!res.ok) throw new Error('Reviews fetch failed');
+    const json: ApiResponse<import('./types').GooglePlaceReviewsData> = await res.json();
+    if (json.data) {
+      return json.data;
+    }
+    throw new Error(json.error || 'No review data returned');
+  } catch (err) {
+    const fallback = await import('@/data/google_reviews.json');
+    return {
+      reviews: fallback.default.reviews as import('./types').GoogleReview[],
+      placeInfo: fallback.default.placeInfo as import('./types').GooglePlaceReviewsData['placeInfo'],
+      categories: [
+        { id: 'all', label: 'All Reviews', count: fallback.default.reviews.length },
+      ],
+    };
+  }
+}
+
+export async function triggerGoogleReviewSync(): Promise<{ success: boolean; message: string }> {
+  try {
+    const res = await fetch(`${BASE_URL}/api/reviews`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'sync' }),
+    });
+    const json = await res.json();
+    return {
+      success: json.success,
+      message: json.data?.message || 'Synchronized with Google Business Profile.',
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: errorString(err),
+    };
+  }
+}
+
+function errorString(e: unknown): string {
+  return e instanceof Error ? e.message : 'Synchronization failed.';
+}
+

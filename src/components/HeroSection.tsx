@@ -50,16 +50,26 @@ export default function HeroSection() {
     }
   };
 
+  // Helper using discrete CSS animation properties to avoid React shorthand conflicts
+  const getSlideStyle = (animName: string, duration: string): React.CSSProperties => ({
+    animationName: animName,
+    animationDuration: duration,
+    animationTimingFunction: 'linear',
+    animationIterationCount: 'infinite',
+    animationDirection: isReversed ? 'reverse' : 'normal',
+    animationPlayState: isPlaying ? 'running' : 'paused',
+  });
+
   return (
     <section
       id="home"
-      className="relative w-full h-[100dvh] min-h-[620px] sm:min-h-[660px] max-h-screen bg-[#FFF3E9] overflow-hidden select-none p-1.5 sm:p-2.5 md:p-3"
+      className="relative w-full h-[100dvh] min-h-[580px] sm:min-h-[640px] max-h-screen bg-[#FFF3E9] overflow-hidden select-none p-1.5 sm:p-2.5 md:p-3"
       aria-label="Kalyan Design Studio Interior Architecture Odisha"
     >
       {/* ========================================================================= */}
       {/* OUTER CORNER MARGINS & SLIM ARCHITECTURAL BLUEPRINT FRAME                 */}
       {/* ========================================================================= */}
-      <div className="relative w-full h-full border border-[#1A1815]/10 rounded-sm overflow-hidden flex flex-col justify-between p-2 sm:p-3.5">
+      <div className="relative w-full h-full border border-[#1A1815]/10 rounded-sm overflow-hidden flex flex-col justify-between p-2 sm:p-3 md:p-3.5">
         
         {/* Corner registration marks */}
         <div className="absolute top-2 left-2 text-[8px] sm:text-[9px] text-[#1A1815]/40 font-mono tracking-widest pointer-events-none">+ 01</div>
@@ -74,17 +84,38 @@ export default function HeroSection() {
         </div>
 
         {/* ======================================================================= */}
-        {/* CENTRAL SVG CONTAINER: PROMINENT & EXPANDED HEIGHT PRESENTATION         */}
+        {/* 1. TOP HEADER: CITATION & HOVER BADGE (Smoothly clearing navbar)        */}
         {/* ======================================================================= */}
-        <div className="absolute inset-0 w-full h-full pointer-events-auto pt-14 sm:pt-16 md:pt-18 pb-14 sm:pb-16 md:pb-14 px-1 sm:px-2 flex items-center justify-center">
+        <div className="relative z-20 w-full pt-18 sm:pt-20 md:pt-18 pb-1 flex-shrink-0 text-center pointer-events-none">
+          <div className="min-h-[30px] flex items-center justify-center">
+            {hoveredLetter ? (
+              <div className="inline-flex items-center space-x-2 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white/95 border border-[#FF8526]/50 text-xs text-[#4A453F] backdrop-blur-md shadow-lg animate-in fade-in zoom-in-95 pointer-events-auto max-w-[92vw] truncate">
+                <span className="font-bold text-[#1A1815]">Letter {getLetterDisplay(hoveredLetter)}:</span>
+                <span className="truncate">{getLetterDescription(hoveredLetter)}</span>
+              </div>
+            ) : (
+              <div className="inline-flex items-center space-x-2 px-3 sm:px-3.5 py-1 rounded-full bg-white/85 border border-[#1A1815]/10 backdrop-blur-md shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF8526] animate-ping" />
+                <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.25em] sm:tracking-[0.3em] font-medium text-[#7A6B58]">
+                  Bhubaneswar &bull; Cuttack &bull; Puri &bull; Odisha
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* ======================================================================= */}
+        {/* 2. CENTRAL SVG DISPLAY: RESPONSIVE FLEX-1 WORKSPACE                      */}
+        {/* ======================================================================= */}
+        <div className="relative z-10 flex-1 min-h-0 w-full flex items-center justify-center py-1 sm:py-2 md:py-3 px-1 sm:px-2 md:px-4">
           
           {/* ------------------------------------------------------------------- */}
-          {/* DESKTOP & TABLET VIEW: "KALYAN" IN ONE PROMINENT HORIZONTAL ROW     */}
+          {/* DESKTOP & TABLET LANDSCAPE VIEW: "KALYAN" IN ONE HORIZONTAL ROW     */}
           {/* ------------------------------------------------------------------- */}
           <svg
             viewBox="0 0 2160 840"
             preserveAspectRatio="xMidYMid meet"
-            className="hidden md:block w-full h-full max-h-[86vh] lg:max-h-[90vh]"
+            className="hidden md:block w-full h-full max-h-full max-w-full drop-shadow-sm select-none"
             aria-label="KALYAN letters with sliding interior design architecture inside"
             role="img"
           >
@@ -102,44 +133,34 @@ export default function HeroSection() {
               }
             `}</style>
             <defs>
-              {/* Letter K: Centered at x=180 */}
+              {/* Desktop ClipPaths: Centers spaced by 360px */}
               <clipPath id="desk-kalyan-k">
-                <text x="180" y="730" textAnchor="middle" className="kalyan-letter-font" fontSize="720" letterSpacing="-5">
+                <text x="180" y="725" textAnchor="middle" className="kalyan-letter-font" fontSize="720">
                   K
                 </text>
               </clipPath>
-
-              {/* Letter A (1st): Centered at x=540 */}
               <clipPath id="desk-kalyan-a1">
-                <text x="540" y="730" textAnchor="middle" className="kalyan-letter-font" fontSize="720" letterSpacing="-5">
+                <text x="540" y="725" textAnchor="middle" className="kalyan-letter-font" fontSize="720">
                   A
                 </text>
               </clipPath>
-
-              {/* Letter L: Centered at x=900 */}
               <clipPath id="desk-kalyan-l">
-                <text x="900" y="730" textAnchor="middle" className="kalyan-letter-font" fontSize="720" letterSpacing="-5">
+                <text x="900" y="725" textAnchor="middle" className="kalyan-letter-font" fontSize="720">
                   L
                 </text>
               </clipPath>
-
-              {/* Letter Y: Centered at x=1260 */}
               <clipPath id="desk-kalyan-y">
-                <text x="1260" y="730" textAnchor="middle" className="kalyan-letter-font" fontSize="720" letterSpacing="-5">
+                <text x="1260" y="725" textAnchor="middle" className="kalyan-letter-font" fontSize="720">
                   Y
                 </text>
               </clipPath>
-
-              {/* Letter A (2nd): Centered at x=1620 */}
               <clipPath id="desk-kalyan-a2">
-                <text x="1620" y="730" textAnchor="middle" className="kalyan-letter-font" fontSize="720" letterSpacing="-5">
+                <text x="1620" y="725" textAnchor="middle" className="kalyan-letter-font" fontSize="720">
                   A
                 </text>
               </clipPath>
-
-              {/* Letter N: Centered at x=1980 */}
               <clipPath id="desk-kalyan-n">
-                <text x="1980" y="730" textAnchor="middle" className="kalyan-letter-font" fontSize="720" letterSpacing="-5">
+                <text x="1980" y="725" textAnchor="middle" className="kalyan-letter-font" fontSize="720">
                   N
                 </text>
               </clipPath>
@@ -147,185 +168,147 @@ export default function HeroSection() {
 
             {/* LETTER K (Sliding Vertically UPWARDS) */}
             <g
-              clipPath="url(#desk-kalyan-k)"
               className="cursor-pointer"
               onMouseEnter={() => setHoveredLetter('K')}
               onMouseLeave={() => setHoveredLetter(null)}
+              onClick={() => setHoveredLetter('K')}
             >
-              <g transform="translate(0, 0)">
-                <g
-                  style={{
-                    animation: `slideUpContinuous ${durK} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.K[0].url} x="0" y="0" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[1].url} x="0" y="420" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[2].url} x="0" y="840" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[3].url} x="0" y="1260" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  {/* Seamless Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.K[0].url} x="0" y="1680" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[1].url} x="0" y="2100" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[2].url} x="0" y="2520" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[3].url} x="0" y="2940" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#desk-kalyan-k)">
+                <g style={getSlideStyle('slideDeskUp', durK)}>
+                  <image href={HERO_LETTER_IMAGES.K[0].url} x="-100" y="-100" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[1].url} x="-100" y="460" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[2].url} x="-100" y="1020" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[3].url} x="-100" y="1580" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.K[0].url} x="-100" y="2140" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[1].url} x="-100" y="2700" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[2].url} x="-100" y="3260" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[3].url} x="-100" y="3820" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="370" height="840" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="-100" y="-100" width="560" height="1100" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="180" y="725" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">K</text>
             </g>
 
             {/* LETTER A (1st) (Sliding Vertically DOWNWARDS) */}
             <g
-              clipPath="url(#desk-kalyan-a1)"
               className="cursor-pointer"
               onMouseEnter={() => setHoveredLetter('A1')}
               onMouseLeave={() => setHoveredLetter(null)}
+              onClick={() => setHoveredLetter('A1')}
             >
-              <g transform="translate(360, 0)">
-                <g
-                  style={{
-                    animation: `slideDownContinuous ${durA1} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="0" y="0" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="0" y="420" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="0" y="840" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="0" y="1260" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  {/* Seamless Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="0" y="1680" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="0" y="2100" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="0" y="2520" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="0" y="2940" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#desk-kalyan-a1)">
+                <g style={getSlideStyle('slideDeskDown', durA1)}>
+                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="260" y="-100" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="260" y="460" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="260" y="1020" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="260" y="1580" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="260" y="2140" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="260" y="2700" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="260" y="3260" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="260" y="3820" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="370" height="840" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="260" y="-100" width="560" height="1100" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="540" y="725" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
             </g>
 
             {/* LETTER L (Sliding Vertically UPWARDS) */}
             <g
-              clipPath="url(#desk-kalyan-l)"
               className="cursor-pointer"
               onMouseEnter={() => setHoveredLetter('L')}
               onMouseLeave={() => setHoveredLetter(null)}
+              onClick={() => setHoveredLetter('L')}
             >
-              <g transform="translate(720, 0)">
-                <g
-                  style={{
-                    animation: `slideUpContinuous ${durL} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.L[0].url} x="0" y="0" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[1].url} x="0" y="420" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[2].url} x="0" y="840" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[3].url} x="0" y="1260" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  {/* Seamless Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.L[0].url} x="0" y="1680" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[1].url} x="0" y="2100" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[2].url} x="0" y="2520" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[3].url} x="0" y="2940" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#desk-kalyan-l)">
+                <g style={getSlideStyle('slideDeskUp', durL)}>
+                  <image href={HERO_LETTER_IMAGES.L[0].url} x="620" y="-100" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.L[1].url} x="620" y="460" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.L[2].url} x="620" y="1020" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.L[3].url} x="620" y="1580" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.L[0].url} x="620" y="2140" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.L[1].url} x="620" y="2700" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.L[2].url} x="620" y="3260" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.L[3].url} x="620" y="3820" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="370" height="840" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="620" y="-100" width="560" height="1100" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="900" y="725" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">L</text>
             </g>
 
             {/* LETTER Y (Sliding Vertically DOWNWARDS) */}
             <g
-              clipPath="url(#desk-kalyan-y)"
               className="cursor-pointer"
               onMouseEnter={() => setHoveredLetter('Y')}
               onMouseLeave={() => setHoveredLetter(null)}
+              onClick={() => setHoveredLetter('Y')}
             >
-              <g transform="translate(1080, 0)">
-                <g
-                  style={{
-                    animation: `slideDownContinuous ${durY} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.Y[0].url} x="0" y="0" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[1].url} x="0" y="420" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[2].url} x="0" y="840" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[3].url} x="0" y="1260" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  {/* Seamless Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.Y[0].url} x="0" y="1680" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[1].url} x="0" y="2100" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[2].url} x="0" y="2520" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[3].url} x="0" y="2940" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#desk-kalyan-y)">
+                <g style={getSlideStyle('slideDeskDown', durY)}>
+                  <image href={HERO_LETTER_IMAGES.Y[0].url} x="980" y="-100" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.Y[1].url} x="980" y="460" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.Y[2].url} x="980" y="1020" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.Y[3].url} x="980" y="1580" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.Y[0].url} x="980" y="2140" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.Y[1].url} x="980" y="2700" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.Y[2].url} x="980" y="3260" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.Y[3].url} x="980" y="3820" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="370" height="840" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="980" y="-100" width="560" height="1100" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="1260" y="725" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">Y</text>
             </g>
 
             {/* LETTER A (2nd) (Sliding Vertically UPWARDS) */}
             <g
-              clipPath="url(#desk-kalyan-a2)"
               className="cursor-pointer"
               onMouseEnter={() => setHoveredLetter('A2')}
               onMouseLeave={() => setHoveredLetter(null)}
+              onClick={() => setHoveredLetter('A2')}
             >
-              <g transform="translate(1440, 0)">
-                <g
-                  style={{
-                    animation: `slideUpContinuous ${durA2} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.A2[0].url} x="0" y="0" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[1].url} x="0" y="420" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[2].url} x="0" y="840" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[3].url} x="0" y="1260" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  {/* Seamless Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.A2[0].url} x="0" y="1680" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[1].url} x="0" y="2100" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[2].url} x="0" y="2520" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[3].url} x="0" y="2940" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#desk-kalyan-a2)">
+                <g style={getSlideStyle('slideDeskUp', durA2)}>
+                  <image href={HERO_LETTER_IMAGES.A2[0].url} x="1340" y="-100" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A2[1].url} x="1340" y="460" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A2[2].url} x="1340" y="1020" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A2[3].url} x="1340" y="1580" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.A2[0].url} x="1340" y="2140" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A2[1].url} x="1340" y="2700" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A2[2].url} x="1340" y="3260" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A2[3].url} x="1340" y="3820" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="370" height="840" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="1340" y="-100" width="560" height="1100" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="1620" y="725" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
             </g>
 
             {/* LETTER N (Sliding Vertically DOWNWARDS) */}
             <g
-              clipPath="url(#desk-kalyan-n)"
               className="cursor-pointer"
               onMouseEnter={() => setHoveredLetter('N')}
               onMouseLeave={() => setHoveredLetter(null)}
+              onClick={() => setHoveredLetter('N')}
             >
-              <g transform="translate(1800, 0)">
-                <g
-                  style={{
-                    animation: `slideDownContinuous ${durN} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.N[0].url} x="0" y="0" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[1].url} x="0" y="420" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[2].url} x="0" y="840" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[3].url} x="0" y="1260" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  {/* Seamless Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.N[0].url} x="0" y="1680" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[1].url} x="0" y="2100" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[2].url} x="0" y="2520" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[3].url} x="0" y="2940" width="370" height="420" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#desk-kalyan-n)">
+                <g style={getSlideStyle('slideDeskDown', durN)}>
+                  <image href={HERO_LETTER_IMAGES.N[0].url} x="1700" y="-100" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.N[1].url} x="1700" y="460" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.N[2].url} x="1700" y="1020" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.N[3].url} x="1700" y="1580" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.N[0].url} x="1700" y="2140" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.N[1].url} x="1700" y="2700" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.N[2].url} x="1700" y="3260" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.N[3].url} x="1700" y="3820" width="560" height="560" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="370" height="840" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="1700" y="-100" width="560" height="1100" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="1980" y="725" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">N</text>
             </g>
-
-            {/* CONTINUOUS ARCHITECTURAL CONTOURS FOR DESKTOP K-A-L-Y-A-N */}
-            <text x="180" y="730" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" letterSpacing="-5" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">K</text>
-            <text x="540" y="730" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" letterSpacing="-5" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
-            <text x="900" y="730" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" letterSpacing="-5" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">L</text>
-            <text x="1260" y="730" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" letterSpacing="-5" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">Y</text>
-            <text x="1620" y="730" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" letterSpacing="-5" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
-            <text x="1980" y="730" textAnchor="middle" className="kalyan-letter-font pointer-events-none" fontSize="720" letterSpacing="-5" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">N</text>
           </svg>
 
           {/* ------------------------------------------------------------------- */}
@@ -334,7 +317,7 @@ export default function HeroSection() {
           <svg
             viewBox="0 0 800 1260"
             preserveAspectRatio="xMidYMid meet"
-            className="block md:hidden w-full h-full max-h-[76vh] sm:max-h-[82vh]"
+            className="block md:hidden w-full h-full max-h-[66vh] max-w-full drop-shadow-sm select-none"
             aria-label="KA LY AN letters with sliding interior design architecture inside"
             role="img"
           >
@@ -352,38 +335,38 @@ export default function HeroSection() {
               }
             `}</style>
             <defs>
-              {/* Row 1: K (x=210, y=350) & A1 (x=590, y=350) */}
+              {/* Row 1: K & A1 (y=355) */}
               <clipPath id="mob-kalyan-k">
-                <text x="210" y="350" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="460" letterSpacing="-4">
+                <text x="215" y="355" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="440">
                   K
                 </text>
               </clipPath>
               <clipPath id="mob-kalyan-a1">
-                <text x="590" y="350" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="460" letterSpacing="-4">
+                <text x="585" y="355" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="440">
                   A
                 </text>
               </clipPath>
 
-              {/* Row 2: L (x=210, y=770) & Y (x=590, y=770) */}
+              {/* Row 2: L & Y (y=775) */}
               <clipPath id="mob-kalyan-l">
-                <text x="210" y="770" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="460" letterSpacing="-4">
+                <text x="215" y="775" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="440">
                   L
                 </text>
               </clipPath>
               <clipPath id="mob-kalyan-y">
-                <text x="590" y="770" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="460" letterSpacing="-4">
+                <text x="585" y="775" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="440">
                   Y
                 </text>
               </clipPath>
 
-              {/* Row 3: A2 (x=210, y=1190) & N (x=590, y=1190) */}
+              {/* Row 3: A2 & N (y=1195) */}
               <clipPath id="mob-kalyan-a2">
-                <text x="210" y="1190" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="460" letterSpacing="-4">
+                <text x="215" y="1195" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="440">
                   A
                 </text>
               </clipPath>
               <clipPath id="mob-kalyan-n">
-                <text x="590" y="1190" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="460" letterSpacing="-4">
+                <text x="585" y="1195" textAnchor="middle" className="kalyan-mob-letter-font" fontSize="440">
                   N
                 </text>
               </clipPath>
@@ -391,240 +374,163 @@ export default function HeroSection() {
 
             {/* ROW 1: LETTER K (Slide Up) */}
             <g
-              clipPath="url(#mob-kalyan-k)"
               className="cursor-pointer"
               onClick={() => setHoveredLetter('K')}
               onMouseEnter={() => setHoveredLetter('K')}
               onMouseLeave={() => setHoveredLetter(null)}
             >
-              <g transform="translate(10, 0)">
-                <g
-                  style={{
-                    animation: `slideUpContinuous ${durK} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.K[0].url} x="0" y="0" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[1].url} x="0" y="260" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[2].url} x="0" y="520" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[3].url} x="0" y="780" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  {/* Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.K[0].url} x="0" y="1040" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[1].url} x="0" y="1300" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[2].url} x="0" y="1560" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.K[3].url} x="0" y="1820" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#mob-kalyan-k)">
+                <g style={getSlideStyle('slideMobUp', durK)}>
+                  <image href={HERO_LETTER_IMAGES.K[0].url} x="-15" y="-60" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[1].url} x="-15" y="300" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[2].url} x="-15" y="660" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[3].url} x="-15" y="1020" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.K[0].url} x="-15" y="1380" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[1].url} x="-15" y="1740" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[2].url} x="-15" y="2100" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.K[3].url} x="-15" y="2460" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="380" height="410" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="-15" y="-60" width="460" height="480" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="215" y="355" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="440" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">K</text>
             </g>
 
             {/* ROW 1: LETTER A1 (Slide Down) */}
             <g
-              clipPath="url(#mob-kalyan-a1)"
               className="cursor-pointer"
               onClick={() => setHoveredLetter('A1')}
               onMouseEnter={() => setHoveredLetter('A1')}
               onMouseLeave={() => setHoveredLetter(null)}
             >
-              <g transform="translate(410, 0)">
-                <g
-                  style={{
-                    animation: `slideDownContinuous ${durA1} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="0" y="0" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="0" y="260" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="0" y="520" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="0" y="780" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  {/* Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="0" y="1040" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="0" y="1300" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="0" y="1560" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="0" y="1820" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#mob-kalyan-a1)">
+                <g style={getSlideStyle('slideMobDown', durA1)}>
+                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="355" y="-60" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="355" y="300" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="355" y="660" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="355" y="1020" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  {/* Seamless Duplicate Loop */}
+                  <image href={HERO_LETTER_IMAGES.A1[0].url} x="355" y="1380" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[1].url} x="355" y="1740" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[2].url} x="355" y="2100" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  <image href={HERO_LETTER_IMAGES.A1[3].url} x="355" y="2460" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
                 </g>
-                <rect x="0" y="0" width="380" height="410" fill="rgba(7, 8, 10, 0.08)" />
+                <rect x="355" y="-60" width="460" height="480" fill="rgba(7, 8, 10, 0.05)" />
               </g>
+              <text x="585" y="355" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="440" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
             </g>
 
             {/* ROW 2: LETTER L (Slide Up) */}
             <g
-              clipPath="url(#mob-kalyan-l)"
               className="cursor-pointer"
               onClick={() => setHoveredLetter('L')}
               onMouseEnter={() => setHoveredLetter('L')}
               onMouseLeave={() => setHoveredLetter(null)}
             >
-              <g transform="translate(10, 420)">
-                <g
-                  style={{
-                    animation: `slideUpContinuous ${durL} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.L[0].url} x="0" y="0" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[1].url} x="0" y="260" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[2].url} x="0" y="520" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[3].url} x="0" y="780" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  {/* Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.L[0].url} x="0" y="1040" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[1].url} x="0" y="1300" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[2].url} x="0" y="1560" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.L[3].url} x="0" y="1820" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#mob-kalyan-l)">
+                <g transform="translate(0, 420)">
+                  <g style={getSlideStyle('slideMobUp', durL)}>
+                    <image href={HERO_LETTER_IMAGES.L[0].url} x="-15" y="-60" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.L[1].url} x="-15" y="300" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.L[2].url} x="-15" y="660" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.L[3].url} x="-15" y="1020" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    {/* Seamless Duplicate Loop */}
+                    <image href={HERO_LETTER_IMAGES.L[0].url} x="-15" y="1380" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.L[1].url} x="-15" y="1740" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.L[2].url} x="-15" y="2100" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.L[3].url} x="-15" y="2460" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  </g>
+                  <rect x="-15" y="-60" width="460" height="480" fill="rgba(7, 8, 10, 0.05)" />
                 </g>
-                <rect x="0" y="0" width="380" height="410" fill="rgba(7, 8, 10, 0.08)" />
               </g>
+              <text x="215" y="775" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="440" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">L</text>
             </g>
 
             {/* ROW 2: LETTER Y (Slide Down) */}
             <g
-              clipPath="url(#mob-kalyan-y)"
               className="cursor-pointer"
               onClick={() => setHoveredLetter('Y')}
               onMouseEnter={() => setHoveredLetter('Y')}
               onMouseLeave={() => setHoveredLetter(null)}
             >
-              <g transform="translate(410, 420)">
-                <g
-                  style={{
-                    animation: `slideDownContinuous ${durY} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.Y[0].url} x="0" y="0" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[1].url} x="0" y="260" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[2].url} x="0" y="520" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[3].url} x="0" y="780" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  {/* Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.Y[0].url} x="0" y="1040" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[1].url} x="0" y="1300" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[2].url} x="0" y="1560" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.Y[3].url} x="0" y="1820" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#mob-kalyan-y)">
+                <g transform="translate(0, 420)">
+                  <g style={getSlideStyle('slideMobDown', durY)}>
+                    <image href={HERO_LETTER_IMAGES.Y[0].url} x="355" y="-60" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.Y[1].url} x="355" y="300" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.Y[2].url} x="355" y="660" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.Y[3].url} x="355" y="1020" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    {/* Seamless Duplicate Loop */}
+                    <image href={HERO_LETTER_IMAGES.Y[0].url} x="355" y="1380" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.Y[1].url} x="355" y="1740" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.Y[2].url} x="355" y="2100" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.Y[3].url} x="355" y="2460" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  </g>
+                  <rect x="355" y="-60" width="460" height="480" fill="rgba(7, 8, 10, 0.05)" />
                 </g>
-                <rect x="0" y="0" width="380" height="410" fill="rgba(7, 8, 10, 0.08)" />
               </g>
+              <text x="585" y="775" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="440" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">Y</text>
             </g>
 
             {/* ROW 3: LETTER A2 (Slide Up) */}
             <g
-              clipPath="url(#mob-kalyan-a2)"
               className="cursor-pointer"
               onClick={() => setHoveredLetter('A2')}
               onMouseEnter={() => setHoveredLetter('A2')}
               onMouseLeave={() => setHoveredLetter(null)}
             >
-              <g transform="translate(10, 840)">
-                <g
-                  style={{
-                    animation: `slideUpContinuous ${durA2} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.A2[0].url} x="0" y="0" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[1].url} x="0" y="260" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[2].url} x="0" y="520" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[3].url} x="0" y="780" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  {/* Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.A2[0].url} x="0" y="1040" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[1].url} x="0" y="1300" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[2].url} x="0" y="1560" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.A2[3].url} x="0" y="1820" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#mob-kalyan-a2)">
+                <g transform="translate(0, 840)">
+                  <g style={getSlideStyle('slideMobUp', durA2)}>
+                    <image href={HERO_LETTER_IMAGES.A2[0].url} x="-15" y="-60" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.A2[1].url} x="-15" y="300" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.A2[2].url} x="-15" y="660" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.A2[3].url} x="-15" y="1020" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    {/* Seamless Duplicate Loop */}
+                    <image href={HERO_LETTER_IMAGES.A2[0].url} x="-15" y="1380" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.A2[1].url} x="-15" y="1740" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.A2[2].url} x="-15" y="2100" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.A2[3].url} x="-15" y="2460" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  </g>
+                  <rect x="-15" y="-60" width="460" height="480" fill="rgba(7, 8, 10, 0.05)" />
                 </g>
-                <rect x="0" y="0" width="380" height="410" fill="rgba(7, 8, 10, 0.08)" />
               </g>
+              <text x="215" y="1195" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="440" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
             </g>
 
             {/* ROW 3: LETTER N (Slide Down) */}
             <g
-              clipPath="url(#mob-kalyan-n)"
               className="cursor-pointer"
               onClick={() => setHoveredLetter('N')}
               onMouseEnter={() => setHoveredLetter('N')}
               onMouseLeave={() => setHoveredLetter(null)}
             >
-              <g transform="translate(410, 840)">
-                <g
-                  style={{
-                    animation: `slideDownContinuous ${durN} linear infinite`,
-                    animationDirection: isReversed ? 'reverse' : 'normal',
-                    animationPlayState: isPlaying ? 'running' : 'paused',
-                  }}
-                >
-                  <image href={HERO_LETTER_IMAGES.N[0].url} x="0" y="0" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[1].url} x="0" y="260" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[2].url} x="0" y="520" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[3].url} x="0" y="780" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  {/* Duplicate */}
-                  <image href={HERO_LETTER_IMAGES.N[0].url} x="0" y="1040" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[1].url} x="0" y="1300" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[2].url} x="0" y="1560" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
-                  <image href={HERO_LETTER_IMAGES.N[3].url} x="0" y="1820" width="380" height="260" preserveAspectRatio="xMidYMid slice" />
+              <g clipPath="url(#mob-kalyan-n)">
+                <g transform="translate(0, 840)">
+                  <g style={getSlideStyle('slideMobDown', durN)}>
+                    <image href={HERO_LETTER_IMAGES.N[0].url} x="355" y="-60" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.N[1].url} x="355" y="300" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.N[2].url} x="355" y="660" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.N[3].url} x="355" y="1020" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    {/* Seamless Duplicate Loop */}
+                    <image href={HERO_LETTER_IMAGES.N[0].url} x="355" y="1380" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.N[1].url} x="355" y="1740" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.N[2].url} x="355" y="2100" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                    <image href={HERO_LETTER_IMAGES.N[3].url} x="355" y="2460" width="460" height="360" preserveAspectRatio="xMidYMid slice" />
+                  </g>
+                  <rect x="355" y="-60" width="460" height="480" fill="rgba(7, 8, 10, 0.05)" />
                 </g>
-                <rect x="0" y="0" width="380" height="410" fill="rgba(7, 8, 10, 0.08)" />
               </g>
+              <text x="585" y="1195" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="440" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">N</text>
             </g>
-
-            {/* CONTINUOUS ARCHITECTURAL CONTOURS FOR MOBILE KA / LY / AN */}
-            {/* Row 1: KA */}
-            <text x="210" y="350" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="460" letterSpacing="-4" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">K</text>
-            <text x="590" y="350" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="460" letterSpacing="-4" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
-            
-            {/* Row 2: LY */}
-            <text x="210" y="770" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="460" letterSpacing="-4" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">L</text>
-            <text x="590" y="770" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="460" letterSpacing="-4" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">Y</text>
-            
-            {/* Row 3: AN */}
-            <text x="210" y="1190" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="460" letterSpacing="-4" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">A</text>
-            <text x="590" y="1190" textAnchor="middle" className="kalyan-mob-letter-font pointer-events-none" fontSize="460" letterSpacing="-4" fill="none" stroke="rgba(26, 24, 21, 0.28)" strokeWidth="2.5">N</text>
           </svg>
 
         </div>
 
-        {/* Soft atmospheric gradient across top & bottom */}
-        <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-b from-[#F7F3EB]/70 via-transparent to-[#F7F3EB]/85" />
-
         {/* ======================================================================= */}
-        {/* IN BETWEEN / OVERLAY: TOP HOVER BADGE & REGIONAL CITATION               */}
+        {/* 3. BOTTOM HUD: BRAND CITATION & INTERACTIVE CONTROLS                    */}
         {/* ======================================================================= */}
-        <div className="relative z-20 w-full pt-14 sm:pt-16 md:pt-18 text-center pointer-events-none">
-          {hoveredLetter ? (
-            <div className="inline-flex items-center space-x-2 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white/95 border border-[#B68953]/50 text-xs text-[#4A453F] backdrop-blur-md shadow-lg animate-in fade-in zoom-in-95 pointer-events-auto max-w-[92vw] truncate">
-              <span className="font-semibold text-[#1A1815]">Letter {getLetterDisplay(hoveredLetter)}:</span>
-              <span className="truncate">{getLetterDescription(hoveredLetter)}</span>
-            </div>
-          ) : (
-            <div className="inline-flex items-center space-x-2 px-3 sm:px-3.5 py-1 rounded-full bg-white/80 border border-[#1A1815]/10 backdrop-blur-md shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#B68953] animate-ping" />
-              <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.25em] sm:tracking-[0.3em] font-medium text-[#7A6B58]">
-                Bhubaneswar &bull; Cuttack &bull; Puri &bull; Odisha
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Floating Interactive Micro-Badges for Desktop / Tablets */}
-        <div className="absolute top-16 left-6 z-30 hidden md:flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/95 border border-[#FF8526]/30 shadow-md animate-float">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#FF8526] animate-ping" />
-          <span className="text-xs font-century font-bold text-[#1A1815]">
-            ⭐ 350+ Homes Handed Over Across Odisha
-          </span>
-        </div>
-
-        <div className="absolute top-16 right-6 z-30 hidden md:flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/95 border border-[#FF8526]/30 shadow-md animate-float-reverse">
-          <span className="text-xs font-century font-bold text-[#FF8526]">
-            ⚡ 45-Day Handover Guaranteed
-          </span>
-        </div>
-
-        {/* ======================================================================= */}
-        {/* BOTTOM HUD: BRAND CITATION & CONTROLS (Within the corner margins)      */}
-        {/* ======================================================================= */}
-        <div className="relative z-20 w-full flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 border-t border-[#1A1815]/10 pt-1.5 pb-1 bg-[#FFF3E9]/80 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none rounded-b">
+        <div className="relative z-20 w-full flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 border-t border-[#1A1815]/10 pt-2 pb-1 bg-[#FFF3E9]/90 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none rounded-b flex-shrink-0">
           
           {/* Left: Branding in Bounce Dash */}
           <div className="text-center sm:text-left">
@@ -637,7 +543,7 @@ export default function HeroSection() {
           </div>
 
           {/* Center/Right: Interactive Controls */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-[#FF8526]/20 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-lg">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-[#FF8526]/25 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-lg">
             {/* Play/Pause */}
             <button
               onClick={() => setIsPlaying(!isPlaying)}

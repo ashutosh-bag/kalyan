@@ -149,6 +149,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${century751.variable} ${courgette.variable} ${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
     >
       <head>
@@ -157,7 +158,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FFF3E9] text-[#1A1815] flex flex-col font-century selection:bg-[#FF8526] selection:text-white">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen bg-[#FFF3E9] text-[#1A1815] flex flex-col font-century selection:bg-[#FF8526] selection:text-white"
+      >
         {children}
       </body>
     </html>

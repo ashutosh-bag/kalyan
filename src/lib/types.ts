@@ -137,3 +137,40 @@ export interface ApiResponse<T> {
   error?: string;
   message?: string;
 }
+
+export interface GoogleReview {
+  id: string;
+  authorName: string;
+  authorInitials?: string;
+  authorLocation?: string;
+  projectType?: string;
+  category?: 'villas' | 'kitchens' | 'residential' | 'commercial' | string;
+  rating: number;
+  relativeTime: string;
+  avatarBg?: string;
+  avatarText?: string;
+  reviewText: string;
+  highlights?: string[];
+  verified?: boolean;
+  source?: string;
+}
+
+export interface GooglePlaceReviewsData {
+  placeInfo: {
+    name: string;
+    placeId: string;
+    googleBusinessUrl: string;
+    googleWriteReviewUrl: string;
+    rating: number;
+    userRatingsTotal: number;
+    lastSynced: string;
+    isLiveSynced?: boolean;
+  };
+  reviews: GoogleReview[];
+  total: number;
+  categories: {
+    id: string;
+    label: string;
+    count: number;
+  }[];
+}

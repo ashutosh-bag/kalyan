@@ -7,6 +7,7 @@ import ProjectsSection from '@/components/ProjectsSection';
 import ServicesSection from '@/components/ServicesSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
+import GoogleReviewsSection from '@/components/GoogleReviewsSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -40,6 +41,9 @@ export default function Home() {
 
         {/* Contact & Consultation Form (API Connected) */}
         <ContactSection />
+
+        {/* Real Verified Google Reviews of Kalyan Design Studio */}
+        <GoogleReviewsSection />
       </main>
 
       {/* Corporate Footer with Newsletter & Links */}
