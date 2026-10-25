@@ -49,22 +49,15 @@
     },
     "designSystem": {
       "typography": {
-        "primaryFont": {
-          "name": "Century751BT",
-          "cssClass": "font-century",
-          "file": "/fonts/Century-751-BT.ttf",
-          "usage": "Global Headings, Body Text, Navigation, Buttons"
+        "primaryHeadingFont": {
+          "name": "Playfair Display",
+          "cssClass": "font-playfair",
+          "usage": "Editorial Headings, Section Titles, Monograms, Luxury Accents"
         },
-        "accentCalligraphicFont": {
-          "name": "Courgette",
-          "cssClass": "font-courgette",
-          "file": "/fonts/Courgette-Regular.ttf",
-          "usage": "Editorial Quotes, Section Taglines, Monogram Details"
-        },
-        "secondaryFont": {
-          "name": "Poppins / Sans-Serif",
-          "cssClass": "font-sans",
-          "usage": "Form Inputs, Captions, Labels"
+        "bodyAndUIFont": {
+          "name": "Lato",
+          "cssClass": "font-lato",
+          "usage": "Global Body Text, Descriptions, Navigation, Buttons, Form Inputs, Captions"
         }
       },
       "colorPalette": {

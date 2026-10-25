@@ -10,11 +10,23 @@ interface NavbarProps {
 
 export default function Navbar({ onOpenConsultation }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
+      // Check if user has completely scrolled past the video hero section
+      const heroEl = document.getElementById('home');
+      if (heroEl) {
+        const heroRect = heroEl.getBoundingClientRect();
+        // Reveal navbar once the hero section has been completely scrolled through
+        const past = heroRect.bottom <= 80;
+        setIsPastHero(past);
+      } else {
+        setIsPastHero(window.scrollY > 600);
+      }
+
       if (window.scrollY > 40) {
         setIsScrolled(true);
       } else {
@@ -36,6 +48,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -90,10 +103,12 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
   return (
     <header
       id="main-navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'glass-nav-scrolled py-1.5 sm:py-2 shadow-2xl'
-          : 'bg-transparent py-2 sm:py-3'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+        !isPastHero
+          ? '-translate-y-full opacity-0 pointer-events-none'
+          : isScrolled
+          ? 'translate-y-0 opacity-100 glass-nav-scrolled py-1.5 sm:py-2 shadow-2xl pointer-events-auto'
+          : 'translate-y-0 opacity-100 bg-transparent py-2 sm:py-3 pointer-events-auto'
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">

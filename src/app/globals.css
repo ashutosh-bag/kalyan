@@ -1,3 +1,6 @@
+/* Google Fonts: Playfair Display (Headings/Display) + Lato (Body/UI) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @import "tailwindcss";
 
 @font-face {
@@ -48,11 +51,15 @@
 }
 
 @theme inline {
-  --font-sans: 'Century751BT', sans-serif;
-  --font-serif: 'Century751BT', serif;
-  --font-century: 'Century751BT', sans-serif;
-  --font-courgette: 'Courgette', cursive, sans-serif;
-  --font-bounce: 'Bounce Dash', cursive, sans-serif;
+  --font-playfair: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-lato: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-heading: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-body: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-century: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-courgette: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-bounce: var(--font-playfair), 'Playfair Display', Georgia, serif;
   --color-primary: var(--bg-primary);
   --color-secondary: var(--bg-secondary);
   --color-gold: var(--accent-gold);
@@ -62,20 +69,36 @@
   --color-kalyan-amber: #E79F30;
 }
 
-.font-bounce, .font-bounce-dash {
-  font-family: 'Bounce Dash', var(--font-bounce-dash), 'Century751BT', sans-serif !important;
+/* Global Website Typography: Playfair Display + Lato */
+html,
+body {
+  font-family: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.font-century {
-  font-family: 'Century751BT', var(--font-century), Georgia, serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
 }
 
-.font-courgette {
-  font-family: 'Courgette', var(--font-courgette), cursive, sans-serif !important;
-}
-
+/* Direct Utility Overrides for universal styling */
+.font-playfair,
+.font-heading,
+.font-bounce,
+.font-bounce-dash,
+.font-courgette,
 .font-serif {
-  font-family: 'Century751BT', Georgia, serif !important;
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif !important;
+}
+
+.font-lato,
+.font-body,
+.font-century,
+.font-sans {
+  font-family: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 /* Image Pop & Vivid Styling */

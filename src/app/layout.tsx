@@ -1,7 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Lato, Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -150,9 +164,15 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${century751.variable} ${courgette.variable} ${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
+      className={`${playfair.variable} ${lato.variable} ${century751.variable} ${courgette.variable} ${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -160,7 +180,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#FFF3E9] text-[#1A1815] flex flex-col font-century selection:bg-[#FF8526] selection:text-white"
+        className="min-h-screen bg-[#FFF3E9] text-[#1A1815] flex flex-col font-lato selection:bg-[#FF8526] selection:text-white"
       >
         {children}
       </body>
