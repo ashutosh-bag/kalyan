@@ -22,7 +22,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       }
 
       // Track active section for indicator
-      const sections = ['home', 'packages', 'spatial-showcase', 'about', 'projects', 'blog', 'contact', 'google-reviews'];
+      const sections = ['home', 'packages', 'spatial-showcase', 'testimonials-360', 'about', 'projects', 'blog', 'google-reviews', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -43,6 +43,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     { name: 'Home', href: '#home', id: 'home' },
     { name: 'Packages', href: '#packages', id: 'packages' },
     { name: 'Showcase', href: '#spatial-showcase', id: 'spatial-showcase' },
+    { name: '360° Tours', href: '#testimonials-360', id: 'testimonials-360' },
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Blog', href: '#blog', id: 'blog' },
@@ -96,7 +97,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Official Animated Brand Logo: Kalyan Design Studio (logo.gif) */}
           <Link
@@ -104,23 +105,23 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             className="group flex items-center focus:outline-none flex-shrink-0"
             aria-label="Kalyan Design Studio Home"
           >
-            <div className="relative flex items-center justify-center rounded-2xl bg-black border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.45)] group-hover:border-[#FF9E4A] group-hover:shadow-[0_4px_32px_rgba(255,133,38,0.7)] transition-all duration-300 overflow-hidden p-1 flex-shrink-0">
+            <div className="relative flex items-center justify-center rounded-xl sm:rounded-2xl bg-black border sm:border-2 border-[#FF8526] shadow-[0_4px_20px_rgba(255,133,38,0.4)] group-hover:border-[#FF9E4A] group-hover:shadow-[0_4px_28px_rgba(255,133,38,0.65)] transition-all duration-300 overflow-hidden p-1 flex-shrink-0">
               <img
                 src="/images/kalyan/branding/logo.gif"
                 alt="Kalyan Design Studio Animated Logo"
                 className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
                   isScrolled
-                    ? 'h-14 sm:h-16 md:h-16'
-                    : 'h-16 sm:h-20 md:h-22'
+                    ? 'h-10 sm:h-12 md:h-12 lg:h-13 xl:h-14'
+                    : 'h-11 sm:h-13 md:h-14 lg:h-14 xl:h-16'
                 }`}
               />
             </div>
           </Link>
 
-          {/* Desktop Navigation items serialized: home, about, projects, blog, contact */}
+          {/* Desktop Navigation items serialized: home, packages, showcase, about, projects, blog, reviews, contact */}
           <nav
             aria-label="Primary Navigation"
-            className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/85 backdrop-blur-md border border-[#1A1815]/10 px-4 py-2 rounded-full shadow-md"
+            className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 bg-white/90 backdrop-blur-md border border-[#1A1815]/10 px-2.5 xl:px-4 py-1.5 rounded-full shadow-md"
           >
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
@@ -128,7 +129,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`relative px-3.5 py-1.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-full ${
+                  className={`relative px-2.5 xl:px-3.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-[0.12em] xl:tracking-[0.2em] font-medium transition-all duration-300 rounded-full whitespace-nowrap ${
                     isActive
                       ? 'text-[#B68953] bg-[#F7F3EB] font-semibold shadow-xs'
                       : 'text-[#5C564E] hover:text-[#1A1815] hover:bg-black/5'
@@ -143,12 +144,11 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             })}
           </nav>
 
-          {/* Right Section: Social Icons (fb, ig, yt) + Consultation Button */}
-          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
-            
-            {/* Social media icons next to navigation */}
+          {/* Right Section Desktop: Social Icons (fb, ig, yt) + Consultation / Get Quote Button */}
+          <div className="hidden lg:flex items-center space-x-2.5 xl:space-x-3.5 flex-shrink-0">
+            {/* Social media icons next to navigation (shown on xl+ screens) */}
             <div
-              className="hidden xl:flex items-center space-x-1.5 border-r border-[#1A1815]/15 pr-4 text-[#5C564E]"
+              className="hidden xl:flex items-center space-x-1.5 border-r border-[#1A1815]/15 pr-3 text-[#5C564E]"
               aria-label="Social media channels"
             >
               {socialLinks.map((social) => (
@@ -158,7 +158,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.ariaLabel}
-                  className="group relative p-2 text-[#68625A] hover:text-[#B68953] hover:bg-black/5 rounded-full transition-all duration-300"
+                  className="group relative p-1.5 text-[#68625A] hover:text-[#B68953] hover:bg-black/5 rounded-full transition-all duration-300"
                   title={social.name}
                 >
                   {social.svg}
@@ -170,8 +170,13 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             {/* Corporate CTA: Get Quote */}
             <a
               href="#packages"
-              onClick={onOpenConsultation}
-              className="group relative inline-flex items-center space-x-2 px-5 py-2.5 bg-[#FF8526] hover:bg-[#f57410] font-courgette text-base text-white transition-all duration-300 rounded-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 overflow-hidden"
+              onClick={(e) => {
+                if (onOpenConsultation) {
+                  e.preventDefault();
+                  onOpenConsultation();
+                }
+              }}
+              className="group relative inline-flex items-center space-x-1.5 xl:space-x-2 px-3.5 py-2 xl:px-5 xl:py-2.5 bg-[#FF8526] hover:bg-[#f57410] font-courgette text-sm xl:text-base text-white transition-all duration-300 rounded-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 overflow-hidden flex-shrink-0 whitespace-nowrap cursor-pointer"
             >
               <span className="relative z-10 text-white drop-shadow-xs">Get Quote</span>
               <ArrowUpRight className="relative z-10 w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -179,17 +184,24 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-2 md:hidden">
+          {/* Mobile & Tablet Actions (< lg) */}
+          <div className="flex items-center space-x-2 sm:space-x-3 lg:hidden flex-shrink-0">
             <a
               href="#packages"
-              className="px-3 py-1.5 bg-[#FF8526] font-courgette text-sm text-white rounded-lg shadow-sm"
+              onClick={(e) => {
+                if (onOpenConsultation) {
+                  e.preventDefault();
+                  onOpenConsultation();
+                }
+              }}
+              className="group relative inline-flex items-center space-x-1 sm:space-x-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FF8526] hover:bg-[#f57410] active:scale-95 font-courgette text-xs sm:text-sm text-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex-shrink-0 whitespace-nowrap cursor-pointer"
             >
-              Get Quote
+              <span>Get Quote</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#1A1815] hover:text-[#B68953] bg-white/80 border border-[#1A1815]/10 rounded-sm focus:outline-none"
+              className="p-1.5 sm:p-2 text-[#1A1815] hover:text-[#B68953] bg-white/90 hover:bg-white border border-[#1A1815]/10 rounded-lg focus:outline-none transition-colors shadow-xs"
               aria-label="Toggle Navigation Menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -199,57 +211,78 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile & Tablet Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden glass-panel border-t border-[#1A1815]/10 mt-3 px-6 py-6 transition-all duration-300 animate-in fade-in slide-in-from-top-4 shadow-xl">
-            <div className="flex flex-col space-y-4">
-              <div className="flex flex-col items-center justify-center pb-4 border-b border-[#1A1815]/10 text-center">
-                <div className="rounded-2xl bg-black border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.4)] p-1.5 overflow-hidden mb-3">
-                  <img
-                    src="/images/kalyan/branding/logo.gif"
-                    alt="Kalyan Design Studio Animated Logo"
-                    className="h-24 w-auto object-contain"
-                  />
-                </div>
-                <span className="font-bounce text-xl text-[#1A1815] leading-tight">
-                  Kalyan Design Studio
-                </span>
-                <span className="text-[11px] uppercase tracking-widest font-century text-[#FF8526] font-bold mt-1">
-                  Architecture &bull; Interiors &bull; Odisha
-                </span>
+        <div className="lg:hidden glass-panel border-t border-[#1A1815]/10 mt-2 sm:mt-3 px-4 sm:px-6 py-5 transition-all duration-300 animate-in fade-in slide-in-from-top-4 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <div className="flex flex-col space-y-3 sm:space-y-4">
+            {/* Brand Header inside drawer */}
+            <div className="flex flex-col items-center justify-center pb-3 border-b border-[#1A1815]/10 text-center">
+              <div className="rounded-2xl bg-black border-2 border-[#FF8526] shadow-[0_4px_20px_rgba(255,133,38,0.35)] p-1.5 overflow-hidden mb-2">
+                <img
+                  src="/images/kalyan/branding/logo.gif"
+                  alt="Kalyan Design Studio Animated Logo"
+                  className="h-16 sm:h-20 w-auto object-contain"
+                />
               </div>
+              <span className="font-bounce text-lg sm:text-xl text-[#1A1815] leading-tight">
+                Kalyan Design Studio
+              </span>
+              <span className="text-[10px] sm:text-[11px] uppercase tracking-widest font-century text-[#FF8526] font-bold mt-0.5">
+                Architecture &bull; Interiors &bull; Odisha
+              </span>
+            </div>
+
+            {/* Prominent CTA in Drawer */}
+            <a
+              href="#packages"
+              onClick={(e) => {
+                if (onOpenConsultation) {
+                  e.preventDefault();
+                  onOpenConsultation();
+                }
+                setMobileMenuOpen(false);
+              }}
+              className="w-full inline-flex items-center justify-center space-x-2 py-2.5 px-4 bg-[#FF8526] hover:bg-[#f57410] active:scale-[0.98] font-courgette text-base text-white rounded-xl shadow-md transition-all cursor-pointer"
+            >
+              <span>Get Instant Quote &amp; Packages</span>
+              <ArrowUpRight className="w-4 h-4 text-white" />
+            </a>
+
+            {/* Nav items */}
+            <div className="grid grid-cols-2 gap-1 py-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm uppercase tracking-[0.25em] font-medium text-[#4A453F] hover:text-[#B68953] py-1 border-b border-[#1A1815]/5 transition-colors"
+                  className="text-xs uppercase tracking-[0.2em] font-medium text-[#4A453F] hover:text-[#B68953] py-2 px-2.5 rounded-lg hover:bg-black/5 transition-colors"
                 >
                   {item.name}
                 </a>
               ))}
+            </div>
 
-              {/* Mobile Social Links */}
-              <div className="pt-3 flex items-center justify-between border-t border-[#1A1815]/10">
-                <span className="text-xs uppercase tracking-wider text-[#68625A]">Connect with Kalyan:</span>
-                <div className="flex items-center space-x-3 text-[#5C564E]">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.ariaLabel}
-                      className="p-2 text-[#5C564E] hover:text-[#B68953] bg-black/5 rounded-full"
-                    >
-                      {social.svg}
-                    </a>
-                  ))}
-                </div>
+            {/* Mobile Social Links */}
+            <div className="pt-3 flex items-center justify-between border-t border-[#1A1815]/10">
+              <span className="text-xs uppercase tracking-wider text-[#68625A]">Connect with Kalyan:</span>
+              <div className="flex items-center space-x-2 text-[#5C564E]">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.ariaLabel}
+                    className="p-2 text-[#5C564E] hover:text-[#B68953] bg-black/5 rounded-full transition-colors"
+                  >
+                    {social.svg}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
     </header>
   );
 }
