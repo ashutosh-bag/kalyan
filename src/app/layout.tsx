@@ -1,56 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Lato, Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Lato } from "next/font/google";
 import "./globals.css";
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "300", "400", "700", "900"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const bounceDash = localFont({
-  src: "../../public/fonts/BounceDash.otf",
-  variable: "--font-bounce-dash",
-  display: "swap",
-});
-
-const catalunya = localFont({
-  src: "../../public/fonts/Catalunya.otf",
-  variable: "--font-catalunya",
-  display: "swap",
-});
-
-const century751 = localFont({
-  src: "../../public/fonts/Century-751-BT.ttf",
-  variable: "--font-century",
-  display: "swap",
-});
-
-const courgette = localFont({
-  src: "../../public/fonts/Courgette-Regular.ttf",
-  variable: "--font-courgette",
-  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -164,15 +120,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${playfair.variable} ${lato.variable} ${century751.variable} ${courgette.variable} ${geistSans.variable} ${geistMono.variable} ${bounceDash.variable} ${catalunya.variable} scroll-smooth antialiased`}
+      className={`${lato.variable} scroll-smooth antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

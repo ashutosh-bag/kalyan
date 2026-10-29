@@ -1,39 +1,4 @@
-/* Google Fonts: Playfair Display (Headings/Display) + Lato (Body/UI) */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 @import "tailwindcss";
-
-@font-face {
-  font-family: 'Bounce Dash';
-  src: url('/fonts/BounceDash.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: 'Catalunya';
-  src: url('/fonts/Catalunya.otf') format('opentype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: 'Century751BT';
-  src: url('/fonts/Century-751-BT.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Courgette';
-  src: url('/fonts/Courgette-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   --bg-primary: #FFF3E9;
@@ -51,15 +16,15 @@
 }
 
 @theme inline {
-  --font-playfair: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-playfair: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-lato: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
-  --font-heading: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-serif: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-century: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-courgette: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-bounce: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-bounce: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --color-primary: var(--bg-primary);
   --color-secondary: var(--bg-secondary);
   --color-gold: var(--accent-gold);
@@ -69,41 +34,39 @@
   --color-kalyan-amber: #E79F30;
 }
 
-/* Global Website Typography */
+/* Unified Website Typography (Consistent Across All Sections for SEO & Core Web Vitals) */
 html,
-body {
-  font-family: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
+body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
-}
-
-/* Clean, Modern & Simple Sans Typography Override */
-.font-courgette,
-.font-script,
-.font-calligraphy {
+h6,
+p,
+span,
+button,
+a,
+input,
+textarea,
+select {
   font-family: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-style: normal !important;
 }
 
-/* Display & Heading Overrides */
+/* Universal Unified Font Classes */
 .font-playfair,
 .font-heading,
-.font-serif {
-  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif !important;
-}
-
+.font-serif,
+.font-bounce,
+.font-century,
+.font-courgette,
+.font-script,
+.font-calligraphy,
 .font-lato,
 .font-body,
-.font-century,
 .font-sans {
   font-family: var(--font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-style: normal !important;
 }
 
 /* Luxury Copper Gold & Metallic Gradients */
@@ -139,13 +102,11 @@ html {
   scroll-behavior: smooth;
   color-scheme: light;
   background-color: #FFF3E9;
-  font-family: 'Century751BT', sans-serif;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Century751BT', sans-serif;
   overflow-x: hidden;
 }
 
