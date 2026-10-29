@@ -115,31 +115,33 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] border-t border-[#1A1815]/10 relative select-none">
+    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 mb-4 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-[#FF8526] animate-pulse"></span>
-            <span className="text-xs uppercase tracking-widest text-[#A85D2A] font-century font-bold">Commissions in Odisha</span>
+        <div className="max-w-3xl mb-12 sm:mb-16">
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+              COMMISSIONS IN ODISHA
+            </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-playfair text-[#1A1815] mb-4 tracking-tight">
-            Begin Your Architectural <span className="text-copper-gradient">Project</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase text-[#1A1815] mb-3 tracking-tight leading-tight">
+            BEGIN YOUR ARCHITECTURAL PROJECT.
           </h2>
-          <p className="text-[#5C564E] text-sm sm:text-base font-century leading-relaxed">
+          <p className="text-[#68625A] text-sm sm:text-base leading-relaxed">
             Schedule your free site measurement and 3D interior design consultation across Bhubaneswar, Cuttack, and Puri.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
           {/* Contact & Consultation Form (Col 1-7) */}
-          <div className="lg:col-span-7 bg-white/95 border border-[#C47847]/20 p-8 sm:p-10 rounded-3xl shadow-[0_16px_45px_rgba(196,120,71,0.12)] backdrop-blur-md">
-            <h3 className="text-2xl font-playfair font-bold text-[#1A1815] mb-6 flex items-center justify-between">
+          <div className="lg:col-span-7 bg-white border border-[#1A1815]/8 p-7 sm:p-10 rounded-[32px] sm:rounded-[36px] shadow-[0_10px_35px_rgba(26,24,21,0.04)]">
+            <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-[#1A1815] mb-6 flex items-center justify-between">
               <span>Book Site Visit &amp; Consultation</span>
-              <span className="text-xs uppercase tracking-wider text-[#A85D2A] font-century font-bold flex items-center">
-                <ShieldCheck className="w-4 h-4 mr-1 text-[#FF8526]" /> Confidential
+              <span className="text-xs uppercase tracking-wider text-[#9C5427] font-semibold flex items-center">
+                <ShieldCheck className="w-4 h-4 mr-1 text-[#9C5427]" /> Confidential
               </span>
             </h3>
 
@@ -304,11 +306,11 @@ export default function ContactSection() {
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
+              {/* Submit Button: Terracotta Pill matching Hero */}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-bold text-base rounded-full transition-all duration-300 shadow-xl flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer hover:scale-[1.02] active:scale-98"
+                className="w-full py-4 bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-base rounded-full transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 {isSubmitting ? (
                   <>

@@ -56,20 +56,22 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] border-t border-[#1A1815]/10 relative">
+    <section id="projects" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#FF8526]/30 mb-3 shadow-xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF8526] animate-pulse"></span>
-              <span className="text-xs uppercase tracking-widest font-century font-semibold text-[#FF8526]">Selected Works</span>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+              <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+                SELECTED COMMISSIONS
+              </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bounce text-black tracking-wide">
-              Curated <span className="text-[#FF8526]">Portfolio</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase text-[#1A1815] tracking-tight leading-tight">
+              CURATED PORTFOLIO.
             </h2>
-            <p className="text-[#5C564E] text-base font-century mt-2 max-w-xl leading-relaxed">
+            <p className="text-[#68625A] text-sm sm:text-base mt-2 max-w-xl leading-relaxed">
               Real turnkey commissions executed across Bhubaneswar, Cuttack, and Puri with bespoke joinery and flawless finish.
             </p>
           </div>
@@ -80,10 +82,10 @@ export default function ProjectsSection() {
               <button
                 key={cat.value}
                 onClick={() => setSelectedCategory(cat.value)}
-                className={`px-4 py-2 text-xs uppercase tracking-wider rounded-xl font-century transition-all duration-300 cursor-pointer ${
+                className={`px-4 sm:px-5 py-2 text-xs uppercase tracking-wider rounded-full transition-all duration-300 cursor-pointer ${
                   selectedCategory === cat.value
-                    ? 'bg-[#FF8526] text-white font-bold shadow-md'
-                    : 'bg-white/90 text-[#68625A] border border-[#1A1815]/10 hover:border-[#FF8526]/40 hover:text-[#FF8526] font-medium'
+                    ? 'bg-[#9C5427] text-white font-semibold shadow-xs'
+                    : 'bg-white text-[#68625A] border border-[#1A1815]/8 hover:border-[#9C5427]/40 hover:text-[#9C5427] font-medium'
                 }`}
               >
                 {cat.label}
@@ -93,7 +95,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((proj) => (
             <div
               key={proj.id}
@@ -101,20 +103,20 @@ export default function ProjectsSection() {
                 setSelectedProject(proj);
                 setActiveGalleryIndex(0);
               }}
-              className="group cursor-pointer rounded-2xl bg-white border border-[#1A1815]/10 hover:border-[#FF8526]/60 overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-md hover:shadow-2xl flex flex-col"
+              className="group cursor-pointer rounded-[30px] sm:rounded-[34px] bg-white border border-[#1A1815]/8 overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:shadow-xl flex flex-col p-4 sm:p-5"
             >
-              {/* Image Preview with Hover Zoom & Vivid Styling */}
-              <div className="relative aspect-[16/11] overflow-hidden bg-[#1A1815]">
+              {/* Image Preview with Hover Zoom */}
+              <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-[#1A1815]/5 mb-4">
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 vivid-image"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 
                 {/* Floating Tag */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/20 text-[10px] uppercase tracking-wider font-century font-bold text-[#FFA65C] rounded-lg">
+                <div className="absolute top-3 left-3">
+                  <span className="px-3 py-1 bg-white/95 backdrop-blur-md border border-[#1A1815]/5 text-[10px] uppercase tracking-wider font-bold text-[#1A1815] rounded-full shadow-xs">
                     {proj.category}
                   </span>
                 </div>

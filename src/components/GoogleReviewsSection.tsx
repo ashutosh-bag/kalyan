@@ -207,27 +207,17 @@ export default function GoogleReviewsSection() {
     <section
       id="google-reviews"
       aria-label="Google Reviews of Kalyan Design Studio"
-      className="scroll-mt-24 relative bg-[#FFF3E9] text-[#1A1815] pt-24 pb-28 px-4 sm:px-6 lg:px-8 border-t border-b border-[#1A1815]/10 overflow-hidden select-none"
+      className="scroll-mt-24 relative bg-[#FAF8F5] text-[#1A1815] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-[#1A1815]/8 overflow-hidden select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Ambient background glows */}
-      <div
-        className="absolute top-16 left-1/4 -translate-x-1/2 w-[600px] h-[350px] bg-[#FF8526]/8 blur-[150px] pointer-events-none rounded-full"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/2 right-10 w-[500px] h-[350px] bg-[#C47847]/8 blur-[160px] pointer-events-none rounded-full"
-        aria-hidden="true"
-      />
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Top Header Badge & Live Sync Button */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <div className="flex flex-wrap items-center gap-3">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 backdrop-blur-md shadow-xs">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white border border-[#1A1815]/8 shadow-xs">
               <span className="w-2.5 h-2.5 rounded-full bg-[#34A853] animate-pulse" />
-              <span className="text-xs font-semibold tracking-wider uppercase text-[#A85D2A] font-mono">
+              <span className="text-xs font-semibold tracking-wider uppercase text-[#1A1815]">
                 Official Google Reviews &bull; Live Sync
               </span>
             </div>
@@ -236,7 +226,7 @@ export default function GoogleReviewsSection() {
               type="button"
               onClick={handleSyncClick}
               disabled={isSyncing}
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white border border-[#C47847]/20 text-xs text-[#FF8526] hover:text-[#d46614] transition-all disabled:opacity-50 cursor-pointer shadow-xs"
+              className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-neutral-50 border border-[#1A1815]/8 text-xs text-[#9C5427] transition-all disabled:opacity-50 cursor-pointer shadow-xs"
               title="Synchronize and fetch newest reviews from Google Maps"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin' : ''}`} />
@@ -259,7 +249,7 @@ export default function GoogleReviewsSection() {
             className="inline-flex items-center space-x-2 text-xs font-medium text-[#68625A] hover:text-[#1A1815] transition-colors group cursor-pointer"
           >
             <span>View Verified Listing on Google Maps</span>
-            <ExternalLink className="w-3.5 h-3.5 text-[#FF8526] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ExternalLink className="w-3.5 h-3.5 text-[#9C5427] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
         </div>
 
@@ -267,13 +257,16 @@ export default function GoogleReviewsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           {/* Left Title and Description */}
           <div className="lg:col-span-7 space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-normal text-[#1A1815] tracking-tight leading-tight">
-              Real Client Trust from{' '}
-              <span className="text-copper-gradient">
-                Odisha&apos;s Finest Homes
+            <div className="flex items-center gap-2.5 mb-1">
+              <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+              <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+                VERIFIED CLIENT REPUTATION
               </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-[46px] font-black uppercase text-[#1A1815] tracking-tight leading-tight">
+              REAL CLIENT TRUST FROM ODISHA HOMES.
             </h2>
-            <p className="text-sm sm:text-base text-[#5C564E] font-century max-w-2xl leading-relaxed">
+            <p className="text-sm sm:text-base text-[#68625A] max-w-2xl leading-relaxed">
               Every verified review published directly on Google Maps by homeowners of luxury duplex villas, penthouses, and turnkey apartments across Bhubaneswar, Cuttack &amp; Puri.
             </p>
           </div>

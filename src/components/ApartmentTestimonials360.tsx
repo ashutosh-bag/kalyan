@@ -731,26 +731,24 @@ export default function ApartmentTestimonials360() {
   return (
     <section
       id="testimonials-360"
-      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#FAF7F2] text-[#1A1815] border-t border-[#1A1815]/10 relative overflow-hidden select-none"
+      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#FAF8F5] text-[#1A1815] border-t border-[#1A1815]/8 relative overflow-hidden select-none"
     >
-      {/* Background Architectural Mesh & Ambience */}
-      <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C47847_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#FF8526]/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-[#C47847]/10 rounded-full blur-[140px] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 text-[#A85D2A] text-xs uppercase tracking-[0.2em] font-semibold mb-4 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF8526] animate-spin-slow" />
-            <span>Interactive 360° Virtual Tour &amp; Homeowner Stories</span>
+          <div className="flex items-center justify-center gap-2.5 mb-3">
+            <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+              INTERACTIVE 360° VIRTUAL TOURS
+            </span>
+            <span className="w-6 h-[1.5px] bg-[#9C5427]" />
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-normal tracking-tight text-[#1A1815] mb-4">
-            Step Inside Handed-Over <span className="text-copper-gradient">Odisha Homes</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase tracking-tight text-[#1A1815] mb-3">
+            STEP INSIDE HANDED-OVER ODISHA HOMES.
           </h2>
-          <p className="text-sm sm:text-base text-[#5C564E] font-century leading-relaxed">
+          <p className="text-sm sm:text-base text-[#68625A] leading-relaxed">
             Drag to pan 360°, inspect factory-finish millwork, and hear firsthand from verified homeowners in Bhubaneswar who trusted Kalyan Design Studio for turnkey transformation.
           </p>
         </div>
@@ -764,10 +762,10 @@ export default function ApartmentTestimonials360() {
                 key={story.id}
                 type="button"
                 onClick={() => setSelectedStoryIndex(idx)}
-                className={`flex items-center gap-2.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer border ${
+                className={`flex items-center gap-2.5 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer border ${
                   isSelected
-                    ? 'bg-[#1C1917] text-white border-[#1C1917] shadow-md scale-102 font-semibold'
-                    : 'bg-white/95 text-[#68625A] border-[#C47847]/20 hover:border-[#FF8526]/50 hover:text-[#1A1815]'
+                    ? 'bg-[#9C5427] text-white border-[#9C5427] shadow-sm'
+                    : 'bg-white text-[#68625A] border-[#1A1815]/8 hover:border-[#9C5427]/40 hover:text-[#1A1815]'
                 }`}
               >
                 <div

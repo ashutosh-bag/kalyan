@@ -248,52 +248,45 @@ export default function SpatialShowcase() {
   return (
     <section 
       id="spatial-showcase" 
-      className="relative w-full bg-[#FAF7F2] text-[#1A1815] py-24 sm:py-32 overflow-hidden border-t border-[#1A1815]/10 select-none"
+      className="relative w-full bg-[#FAF8F5] text-[#1A1815] py-20 sm:py-28 overflow-hidden border-t border-[#1A1815]/8 select-none"
       aria-label="Interior Spatial Design Architecture Showcase"
     >
-      {/* Ambient background spotlights */}
-      <div className="absolute top-10 left-1/4 w-[680px] h-[680px] bg-[#FF8526]/8 rounded-full blur-[190px] pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[740px] h-[740px] bg-[#C47847]/10 rounded-full blur-[200px] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ================================================================= */}
         {/* SECTION HEADER                                                    */}
         {/* ================================================================= */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div className="space-y-3.5 max-w-2xl">
-            <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 backdrop-blur-md shadow-xs">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF8526] animate-pulse" />
-              <span className="text-xs uppercase tracking-widest font-century font-semibold text-[#A85D2A]">
-                Spatial Architecture Showcase
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+              <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+                SPATIAL ARCHITECTURE SHOWCASE
               </span>
             </div>
             
-            <h2 className="text-3xl sm:text-5xl lg:text-[54px] font-playfair text-[#1A1815] tracking-tight leading-[1.12]">
-              Bespoke Spaces Crafted with{' '}
-              <span className="text-copper-gradient block sm:inline">
-                Living Light &amp; Texture
-              </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase text-[#1A1815] tracking-tight leading-tight">
+              BESPOKE SPACES CRAFTED WITH LIVING LIGHT.
             </h2>
             
-            <p className="text-base sm:text-lg text-[#5C564E] font-century leading-relaxed">
+            <p className="text-sm sm:text-base text-[#68625A] leading-relaxed mt-3">
               Explore our master commissions across Odisha. Touch, inspect, and experience how organic regional stone, custom joinery, and circadian illumination synthesize into extraordinary living environments.
             </p>
           </div>
 
           {/* Quick Stats / Highlights */}
-          <div className="flex items-center gap-6 sm:gap-10 border-l border-[#C47847]/30 pl-6 sm:pl-8 py-2">
+          <div className="flex items-center gap-6 sm:gap-8 border-l border-[#1A1815]/10 pl-6 sm:pl-8 py-1">
             <div>
-              <div className="text-2xl sm:text-3xl font-playfair font-bold text-[#1A1815]">100%</div>
-              <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Bespoke Millwork</div>
+              <div className="text-2xl sm:text-3xl font-black text-[#1A1815]">100%</div>
+              <div className="text-[11px] uppercase tracking-wider font-semibold text-[#7A7369]">Bespoke Millwork</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-playfair font-bold text-[#FF8526]">350+</div>
-              <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Odisha Homes</div>
+              <div className="text-2xl sm:text-3xl font-black text-[#9C5427]">350+</div>
+              <div className="text-[11px] uppercase tracking-wider font-semibold text-[#7A7369]">Odisha Homes</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-playfair font-bold text-[#1A1815]">Vastu</div>
-              <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Precision Flow</div>
+              <div className="text-2xl sm:text-3xl font-black text-[#1A1815]">Vastu</div>
+              <div className="text-[11px] uppercase tracking-wider font-semibold text-[#7A7369]">Precision Flow</div>
             </div>
           </div>
         </div>
@@ -301,33 +294,33 @@ export default function SpatialShowcase() {
         {/* ================================================================= */}
         {/* 1. MASTER BEFORE / AFTER: EMPTY ROOM ➔ FILLED WITH INTERIOR DESIGN */}
         {/* ================================================================= */}
-        <div className="mb-24 sm:mb-28">
+        <div className="mb-20 sm:mb-24">
           
           {/* Header Controls: Mode Selector & Description */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
             
             {/* Title & Tagline */}
             <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-2xl bg-[#FFF3E9] border border-[#C47847]/30 flex items-center justify-center text-[#FF8526] shrink-0 shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-white border border-[#1A1815]/8 flex items-center justify-center text-[#9C5427] shrink-0 shadow-xs">
                 {comparisonMode === 'empty-to-furnished' ? (
-                  <Home className="w-5 h-5 text-[#FF8526]" />
+                  <Home className="w-5 h-5 text-[#9C5427]" />
                 ) : (
-                  <Sun className="w-5 h-5 text-[#FF8526]" />
+                  <Sun className="w-5 h-5 text-[#9C5427]" />
                 )}
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-playfair font-bold text-[#1A1815]">
+                <h3 className="text-lg sm:text-xl font-bold uppercase tracking-tight text-[#1A1815]">
                   {comparisonMode === 'empty-to-furnished' ? (
                     <>
-                      Empty Bare-Shell Flat <span className="text-copper-gradient font-normal">➔ Turnkey Interior</span>
+                      Empty Bare-Shell Flat <span className="text-[#9C5427] font-semibold">➔ Turnkey Interior</span>
                     </>
                   ) : (
                     <>
-                      Circadian Natural Daylight <span className="text-copper-gradient font-normal">➔ 2400K Evening Glow</span>
+                      Circadian Natural Daylight <span className="text-[#9C5427] font-semibold">➔ 2400K Evening Glow</span>
                     </>
                   )}
                 </h3>
-                <p className="text-xs sm:text-sm font-century text-[#5C564E]">
+                <p className="text-xs sm:text-sm text-[#68625A]">
                   {comparisonMode === 'empty-to-furnished' 
                     ? 'Drag slider horizontally to see the empty room transform into a luxury bespoke living room'
                     : 'Drag slider to witness 5500K natural sunlight transition into 2400K evening ambient illumination'
@@ -337,34 +330,30 @@ export default function SpatialShowcase() {
             </div>
 
             {/* Mode Switcher Buttons */}
-            <div className="flex items-center gap-1.5 p-1 bg-white/95 rounded-full border border-[#C47847]/25 shadow-xs self-start lg:self-auto">
+            <div className="flex items-center gap-1.5 p-1 bg-white rounded-full border border-[#1A1815]/8 shadow-xs self-start lg:self-auto">
               <button
                 type="button"
                 onClick={() => setComparisonMode('empty-to-furnished')}
-                className={`px-4 py-1.5 rounded-full text-xs font-century font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-4 sm:px-5 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   comparisonMode === 'empty-to-furnished'
-                    ? 'bg-[#1C1917] text-white shadow-xs'
-                    : 'text-[#68625A] hover:text-[#1A1815]'
+                    ? 'bg-[#9C5427] text-white shadow-xs'
+                    : 'bg-transparent text-[#1A1815] hover:bg-neutral-100'
                 }`}
               >
-                <Building2 className="w-3.5 h-3.5" />
-                <span>Empty vs. Furnished</span>
+                Before &amp; After (Bare-Shell ➔ Furnished)
               </button>
-
               <button
                 type="button"
                 onClick={() => setComparisonMode('circadian-day-night')}
-                className={`px-4 py-1.5 rounded-full text-xs font-century font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-4 sm:px-5 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   comparisonMode === 'circadian-day-night'
-                    ? 'bg-[#FF8526] text-white shadow-xs'
-                    : 'text-[#68625A] hover:text-[#1A1815]'
+                    ? 'bg-[#9C5427] text-white shadow-xs'
+                    : 'bg-transparent text-[#1A1815] hover:bg-neutral-100'
                 }`}
               >
-                <Lamp className="w-3.5 h-3.5" />
-                <span>Day vs. Night Lighting</span>
+                Circadian Lighting Mode
               </button>
             </div>
-
           </div>
 
           {/* Quick Presets & Real-Time Ratio Indicator */}

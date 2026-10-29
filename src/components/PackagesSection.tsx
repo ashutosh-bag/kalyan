@@ -111,134 +111,110 @@ export default function PackagesSection() {
   };
 
   return (
-    <section id="packages" className="py-24 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] relative overflow-hidden select-none">
-      {/* Decorative Warm Ambient Glows & Flowing Curves */}
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#FF8526]/12 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 -right-48 w-96 h-96 bg-[#FFA65C]/15 rounded-full blur-[140px] pointer-events-none" />
-
-      {/* Layered Golden Sand Wave Curves in Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-60">
-        <svg viewBox="0 0 1440 800" fill="none" className="w-full h-full object-cover">
-          <path d="M-100,200 C300,350 700,50 1100,220 C1300,310 1500,250 1600,280" stroke="#FF8526" strokeWidth="2" opacity="0.35" />
-          <path d="M-100,230 C320,380 720,80 1120,250 C1320,340 1520,280 1620,310" stroke="#C47847" strokeWidth="1" strokeDasharray="6 8" opacity="0.25" />
-          <path d="M-50,650 C350,520 750,750 1200,600 C1400,530 1550,620 1650,590" stroke="#E79F30" strokeWidth="2.5" opacity="0.28" />
-        </svg>
-
-        {/* Botanical Plant Silhouette peeking from right edge */}
-        <div className="absolute top-1/3 -right-6 w-32 h-44 opacity-20 pointer-events-none transform rotate-45">
-          <svg viewBox="0 0 100 150" fill="none">
-            <path d="M50,140 C50,90 48,40 52,10" stroke="#4A6B43" strokeWidth="2" strokeLinecap="round" />
-            <path d="M50,110 C35,105 25,90 30,80 C35,70 50,90 50,110 Z" fill="#5F8257" opacity="0.8" />
-            <path d="M50,85 C65,80 75,65 70,55 C65,45 50,65 50,85 Z" fill="#5F8257" opacity="0.8" />
-            <path d="M50,55 C35,50 25,35 30,25 C35,15 50,35 50,55 Z" fill="#5F8257" opacity="0.8" />
-          </svg>
-        </div>
-      </div>
-
+    <section id="packages" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] relative overflow-hidden select-none border-t border-[#1A1815]/8">
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Header matching exact client title typography */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        {/* Header matching exact Hero Section typography & design language */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#FF8526]/20 shadow-xs mb-3">
-              <Sparkles className="w-4 h-4 text-[#FF8526] animate-pulse" />
-              <span className="text-xs uppercase tracking-widest font-century font-semibold text-[#FF8526]">
-                Transparent Turnkey Pricing
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+              <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+                TRANSPARENT TURNKEY PRICING
               </span>
             </div>
             
-            {/* EXACT FONT: Bounce Dash for "Full Interior Packages" */}
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bounce text-black tracking-wide leading-tight">
-              Full Interior <span className="text-[#FF8526]">Packages</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase text-[#1A1815] tracking-tight leading-tight">
+              FULL INTERIOR PACKAGES.
             </h2>
-            <p className="mt-3 text-[#5C564E] font-century text-base sm:text-lg max-w-2xl leading-relaxed">
-              Tailored residential turnkey packages engineered for Odisha homes with 100% material transparency, no hidden charges, and assured 45-day on-time handover.
+            <p className="mt-3 text-[#68625A] text-sm sm:text-base max-w-2xl leading-relaxed">
+              Tailored residential turnkey packages engineered for Odisha homes with 100% material transparency, zero hidden fees, and contractual 45-day on-time handover.
             </p>
           </div>
 
           {/* Floating Trust Badges */}
           <div className="flex flex-wrap items-center gap-3">
-            <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/80 border border-[#1A1815]/10 shadow-xs animate-float">
-              <Shield className="w-4 h-4 text-[#FF8526]" />
-              <span className="text-xs font-century font-medium text-[#1A1815]">5-Year Warranty</span>
+            <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-[#1A1815]/8 shadow-xs">
+              <Shield className="w-4 h-4 text-[#9C5427]" />
+              <span className="text-xs font-semibold text-[#1A1815]">10-Year Warranty</span>
             </div>
-            <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/80 border border-[#1A1815]/10 shadow-xs animate-float-reverse">
-              <Clock className="w-4 h-4 text-[#FF8526]" />
-              <span className="text-xs font-century font-medium text-[#1A1815]">45 Days Delivery</span>
+            <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-[#1A1815]/8 shadow-xs">
+              <Clock className="w-4 h-4 text-[#9C5427]" />
+              <span className="text-xs font-semibold text-[#1A1815]">45-Day Handover</span>
             </div>
           </div>
         </div>
 
-        {/* 3 Package Cards matching exact design in screenshot */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        {/* 3 Package Cards matching Hero Bento Style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {PACKAGES.map((pkg) => {
             const isPop = pkg.popular;
             return (
               <div
                 key={pkg.id}
-                className={`group relative bg-white rounded-2xl overflow-hidden border transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between ${
+                className={`group relative bg-white rounded-[30px] sm:rounded-[36px] overflow-hidden border transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between p-5 sm:p-6 ${
                   isPop
-                    ? 'border-[#FF8526] shadow-[0_12px_40px_rgba(255,133,38,0.18)] hover:shadow-[0_20px_50px_rgba(255,133,38,0.28)]'
-                    : 'border-[#1A1815]/10 hover:border-[#FF8526]/50 shadow-md hover:shadow-2xl'
+                    ? 'border-[#9C5427]/40 shadow-[0_16px_45px_rgba(156,84,39,0.12)]'
+                    : 'border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:shadow-[0_16px_40px_rgba(26,24,21,0.08)]'
                 }`}
               >
                 {/* Popular / Best Value Ribbon */}
                 {pkg.badge && (
-                  <div className="absolute top-4 right-4 z-20">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-century uppercase font-bold tracking-wider bg-[#FF8526] text-white shadow-md animate-pulse">
+                  <div className="absolute top-8 right-8 z-20">
+                    <span className="px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-[#9C5427] text-white shadow-sm">
                       {pkg.badge}
                     </span>
                   </div>
                 )}
 
                 <div>
-                  {/* Image Container with Exact Bottom-Right Tag Overlay */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#1A1815]/5">
+                  {/* Image Container */}
+                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#1A1815]/5 mb-5">
                     <img
                       src={pkg.image}
                       alt={pkg.bhk}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 vivid-image"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    {/* Gradient Overlay for Crisp Pop */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300" />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60" />
 
-                    {/* EXACT OVERLAY TAG: White Box at bottom-right of image */}
-                    <div className="absolute bottom-0 right-0 bg-white px-5 py-2.5 shadow-lg border-t border-l border-[#1A1815]/10 z-10 transition-transform duration-300 group-hover:translate-x-0">
-                      <span className="font-century text-base sm:text-lg font-bold tracking-wider text-[#1A1815] uppercase">
+                    {/* BHK Pill Tag */}
+                    <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xs border border-[#1A1815]/5">
+                      <span className="text-xs font-bold tracking-wide text-[#1A1815] uppercase">
                         {pkg.bhk}
                       </span>
                     </div>
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6 sm:p-7">
-                    {/* Price Line matching exact text in screenshot */}
-                    <div className="mb-5 pb-4 border-b border-[#1A1815]/10">
-                      <div className="font-century text-sm uppercase tracking-wider font-semibold text-[#1A1815]">
-                        PRICE STARTING{' '}
-                        <span className="text-[#FF8526] text-lg sm:text-xl font-bold ml-1 font-century">
-                          {pkg.price}
-                        </span>
-                      </div>
+                  <div>
+                    {/* Price Line */}
+                    <div className="mb-4 pb-3 border-b border-[#1A1815]/8 flex items-baseline justify-between">
+                      <span className="text-xs uppercase tracking-wider font-semibold text-[#7A7369]">
+                        Starting From
+                      </span>
+                      <span className="text-xl sm:text-2xl font-black text-[#9C5427]">
+                        {pkg.price}
+                      </span>
                     </div>
 
-                    {/* Feature Bullet Points matching screenshot */}
-                    <ul className="space-y-3 mb-6">
+                    {/* Feature Bullet Points */}
+                    <ul className="space-y-2.5 mb-6">
                       {pkg.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-start text-xs sm:text-sm font-century text-[#1A1815] leading-relaxed">
-                          <span className="text-black text-sm mr-2.5 font-bold leading-none select-none">•</span>
+                        <li key={idx} className="flex items-start text-xs sm:text-sm text-[#1A1815] leading-relaxed">
+                          <span className="text-[#9C5427] text-sm mr-2 font-bold leading-none select-none">•</span>
                           <span>{feat}</span>
                         </li>
                       ))}
                     </ul>
 
                     {/* Detailed Specifications Preview Drawer */}
-                    <div className="p-3.5 rounded-xl bg-[#FFF3E9]/60 border border-[#FF8526]/15 space-y-1.5 mb-6 text-xs font-century text-[#5C564E]">
+                    <div className="p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/6 space-y-1 mb-6 text-xs text-[#68625A]">
                       <div className="font-semibold text-[#1A1815] text-[11px] uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#FF8526]" />
-                        <span>Included Scope of Work:</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#9C5427]" />
+                        <span>Included Scope:</span>
                       </div>
                       {pkg.breakdown.slice(0, 3).map((item, i) => (
                         <p key={i} className="line-clamp-1 leading-snug">
@@ -249,18 +225,15 @@ export default function PackagesSection() {
                   </div>
                 </div>
 
-                {/* Button: Orange Pill/Rounded Button with Clean Sans Font */}
-                <div className="px-6 pb-7">
+                {/* Button: Terracotta Pill matching Hero */}
+                <div>
                   <button
                     type="button"
                     onClick={() => handleOpenQuote(pkg)}
-                    className="w-full relative group/btn overflow-hidden bg-[#FF8526] hover:bg-[#f27412] active:scale-95 text-white font-semibold text-lg py-3 px-6 rounded-xl shadow-md hover:shadow-[0_8px_25px_rgba(255,133,38,0.4)] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                    className="w-full rounded-full py-3.5 px-6 bg-[#9C5427] hover:bg-[#85451D] active:scale-98 text-white font-medium text-sm sm:text-base shadow-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <span className="relative z-10 tracking-wide text-white drop-shadow-sm">
-                      Get Quote
-                    </span>
-                    {/* Shimmer sweep effect */}
-                    <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                    <span>Get Free Estimate</span>
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -268,25 +241,25 @@ export default function PackagesSection() {
           })}
         </div>
 
-        {/* Bottom Banner with Decorative Flourish */}
-        <div className="mt-16 p-6 sm:p-8 rounded-2xl bg-white border border-[#FF8526]/20 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Bottom Banner with Matching Bento Card */}
+        <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-[30px] sm:rounded-[36px] bg-white border border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-[#FFF3E9] border border-[#FF8526]/30 flex items-center justify-center flex-shrink-0 animate-glow-pulse">
-              <Calculator className="w-7 h-7 text-[#FF8526]" />
+            <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/8 flex items-center justify-center flex-shrink-0 text-[#9C5427]">
+              <Calculator className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-bounce text-xl sm:text-2xl text-black">
+              <h3 className="text-lg sm:text-xl font-bold uppercase tracking-tight text-[#1A1815]">
                 Need a Custom Duplex or Villa Quotation?
               </h3>
-              <p className="text-xs sm:text-sm font-century text-[#5C564E] mt-0.5">
-                Our principal architects visit your Bhubaneswar/Cuttack site for free measurement and 3D concept layout.
+              <p className="text-xs sm:text-sm text-[#68625A] mt-0.5">
+                Our principal architects visit your Bhubaneswar/Cuttack site for free measurement and 3D layout.
               </p>
             </div>
           </div>
           <button
             type="button"
             onClick={() => handleOpenQuote(PACKAGES[1])}
-            className="px-6 py-3 rounded-xl bg-[#1A1815] hover:bg-[#FF8526] text-white font-semibold text-sm sm:text-base transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer hover:scale-105"
+            className="px-7 py-3.5 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white font-medium text-sm sm:text-base transition-all duration-300 shadow-sm whitespace-nowrap cursor-pointer hover:scale-102"
           >
             Schedule Free Site Visit
           </button>
@@ -439,7 +412,7 @@ export default function PackagesSection() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-[1.02] cursor-pointer mt-2"
+                    className="w-full py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-base rounded-full shadow-sm transition-all cursor-pointer mt-2"
                   >
                     Submit & Download Free Estimate
                   </button>

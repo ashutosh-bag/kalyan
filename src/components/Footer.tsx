@@ -59,7 +59,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#FAF7F2] border-t border-[#1A1815]/10 pt-20 pb-12 px-4 sm:px-6 lg:px-8 text-[#5C564E] select-none">
+    <footer className="bg-[#FAF8F5] border-t border-[#1A1815]/8 pt-20 pb-12 px-4 sm:px-6 lg:px-8 text-[#5C564E] select-none">
       <div className="max-w-7xl mx-auto">
 
         {/* Top Grid */}
