@@ -541,11 +541,11 @@ export default function HeroSection() {
               </span>
             </div>
 
-            {/* Editorial Headline with Playfair Display & Courgette Script Swash */}
+            {/* Editorial Headline with Playfair Display & Clean Gradient */}
             <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[70px] font-playfair font-normal text-[#1A1815] leading-[1.05] tracking-tight">
                 Redefine Your Space <br />
-                <span className="font-courgette text-copper-gradient italic block text-4xl sm:text-5xl md:text-6xl lg:text-[68px] mt-1 drop-shadow-xs">
+                <span className="text-copper-gradient block text-4xl sm:text-5xl md:text-6xl lg:text-[68px] mt-1 font-normal tracking-normal drop-shadow-xs">
                   with Timeless Elegance
                 </span>
               </h1>
@@ -1068,7 +1068,7 @@ export default function HeroSection() {
           <div className="flex items-center justify-center gap-4 mb-2">
             <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-[#C47847]/40" />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair text-[#1A1815] tracking-tight">
-              Shop by <span className="font-courgette text-copper-gradient italic">Category</span>
+              Shop by <span className="text-copper-gradient">Category</span>
             </h2>
             <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-[#C47847]/40" />
           </div>
@@ -1302,7 +1302,7 @@ export default function HeroSection() {
               </span>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-playfair text-[#1A1815] leading-tight">
                 Transform Your Space{' '}
-                <span className="font-courgette text-copper-gradient italic inline-block">
+                <span className="text-copper-gradient inline-block font-normal">
                   Today
                 </span>
               </h3>

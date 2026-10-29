@@ -125,7 +125,7 @@ export default function ContactSection() {
             <span className="text-xs uppercase tracking-widest text-[#A85D2A] font-century font-bold">Commissions in Odisha</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-playfair text-[#1A1815] mb-4 tracking-tight">
-            Begin Your Architectural <span className="font-courgette text-copper-gradient italic">Project</span>
+            Begin Your Architectural <span className="text-copper-gradient">Project</span>
           </h2>
           <p className="text-[#5C564E] text-sm sm:text-base font-century leading-relaxed">
             Schedule your free site measurement and 3D interior design consultation across Bhubaneswar, Cuttack, and Puri.

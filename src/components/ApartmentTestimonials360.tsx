@@ -748,7 +748,7 @@ export default function ApartmentTestimonials360() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-normal tracking-tight text-[#1A1815] mb-4">
-            Step Inside Handed-Over <span className="font-courgette text-copper-gradient italic">Odisha Homes</span>
+            Step Inside Handed-Over <span className="text-copper-gradient">Odisha Homes</span>
           </h2>
           <p className="text-sm sm:text-base text-[#5C564E] font-century leading-relaxed">
             Drag to pan 360°, inspect factory-finish millwork, and hear firsthand from verified homeowners in Bhubaneswar who trusted Kalyan Design Studio for turnkey transformation.
@@ -1037,7 +1037,7 @@ export default function ApartmentTestimonials360() {
 
               <a
                 href="#packages"
-                className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-sm rounded-lg transition-all shadow-md active:scale-98"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#FF8526] hover:bg-[#e87417] text-white font-medium text-sm rounded-lg transition-all shadow-md active:scale-98"
               >
                 <span>Get Quote on this Finish</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -1097,7 +1097,7 @@ export default function ApartmentTestimonials360() {
                 <span className="absolute -left-3 top-0 text-3xl font-serif text-[#FF8526] leading-none">
                   &ldquo;
                 </span>
-                <p className="text-base sm:text-lg text-[#2D2824] font-courgette leading-relaxed italic">
+                <p className="text-base sm:text-lg text-[#2D2824] font-century leading-relaxed">
                   {currentStory.homeowner.quote}
                 </p>
               </div>

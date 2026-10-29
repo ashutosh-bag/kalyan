@@ -94,7 +94,7 @@ export default function ServicesSection() {
 
                 <a
                   href="#packages"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#FFF3E9] hover:bg-[#FF8526] text-[#FF8526] hover:text-white font-courgette text-lg transition-all border border-[#FF8526]/30 hover:border-[#FF8526] shadow-xs hover:shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#FFF3E9] hover:bg-[#FF8526] text-[#FF8526] hover:text-white font-semibold text-sm transition-all border border-[#FF8526]/30 hover:border-[#FF8526] shadow-xs hover:shadow-md"
                 >
                   <span>Get Quote on {srv.title}</span>
                   <ArrowRight className="w-4 h-4" />

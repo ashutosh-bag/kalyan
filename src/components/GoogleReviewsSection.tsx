@@ -269,7 +269,7 @@ export default function GoogleReviewsSection() {
           <div className="lg:col-span-7 space-y-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-normal text-[#1A1815] tracking-tight leading-tight">
               Real Client Trust from{' '}
-              <span className="font-courgette text-copper-gradient italic">
+              <span className="text-copper-gradient">
                 Odisha&apos;s Finest Homes
               </span>
             </h2>
@@ -508,7 +508,7 @@ export default function GoogleReviewsSection() {
             {marqueeQuotes.concat(marqueeQuotes).map((quote, idx) => (
               <div key={idx} className="inline-flex items-center space-x-3 text-xs sm:text-sm text-[#5C564E]">
                 <span className="text-[#FF8526] font-serif text-lg leading-none">&ldquo;</span>
-                <span className="font-playfair italic text-[#1A1815]">{quote}</span>
+                <span className="font-playfair font-normal text-[#1A1815]">{quote}</span>
                 <span className="text-[#FF8526] font-serif text-lg leading-none">&rdquo;</span>
                 <div className="flex items-center space-x-0.5 text-[#FF8526] ml-1">
                   <Star className="w-3 h-3 fill-current inline" />

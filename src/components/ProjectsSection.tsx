@@ -160,7 +160,7 @@ export default function ProjectsSection() {
                     )}
                   </div>
 
-                  <span className="text-sm font-courgette text-[#FF8526] flex items-center group-hover:translate-x-1 transition-transform">
+                  <span className="text-sm font-semibold text-[#FF8526] flex items-center group-hover:translate-x-1 transition-transform">
                     View Case <ArrowRight className="w-3.5 h-3.5 ml-1" />
                   </span>
                 </div>
@@ -302,7 +302,7 @@ export default function ProjectsSection() {
                       <a
                         href="#packages"
                         onClick={() => setSelectedProject(null)}
-                        className="flex-1 inline-flex items-center justify-center py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-xl rounded-xl transition-all shadow-lg hover:scale-[1.01] cursor-pointer text-center"
+                        className="flex-1 inline-flex items-center justify-center py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-semibold text-base rounded-xl transition-all shadow-lg hover:scale-[1.01] cursor-pointer text-center"
                       >
                         Get Quote on this Project
                       </a>

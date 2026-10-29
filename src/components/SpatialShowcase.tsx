@@ -271,7 +271,7 @@ export default function SpatialShowcase() {
             
             <h2 className="text-3xl sm:text-5xl lg:text-[54px] font-playfair text-[#1A1815] tracking-tight leading-[1.12]">
               Bespoke Spaces Crafted with{' '}
-              <span className="font-courgette text-copper-gradient italic block sm:inline">
+              <span className="text-copper-gradient block sm:inline">
                 Living Light &amp; Texture
               </span>
             </h2>
@@ -319,11 +319,11 @@ export default function SpatialShowcase() {
                 <h3 className="text-xl sm:text-2xl font-playfair font-bold text-[#1A1815]">
                   {comparisonMode === 'empty-to-furnished' ? (
                     <>
-                      Empty Bare-Shell Flat <span className="font-courgette text-copper-gradient italic">➔ Turnkey Interior</span>
+                      Empty Bare-Shell Flat <span className="text-copper-gradient font-normal">➔ Turnkey Interior</span>
                     </>
                   ) : (
                     <>
-                      Circadian Natural Daylight <span className="font-courgette text-copper-gradient italic">➔ 2400K Evening Glow</span>
+                      Circadian Natural Daylight <span className="text-copper-gradient font-normal">➔ 2400K Evening Glow</span>
                     </>
                   )}
                 </h3>
@@ -689,7 +689,7 @@ export default function SpatialShowcase() {
                 <span>Kinetic Visual Streams</span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
-                Continuous Stream of <span className="font-courgette text-copper-gradient italic">Curated Interiors</span>
+                Continuous Stream of <span className="text-copper-gradient">Curated Interiors</span>
               </h3>
               <p className="text-xs sm:text-sm font-century text-[#5C564E] mt-0.5">
                 Live portfolio filmstrip of turnkey apartments, penthouses, and bespoke villas across Odisha.
@@ -856,7 +856,7 @@ export default function SpatialShowcase() {
                 <span>Spatial Categories</span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
-                Detailed Interior <span className="font-courgette text-copper-gradient italic">Studies &amp; Models</span>
+                Detailed Interior <span className="text-copper-gradient">Studies &amp; Models</span>
               </h3>
             </div>
 

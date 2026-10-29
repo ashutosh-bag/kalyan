@@ -249,12 +249,12 @@ export default function PackagesSection() {
                   </div>
                 </div>
 
-                {/* EXACT BUTTON: Orange Pill/Rounded Button with Courgette Font */}
+                {/* Button: Orange Pill/Rounded Button with Clean Sans Font */}
                 <div className="px-6 pb-7">
                   <button
                     type="button"
                     onClick={() => handleOpenQuote(pkg)}
-                    className="w-full relative group/btn overflow-hidden bg-[#FF8526] hover:bg-[#f27412] active:scale-95 text-white font-courgette text-xl sm:text-2xl py-3 px-6 rounded-xl shadow-md hover:shadow-[0_8px_25px_rgba(255,133,38,0.4)] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                    className="w-full relative group/btn overflow-hidden bg-[#FF8526] hover:bg-[#f27412] active:scale-95 text-white font-semibold text-lg py-3 px-6 rounded-xl shadow-md hover:shadow-[0_8px_25px_rgba(255,133,38,0.4)] transition-all duration-300 flex items-center justify-center cursor-pointer"
                   >
                     <span className="relative z-10 tracking-wide text-white drop-shadow-sm">
                       Get Quote
@@ -286,7 +286,7 @@ export default function PackagesSection() {
           <button
             type="button"
             onClick={() => handleOpenQuote(PACKAGES[1])}
-            className="px-6 py-3 rounded-xl bg-[#1A1815] hover:bg-[#FF8526] text-white font-courgette text-lg transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer hover:scale-105"
+            className="px-6 py-3 rounded-xl bg-[#1A1815] hover:bg-[#FF8526] text-white font-semibold text-sm sm:text-base transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer hover:scale-105"
           >
             Schedule Free Site Visit
           </button>
@@ -340,7 +340,7 @@ export default function PackagesSection() {
                   <button
                     type="button"
                     onClick={() => setModalOpen(false)}
-                    className="mt-6 px-6 py-2.5 bg-[#FF8526] text-white font-courgette text-lg rounded-xl shadow-md hover:bg-[#e87417]"
+                    className="mt-6 px-6 py-2.5 bg-[#FF8526] text-white font-semibold text-base rounded-xl shadow-md hover:bg-[#e87417]"
                   >
                     Done
                   </button>
@@ -439,7 +439,7 @@ export default function PackagesSection() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-2xl rounded-xl shadow-lg transition-all hover:scale-[1.02] cursor-pointer mt-2"
+                    className="w-full py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-[1.02] cursor-pointer mt-2"
                   >
                     Submit & Download Free Estimate
                   </button>

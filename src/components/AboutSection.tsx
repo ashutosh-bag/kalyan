@@ -62,7 +62,7 @@ export default function AboutSection() {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <a
                 href="#packages"
-                className="px-6 py-3 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-xl shadow-md hover:scale-105 transition-all inline-flex items-center gap-2"
+                className="px-6 py-3 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-medium text-base shadow-md hover:scale-105 transition-all inline-flex items-center gap-2"
               >
                 <span>Explore Packages</span>
                 <ArrowRight className="w-4 h-4" />

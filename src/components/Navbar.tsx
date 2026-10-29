@@ -177,7 +177,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                   onOpenConsultation();
                 }
               }}
-              className="group relative inline-flex items-center space-x-1.5 xl:space-x-2 px-3.5 py-2 xl:px-5 xl:py-2.5 bg-[#FF8526] hover:bg-[#f57410] font-courgette text-sm xl:text-base text-white transition-all duration-300 rounded-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 overflow-hidden flex-shrink-0 whitespace-nowrap cursor-pointer"
+              className="group relative inline-flex items-center space-x-1.5 xl:space-x-2 px-3.5 py-2 xl:px-5 xl:py-2.5 bg-[#FF8526] hover:bg-[#f57410] font-semibold text-sm xl:text-base text-white transition-all duration-300 rounded-lg shadow-md hover:shadow-lg hover:scale-105 active:scale-95 overflow-hidden flex-shrink-0 whitespace-nowrap cursor-pointer"
             >
               <span className="relative z-10 text-white drop-shadow-xs">Get Quote</span>
               <ArrowUpRight className="relative z-10 w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -195,7 +195,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                   onOpenConsultation();
                 }
               }}
-              className="group relative inline-flex items-center space-x-1 sm:space-x-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FF8526] hover:bg-[#f57410] active:scale-95 font-courgette text-xs sm:text-sm text-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex-shrink-0 whitespace-nowrap cursor-pointer"
+              className="group relative inline-flex items-center space-x-1 sm:space-x-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FF8526] hover:bg-[#f57410] active:scale-95 font-semibold text-xs sm:text-sm text-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex-shrink-0 whitespace-nowrap cursor-pointer"
             >
               <span>Get Quote</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
@@ -243,7 +243,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 }
                 setMobileMenuOpen(false);
               }}
-              className="w-full inline-flex items-center justify-center space-x-2 py-2.5 px-4 bg-[#FF8526] hover:bg-[#f57410] active:scale-[0.98] font-courgette text-base text-white rounded-xl shadow-md transition-all cursor-pointer"
+              className="w-full inline-flex items-center justify-center space-x-2 py-2.5 px-4 bg-[#FF8526] hover:bg-[#f57410] active:scale-[0.98] font-semibold text-base text-white rounded-xl shadow-md transition-all cursor-pointer"
             >
               <span>Get Instant Quote &amp; Packages</span>
               <ArrowUpRight className="w-4 h-4 text-white" />

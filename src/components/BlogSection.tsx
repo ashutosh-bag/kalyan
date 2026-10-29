@@ -17,7 +17,7 @@ export default function BlogSection() {
               <span className="text-xs uppercase tracking-widest text-[#A85D2A] font-century font-bold">Studio Journal &amp; Insights</span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-playfair text-[#1A1815] tracking-tight">
-              Interior Design <span className="font-courgette text-copper-gradient italic">Perspectives</span>
+              Interior Design <span className="text-copper-gradient">Perspectives</span>
             </h2>
             <p className="text-[#5C564E] text-sm sm:text-base font-century mt-2 max-w-xl leading-relaxed">
               Insights on color psychology, spatial harmony, and contemporary living by Kalyan Design Studio.
