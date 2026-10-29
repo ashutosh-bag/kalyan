@@ -112,9 +112,28 @@ export default function PackagesSection() {
 
   return (
     <section id="packages" className="py-24 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] relative overflow-hidden select-none">
-      {/* Decorative Warm Ambient Glows */}
+      {/* Decorative Warm Ambient Glows & Flowing Curves */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#FF8526]/12 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-10 -right-48 w-96 h-96 bg-[#FFA65C]/15 rounded-full blur-[140px] pointer-events-none" />
+
+      {/* Layered Golden Sand Wave Curves in Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-60">
+        <svg viewBox="0 0 1440 800" fill="none" className="w-full h-full object-cover">
+          <path d="M-100,200 C300,350 700,50 1100,220 C1300,310 1500,250 1600,280" stroke="#FF8526" strokeWidth="2" opacity="0.35" />
+          <path d="M-100,230 C320,380 720,80 1120,250 C1320,340 1520,280 1620,310" stroke="#C47847" strokeWidth="1" strokeDasharray="6 8" opacity="0.25" />
+          <path d="M-50,650 C350,520 750,750 1200,600 C1400,530 1550,620 1650,590" stroke="#E79F30" strokeWidth="2.5" opacity="0.28" />
+        </svg>
+
+        {/* Botanical Plant Silhouette peeking from right edge */}
+        <div className="absolute top-1/3 -right-6 w-32 h-44 opacity-20 pointer-events-none transform rotate-45">
+          <svg viewBox="0 0 100 150" fill="none">
+            <path d="M50,140 C50,90 48,40 52,10" stroke="#4A6B43" strokeWidth="2" strokeLinecap="round" />
+            <path d="M50,110 C35,105 25,90 30,80 C35,70 50,90 50,110 Z" fill="#5F8257" opacity="0.8" />
+            <path d="M50,85 C65,80 75,65 70,55 C65,45 50,65 50,85 Z" fill="#5F8257" opacity="0.8" />
+            <path d="M50,55 C35,50 25,35 30,25 C35,15 50,35 50,55 Z" fill="#5F8257" opacity="0.8" />
+          </svg>
+        </div>
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         

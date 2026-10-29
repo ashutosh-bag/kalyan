@@ -83,7 +83,7 @@ export default function ContactSection() {
     } catch {
       setStatusMessage({
         type: 'error',
-        text: 'A connection issue occurred. Please reach our Bhubaneswar office directly at +91 674 297 4100 or email inquiries@kynstudio.in.',
+        text: 'A connection issue occurred. Please reach our Bhubaneswar office directly at +91 75040 41040 or email info@kalyandesignstudio.com.',
       });
     } finally {
       setIsSubmitting(false);
@@ -94,14 +94,14 @@ export default function ContactSection() {
     {
       city: 'Kalyan Design Studio — Bhubaneswar HQ',
       address: '3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018',
-      phone: '+91-750404104 / +9175040 41040',
+      phone: '+91-750404104 / +91 75040 41040',
       email: 'info@kalyandesignstudio.com',
       hours: 'Mon – Sat: 10:00 AM – 8:00 PM',
     },
     {
       city: 'Cuttack Regional Execution Atelier',
       address: 'Serving CDA Sectors, Cantonment Road & Riverfront, Cuttack, Odisha',
-      phone: '+9175040 41040',
+      phone: '+91 75040 41040',
       email: 'info@kalyandesignstudio.com',
       hours: 'By Site Appointment',
     },
@@ -115,19 +115,19 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#0d0f14] border-t border-white/5 relative">
+    <section id="contact" className="py-28 px-4 sm:px-6 lg:px-8 bg-[#FFF3E9] border-t border-[#1A1815]/10 relative select-none">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF8526] animate-pulse"></span>
-            <span className="text-xs uppercase tracking-widest text-[#FF8526] font-century font-bold">Commissions in Odisha</span>
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 mb-4 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#FF8526] animate-pulse"></span>
+            <span className="text-xs uppercase tracking-widest text-[#A85D2A] font-century font-bold">Commissions in Odisha</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bounce text-white mb-4 tracking-wide">
-            Begin Your Architectural <span className="text-[#FF8526]">Project</span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-playfair text-[#1A1815] mb-4 tracking-tight">
+            Begin Your Architectural <span className="font-courgette text-copper-gradient italic">Project</span>
           </h2>
-          <p className="text-neutral-300 text-sm sm:text-base font-century leading-relaxed">
+          <p className="text-[#5C564E] text-sm sm:text-base font-century leading-relaxed">
             Schedule your free site measurement and 3D interior design consultation across Bhubaneswar, Cuttack, and Puri.
           </p>
         </div>
@@ -135,10 +135,10 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
           {/* Contact & Consultation Form (Col 1-7) */}
-          <div className="lg:col-span-7 bg-neutral-900/60 border border-white/10 p-8 sm:p-10 rounded-2xl shadow-2xl backdrop-blur-md">
-            <h3 className="text-2xl font-bounce text-white mb-6 flex items-center justify-between">
+          <div className="lg:col-span-7 bg-white/95 border border-[#C47847]/20 p-8 sm:p-10 rounded-3xl shadow-[0_16px_45px_rgba(196,120,71,0.12)] backdrop-blur-md">
+            <h3 className="text-2xl font-playfair font-bold text-[#1A1815] mb-6 flex items-center justify-between">
               <span>Book Site Visit &amp; Consultation</span>
-              <span className="text-xs uppercase tracking-wider text-[#FF8526] font-century font-bold flex items-center">
+              <span className="text-xs uppercase tracking-wider text-[#A85D2A] font-century font-bold flex items-center">
                 <ShieldCheck className="w-4 h-4 mr-1 text-[#FF8526]" /> Confidential
               </span>
             </h3>
@@ -146,20 +146,20 @@ export default function ContactSection() {
             {/* Alert Status Feedback */}
             {statusMessage && (
               <div
-                className={`p-4 rounded-sm mb-6 flex items-start space-x-3 text-xs sm:text-sm ${statusMessage.type === 'success'
-                    ? 'bg-emerald-950/40 border border-emerald-500/40 text-emerald-200'
-                    : 'bg-rose-950/40 border border-rose-500/40 text-rose-200'
+                className={`p-4 rounded-xl mb-6 flex items-start space-x-3 text-xs sm:text-sm ${statusMessage.type === 'success'
+                    ? 'bg-emerald-50 border border-emerald-500/40 text-emerald-900'
+                    : 'bg-rose-50 border border-rose-500/40 text-rose-900'
                   }`}
               >
                 {statusMessage.type === 'success' ? (
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 ) : (
-                  <AlertCircle className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                  <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
                 )}
                 <div>
-                  <p className="font-medium">{statusMessage.text}</p>
+                  <p className="font-semibold">{statusMessage.text}</p>
                   {statusMessage.submissionId && (
-                    <p className="text-xs text-neutral-400 font-mono mt-1">
+                    <p className="text-xs text-[#5C564E] font-mono mt-1">
                       Tracking Reference: {statusMessage.submissionId}
                     </p>
                   )}
@@ -172,8 +172,8 @@ export default function ContactSection() {
 
                 {/* Full Name */}
                 <div>
-                  <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
-                    Full Name <span className="text-[#c8a47e]">*</span>
+                  <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                    Full Name <span className="text-[#FF8526]">*</span>
                   </label>
                   <input
                     type="text"
@@ -183,14 +183,14 @@ export default function ContactSection() {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Alok Mohanty"
-                    className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c8a47e] transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
                   />
                 </div>
 
                 {/* Email Address */}
                 <div>
-                  <label htmlFor="email" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
-                    Email Address <span className="text-[#c8a47e]">*</span>
+                  <label htmlFor="email" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                    Email Address <span className="text-[#FF8526]">*</span>
                   </label>
                   <input
                     type="email"
@@ -200,7 +200,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@domain.com"
-                    className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c8a47e] transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
                   />
                 </div>
               </div>
@@ -208,8 +208,8 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
-                    Phone / WhatsApp <span className="text-[#c8a47e]">*</span>
+                  <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                    Phone / WhatsApp <span className="text-[#FF8526]">*</span>
                   </label>
                   <input
                     type="tel"
@@ -219,13 +219,13 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 94370 00000"
-                    className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c8a47e] transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
                   />
                 </div>
 
                 {/* Project Typology */}
                 <div>
-                  <label htmlFor="projectType" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
+                  <label htmlFor="projectType" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
                     Commission Typology
                   </label>
                   <select
@@ -233,14 +233,14 @@ export default function ContactSection() {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-[#c8a47e] transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors cursor-pointer"
                   >
                     <option value="Modular Kitchen">Modular Kitchen</option>
-                    <option value="TV Cabinet & Media Unit">TV Cabinet & Media Unit</option>
-                    <option value="Custom Wardrobe & Closets">Custom Wardrobe & Closets</option>
+                    <option value="TV Cabinet & Media Unit">TV Cabinet &amp; Media Unit</option>
+                    <option value="Custom Wardrobe & Closets">Custom Wardrobe &amp; Closets</option>
                     <option value="Gypsum / PVC False Ceiling">Gypsum / PVC False Ceiling</option>
-                    <option value="3D Interior Models & Visuals">3D Interior Models & Visuals</option>
-                    <option value="Core House Plan & Architecture">Core House Plan & Architecture</option>
+                    <option value="3D Interior Models & Visuals">3D Interior Models &amp; Visuals</option>
+                    <option value="Core House Plan & Architecture">Core House Plan &amp; Architecture</option>
                     <option value="Full Turnkey Home Interior Package">Full Turnkey Home Interior Package</option>
                     <option value="Commercial / Office Fit-out">Commercial / Office Fit-out</option>
                   </select>
@@ -250,7 +250,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Budget Range in INR */}
                 <div>
-                  <label htmlFor="budgetRange" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
+                  <label htmlFor="budgetRange" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
                     Estimated Budget Scale
                   </label>
                   <select
@@ -258,18 +258,18 @@ export default function ContactSection() {
                     name="budgetRange"
                     value={formData.budgetRange}
                     onChange={handleChange}
-                    className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-[#c8a47e] transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors cursor-pointer"
                   >
-                    <option value="₹20 Lakhs – ₹35 Lakhs">₹20 Lakhs – ₹35 Lakhs</option>
-                    <option value="₹35 Lakhs – ₹70 Lakhs">₹35 Lakhs – ₹70 Lakhs</option>
-                    <option value="₹70 Lakhs – ₹1.5 Crore">₹70 Lakhs – ₹1.5 Crore</option>
-                    <option value="₹1.5 Crore+ (Large Estate)">₹1.5 Crore+ (Bespoke Estate Scale)</option>
+                    <option value="₹2.5L – ₹4.5L (Turnkey 2BHK/3BHK)">₹2.5L – ₹4.5L (Turnkey 2BHK/3BHK)</option>
+                    <option value="₹4.5L – ₹8.5L (Executive Duplex)">₹4.5L – ₹8.5L (Executive Duplex)</option>
+                    <option value="₹8.5L – ₹15L (Luxury Villa)">₹8.5L – ₹15L (Luxury Villa)</option>
+                    <option value="₹15L+ (Estate Masterpiece)">₹15L+ (Estate Masterpiece)</option>
                   </select>
                 </div>
 
                 {/* Timeline */}
                 <div>
-                  <label htmlFor="timeline" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
+                  <label htmlFor="timeline" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
                     Target Handover Timeline
                   </label>
                   <select
@@ -277,9 +277,9 @@ export default function ContactSection() {
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleChange}
-                    className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-[#c8a47e] transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors cursor-pointer"
                   >
-                    <option value="Immediate">Immediate (Within 60 Days)</option>
+                    <option value="Immediate (45-Day Turnkey Guarantee)">Immediate (45-Day Turnkey Guarantee)</option>
                     <option value="3 - 6 Months">3 – 6 Months</option>
                     <option value="6 - 12 Months">6 – 12 Months</option>
                     <option value="Under Construction / Structure Stage">Under Construction / Structure Stage</option>
@@ -289,8 +289,8 @@ export default function ContactSection() {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-xs uppercase tracking-wider text-neutral-300 mb-2 font-medium">
-                  Project Details & Location in Odisha <span className="text-[#c8a47e]">*</span>
+                <label htmlFor="message" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                  Project Details &amp; Location in Odisha <span className="text-[#FF8526]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -300,7 +300,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your plot/property location (e.g. Patia, Jaydev Vihar, CDA Cuttack), approximate built-up area, and design goals..."
-                  className="w-full bg-neutral-950/70 border border-white/10 rounded-sm px-4 py-3 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c8a47e] transition-colors"
+                  className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
                 ></textarea>
               </div>
 
@@ -308,7 +308,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-2xl rounded-xl transition-all duration-300 shadow-xl flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer hover:scale-[1.02]"
+                className="w-full py-4 bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-bold text-base rounded-full transition-all duration-300 shadow-xl flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer hover:scale-[1.02] active:scale-98"
               >
                 {isSubmitting ? (
                   <>
@@ -318,38 +318,38 @@ export default function ContactSection() {
                 ) : (
                   <>
                     <Send className="w-5 h-5 text-white" />
-                    <span>Submit &amp; Get Free Quote</span>
+                    <span>Submit &amp; Get Free 3D Layout Quote</span>
                   </>
                 )}
               </button>
 
-              <div className="flex items-center justify-center space-x-2 text-[11px] text-neutral-400 font-light">
-                <Clock className="w-3.5 h-3.5 text-[#c8a47e]" />
+              <div className="flex items-center justify-center space-x-2 text-[11px] text-[#7C6F5E] font-century">
+                <Clock className="w-3.5 h-3.5 text-[#C47847]" />
                 <span>Our principal design team will review and contact you within 24 hours.</span>
               </div>
             </form>
           </div>
 
           {/* Global Presence & Direct Contacts (Col 8-12) */}
-          <div className="lg:col-span-5 flex flex-col space-y-8">
+          <div className="lg:col-span-5 flex flex-col space-y-6">
 
             {/* Odisha Studios */}
-            <div className="bg-neutral-900/30 border border-white/10 p-8 rounded-sm">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#e0c8aa] font-medium mb-6">
+            <div className="bg-white/95 border border-[#C47847]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
+              <h4 className="text-xs uppercase tracking-[0.25em] text-[#A85D2A] font-century font-bold mb-6">
                 Our Studios in Odisha
               </h4>
               <div className="space-y-6">
                 {offices.map((off, idx) => (
-                  <div key={idx} className="border-b border-white/5 pb-4 last:border-none last:pb-0">
-                    <span className="text-base font-serif text-white font-medium block">
+                  <div key={idx} className="border-b border-[#1A1815]/10 pb-4 last:border-none last:pb-0">
+                    <span className="text-base font-playfair text-[#1A1815] font-bold block">
                       {off.city}
                     </span>
-                    <div className="flex items-center space-x-2 text-xs text-neutral-400 mt-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#c8a47e]" />
+                    <div className="flex items-start space-x-2 text-xs text-[#5C564E] font-century mt-1">
+                      <MapPin className="w-3.5 h-3.5 text-[#C47847] shrink-0 mt-0.5" />
                       <span>{off.address}</span>
                     </div>
-                    <div className="flex items-center space-x-2 text-xs text-neutral-400 mt-1 font-mono">
-                      <Phone className="w-3.5 h-3.5 text-[#c8a47e]" />
+                    <div className="flex items-center space-x-2 text-xs text-[#5C564E] font-mono mt-1">
+                      <Phone className="w-3.5 h-3.5 text-[#C47847]" />
                       <span>{off.phone}</span>
                     </div>
                   </div>
@@ -358,26 +358,26 @@ export default function ContactSection() {
             </div>
 
             {/* Direct Channel */}
-            <div className="bg-neutral-900/30 border border-white/10 p-8 rounded-sm">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#e0c8aa] font-medium mb-4">
+            <div className="bg-white/95 border border-[#C47847]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
+              <h4 className="text-xs uppercase tracking-[0.25em] text-[#A85D2A] font-century font-bold mb-4">
                 Direct Inquiries
               </h4>
-              <div className="space-y-3 text-xs sm:text-sm text-neutral-300">
+              <div className="space-y-3 text-xs sm:text-sm text-[#1A1815]">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-[#c8a47e]" />
-                  <span>inquiries@kynstudio.in</span>
+                  <Mail className="w-4 h-4 text-[#C47847]" />
+                  <span>info@kalyandesignstudio.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#c8a47e]" />
-                  <span>+91 674 297 4100 (Bhubaneswar Studio)</span>
+                  <Phone className="w-4 h-4 text-[#C47847]" />
+                  <span>+91 75040 41040 (Bhubaneswar Studio)</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#c8a47e]" />
-                  <span>+91 9437 120 400 (Client Direct Hotline)</span>
+                  <Phone className="w-4 h-4 text-[#C47847]" />
+                  <span>+91 75040 41040 (Client Direct Hotline)</span>
                 </div>
               </div>
-              <p className="text-[11px] text-neutral-400 font-light mt-4 leading-relaxed">
-                For architectural design consultations, structural drawings review, or site evaluation visits across Odisha, please schedule an in-person session at our Bhubaneswar or Cuttack studios.
+              <p className="text-[11px] text-[#5C564E] font-century mt-4 leading-relaxed">
+                For architectural design consultations, structural drawings review, or site evaluation visits across Odisha, please schedule an in-person session at our Bhubaneswar studio.
               </p>
             </div>
 

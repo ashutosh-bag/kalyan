@@ -13,9 +13,20 @@ import {
   Pause, 
   ArrowUpRight,
   Eye,
-  Sliders,
-  Compass
+  SlidersHorizontal,
+  Compass,
+  CheckCircle2,
+  Building2,
+  Lamp,
+  Home
 } from 'lucide-react';
+
+interface Hotspot {
+  x: number;
+  y: number;
+  title: string;
+  desc: string;
+}
 
 interface ShowcaseItem {
   id: string;
@@ -26,10 +37,41 @@ interface ShowcaseItem {
   area: string;
   materials: string[];
   image: string;
-  nightImage?: string;
   description: string;
-  hotspots?: { x: number; y: number; title: string; desc: string }[];
 }
+
+const FURNISHED_HOTSPOTS: Hotspot[] = [
+  { 
+    x: 42, 
+    y: 72, 
+    title: 'Custom Curved Bouclé Sectional', 
+    desc: 'Ergonomic contours in stain-resistant Belgian bouclé fabric with high-density layered cushioning.' 
+  },
+  { 
+    x: 74, 
+    y: 32, 
+    title: 'Fluted Acoustic Teak Panelling', 
+    desc: 'Solid kiln-dried teak slats with hidden indirect 2700K circadian LED ribbons.' 
+  },
+  { 
+    x: 58, 
+    y: 74, 
+    title: 'Solid Teak & Glass Coffee Table', 
+    desc: 'Handcrafted hardwood centerpiece with soft rounded corners and matte protective finish.' 
+  },
+  { 
+    x: 22, 
+    y: 35, 
+    title: 'Architectural Brass Floor Arc', 
+    desc: 'Brushed champagne brass body with warm diffused downward illumination.' 
+  },
+  { 
+    x: 88, 
+    y: 68, 
+    title: 'Specimen Fiddle-Leaf Fig Tree', 
+    desc: 'Live air-purifying indoor botanical housed in a fluted terracotta clay planter.' 
+  },
+];
 
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
@@ -40,14 +82,8 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Patia Villa, Bhubaneswar',
     area: '1,450 sq ft',
     materials: ['Khandagiri Sandstone', 'Burma Teak', 'Acoustic Slatting', 'Concealed LED Coves'],
-    image: '/images/kalyan/gallery/photo1.png',
-    nightImage: '/images/kalyan/gallery/photo20.png',
+    image: '/images/casa-noir/hero-living.jpg',
     description: 'Sculpted with soaring ceilings, floor-to-ceiling thermal glazing, and an integrated sunken seating pavilion designed for entertaining.',
-    hotspots: [
-      { x: 26, y: 48, title: 'Khandagiri Sandstone Wall', desc: 'Hand-chiselled local stone with dry joint cladding that captures morning sunlight.' },
-      { x: 55, y: 28, title: 'Circadian Linear Coves', desc: 'Calibrated 2400K-3000K continuous LEDs recessed into acoustical ceiling channels.' },
-      { x: 74, y: 72, title: 'Burma Teak Joinery', desc: 'Hand-rubbed natural matte oil finish with hidden push-latch storage and brass reveals.' },
-    ],
   },
   {
     id: 'calacatta-kitchen',
@@ -79,7 +115,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Infocity Penthouse, Bhubaneswar',
     area: '880 sq ft',
     materials: ['Textured Lime Plaster', 'Fluted Teak Headboard', 'Bouclé Upholstery', 'Bronze Glazing'],
-    image: '/images/kalyan/gallery/photo2.png',
+    image: '/images/casa-noir/bedroom.jpg',
     description: 'A serene haven featuring acoustic plaster walls, ambient perimeter floor washes, and automated linen solar drapery.',
   },
   {
@@ -112,7 +148,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     location: 'Jaydev Vihar Residence, Bhubaneswar',
     area: '720 sq ft',
     materials: ['Solid Monolithic Oak', 'Brushed Champagne Brass', 'Handwoven Odia Silk', 'Fluted Glass'],
-    image: '/images/kalyan/gallery/photo3.png',
+    image: '/images/casa-noir/urban-wood.jpg',
     description: 'Seating for twelve surrounded by bespoke fluted cabinetry, custom temperature-controlled wine display, and botanical reflections.',
   },
   {
@@ -130,30 +166,37 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
 
 // Marquee Stream Photos (Row 1 and Row 2)
 const STREAM_ROW_1 = [
-  { url: '/images/kalyan/gallery/photo1.png', title: 'Bhubaneswar Living Lounge', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo4.png', title: 'Modular Chef Kitchen', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo19.png', title: 'Mahanadi Riverfront Living Room', loc: 'Cuttack' },
-  { url: '/images/kalyan/gallery/photo2.png', title: 'Master Bedroom Acoustic Suite', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo7.png', title: '3D Commercial Parlour Design', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo10.png', title: 'Nandan Vihar Duplex Lounge', loc: 'Bhubaneswar' },
+  { url: '/images/casa-noir/hero-living.jpg', title: 'Curved Lounge & Greenery', loc: 'Bhubaneswar Villa' },
+  { url: '/images/casa-noir/bedroom.jpg', title: 'Fluted Acoustic Bed Suite', loc: 'Patia Duplex' },
+  { url: '/images/kalyan/gallery/photo4.png', title: 'Monolithic Calacatta Chef Kitchen', loc: 'Chandrasekharpur' },
+  { url: '/images/casa-noir/urban-wood.jpg', title: 'Solid Oak Dining & Olive Foliage', loc: 'Cuttack Penthouse' },
+  { url: '/images/kalyan/gallery/photo19.png', title: 'Mahanadi Riverfront Living Room', loc: 'CDA Cuttack' },
+  { url: '/images/casa-noir/cozy-living.jpg', title: 'Sunlit Reading Nook & Monstera', loc: 'Puri Beachside' },
 ];
 
 const STREAM_ROW_2 = [
-  { url: '/images/kalyan/gallery/photo13.png', title: 'Sundarpada Private Residence', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo16.png', title: 'Koraput Corporate Office Headquarters', loc: 'Koraput' },
-  { url: '/images/kalyan/gallery/photo22.png', title: 'Cuttack Heritage Bungalow Living', loc: 'Cuttack' },
-  { url: '/images/kalyan/gallery/photo6.png', title: 'Fluted Wall & Media Console', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo28.png', title: 'Modern Mandir & Sacred Puja Niche', loc: 'Bhubaneswar' },
-  { url: '/images/kalyan/gallery/photo21.png', title: 'Custom TV Cabinet & Media Storage', loc: 'Cuttack' },
+  { url: '/images/casa-noir/floating-shelf.jpg', title: 'Artisanal Ceramic & Oak Console', loc: 'Kalyan Craft Archive' },
+  { url: '/images/kalyan/gallery/photo15.png', title: 'Open-Air Coastal Spa Bath', loc: 'Puri Marine Drive' },
+  { url: '/images/casa-noir/decor-pampas.jpg', title: 'Pampas Botanical Console Corner', loc: 'Saheed Nagar' },
+  { url: '/images/kalyan/gallery/photo6.png', title: 'Fluted Teak Wall & Library Niche', loc: 'Bhubaneswar' },
+  { url: '/images/casa-noir/lighting-plant.jpg', title: 'Circadian Pendant & Foliage Studio', loc: 'Jaydev Vihar' },
+  { url: '/images/kalyan/gallery/photo11.png', title: 'Cantilevered Teak & Glass Staircase', loc: 'Patia Duplex' },
 ];
 
 export default function SpatialShowcase() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'living' | 'kitchen' | 'bedroom' | 'details'>('all');
+  
+  // Transformation Mode: 'empty-to-furnished' (default) OR 'circadian-day-night'
+  const [comparisonMode, setComparisonMode] = useState<'empty-to-furnished' | 'circadian-day-night'>('empty-to-furnished');
+  
+  // Slider position: 0 = 100% After (Furnished / Night), 100 = 100% Before (Empty / Day)
+  // Default at 50% for 50/50 split comparison
   const [sliderPosition, setSliderPosition] = useState<number>(50);
   const [isDraggingSlider, setIsDraggingSlider] = useState<boolean>(false);
   const [isMarqueePaused, setIsMarqueePaused] = useState<boolean>(false);
-  const [marqueeSpeed, setMarqueeSpeed] = useState<'normal' | 'slow' | 'fast'>('normal');
+  const [marqueeSpeed, setMarqueeSpeed] = useState<'slow' | 'normal' | 'fast'>('normal');
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
+  const [showHotspots, setShowHotspots] = useState<boolean>(true);
   const [selectedItem, setSelectedItem] = useState<ShowcaseItem | null>(null);
   const sliderContainerRef = useRef<HTMLDivElement>(null);
 
@@ -169,8 +212,8 @@ export default function SpatialShowcase() {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
 
     setCardRotate({ x: rotateX, y: rotateY });
     setHoveredCardId(id);
@@ -181,7 +224,7 @@ export default function SpatialShowcase() {
     setHoveredCardId(null);
   };
 
-  // Day vs Night Slider drag handlers
+  // Drag handlers for Before/After Slider
   const handleSliderMove = (clientX: number) => {
     if (!sliderContainerRef.current) return;
     const rect = sliderContainerRef.current.getBoundingClientRect();
@@ -194,39 +237,43 @@ export default function SpatialShowcase() {
     : SHOWCASE_ITEMS.filter(item => item.category === activeCategory);
 
   const getMarqueeDuration = () => {
-    if (marqueeSpeed === 'slow') return '65s';
-    if (marqueeSpeed === 'fast') return '30s';
-    return '45s';
+    if (marqueeSpeed === 'slow') return '60s';
+    if (marqueeSpeed === 'fast') return '28s';
+    return '42s';
   };
+
+  // Calculated Kelvin for circadian mode
+  const currentKelvin = Math.round(2400 + (sliderPosition / 100) * (5500 - 2400));
 
   return (
     <section 
       id="spatial-showcase" 
-      className="relative w-full bg-[#F4EFEA] text-[#1A1815] py-24 sm:py-32 overflow-hidden border-t border-[#1A1815]/10"
+      className="relative w-full bg-[#FAF7F2] text-[#1A1815] py-24 sm:py-32 overflow-hidden border-t border-[#1A1815]/10 select-none"
       aria-label="Interior Spatial Design Architecture Showcase"
     >
-      {/* Ambient background glows */}
-      <div className="absolute top-10 left-1/4 w-[600px] h-[600px] bg-[#B68953]/10 rounded-full blur-[180px] pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[700px] h-[700px] bg-[#DFC5A4]/25 rounded-full blur-[200px] pointer-events-none" />
+      {/* Ambient background spotlights */}
+      <div className="absolute top-10 left-1/4 w-[680px] h-[680px] bg-[#FF8526]/8 rounded-full blur-[190px] pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-[740px] h-[740px] bg-[#C47847]/10 rounded-full blur-[200px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ================================================================= */}
-        {/* HEADER: CLIENT-FOCUSED ARCHITECTURAL SHOWCASE TITLE               */}
-        {/* ================================================================= */}
         {/* SECTION HEADER                                                    */}
         {/* ================================================================= */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#FF8526]/30 backdrop-blur-md shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[#FF8526] animate-pulse" />
-              <span className="text-xs uppercase tracking-widest font-century font-semibold text-[#FF8526]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div className="space-y-3.5 max-w-2xl">
+            <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 backdrop-blur-md shadow-xs">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FF8526] animate-pulse" />
+              <span className="text-xs uppercase tracking-widest font-century font-semibold text-[#A85D2A]">
                 Spatial Architecture Showcase
               </span>
             </div>
             
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bounce text-black tracking-wide leading-tight">
-              Bespoke Spaces Crafted with <span className="text-[#FF8526]">Living Light</span> & Texture
+            <h2 className="text-3xl sm:text-5xl lg:text-[54px] font-playfair text-[#1A1815] tracking-tight leading-[1.12]">
+              Bespoke Spaces Crafted with{' '}
+              <span className="font-courgette text-copper-gradient italic block sm:inline">
+                Living Light &amp; Texture
+              </span>
             </h2>
             
             <p className="text-base sm:text-lg text-[#5C564E] font-century leading-relaxed">
@@ -235,56 +282,183 @@ export default function SpatialShowcase() {
           </div>
 
           {/* Quick Stats / Highlights */}
-          <div className="flex items-center gap-6 sm:gap-10 border-l border-[#FF8526]/30 pl-6 sm:pl-8 py-2">
+          <div className="flex items-center gap-6 sm:gap-10 border-l border-[#C47847]/30 pl-6 sm:pl-8 py-2">
             <div>
-              <div className="text-2xl sm:text-3xl font-bounce text-[#1A1815]">100%</div>
+              <div className="text-2xl sm:text-3xl font-playfair font-bold text-[#1A1815]">100%</div>
               <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Bespoke Millwork</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bounce text-[#FF8526]">350+</div>
+              <div className="text-2xl sm:text-3xl font-playfair font-bold text-[#FF8526]">350+</div>
               <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Odisha Homes</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bounce text-[#1A1815]">Vastu</div>
+              <div className="text-2xl sm:text-3xl font-playfair font-bold text-[#1A1815]">Vastu</div>
               <div className="text-[11px] uppercase tracking-wider font-century font-medium text-[#68625A]">Precision Flow</div>
             </div>
           </div>
         </div>
 
         {/* ================================================================= */}
-        {/* 1. INTERACTIVE DAY / NIGHT LIGHTING ATMOSPHERE MORPH SLIDER       */}
+        {/* 1. MASTER BEFORE / AFTER: EMPTY ROOM ➔ FILLED WITH INTERIOR DESIGN */}
         {/* ================================================================= */}
-        <div className="mb-24">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#FF8526]/15 border border-[#FF8526]/30 flex items-center justify-center text-[#FF8526]">
-                <Sun className="w-4 h-4 text-[#FF8526]" />
+        <div className="mb-24 sm:mb-28">
+          
+          {/* Header Controls: Mode Selector & Description */}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+            
+            {/* Title & Tagline */}
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-2xl bg-[#FFF3E9] border border-[#C47847]/30 flex items-center justify-center text-[#FF8526] shrink-0 shadow-xs">
+                {comparisonMode === 'empty-to-furnished' ? (
+                  <Home className="w-5 h-5 text-[#FF8526]" />
+                ) : (
+                  <Sun className="w-5 h-5 text-[#FF8526]" />
+                )}
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-bounce text-black">
-                  Circadian Lighting &amp; Atmosphere <span className="text-[#FF8526]">Morph</span>
+                <h3 className="text-xl sm:text-2xl font-playfair font-bold text-[#1A1815]">
+                  {comparisonMode === 'empty-to-furnished' ? (
+                    <>
+                      Empty Bare-Shell Flat <span className="font-courgette text-copper-gradient italic">➔ Turnkey Interior</span>
+                    </>
+                  ) : (
+                    <>
+                      Circadian Natural Daylight <span className="font-courgette text-copper-gradient italic">➔ 2400K Evening Glow</span>
+                    </>
+                  )}
                 </h3>
                 <p className="text-xs sm:text-sm font-century text-[#5C564E]">
-                  Drag slider to experience Natural Daylight vs. 2400K Evening Illumination
+                  {comparisonMode === 'empty-to-furnished' 
+                    ? 'Drag slider horizontally to see the empty room transform into a luxury bespoke living room'
+                    : 'Drag slider to witness 5500K natural sunlight transition into 2400K evening ambient illumination'
+                  }
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 bg-white/95 border border-[#FF8526]/30 rounded-full px-3.5 py-1 text-xs text-[#5C564E] shadow-sm font-century">
-              <span className={`flex items-center gap-1.5 transition-colors ${sliderPosition > 50 ? 'text-[#FF8526] font-bold' : 'text-[#8A847C]'}`}>
-                <Sun className="w-3.5 h-3.5" /> Day View ({Math.round(sliderPosition)}%)
-              </span>
-              <span className="text-[#1A1815]/20">|</span>
-              <span className={`flex items-center gap-1.5 transition-colors ${sliderPosition <= 50 ? 'text-[#FF8526] font-bold' : 'text-[#8A847C]'}`}>
-                <Moon className="w-3.5 h-3.5" /> Night View ({Math.round(100 - sliderPosition)}%)
-              </span>
+            {/* Mode Switcher Buttons */}
+            <div className="flex items-center gap-1.5 p-1 bg-white/95 rounded-full border border-[#C47847]/25 shadow-xs self-start lg:self-auto">
+              <button
+                type="button"
+                onClick={() => setComparisonMode('empty-to-furnished')}
+                className={`px-4 py-1.5 rounded-full text-xs font-century font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                  comparisonMode === 'empty-to-furnished'
+                    ? 'bg-[#1C1917] text-white shadow-xs'
+                    : 'text-[#68625A] hover:text-[#1A1815]'
+                }`}
+              >
+                <Building2 className="w-3.5 h-3.5" />
+                <span>Empty vs. Furnished</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setComparisonMode('circadian-day-night')}
+                className={`px-4 py-1.5 rounded-full text-xs font-century font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                  comparisonMode === 'circadian-day-night'
+                    ? 'bg-[#FF8526] text-white shadow-xs'
+                    : 'text-[#68625A] hover:text-[#1A1815]'
+                }`}
+              >
+                <Lamp className="w-3.5 h-3.5" />
+                <span>Day vs. Night Lighting</span>
+              </button>
             </div>
+
           </div>
 
-          {/* Interactive Split-Screen Comparison Container */}
+          {/* Quick Presets & Real-Time Ratio Indicator */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 px-1">
+            
+            {/* Real-time Status Badge */}
+            <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#C47847]/20 text-xs font-century text-[#1A1815] shadow-xs">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FF8526] animate-pulse" />
+                {comparisonMode === 'empty-to-furnished' ? (
+                  <>
+                    <span className="font-semibold text-[#1A1815]">
+                      {sliderPosition > 70 
+                        ? '🏗️ Inspecting Empty Bare-Shell Stage' 
+                        : sliderPosition < 30 
+                        ? '✨ Inspecting Fully Finished Interior' 
+                        : '⚖️ 50 / 50 Transformation Split'
+                      }
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="font-mono font-bold text-[#A85D2A]">{currentKelvin}K</span>
+                    <span className="text-[#68625A]">
+                      {currentKelvin > 4500 ? 'Daylight Golden Hour' : '2400K Evening Warmth'}
+                    </span>
+                  </>
+                )}
+              </div>
+
+              <span className="text-[11px] font-century text-[#7C6F5E] hidden md:inline">
+                Before: {Math.round(sliderPosition)}% &bull; After: {Math.round(100 - sliderPosition)}%
+              </span>
+            </div>
+
+            {/* Preset Buttons */}
+            <div className="flex items-center gap-1.5 self-start sm:self-auto">
+              <button
+                type="button"
+                onClick={() => setSliderPosition(100)}
+                className={`px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                  sliderPosition >= 95 
+                    ? 'bg-[#1C1917] text-white border-[#1C1917]' 
+                    : 'bg-white hover:bg-neutral-100 text-[#68625A] border-[#1A1815]/10'
+                }`}
+              >
+                {comparisonMode === 'empty-to-furnished' ? '🏗️ 100% Empty Room' : '☀️ 100% Day'}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSliderPosition(50)}
+                className={`px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                  sliderPosition > 40 && sliderPosition < 60 
+                    ? 'bg-[#1C1917] text-white border-[#1C1917]' 
+                    : 'bg-white hover:bg-neutral-100 text-[#68625A] border-[#1A1815]/10'
+                }`}
+              >
+                50 / 50 Split
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSliderPosition(0)}
+                className={`px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                  sliderPosition <= 5 
+                    ? 'bg-[#1C1917] text-white border-[#1C1917]' 
+                    : 'bg-white hover:bg-neutral-100 text-[#68625A] border-[#1A1815]/10'
+                }`}
+              >
+                {comparisonMode === 'empty-to-furnished' ? '✨ 100% Filled Interior' : '🌙 100% Evening'}
+              </button>
+
+              {comparisonMode === 'empty-to-furnished' && (
+                <button
+                  type="button"
+                  onClick={() => setShowHotspots(!showHotspots)}
+                  className={`hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                    showHotspots ? 'bg-[#FFF3E9] text-[#A85D2A] border-[#FF8526]/30' : 'bg-white text-[#8C8275] border-[#1A1815]/10'
+                  }`}
+                  title="Toggle Design Hotspots"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>{showHotspots ? 'Pins On' : 'Pins Off'}</span>
+                </button>
+              )}
+            </div>
+
+          </div>
+
+          {/* Master Interactive Before / After Canvas */}
           <div 
             ref={sliderContainerRef}
-            className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] rounded-xl overflow-hidden border border-white/15 select-none cursor-ew-resize group shadow-2xl shadow-black/80"
+            className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] rounded-3xl overflow-hidden border border-[#C47847]/30 select-none cursor-ew-resize group shadow-[0_24px_60px_rgba(196,120,71,0.22)] bg-[#1A1815]"
             onMouseMove={(e) => {
               if (isDraggingSlider || e.buttons === 1) handleSliderMove(e.clientX);
             }}
@@ -295,33 +469,117 @@ export default function SpatialShowcase() {
             onMouseUp={() => setIsDraggingSlider(false)}
             onMouseLeave={() => setIsDraggingSlider(false)}
           >
-            {/* Night View (Base Layer) */}
-            <div 
-              className="absolute inset-0 w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${SHOWCASE_ITEMS[0].nightImage})` }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
-              <div className="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs text-neutral-300 flex items-center gap-2">
-                <Moon className="w-3.5 h-3.5 text-[#c8a47e]" /> Circadian Ambient Evening
-              </div>
+            {/* ============================================================= */}
+            {/* LAYER 1: BASE LAYER (AFTER: ROOM FILLED WITH INTERIOR DESIGN)  */}
+            {/* ============================================================= */}
+            <div className="absolute inset-0 w-full h-full">
+              {comparisonMode === 'empty-to-furnished' ? (
+                /* MODE 1 AFTER: ROOM FILLED WITH LUXURY INTERIOR DESIGN */
+                <div className="relative w-full h-full overflow-hidden">
+                  <img
+                    src="/images/transformation/furnished-room.jpg"
+                    alt="After: Room Filled with Luxury Interior Design"
+                    className="w-full h-full object-cover object-center"
+                  />
+
+                  {/* Soft bottom vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10 pointer-events-none" />
+
+                  {/* Top Right AFTER Badge */}
+                  <div className="absolute top-6 right-6 z-20">
+                    <div className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#FF8526]/40 text-xs font-century font-semibold text-white flex items-center gap-2 shadow-lg">
+                      <Sparkles className="w-3.5 h-3.5 text-[#FF8526]" />
+                      <span>AFTER: Filled with Turnkey Interior</span>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* MODE 2 AFTER: 2400K EVENING AMBIENT LIGHTING */
+                <div className="relative w-full h-full overflow-hidden">
+                  <img
+                    src="/images/casa-noir/hero-living.jpg"
+                    alt="Living Room - Evening 2400K Illumination"
+                    className="w-full h-full object-cover object-center filter brightness-[0.76] contrast-[1.2] saturate-[1.3] sepia-[0.25]"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/40 pointer-events-none" />
+                  <div className="absolute top-[25%] left-[20%] w-[420px] h-[420px] rounded-full bg-[#FF8526]/25 blur-[100px] pointer-events-none" />
+                  <div className="absolute top-[30%] right-[25%] w-[460px] h-[460px] rounded-full bg-[#E79F30]/20 blur-[110px] pointer-events-none" />
+
+                  <div className="absolute top-6 right-6 z-20">
+                    <div className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#FF8526]/30 text-xs font-century font-medium text-white flex items-center gap-2 shadow-lg">
+                      <Moon className="w-3.5 h-3.5 text-[#FF8526]" />
+                      <span>2400K Circadian Evening Illumination</span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Day View (Clipped Top Layer) */}
+            {/* ============================================================= */}
+            {/* LAYER 2: TOP CLIPPED LAYER (BEFORE: EMPTY ROOM)               */}
+            {/* ============================================================= */}
             <div 
-              className="absolute inset-0 w-full h-full bg-cover bg-center overflow-hidden transition-[clip-path] duration-75"
+              className="absolute inset-0 w-full h-full overflow-hidden transition-[clip-path] duration-75"
               style={{ 
-                backgroundImage: `url(${SHOWCASE_ITEMS[0].image})`,
                 clipPath: `polygon(0% 0%, ${sliderPosition}% 0%, ${sliderPosition}% 100%, 0% 100%)`
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
-              <div className="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs text-neutral-300 flex items-center gap-2">
-                <Sun className="w-3.5 h-3.5 text-[#e6cfb8]" /> Natural Daylight Golden Hour
+              <div className="relative w-full h-full">
+                {comparisonMode === 'empty-to-furnished' ? (
+                  /* MODE 1 BEFORE: EMPTY BARE-SHELL ROOM */
+                  <>
+                    <img
+                      src="/images/transformation/empty-room.jpg"
+                      alt="Before: Empty Bare-Shell Room"
+                      className="w-full h-full object-cover object-center"
+                    />
+
+                    {/* Subtle blueprint grid overlay on empty room */}
+                    <div 
+                      className="absolute inset-0 pointer-events-none opacity-15"
+                      style={{
+                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)',
+                        backgroundSize: '36px 36px'
+                      }}
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15 pointer-events-none" />
+
+                    {/* Top Left BEFORE Badge */}
+                    <div className="absolute top-6 left-6 z-20">
+                      <div className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#1A1815]/15 text-xs font-century font-semibold text-[#1A1815] flex items-center gap-2 shadow-lg">
+                        <Building2 className="w-3.5 h-3.5 text-[#C47847]" />
+                        <span>BEFORE: Empty Bare-Shell Room</span>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  /* MODE 2 BEFORE: NATURAL DAYLIGHT */
+                  <>
+                    <img
+                      src="/images/casa-noir/hero-living.jpg"
+                      alt="Living Room - Natural Daylight"
+                      className="w-full h-full object-cover object-center filter brightness-[1.04] contrast-[1.04] saturate-[1.08]"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15 pointer-events-none" />
+
+                    <div className="absolute top-6 left-6 z-20">
+                      <div className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#C47847]/30 text-xs font-century font-semibold text-[#1A1815] flex items-center gap-2 shadow-lg">
+                        <Sun className="w-3.5 h-3.5 text-[#FF8526]" />
+                        <span>5500K Natural Daylight &bull; Golden Hour</span>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
 
-            {/* Interactive Hotspots on Featured Master Living Space */}
-            {SHOWCASE_ITEMS[0].hotspots?.map((hotspot, idx) => (
+            {/* ============================================================= */}
+            {/* INTERACTIVE HOTSPOTS ANCHORED TO INTERIOR DESIGN CRAFT        */}
+            {/* ============================================================= */}
+            {showHotspots && comparisonMode === 'empty-to-furnished' && FURNISHED_HOTSPOTS.map((hotspot, idx) => (
               <div
                 key={idx}
                 className="absolute z-20"
@@ -332,89 +590,127 @@ export default function SpatialShowcase() {
                 <button
                   type="button"
                   aria-label={`View hotspot ${hotspot.title}`}
-                  className="relative w-8 h-8 rounded-full bg-[#c8a47e] text-neutral-950 font-bold flex items-center justify-center text-xs shadow-lg shadow-black/60 transition-transform hover:scale-125 animate-hotspot"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveHotspot(activeHotspot === idx ? null : idx);
+                  }}
+                  className={`relative w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shadow-xl transition-all hover:scale-125 cursor-pointer ${
+                    activeHotspot === idx 
+                      ? 'bg-[#FF8526] text-white ring-4 ring-white/50 scale-110' 
+                      : 'bg-white/95 text-[#1A1815] hover:bg-[#FF8526] hover:text-white'
+                  }`}
                 >
-                  +
+                  <span className="absolute inset-0 rounded-full bg-[#FF8526]/40 animate-ping" />
+                  <span className="relative z-10">{activeHotspot === idx ? '✕' : '+'}</span>
                 </button>
 
                 {/* Hotspot Floating Tooltip */}
                 {activeHotspot === idx && (
-                  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 p-3.5 rounded-lg bg-white/95 backdrop-blur-xl border border-[#B68953]/40 shadow-2xl text-left pointer-events-none z-30 transition-all">
-                    <div className="text-xs font-semibold text-[#9E7445] flex items-center gap-1.5 mb-1">
-                      <Sparkles className="w-3.5 h-3.5 text-[#B68953]" />
-                      {hotspot.title}
+                  <div 
+                    className="absolute bottom-11 left-1/2 -translate-x-1/2 w-64 p-3.5 rounded-2xl bg-black/85 backdrop-blur-xl border border-white/20 shadow-2xl text-left pointer-events-auto z-30 animate-in fade-in zoom-in-95"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="text-xs font-semibold text-[#FF9E4A] flex items-center gap-1.5 mb-1">
+                      <Sparkles className="w-3.5 h-3.5 text-[#FF8526]" />
+                      <span>{hotspot.title}</span>
                     </div>
-                    <p className="text-[11px] text-[#5C564E] leading-snug font-light">
+                    <p className="text-[11px] text-white/85 leading-snug font-century">
                       {hotspot.desc}
                     </p>
+                    <div className="mt-2 pt-2 border-t border-white/15 flex items-center justify-between text-[10px] text-[#FFA65C] font-century">
+                      <span>✦ Turnkey Specification</span>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#25D366]" />
+                    </div>
                   </div>
                 )}
               </div>
             ))}
 
-            {/* Draggable Divider Handle */}
+            {/* ============================================================= */}
+            {/* LUXURY METALLIC DRAGGABLE DIVIDER HANDLE                      */}
+            {/* ============================================================= */}
             <div 
-              className="absolute top-0 bottom-0 w-1 bg-white/90 z-20 transition-[left] duration-75 shadow-[0_0_15px_rgba(255,255,255,0.7)]"
+              className="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-white/40 via-white to-white/40 z-20 transition-[left] duration-75 shadow-[0_0_18px_rgba(255,133,38,0.7)]"
               style={{ left: `${sliderPosition}%` }}
             >
-              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white text-[#1A1815] font-bold flex items-center justify-center shadow-xl border-2 border-[#1A1815]/20 transition-transform group-hover:scale-110">
-                <span className="text-[10px] tracking-tighter font-mono">◀▶</span>
+              {/* Center Tactile Knob */}
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-gradient-to-br from-white via-[#FAF7F2] to-[#EFE2D6] text-[#1A1815] font-bold flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.35)] border-2 border-[#C47847]/40 transition-transform group-hover:scale-110 active:scale-95">
+                <span className="text-[11px] tracking-tight font-mono text-[#A85D2A] select-none">
+                  ◀▶
+                </span>
               </div>
             </div>
 
-            {/* Bottom Caption Overlay */}
+            {/* ============================================================= */}
+            {/* BOTTOM CAPTION OVERLAY                                        */}
+            {/* ============================================================= */}
             <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-col sm:flex-row sm:items-end justify-between gap-4 pointer-events-none">
-              <div className="max-w-xl">
-                <span className="text-xs uppercase tracking-widest text-[#FF8526] font-century font-bold">Featured Masterwork</span>
-                <h4 className="text-xl sm:text-3xl font-bounce text-white drop-shadow-md">
-                  The Patia Monolithic Villa — Double-Height Atrium
+              <div className="max-w-xl text-white">
+                <span className="text-[11px] uppercase tracking-widest text-[#FF9E4A] font-mono block mb-1">
+                  PATIA LUXURY PENTHOUSE &bull; 45-DAY TURNKEY HANDOVER
+                </span>
+                <h4 className="text-xl sm:text-2xl lg:text-3xl font-playfair font-bold text-white drop-shadow-md">
+                  {comparisonMode === 'empty-to-furnished' 
+                    ? 'The 45-Day Architectural Transformation'
+                    : 'The Patia Monolithic Villa — Double-Height Atrium'
+                  }
                 </h4>
-                <p className="text-xs sm:text-sm text-neutral-200 font-century mt-1 drop-shadow">
-                  Custom travertine hearth, fluted Burma teak acoustic slats, and circadian concealed coves calibrated for dawn-to-dusk wellness.
+                <p className="text-xs sm:text-sm text-white/90 font-century mt-1 line-clamp-2 leading-relaxed drop-shadow">
+                  {comparisonMode === 'empty-to-furnished'
+                    ? 'Witness the exact transformation from bare walls, raw concrete, and exposed conduits into a fully furnished, warm, circadian-illuminated turnkey home.'
+                    : 'Custom travertine hearth, fluted Burma teak acoustic slats, and circadian concealed coves calibrated for dawn-to-dusk wellness.'
+                  }
                 </p>
               </div>
 
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedItem(SHOWCASE_ITEMS[0]);
-                }}
-                className="pointer-events-auto inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-base transition-all shadow-xl hover:scale-105 cursor-pointer"
+              <a
+                href="#packages"
+                className="pointer-events-auto inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-semibold text-xs sm:text-sm transition-all shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
               >
-                <Maximize2 className="w-4 h-4 text-white" /> Inspect Full Space
-              </button>
+                <span>Calculate Your Home&apos;s Budget</span>
+                <ArrowUpRight className="w-4 h-4 text-white" />
+              </a>
             </div>
+
           </div>
+
         </div>
 
         {/* ================================================================= */}
         {/* 2. DUAL-TIER CONTINUOUS KINETIC STREAMS (SILKY MARQUEE GALLERIES) */}
         {/* ================================================================= */}
         <div className="mb-28">
+          
+          {/* Header & Speed Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#FF8526] tracking-widest uppercase mb-1">
-                <Layers className="w-3.5 h-3.5" /> Kinetic Visual Streams
+              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#C47847] tracking-widest uppercase mb-1">
+                <Layers className="w-3.5 h-3.5" /> 
+                <span>Kinetic Visual Streams</span>
               </div>
-              <h3 className="text-2xl sm:text-4xl font-bounce text-black">
-                Continuous Stream of <span className="text-[#FF8526]">Curated Interiors</span>
+              <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
+                Continuous Stream of <span className="font-courgette text-copper-gradient italic">Curated Interiors</span>
               </h3>
+              <p className="text-xs sm:text-sm font-century text-[#5C564E] mt-0.5">
+                Live portfolio filmstrip of turnkey apartments, penthouses, and bespoke villas across Odisha.
+              </p>
             </div>
 
             {/* Marquee Controls */}
             <div className="flex items-center gap-3">
-              <div className="flex items-center bg-white/90 border border-[#1A1815]/10 rounded-full p-1 text-xs shadow-xs">
+              <div className="flex items-center bg-white/95 border border-[#C47847]/20 rounded-full p-1 text-xs shadow-xs font-century">
                 {(['slow', 'normal', 'fast'] as const).map((spd) => (
                   <button
                     key={spd}
                     type="button"
                     onClick={() => setMarqueeSpeed(spd)}
-                    className={`px-3 py-1 rounded-full capitalize transition-colors ${
-                      marqueeSpeed === spd ? 'bg-[#B68953] text-white font-medium shadow-xs' : 'text-[#68625A] hover:text-[#1A1815]'
+                    className={`px-3 py-1 rounded-full capitalize transition-colors cursor-pointer ${
+                      marqueeSpeed === spd 
+                        ? 'bg-[#1C1917] text-white font-medium shadow-xs' 
+                        : 'text-[#68625A] hover:text-[#1A1815]'
                     }`}
                   >
-                    {spd}
+                    {spd === 'slow' ? '0.6x' : spd === 'normal' ? '1.0x' : '1.4x'}
                   </button>
                 ))}
               </div>
@@ -423,17 +719,22 @@ export default function SpatialShowcase() {
                 type="button"
                 onClick={() => setIsMarqueePaused(!isMarqueePaused)}
                 aria-label={isMarqueePaused ? 'Play stream' : 'Pause stream'}
-                className="w-8 h-8 rounded-full bg-white/90 border border-[#1A1815]/15 flex items-center justify-center text-[#1A1815] hover:bg-[#B68953] hover:text-white transition-colors shadow-xs"
+                className="w-8 h-8 rounded-full bg-white/95 border border-[#C47847]/20 flex items-center justify-center text-[#1A1815] hover:bg-[#FF8526] hover:text-white transition-colors shadow-xs cursor-pointer"
+                title={isMarqueePaused ? 'Play Stream' : 'Pause Stream'}
               >
-                {isMarqueePaused ? <Play className="w-3.5 h-3.5" /> : <Pause className="w-3.5 h-3.5" />}
+                {isMarqueePaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5" />}
               </button>
             </div>
           </div>
 
-          {/* Marquee Row 1 (Sliding Left) */}
-          <div className="relative w-full overflow-hidden mb-4">
+          {/* Marquee Row 1 (Sliding Left) with Soft Edge Vignette Masks */}
+          <div className="relative w-full overflow-hidden mb-5">
+            {/* Side Fade Gradient Masks */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10" />
+
             <div 
-              className="animate-marquee-left gap-4"
+              className="animate-marquee-left gap-5"
               style={{ 
                 animationDuration: getMarqueeDuration(),
                 animationPlayState: isMarqueePaused ? 'paused' : 'running'
@@ -448,40 +749,50 @@ export default function SpatialShowcase() {
                     category: 'living',
                     categoryLabel: 'Curated Stream',
                     location: img.loc,
-                    area: 'Architectural Commission',
-                    materials: ['Natural Stone', 'Seasoned Teak', 'Architectural Lighting'],
+                    area: 'Turnkey Commission',
+                    materials: ['Natural Stone', 'Seasoned Teak', 'Circadian Lighting', 'BWP Ply'],
                     image: img.url,
-                    description: `${img.title} designed and executed in ${img.loc}, Odisha by Studio KYN.`
+                    description: `${img.title} designed and executed in ${img.loc}, Odisha with bespoke turnkey finishes.`
                   })}
-                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-lg overflow-hidden border border-white/10 flex-shrink-0 cursor-pointer shadow-lg transition-transform duration-300 hover:scale-[1.02] hover:border-[#c8a47e]/60"
+                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#C47847]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#FF8526]/60 hover:shadow-xl"
                 >
                   <img
                     src={img.url}
                     alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
                   
+                  {/* Floating Eye Inspect Pill */}
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white">
-                      <Eye className="w-3.5 h-3.5" />
+                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#1A1815] flex items-center justify-center shadow-md">
+                      <Eye className="w-4 h-4" />
                     </span>
                   </div>
 
-                  <div className="absolute bottom-3.5 left-4 right-4">
-                    <span className="text-[10px] font-mono text-[#c8a47e] uppercase tracking-wider">{img.loc}</span>
-                    <h5 className="text-sm font-medium text-white truncate drop-shadow">{img.title}</h5>
+                  {/* Bottom Text Pill */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="text-[10px] font-mono text-[#FF9E4A] uppercase tracking-wider block mb-0.5">
+                      {img.loc}
+                    </span>
+                    <h5 className="text-sm font-playfair font-bold text-white truncate drop-shadow">
+                      {img.title}
+                    </h5>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Marquee Row 2 (Sliding Right) */}
+          {/* Marquee Row 2 (Sliding Right) with Soft Edge Vignette Masks */}
           <div className="relative w-full overflow-hidden">
+            {/* Side Fade Gradient Masks */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10" />
+
             <div 
-              className="animate-marquee-right gap-4"
+              className="animate-marquee-right gap-5"
               style={{ 
                 animationDuration: getMarqueeDuration(),
                 animationPlayState: isMarqueePaused ? 'paused' : 'running'
@@ -496,35 +807,42 @@ export default function SpatialShowcase() {
                     category: 'kitchen',
                     categoryLabel: 'Curated Stream',
                     location: img.loc,
-                    area: 'Architectural Commission',
-                    materials: ['Artisanal Joinery', 'Calacatta Marble', 'Brushed Brass'],
+                    area: 'Turnkey Commission',
+                    materials: ['Artisanal Joinery', 'Calacatta Marble', 'Brushed Brass', 'Fluted Oak'],
                     image: img.url,
-                    description: `${img.title} designed and executed in ${img.loc}, Odisha by Studio KYN.`
+                    description: `${img.title} executed with master-grade materials in ${img.loc}, Odisha.`
                   })}
-                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-lg overflow-hidden border border-white/10 flex-shrink-0 cursor-pointer shadow-lg transition-transform duration-300 hover:scale-[1.02] hover:border-[#c8a47e]/60"
+                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#C47847]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#FF8526]/60 hover:shadow-xl"
                 >
                   <img
                     src={img.url}
                     alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
                   
+                  {/* Floating Eye Inspect Pill */}
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white">
-                      <Eye className="w-3.5 h-3.5" />
+                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#1A1815] flex items-center justify-center shadow-md">
+                      <Eye className="w-4 h-4" />
                     </span>
                   </div>
 
-                  <div className="absolute bottom-3.5 left-4 right-4">
-                    <span className="text-[10px] font-mono text-[#c8a47e] uppercase tracking-wider">{img.loc}</span>
-                    <h5 className="text-sm font-medium text-white truncate drop-shadow">{img.title}</h5>
+                  {/* Bottom Text Pill */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="text-[10px] font-mono text-[#FF9E4A] uppercase tracking-wider block mb-0.5">
+                      {img.loc}
+                    </span>
+                    <h5 className="text-sm font-playfair font-bold text-white truncate drop-shadow">
+                      {img.title}
+                    </h5>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
 
         {/* ================================================================= */}
@@ -533,16 +851,17 @@ export default function SpatialShowcase() {
         <div>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#FF8526] tracking-widest uppercase mb-1">
-                <Compass className="w-3.5 h-3.5" /> Spatial Categories
+              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#C47847] tracking-widest uppercase mb-1">
+                <Compass className="w-3.5 h-3.5" /> 
+                <span>Spatial Categories</span>
               </div>
-              <h3 className="text-2xl sm:text-4xl font-bounce text-black">
-                Detailed Interior <span className="text-[#FF8526]">Studies &amp; Models</span>
+              <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
+                Detailed Interior <span className="font-courgette text-copper-gradient italic">Studies &amp; Models</span>
               </h3>
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 bg-white/95 border border-[#FF8526]/20 rounded-full p-1.5 backdrop-blur-lg shadow-sm">
+            <div className="flex flex-wrap items-center gap-2 bg-white/95 border border-[#C47847]/20 rounded-full p-1.5 backdrop-blur-lg shadow-sm">
               {[
                 { id: 'all', label: 'All Sanctuaries' },
                 { id: 'living', label: 'Grand Living' },
@@ -556,8 +875,8 @@ export default function SpatialShowcase() {
                   onClick={() => setActiveCategory(tab.id as any)}
                   className={`px-4 py-2 rounded-full text-xs font-century transition-all cursor-pointer ${
                     activeCategory === tab.id
-                      ? 'bg-[#FF8526] text-white shadow-md font-bold'
-                      : 'text-[#68625A] hover:text-[#FF8526] hover:bg-black/5 font-medium'
+                      ? 'bg-[#1C1917] text-white shadow-md font-semibold'
+                      : 'text-[#68625A] hover:text-[#1A1815] hover:bg-black/5 font-medium'
                   }`}
                 >
                   {tab.label}
@@ -579,7 +898,7 @@ export default function SpatialShowcase() {
                   className="perspective-1000 cursor-pointer"
                 >
                   <div
-                    className="relative w-full h-[420px] rounded-xl overflow-hidden border border-[#1A1815]/10 bg-white transition-transform duration-200 ease-out shadow-lg transform-style-3d group hover:border-[#B68953]/60 hover:shadow-xl"
+                    className="relative w-full h-[430px] rounded-2xl overflow-hidden border border-[#C47847]/20 bg-white transition-transform duration-200 ease-out shadow-lg transform-style-3d group hover:border-[#FF8526]/60 hover:shadow-2xl"
                     style={{
                       transform: isHovered
                         ? `rotateX(${cardRotate.x}deg) rotateY(${cardRotate.y}deg) scale3d(1.02, 1.02, 1.02)`
@@ -590,7 +909,7 @@ export default function SpatialShowcase() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                       loading="lazy"
                     />
 
@@ -599,26 +918,26 @@ export default function SpatialShowcase() {
 
                     {/* Top Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                      <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] font-mono text-[#DFC5A4]">
+                      <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] font-mono text-[#FF9E4A]">
                         {item.categoryLabel}
                       </span>
-                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#B68953] group-hover:text-white transition-colors shadow-sm">
+                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#FF8526] group-hover:text-white transition-colors shadow-sm">
                         <ArrowUpRight className="w-4 h-4" />
                       </span>
                     </div>
 
                     {/* Bottom Details */}
-                    <div className="absolute bottom-5 left-5 right-5 z-10 space-y-2.5">
+                    <div className="absolute bottom-5 left-5 right-5 z-10 space-y-2">
                       <div className="text-[11px] font-mono text-neutral-300 flex items-center justify-between">
                         <span>{item.location}</span>
-                        <span className="text-[#DFC5A4]">{item.area}</span>
+                        <span className="text-[#FF9E4A]">{item.area}</span>
                       </div>
 
-                      <h4 className="text-lg font-serif text-white font-medium leading-snug group-hover:text-[#DFC5A4] transition-colors">
+                      <h4 className="text-lg font-playfair text-white font-bold leading-snug group-hover:text-[#FFA65C] transition-colors">
                         {item.title}
                       </h4>
 
-                      <p className="text-xs text-neutral-300 font-light line-clamp-2 leading-relaxed">
+                      <p className="text-xs text-neutral-300 font-century line-clamp-2 leading-relaxed">
                         {item.description}
                       </p>
 
@@ -627,13 +946,13 @@ export default function SpatialShowcase() {
                         {item.materials.slice(0, 3).map((mat, mIdx) => (
                           <span
                             key={mIdx}
-                            className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-sm border border-white/20 text-[10px] text-white font-light"
+                            className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-sm border border-white/20 text-[10px] text-white font-century"
                           >
                             {mat}
                           </span>
                         ))}
                         {item.materials.length > 3 && (
-                          <span className="px-1.5 py-0.5 rounded bg-white/10 text-[10px] text-neutral-300">
+                          <span className="px-1.5 py-0.5 rounded bg-white/10 text-[10px] text-neutral-300 font-century">
                             +{item.materials.length - 3}
                           </span>
                         )}
@@ -653,11 +972,11 @@ export default function SpatialShowcase() {
       {/* =================================================================== */}
       {selectedItem && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-xl p-4 sm:p-6 lg:p-10 animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xl p-4 sm:p-6 lg:p-10 animate-fade-in"
           onClick={() => setSelectedItem(null)}
         >
           <div 
-            className="relative w-full max-w-5xl bg-[#FAF7F2] border border-[#1A1815]/15 rounded-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh]"
+            className="relative w-full max-w-5xl bg-[#FAF7F2] border border-[#1A1815]/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile Back Button */}
@@ -690,7 +1009,7 @@ export default function SpatialShowcase() {
                 alt={selectedItem.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs text-[#DFC5A4] font-mono">
+              <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs text-[#FF9E4A] font-mono">
                 {selectedItem.location}
               </div>
             </div>
@@ -698,31 +1017,32 @@ export default function SpatialShowcase() {
             {/* Right Architectural Specifications */}
             <div className="lg:w-2/5 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#1A1815]/10 text-xs text-[#9E7445]">
-                  <Sparkles className="w-3.5 h-3.5 text-[#B68953]" /> {selectedItem.categoryLabel}
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#C47847]/20 text-xs text-[#A85D2A] font-century font-semibold">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FF8526]" /> 
+                  <span>{selectedItem.categoryLabel}</span>
                 </div>
 
-                <h3 className="text-2xl font-serif text-[#1A1815] font-medium leading-tight">
+                <h3 className="text-2xl font-playfair font-bold text-[#1A1815] leading-tight">
                   {selectedItem.title}
                 </h3>
 
-                <p className="text-sm text-[#5C564E] font-light leading-relaxed">
+                <p className="text-sm text-[#5C564E] font-century leading-relaxed">
                   {selectedItem.description}
                 </p>
 
                 <div className="border-t border-[#1A1815]/10 pt-4 space-y-3">
                   <div>
                     <span className="text-[11px] font-mono uppercase text-[#7A7369]">Spatial Dimensions</span>
-                    <p className="text-sm text-[#1A1815] font-medium">{selectedItem.area}</p>
+                    <p className="text-sm text-[#1A1815] font-medium font-century">{selectedItem.area}</p>
                   </div>
 
                   <div>
-                    <span className="text-[11px] font-mono uppercase text-[#7A7369]">Curated Materials & Finishes</span>
+                    <span className="text-[11px] font-mono uppercase text-[#7A7369]">Curated Materials &amp; Finishes</span>
                     <div className="flex flex-wrap gap-1.5 mt-1.5">
                       {selectedItem.materials.map((mat, idx) => (
                         <span 
                           key={idx}
-                          className="px-2.5 py-1 rounded-md bg-white border border-[#1A1815]/10 text-xs text-[#4A453F]"
+                          className="px-2.5 py-1 rounded-md bg-white border border-[#1A1815]/10 text-xs text-[#4A453F] font-century"
                         >
                           {mat}
                         </span>
@@ -737,9 +1057,10 @@ export default function SpatialShowcase() {
                 <a
                   href="#packages"
                   onClick={() => setSelectedItem(null)}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-xl transition-all shadow-lg hover:scale-[1.02] cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-semibold text-sm transition-all shadow-lg hover:scale-[1.02] cursor-pointer"
                 >
-                  Get Quote on this Design <ArrowUpRight className="w-5 h-5 text-white" />
+                  <span>Get Quote on this Design</span>
+                  <ArrowUpRight className="w-4 h-4 text-white" />
                 </a>
               </div>
             </div>

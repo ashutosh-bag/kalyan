@@ -731,26 +731,26 @@ export default function ApartmentTestimonials360() {
   return (
     <section
       id="testimonials-360"
-      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#141210] text-[#F7F3EB] relative overflow-hidden select-none"
+      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#FAF7F2] text-[#1A1815] border-t border-[#1A1815]/10 relative overflow-hidden select-none"
     >
       {/* Background Architectural Mesh & Ambience */}
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FF8526_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#FF8526]/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-[#B68953]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C47847_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#FF8526]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-[#C47847]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF8526]/15 border border-[#FF8526]/30 text-[#FF8526] text-xs uppercase tracking-[0.2em] font-semibold mb-4 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 animate-spin-slow" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 border border-[#C47847]/30 text-[#A85D2A] text-xs uppercase tracking-[0.2em] font-semibold mb-4 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#FF8526] animate-spin-slow" />
             <span>Interactive 360° Virtual Tour &amp; Homeowner Stories</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-bounce tracking-tight text-white mb-4">
-            Step Inside Handed-Over <span className="text-[#FF8526]">Odisha Homes</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-normal tracking-tight text-[#1A1815] mb-4">
+            Step Inside Handed-Over <span className="font-courgette text-copper-gradient italic">Odisha Homes</span>
           </h2>
-          <p className="text-sm sm:text-base text-[#D4CDC3] font-century leading-relaxed">
+          <p className="text-sm sm:text-base text-[#5C564E] font-century leading-relaxed">
             Drag to pan 360°, inspect factory-finish millwork, and hear firsthand from verified homeowners in Bhubaneswar who trusted Kalyan Design Studio for turnkey transformation.
           </p>
         </div>
@@ -766,13 +766,13 @@ export default function ApartmentTestimonials360() {
                 onClick={() => setSelectedStoryIndex(idx)}
                 className={`flex items-center gap-2.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer border ${
                   isSelected
-                    ? 'bg-[#FF8526] text-white border-[#FF8526] shadow-[0_8px_24px_rgba(255,133,38,0.4)] scale-102 font-semibold'
-                    : 'bg-[#1F1B18]/90 text-[#A8A196] border-[#3D352E] hover:border-[#FF8526]/50 hover:text-white'
+                    ? 'bg-[#1C1917] text-white border-[#1C1917] shadow-md scale-102 font-semibold'
+                    : 'bg-white/95 text-[#68625A] border-[#C47847]/20 hover:border-[#FF8526]/50 hover:text-[#1A1815]'
                 }`}
               >
                 <div
                   className={`w-2 h-2 rounded-full ${
-                    isSelected ? 'bg-white animate-pulse' : 'bg-[#FF8526]'
+                    isSelected ? 'bg-[#FF8526] animate-pulse' : 'bg-[#C47847]/50'
                   }`}
                 />
                 <span className="whitespace-nowrap">{story.name.split(' ')[0]} {story.name.split(' ')[1]}</span>
@@ -787,7 +787,7 @@ export default function ApartmentTestimonials360() {
         {/* 360° Interactive Canvas Card */}
         <div
           ref={containerRef}
-          className={`relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#3D352E] bg-black shadow-2xl transition-all duration-300 ${
+          className={`relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#C47847]/30 bg-black shadow-2xl transition-all duration-300 ${
             isFullscreen
               ? 'fixed inset-0 z-50 rounded-none border-none'
               : 'w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[340px] max-h-[660px]'
@@ -1047,7 +1047,7 @@ export default function ApartmentTestimonials360() {
         </div>
 
         {/* Integrated Homeowner Testimonial & Project Monograph */}
-        <div className="mt-10 sm:mt-14 bg-gradient-to-br from-[#1C1815] to-[#25201C] rounded-3xl p-6 sm:p-10 border border-[#3D352E] shadow-2xl relative overflow-hidden">
+        <div className="mt-10 sm:mt-14 bg-white/95 rounded-3xl p-6 sm:p-10 border border-[#C47847]/25 shadow-[0_16px_45px_rgba(196,120,71,0.12)] relative overflow-hidden text-[#1A1815]">
           {/* Subtle Ambient Background Watermark */}
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#FF8526]/5 blur-3xl pointer-events-none" />
 
@@ -1056,7 +1056,7 @@ export default function ApartmentTestimonials360() {
             {/* Left Column: Homeowner Portrait & Identity Card (4 Cols) */}
             <div className="lg:col-span-4 flex flex-col items-center text-center sm:text-left sm:flex-row lg:flex-col lg:items-start gap-5">
               <div className="relative flex-shrink-0">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.35)] relative">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.25)] relative">
                   <img
                     src={currentStory.homeowner.photo}
                     alt={currentStory.homeowner.name}
@@ -1069,14 +1069,14 @@ export default function ApartmentTestimonials360() {
               </div>
 
               <div className="flex-1">
-                <div className="inline-flex items-center gap-1.5 text-xs text-[#E79F30] font-semibold mb-1">
-                  <Award className="w-3.5 h-3.5" />
+                <div className="inline-flex items-center gap-1.5 text-xs text-[#A85D2A] font-semibold mb-1">
+                  <Award className="w-3.5 h-3.5 text-[#FF8526]" />
                   <span>{currentStory.homeowner.verifiedBadge}</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold font-bounce text-white">
+                <h3 className="text-xl sm:text-2xl font-bold font-playfair text-[#1A1815]">
                   {currentStory.homeowner.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#A8A196] font-century mt-0.5">
+                <p className="text-xs sm:text-sm text-[#68625A] font-century mt-0.5">
                   {currentStory.homeowner.designation}
                 </p>
 
@@ -1085,7 +1085,7 @@ export default function ApartmentTestimonials360() {
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[#FF8526] text-[#FF8526]" />
                   ))}
-                  <span className="text-xs font-bold text-white ml-1.5">5.0 / 5.0</span>
+                  <span className="text-xs font-bold text-[#1A1815] ml-1.5">5.0 / 5.0</span>
                 </div>
               </div>
             </div>
@@ -1097,37 +1097,37 @@ export default function ApartmentTestimonials360() {
                 <span className="absolute -left-3 top-0 text-3xl font-serif text-[#FF8526] leading-none">
                   &ldquo;
                 </span>
-                <p className="text-base sm:text-lg text-[#F7F3EB] font-courgette leading-relaxed italic">
+                <p className="text-base sm:text-lg text-[#2D2824] font-courgette leading-relaxed italic">
                   {currentStory.homeowner.quote}
                 </p>
               </div>
 
               {/* Turnkey Project Specification Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-t border-b border-white/10 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-t border-b border-[#1A1815]/10 mb-6">
                 <div>
-                  <span className="text-[11px] text-[#A8A196] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
                     Project Scope
                   </span>
-                  <span className="text-sm font-semibold text-white">{currentStory.type}</span>
+                  <span className="text-sm font-semibold text-[#1A1815]">{currentStory.type}</span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-[#A8A196] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
                     Carpet Area
                   </span>
-                  <span className="text-sm font-semibold text-white flex items-center gap-1">
+                  <span className="text-sm font-semibold text-[#1A1815] flex items-center gap-1">
                     <Ruler className="w-3 h-3 text-[#FF8526]" /> {currentStory.area}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-[#A8A196] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
                     Handover Date
                   </span>
-                  <span className="text-sm font-semibold text-white flex items-center gap-1">
+                  <span className="text-sm font-semibold text-[#1A1815] flex items-center gap-1">
                     <Calendar className="w-3 h-3 text-[#FF8526]" /> {currentStory.handoverDate}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-[#A8A196] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
                     Studio Assurance
                   </span>
                   <span className="text-sm font-semibold text-[#FF8526] flex items-center gap-1">
@@ -1139,13 +1139,13 @@ export default function ApartmentTestimonials360() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-[#A8A196]">Color Palette:</span>
+                  <span className="text-xs text-[#7C6F5E]">Color Palette:</span>
                   <div className="flex items-center -space-x-1.5">
                     {currentStory.palette.map((color, cIdx) => (
                       <span
                         key={cIdx}
                         style={{ backgroundColor: color }}
-                        className="w-5 h-5 rounded-full border border-black/40 shadow-sm"
+                        className="w-5 h-5 rounded-full border border-black/20 shadow-sm"
                         title={color}
                       />
                     ))}
@@ -1155,7 +1155,7 @@ export default function ApartmentTestimonials360() {
                 <div className="flex items-center gap-3">
                   <a
                     href="#packages"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF8526] hover:bg-[#e87417] text-white font-courgette text-base transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-semibold text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
                   >
                     <span>Get Similar Quote</span>
                     <ArrowUpRight className="w-4 h-4" />
