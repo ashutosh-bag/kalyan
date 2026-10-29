@@ -123,20 +123,20 @@ export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="relative w-full bg-[#FAF8F5] pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 select-none"
+      className="relative w-full bg-[#FAF8F5] pt-20 sm:pt-24 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8 select-none"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl xl:max-w-7xl mx-auto">
         
         {/* ===================================================================== */}
         {/* 1. HERO MAIN ROW: EDITORIAL TYPOGRAPHY & FLOATING BENTO SHOWCASE     */}
         {/* ===================================================================== */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-center mb-10 sm:mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-center mb-10 sm:mb-14">
           
           {/* Left Column: Bold Architectural Headline, CTAs & Social Proof */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
+          <div className="lg:col-span-6 flex flex-col justify-center pr-0 lg:pr-2">
             
             {/* Tagline with subtle hairline */}
-            <div className="flex items-center gap-2.5 mb-4">
+            <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-[1.5px] bg-[#9C5427]" />
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
                 A HOME THAT FEELS LIKE YOU
@@ -144,19 +144,19 @@ export default function HeroSection() {
             </div>
 
             {/* Massive Bold Grotesque Sans Headline (Ditto 3 lines with periods) */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[70px] font-black font-sans text-[#1A1815] uppercase tracking-[-0.03em] leading-[0.98] mb-5">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[62px] font-black font-sans text-[#1A1815] uppercase tracking-[-0.03em] leading-[0.98] mb-4">
               DESIGN.<br />
               WARMTH.<br />
               A BETTER HOME.
             </h1>
 
             {/* Subtitle Description */}
-            <p className="text-sm sm:text-base text-[#68625A] font-normal leading-relaxed max-w-md mb-8">
+            <p className="text-sm sm:text-base text-[#68625A] font-normal leading-relaxed max-w-md mb-6">
               Curated home essentials that bring comfort, style and calm to your everyday life.
             </p>
 
             {/* Action Buttons: Solid Terracotta Pill + White Outline Pill */}
-            <div className="flex flex-wrap items-center gap-3.5 mb-10">
+            <div className="flex flex-wrap items-center gap-3.5 mb-8">
               <a
                 href="#packages"
                 className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-sm sm:text-base shadow-sm transition-all hover:gap-3 cursor-pointer"
@@ -208,10 +208,10 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column: Centerpiece Visual + 2 Floating White Bento Cards */}
-          <div className="lg:col-span-7 relative flex items-center justify-center lg:justify-end pt-4 lg:pt-0">
+          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-start pt-4 lg:pt-0">
             
             {/* Centerpiece Image Container */}
-            <div className="relative w-full max-w-[480px] xl:max-w-[530px] aspect-[4/4.8] sm:aspect-[4/4.5] rounded-[32px] sm:rounded-[38px] overflow-hidden shadow-[0_20px_50px_rgba(26,24,21,0.12)] border-2 border-white bg-white">
+            <div className="relative w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[480px] aspect-[4/4.8] sm:aspect-[4/4.5] rounded-[32px] sm:rounded-[38px] overflow-hidden shadow-[0_20px_50px_rgba(26,24,21,0.12)] border-2 border-white bg-white">
               <img
                 src="/images/hero/centerpiece.jpg"
                 alt="Organic Warm Interior Centerpiece"
@@ -223,7 +223,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 1: Top Right Season & Collection Card */}
-            <div className="absolute -top-3 sm:top-4 right-0 sm:-right-4 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-52 sm:w-60 z-20 transition-all">
+            <div className="absolute -top-3 sm:top-4 -right-2 sm:-right-4 lg:-right-8 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-52 sm:w-60 z-20 transition-all">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#FAF8F5] border border-[#1A1815]/10 flex-shrink-0">
                   <img 
@@ -267,7 +267,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 2: Bottom Right Shipping & Payment Trust Badges */}
-            <div className="absolute bottom-4 sm:bottom-10 right-0 sm:-right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-56 sm:w-64 z-20 space-y-3">
+            <div className="absolute bottom-4 sm:bottom-10 -right-2 sm:-right-4 lg:-right-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-56 sm:w-64 z-20 space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
                   <Truck className="w-4 h-4" />

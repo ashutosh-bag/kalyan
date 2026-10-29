@@ -33,7 +33,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Header Grid: Text + Image Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-20 sm:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center mb-16 sm:mb-20">
           
           {/* Left Text */}
           <div className="lg:col-span-6 space-y-6">
