@@ -174,8 +174,8 @@ export default function ContactSection() {
 
                 {/* Full Name */}
                 <div>
-                  <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
-                    Full Name <span className="text-[#FF8526]">*</span>
+                  <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
+                    Full Name <span className="text-[#9C5427]">*</span>
                   </label>
                   <input
                     type="text"
@@ -185,14 +185,14 @@ export default function ContactSection() {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Alok Mohanty"
-                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors"
                   />
                 </div>
 
                 {/* Email Address */}
                 <div>
-                  <label htmlFor="email" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
-                    Email Address <span className="text-[#FF8526]">*</span>
+                  <label htmlFor="email" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
+                    Email Address <span className="text-[#9C5427]">*</span>
                   </label>
                   <input
                     type="email"
@@ -202,7 +202,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@domain.com"
-                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors"
                   />
                 </div>
               </div>
@@ -210,8 +210,8 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
-                    Phone / WhatsApp <span className="text-[#FF8526]">*</span>
+                  <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
+                    Phone / WhatsApp <span className="text-[#9C5427]">*</span>
                   </label>
                   <input
                     type="tel"
@@ -221,13 +221,13 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 94370 00000"
-                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors"
                   />
                 </div>
 
                 {/* Project Typology */}
                 <div>
-                  <label htmlFor="projectType" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                  <label htmlFor="projectType" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
                     Commission Typology
                   </label>
                   <select
@@ -235,7 +235,7 @@ export default function ContactSection() {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors cursor-pointer"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors cursor-pointer"
                   >
                     <option value="Modular Kitchen">Modular Kitchen</option>
                     <option value="TV Cabinet & Media Unit">TV Cabinet &amp; Media Unit</option>
@@ -252,7 +252,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Budget Range in INR */}
                 <div>
-                  <label htmlFor="budgetRange" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                  <label htmlFor="budgetRange" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
                     Estimated Budget Scale
                   </label>
                   <select
@@ -260,7 +260,7 @@ export default function ContactSection() {
                     name="budgetRange"
                     value={formData.budgetRange}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors cursor-pointer"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors cursor-pointer"
                   >
                     <option value="₹2.5L – ₹4.5L (Turnkey 2BHK/3BHK)">₹2.5L – ₹4.5L (Turnkey 2BHK/3BHK)</option>
                     <option value="₹4.5L – ₹8.5L (Executive Duplex)">₹4.5L – ₹8.5L (Executive Duplex)</option>
@@ -271,7 +271,7 @@ export default function ContactSection() {
 
                 {/* Timeline */}
                 <div>
-                  <label htmlFor="timeline" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
+                  <label htmlFor="timeline" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
                     Target Handover Timeline
                   </label>
                   <select
@@ -279,7 +279,7 @@ export default function ContactSection() {
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors cursor-pointer"
+                    className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors cursor-pointer"
                   >
                     <option value="Immediate (45-Day Turnkey Guarantee)">Immediate (45-Day Turnkey Guarantee)</option>
                     <option value="3 - 6 Months">3 – 6 Months</option>
@@ -291,8 +291,8 @@ export default function ContactSection() {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-century font-bold">
-                  Project Details &amp; Location in Odisha <span className="text-[#FF8526]">*</span>
+                <label htmlFor="message" className="block text-xs uppercase tracking-wider text-[#1A1815] mb-2 font-bold">
+                  Project Details &amp; Location in Odisha <span className="text-[#9C5427]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -302,7 +302,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your plot/property location (e.g. Patia, Jaydev Vihar, CDA Cuttack), approximate built-up area, and design goals..."
-                  className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#FF8526] focus:bg-white transition-colors"
+                  className="w-full bg-[#FAF7F2] border border-[#1A1815]/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#1A1815] placeholder-[#8C8275] focus:outline-none focus:border-[#9C5427] focus:bg-white transition-colors"
                 ></textarea>
               </div>
 
@@ -325,8 +325,8 @@ export default function ContactSection() {
                 )}
               </button>
 
-              <div className="flex items-center justify-center space-x-2 text-[11px] text-[#7C6F5E] font-century">
-                <Clock className="w-3.5 h-3.5 text-[#C47847]" />
+              <div className="flex items-center justify-center space-x-2 text-[11px] text-[#7C6F5E] ">
+                <Clock className="w-3.5 h-3.5 text-[#9C5427]" />
                 <span>Our principal design team will review and contact you within 24 hours.</span>
               </div>
             </form>
@@ -336,8 +336,8 @@ export default function ContactSection() {
           <div className="lg:col-span-5 flex flex-col space-y-6">
 
             {/* Odisha Studios */}
-            <div className="bg-white/95 border border-[#C47847]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#A85D2A] font-century font-bold mb-6">
+            <div className="bg-white/95 border border-[#9C5427]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
+              <h4 className="text-xs uppercase tracking-[0.25em] text-[#9C5427] font-bold mb-6">
                 Our Studios in Odisha
               </h4>
               <div className="space-y-6">
@@ -346,12 +346,12 @@ export default function ContactSection() {
                     <span className="text-base font-playfair text-[#1A1815] font-bold block">
                       {off.city}
                     </span>
-                    <div className="flex items-start space-x-2 text-xs text-[#5C564E] font-century mt-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#C47847] shrink-0 mt-0.5" />
+                    <div className="flex items-start space-x-2 text-xs text-[#5C564E] mt-1">
+                      <MapPin className="w-3.5 h-3.5 text-[#9C5427] shrink-0 mt-0.5" />
                       <span>{off.address}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-xs text-[#5C564E] font-mono mt-1">
-                      <Phone className="w-3.5 h-3.5 text-[#C47847]" />
+                      <Phone className="w-3.5 h-3.5 text-[#9C5427]" />
                       <span>{off.phone}</span>
                     </div>
                   </div>
@@ -360,25 +360,25 @@ export default function ContactSection() {
             </div>
 
             {/* Direct Channel */}
-            <div className="bg-white/95 border border-[#C47847]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#A85D2A] font-century font-bold mb-4">
+            <div className="bg-white/95 border border-[#9C5427]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
+              <h4 className="text-xs uppercase tracking-[0.25em] text-[#9C5427] font-bold mb-4">
                 Direct Inquiries
               </h4>
               <div className="space-y-3 text-xs sm:text-sm text-[#1A1815]">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-[#C47847]" />
+                  <Mail className="w-4 h-4 text-[#9C5427]" />
                   <span>info@kalyandesignstudio.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#C47847]" />
+                  <Phone className="w-4 h-4 text-[#9C5427]" />
                   <span>+91 75040 41040 (Bhubaneswar Studio)</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#C47847]" />
+                  <Phone className="w-4 h-4 text-[#9C5427]" />
                   <span>+91 75040 41040 (Client Direct Hotline)</span>
                 </div>
               </div>
-              <p className="text-[11px] text-[#5C564E] font-century mt-4 leading-relaxed">
+              <p className="text-[11px] text-[#5C564E] mt-4 leading-relaxed">
                 For architectural design consultations, structural drawings review, or site evaluation visits across Odisha, please schedule an in-person session at our Bhubaneswar studio.
               </p>
             </div>

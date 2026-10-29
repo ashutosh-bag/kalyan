@@ -10,7 +10,7 @@ const lato = Lato({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#FFF3E9",
+  themeColor: "#FAF8F5",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -130,7 +130,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#FFF3E9] text-[#1A1815] flex flex-col font-lato selection:bg-[#FF8526] selection:text-white"
+        className="min-h-screen bg-[#FAF8F5] text-[#1A1815] flex flex-col font-lato selection:bg-[#9C5427] selection:text-white"
       >
         {children}
       </body>

@@ -68,7 +68,7 @@ export default function Footer() {
           {/* Brand & Studio Info (Col 1-5) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
-              <div className="p-1.5 rounded-2xl bg-white border border-[#C47847]/30 shadow-md w-fit overflow-hidden">
+              <div className="p-1.5 rounded-2xl bg-white border border-[#9C5427]/30 shadow-md w-fit overflow-hidden">
                 <img
                   src="/images/kalyan/branding/logo.gif"
                   alt="Kalyan Design Studio Animated Logo"
@@ -79,43 +79,43 @@ export default function Footer() {
                 <span className="font-playfair font-bold text-2xl text-[#1A1815]">
                   Kalyan Design Studio
                 </span>
-                <span className="text-xs tracking-widest font-century uppercase text-[#A85D2A] font-bold mt-1">
+                <span className="text-xs tracking-widest uppercase text-[#9C5427] font-bold mt-1">
                   Architecture &bull; Interiors &bull; Odisha
                 </span>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-[#5C564E] font-century leading-relaxed max-w-sm pt-2">
+            <p className="text-xs sm:text-sm text-[#5C564E] leading-relaxed max-w-sm pt-2">
               Best Interior Design Company in Bhubaneswar, transforming spaces with elegant, functional designs across Odisha.
             </p>
 
             {/* Direct Contact Info */}
-            <div className="space-y-2 pt-2 text-xs text-[#5C564E] font-century">
+            <div className="space-y-2 pt-2 text-xs text-[#5C564E] ">
               <div className="flex items-start space-x-2.5">
-                <span className="text-[#C47847] font-mono">📍</span>
+                <span className="text-[#9C5427] font-mono">📍</span>
                 <span>3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018</span>
               </div>
               <div className="flex items-center space-x-2.5">
-                <span className="text-[#C47847] font-mono">📞</span>
+                <span className="text-[#9C5427] font-mono">📞</span>
                 <a href="tel:+917504041040" className="hover:text-[#1A1815] transition-colors font-semibold">
                   +91-750404104 / 75040 41040
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <span className="text-[#C47847] font-mono">✉️</span>
+                <span className="text-[#9C5427] font-mono">✉️</span>
                 <a href="mailto:info@kalyandesignstudio.com" className="hover:text-[#1A1815] transition-colors font-semibold">
                   info@kalyandesignstudio.com
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <span className="text-[#C47847] font-mono">🕒</span>
+                <span className="text-[#9C5427] font-mono">🕒</span>
                 <span>Mon – Sat: 10:00 AM – 8:00 PM</span>
               </div>
             </div>
 
             {/* Social Icons */}
             <div className="pt-3 flex items-center space-x-3">
-              <span className="text-[11px] uppercase tracking-wider text-[#8C8275] mr-1 font-century font-semibold">Follow:</span>
+              <span className="text-[11px] uppercase tracking-wider text-[#8C8275] mr-1 font-semibold">Follow:</span>
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -123,7 +123,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.ariaLabel}
-                  className="p-2 text-[#68625A] hover:text-white bg-white hover:bg-[#FF8526] border border-[#C47847]/20 rounded-full transition-all shadow-xs"
+                  className="p-2 text-[#68625A] hover:text-white bg-white hover:bg-[#9C5427] border border-[#9C5427]/20 rounded-full transition-all shadow-xs"
                 >
                   {social.svg}
                 </a>
@@ -133,7 +133,7 @@ export default function Footer() {
 
           {/* Navigation Links (Col 6-7) */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs uppercase tracking-[0.25em] text-[#A85D2A] font-century font-bold mb-4">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-[#9C5427] font-bold mb-4">
               Explore Studio
             </h4>
             <ul className="space-y-2.5">
@@ -141,7 +141,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#FF8526] transition-colors font-century"
+                    className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#9C5427] transition-colors "
                   >
                     {item.name}
                   </a>
@@ -152,7 +152,7 @@ export default function Footer() {
                   href="https://kalyandesignstudio.com/blog/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs sm:text-sm uppercase tracking-wider text-[#A85D2A] hover:text-[#FF8526] transition-colors font-century font-semibold"
+                  className="text-xs sm:text-sm uppercase tracking-wider text-[#9C5427] hover:text-[#9C5427] transition-colors font-semibold"
                 >
                   WordPress Blog ↗
                 </a>
@@ -162,7 +162,7 @@ export default function Footer() {
                   href="https://g.co/kgs/VwVxACj"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#FF8526] transition-colors font-century"
+                  className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#9C5427] transition-colors "
                 >
                   Google Reviews (4.9 ★) ↗
                 </a>
@@ -172,10 +172,10 @@ export default function Footer() {
 
           {/* Google Maps Embed (Col 8-12) */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-xs uppercase tracking-[0.25em] text-[#A85D2A] font-century font-bold">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-[#9C5427] font-bold">
               Studio Location
             </h4>
-            <div className="w-full h-44 rounded-2xl overflow-hidden border border-[#C47847]/25 bg-white shadow-md">
+            <div className="w-full h-44 rounded-2xl overflow-hidden border border-[#9C5427]/25 bg-white shadow-md">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14703.497116044074!2d85.86106134999999!3d20.251747199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a76aa3db6109%3A0x9796e53a6bd98373!2sKalyan+Design+Studio!5e0!3m2!1sen!2sin!4v1633363360744!5m2!1sen!2sin"
                 width="100%"
@@ -186,7 +186,7 @@ export default function Footer() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <p className="text-[11px] text-[#7C6F5E] font-century">
+            <p className="text-[11px] text-[#7C6F5E] ">
               Baragada, Puri-NH Bypass, Bhubaneswar &bull; Serving all Odisha districts.
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#7C6F5E] font-century gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#7C6F5E] gap-4">
           <p>&copy; {new Date().getFullYear()} Kalyan Design Studio. All rights reserved. Baragada, Bhubaneswar, Odisha 751018.</p>
           <div className="flex items-center space-x-6">
             <a href="tel:+917504041040" className="hover:text-[#1A1815] transition-colors">+91-750404104</a>

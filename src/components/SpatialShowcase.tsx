@@ -361,8 +361,8 @@ export default function SpatialShowcase() {
             
             {/* Real-time Status Badge */}
             <div className="flex items-center gap-2.5">
-              <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#C47847]/20 text-xs font-century text-[#1A1815] shadow-xs">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF8526] animate-pulse" />
+              <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#9C5427]/20 text-xs text-[#1A1815] shadow-xs">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#9C5427] animate-pulse" />
                 {comparisonMode === 'empty-to-furnished' ? (
                   <>
                     <span className="font-semibold text-[#1A1815]">
@@ -376,7 +376,7 @@ export default function SpatialShowcase() {
                   </>
                 ) : (
                   <>
-                    <span className="font-mono font-bold text-[#A85D2A]">{currentKelvin}K</span>
+                    <span className="font-mono font-bold text-[#9C5427]">{currentKelvin}K</span>
                     <span className="text-[#68625A]">
                       {currentKelvin > 4500 ? 'Daylight Golden Hour' : '2400K Evening Warmth'}
                     </span>
@@ -384,7 +384,7 @@ export default function SpatialShowcase() {
                 )}
               </div>
 
-              <span className="text-[11px] font-century text-[#7C6F5E] hidden md:inline">
+              <span className="text-[11px] text-[#7C6F5E] hidden md:inline">
                 Before: {Math.round(sliderPosition)}% &bull; After: {Math.round(100 - sliderPosition)}%
               </span>
             </div>
@@ -394,7 +394,7 @@ export default function SpatialShowcase() {
               <button
                 type="button"
                 onClick={() => setSliderPosition(100)}
-                className={`px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer border ${
                   sliderPosition >= 95 
                     ? 'bg-[#1C1917] text-white border-[#1C1917]' 
                     : 'bg-white hover:bg-neutral-100 text-[#68625A] border-[#1A1815]/10'
@@ -406,7 +406,7 @@ export default function SpatialShowcase() {
               <button
                 type="button"
                 onClick={() => setSliderPosition(50)}
-                className={`px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer border ${
                   sliderPosition > 40 && sliderPosition < 60 
                     ? 'bg-[#1C1917] text-white border-[#1C1917]' 
                     : 'bg-white hover:bg-neutral-100 text-[#68625A] border-[#1A1815]/10'
@@ -418,7 +418,7 @@ export default function SpatialShowcase() {
               <button
                 type="button"
                 onClick={() => setSliderPosition(0)}
-                className={`px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer border ${
                   sliderPosition <= 5 
                     ? 'bg-[#1C1917] text-white border-[#1C1917]' 
                     : 'bg-white hover:bg-neutral-100 text-[#68625A] border-[#1A1815]/10'
@@ -431,8 +431,8 @@ export default function SpatialShowcase() {
                 <button
                   type="button"
                   onClick={() => setShowHotspots(!showHotspots)}
-                  className={`hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-century font-medium transition-colors cursor-pointer border ${
-                    showHotspots ? 'bg-[#FFF3E9] text-[#A85D2A] border-[#FF8526]/30' : 'bg-white text-[#8C8275] border-[#1A1815]/10'
+                  className={`hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer border ${
+                    showHotspots ? 'bg-[#FFF3E9] text-[#9C5427] border-[#9C5427]/30' : 'bg-white text-[#8C8275] border-[#1A1815]/10'
                   }`}
                   title="Toggle Design Hotspots"
                 >
@@ -447,7 +447,7 @@ export default function SpatialShowcase() {
           {/* Master Interactive Before / After Canvas */}
           <div 
             ref={sliderContainerRef}
-            className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] rounded-3xl overflow-hidden border border-[#C47847]/30 select-none cursor-ew-resize group shadow-[0_24px_60px_rgba(196,120,71,0.22)] bg-[#1A1815]"
+            className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] rounded-3xl overflow-hidden border border-[#9C5427]/30 select-none cursor-ew-resize group shadow-[0_24px_60px_rgba(196,120,71,0.22)] bg-[#1A1815]"
             onMouseMove={(e) => {
               if (isDraggingSlider || e.buttons === 1) handleSliderMove(e.clientX);
             }}
@@ -476,8 +476,8 @@ export default function SpatialShowcase() {
 
                   {/* Top Right AFTER Badge */}
                   <div className="absolute top-6 right-6 z-20">
-                    <div className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#FF8526]/40 text-xs font-century font-semibold text-white flex items-center gap-2 shadow-lg">
-                      <Sparkles className="w-3.5 h-3.5 text-[#FF8526]" />
+                    <div className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#9C5427]/40 text-xs font-semibold text-white flex items-center gap-2 shadow-lg">
+                      <Sparkles className="w-3.5 h-3.5 text-[#9C5427]" />
                       <span>AFTER: Filled with Turnkey Interior</span>
                     </div>
                   </div>
@@ -492,12 +492,12 @@ export default function SpatialShowcase() {
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/40 pointer-events-none" />
-                  <div className="absolute top-[25%] left-[20%] w-[420px] h-[420px] rounded-full bg-[#FF8526]/25 blur-[100px] pointer-events-none" />
+                  <div className="absolute top-[25%] left-[20%] w-[420px] h-[420px] rounded-full bg-[#9C5427]/25 blur-[100px] pointer-events-none" />
                   <div className="absolute top-[30%] right-[25%] w-[460px] h-[460px] rounded-full bg-[#E79F30]/20 blur-[110px] pointer-events-none" />
 
                   <div className="absolute top-6 right-6 z-20">
-                    <div className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#FF8526]/30 text-xs font-century font-medium text-white flex items-center gap-2 shadow-lg">
-                      <Moon className="w-3.5 h-3.5 text-[#FF8526]" />
+                    <div className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#9C5427]/30 text-xs font-medium text-white flex items-center gap-2 shadow-lg">
+                      <Moon className="w-3.5 h-3.5 text-[#9C5427]" />
                       <span>2400K Circadian Evening Illumination</span>
                     </div>
                   </div>
@@ -537,8 +537,8 @@ export default function SpatialShowcase() {
 
                     {/* Top Left BEFORE Badge */}
                     <div className="absolute top-6 left-6 z-20">
-                      <div className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#1A1815]/15 text-xs font-century font-semibold text-[#1A1815] flex items-center gap-2 shadow-lg">
-                        <Building2 className="w-3.5 h-3.5 text-[#C47847]" />
+                      <div className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#1A1815]/15 text-xs font-semibold text-[#1A1815] flex items-center gap-2 shadow-lg">
+                        <Building2 className="w-3.5 h-3.5 text-[#9C5427]" />
                         <span>BEFORE: Empty Bare-Shell Room</span>
                       </div>
                     </div>
@@ -555,8 +555,8 @@ export default function SpatialShowcase() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15 pointer-events-none" />
 
                     <div className="absolute top-6 left-6 z-20">
-                      <div className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#C47847]/30 text-xs font-century font-semibold text-[#1A1815] flex items-center gap-2 shadow-lg">
-                        <Sun className="w-3.5 h-3.5 text-[#FF8526]" />
+                      <div className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#9C5427]/30 text-xs font-semibold text-[#1A1815] flex items-center gap-2 shadow-lg">
+                        <Sun className="w-3.5 h-3.5 text-[#9C5427]" />
                         <span>5500K Natural Daylight &bull; Golden Hour</span>
                       </div>
                     </div>
@@ -585,11 +585,11 @@ export default function SpatialShowcase() {
                   }}
                   className={`relative w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shadow-xl transition-all hover:scale-125 cursor-pointer ${
                     activeHotspot === idx 
-                      ? 'bg-[#FF8526] text-white ring-4 ring-white/50 scale-110' 
-                      : 'bg-white/95 text-[#1A1815] hover:bg-[#FF8526] hover:text-white'
+                      ? 'bg-[#9C5427] text-white ring-4 ring-white/50 scale-110' 
+                      : 'bg-white/95 text-[#1A1815] hover:bg-[#9C5427] hover:text-white'
                   }`}
                 >
-                  <span className="absolute inset-0 rounded-full bg-[#FF8526]/40 animate-ping" />
+                  <span className="absolute inset-0 rounded-full bg-[#9C5427]/40 animate-ping" />
                   <span className="relative z-10">{activeHotspot === idx ? '✕' : '+'}</span>
                 </button>
 
@@ -600,13 +600,13 @@ export default function SpatialShowcase() {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <div className="text-xs font-semibold text-[#FF9E4A] flex items-center gap-1.5 mb-1">
-                      <Sparkles className="w-3.5 h-3.5 text-[#FF8526]" />
+                      <Sparkles className="w-3.5 h-3.5 text-[#9C5427]" />
                       <span>{hotspot.title}</span>
                     </div>
-                    <p className="text-[11px] text-white/85 leading-snug font-century">
+                    <p className="text-[11px] text-white/85 leading-snug ">
                       {hotspot.desc}
                     </p>
-                    <div className="mt-2 pt-2 border-t border-white/15 flex items-center justify-between text-[10px] text-[#FFA65C] font-century">
+                    <div className="mt-2 pt-2 border-t border-white/15 flex items-center justify-between text-[10px] text-[#C49B7E] ">
                       <span>✦ Turnkey Specification</span>
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#25D366]" />
                     </div>
@@ -623,8 +623,8 @@ export default function SpatialShowcase() {
               style={{ left: `${sliderPosition}%` }}
             >
               {/* Center Tactile Knob */}
-              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-gradient-to-br from-white via-[#FAF7F2] to-[#EFE2D6] text-[#1A1815] font-bold flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.35)] border-2 border-[#C47847]/40 transition-transform group-hover:scale-110 active:scale-95">
-                <span className="text-[11px] tracking-tight font-mono text-[#A85D2A] select-none">
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-gradient-to-br from-white via-[#FAF7F2] to-[#EFE2D6] text-[#1A1815] font-bold flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.35)] border-2 border-[#9C5427]/40 transition-transform group-hover:scale-110 active:scale-95">
+                <span className="text-[11px] tracking-tight font-mono text-[#9C5427] select-none">
                   ◀▶
                 </span>
               </div>
@@ -644,7 +644,7 @@ export default function SpatialShowcase() {
                     : 'The Patia Monolithic Villa — Double-Height Atrium'
                   }
                 </h4>
-                <p className="text-xs sm:text-sm text-white/90 font-century mt-1 line-clamp-2 leading-relaxed drop-shadow">
+                <p className="text-xs sm:text-sm text-white/90 mt-1 line-clamp-2 leading-relaxed drop-shadow">
                   {comparisonMode === 'empty-to-furnished'
                     ? 'Witness the exact transformation from bare walls, raw concrete, and exposed conduits into a fully furnished, warm, circadian-illuminated turnkey home.'
                     : 'Custom travertine hearth, fluted Burma teak acoustic slats, and circadian concealed coves calibrated for dawn-to-dusk wellness.'
@@ -654,7 +654,7 @@ export default function SpatialShowcase() {
 
               <a
                 href="#packages"
-                className="pointer-events-auto inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-semibold text-xs sm:text-sm transition-all shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
+                className="pointer-events-auto inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm transition-all shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
               >
                 <span>Calculate Your Home&apos;s Budget</span>
                 <ArrowUpRight className="w-4 h-4 text-white" />
@@ -673,21 +673,21 @@ export default function SpatialShowcase() {
           {/* Header & Speed Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#C47847] tracking-widest uppercase mb-1">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#9C5427] tracking-widest uppercase mb-1">
                 <Layers className="w-3.5 h-3.5" /> 
                 <span>Kinetic Visual Streams</span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
                 Continuous Stream of <span className="text-copper-gradient">Curated Interiors</span>
               </h3>
-              <p className="text-xs sm:text-sm font-century text-[#5C564E] mt-0.5">
+              <p className="text-xs sm:text-sm text-[#5C564E] mt-0.5">
                 Live portfolio filmstrip of turnkey apartments, penthouses, and bespoke villas across Odisha.
               </p>
             </div>
 
             {/* Marquee Controls */}
             <div className="flex items-center gap-3">
-              <div className="flex items-center bg-white/95 border border-[#C47847]/20 rounded-full p-1 text-xs shadow-xs font-century">
+              <div className="flex items-center bg-white/95 border border-[#9C5427]/20 rounded-full p-1 text-xs shadow-xs ">
                 {(['slow', 'normal', 'fast'] as const).map((spd) => (
                   <button
                     key={spd}
@@ -708,7 +708,7 @@ export default function SpatialShowcase() {
                 type="button"
                 onClick={() => setIsMarqueePaused(!isMarqueePaused)}
                 aria-label={isMarqueePaused ? 'Play stream' : 'Pause stream'}
-                className="w-8 h-8 rounded-full bg-white/95 border border-[#C47847]/20 flex items-center justify-center text-[#1A1815] hover:bg-[#FF8526] hover:text-white transition-colors shadow-xs cursor-pointer"
+                className="w-8 h-8 rounded-full bg-white/95 border border-[#9C5427]/20 flex items-center justify-center text-[#1A1815] hover:bg-[#9C5427] hover:text-white transition-colors shadow-xs cursor-pointer"
                 title={isMarqueePaused ? 'Play Stream' : 'Pause Stream'}
               >
                 {isMarqueePaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5" />}
@@ -743,7 +743,7 @@ export default function SpatialShowcase() {
                     image: img.url,
                     description: `${img.title} designed and executed in ${img.loc}, Odisha with bespoke turnkey finishes.`
                   })}
-                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#C47847]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#FF8526]/60 hover:shadow-xl"
+                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#9C5427]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#9C5427]/60 hover:shadow-xl"
                 >
                   <img
                     src={img.url}
@@ -801,7 +801,7 @@ export default function SpatialShowcase() {
                     image: img.url,
                     description: `${img.title} executed with master-grade materials in ${img.loc}, Odisha.`
                   })}
-                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#C47847]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#FF8526]/60 hover:shadow-xl"
+                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#9C5427]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#9C5427]/60 hover:shadow-xl"
                 >
                   <img
                     src={img.url}
@@ -840,7 +840,7 @@ export default function SpatialShowcase() {
         <div>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-century font-bold text-[#C47847] tracking-widest uppercase mb-1">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#9C5427] tracking-widest uppercase mb-1">
                 <Compass className="w-3.5 h-3.5" /> 
                 <span>Spatial Categories</span>
               </div>
@@ -850,7 +850,7 @@ export default function SpatialShowcase() {
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 bg-white/95 border border-[#C47847]/20 rounded-full p-1.5 backdrop-blur-lg shadow-sm">
+            <div className="flex flex-wrap items-center gap-2 bg-white/95 border border-[#9C5427]/20 rounded-full p-1.5 backdrop-blur-lg shadow-sm">
               {[
                 { id: 'all', label: 'All Sanctuaries' },
                 { id: 'living', label: 'Grand Living' },
@@ -862,7 +862,7 @@ export default function SpatialShowcase() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveCategory(tab.id as any)}
-                  className={`px-4 py-2 rounded-full text-xs font-century transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs transition-all cursor-pointer ${
                     activeCategory === tab.id
                       ? 'bg-[#1C1917] text-white shadow-md font-semibold'
                       : 'text-[#68625A] hover:text-[#1A1815] hover:bg-black/5 font-medium'
@@ -887,7 +887,7 @@ export default function SpatialShowcase() {
                   className="perspective-1000 cursor-pointer"
                 >
                   <div
-                    className="relative w-full h-[430px] rounded-2xl overflow-hidden border border-[#C47847]/20 bg-white transition-transform duration-200 ease-out shadow-lg transform-style-3d group hover:border-[#FF8526]/60 hover:shadow-2xl"
+                    className="relative w-full h-[430px] rounded-2xl overflow-hidden border border-[#9C5427]/20 bg-white transition-transform duration-200 ease-out shadow-lg transform-style-3d group hover:border-[#9C5427]/60 hover:shadow-2xl"
                     style={{
                       transform: isHovered
                         ? `rotateX(${cardRotate.x}deg) rotateY(${cardRotate.y}deg) scale3d(1.02, 1.02, 1.02)`
@@ -910,7 +910,7 @@ export default function SpatialShowcase() {
                       <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] font-mono text-[#FF9E4A]">
                         {item.categoryLabel}
                       </span>
-                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#FF8526] group-hover:text-white transition-colors shadow-sm">
+                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#9C5427] group-hover:text-white transition-colors shadow-sm">
                         <ArrowUpRight className="w-4 h-4" />
                       </span>
                     </div>
@@ -922,11 +922,11 @@ export default function SpatialShowcase() {
                         <span className="text-[#FF9E4A]">{item.area}</span>
                       </div>
 
-                      <h4 className="text-lg font-playfair text-white font-bold leading-snug group-hover:text-[#FFA65C] transition-colors">
+                      <h4 className="text-lg font-playfair text-white font-bold leading-snug group-hover:text-[#C49B7E] transition-colors">
                         {item.title}
                       </h4>
 
-                      <p className="text-xs text-neutral-300 font-century line-clamp-2 leading-relaxed">
+                      <p className="text-xs text-neutral-300 line-clamp-2 leading-relaxed">
                         {item.description}
                       </p>
 
@@ -935,13 +935,13 @@ export default function SpatialShowcase() {
                         {item.materials.slice(0, 3).map((mat, mIdx) => (
                           <span
                             key={mIdx}
-                            className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-sm border border-white/20 text-[10px] text-white font-century"
+                            className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-sm border border-white/20 text-[10px] text-white "
                           >
                             {mat}
                           </span>
                         ))}
                         {item.materials.length > 3 && (
-                          <span className="px-1.5 py-0.5 rounded bg-white/10 text-[10px] text-neutral-300 font-century">
+                          <span className="px-1.5 py-0.5 rounded bg-white/10 text-[10px] text-neutral-300 ">
                             +{item.materials.length - 3}
                           </span>
                         )}
@@ -974,9 +974,9 @@ export default function SpatialShowcase() {
                 type="button"
                 onClick={() => setSelectedItem(null)}
                 aria-label="Back to showcase"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-[#1A1815]/15 text-[#1A1815] hover:text-[#FF8526] text-xs font-century font-medium shadow-md transition-all active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-[#1A1815]/15 text-[#1A1815] hover:text-[#9C5427] text-xs font-medium shadow-md transition-all active:scale-95 cursor-pointer"
               >
-                <ArrowLeft className="w-3.5 h-3.5 text-[#FF8526]" />
+                <ArrowLeft className="w-3.5 h-3.5 text-[#9C5427]" />
                 <span>Back</span>
               </button>
             </div>
@@ -986,7 +986,7 @@ export default function SpatialShowcase() {
               type="button"
               onClick={() => setSelectedItem(null)}
               aria-label="Close modal"
-              className="absolute top-4 right-4 z-30 w-10 h-10 rounded-full bg-white/90 border border-[#1A1815]/15 text-[#1A1815] hover:bg-[#FF8526] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
+              className="absolute top-4 right-4 z-30 w-10 h-10 rounded-full bg-white/90 border border-[#1A1815]/15 text-[#1A1815] hover:bg-[#9C5427] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -1006,8 +1006,8 @@ export default function SpatialShowcase() {
             {/* Right Architectural Specifications */}
             <div className="lg:w-2/5 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#C47847]/20 text-xs text-[#A85D2A] font-century font-semibold">
-                  <Sparkles className="w-3.5 h-3.5 text-[#FF8526]" /> 
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#9C5427]/20 text-xs text-[#9C5427] font-semibold">
+                  <Sparkles className="w-3.5 h-3.5 text-[#9C5427]" /> 
                   <span>{selectedItem.categoryLabel}</span>
                 </div>
 
@@ -1015,14 +1015,14 @@ export default function SpatialShowcase() {
                   {selectedItem.title}
                 </h3>
 
-                <p className="text-sm text-[#5C564E] font-century leading-relaxed">
+                <p className="text-sm text-[#5C564E] leading-relaxed">
                   {selectedItem.description}
                 </p>
 
                 <div className="border-t border-[#1A1815]/10 pt-4 space-y-3">
                   <div>
                     <span className="text-[11px] font-mono uppercase text-[#7A7369]">Spatial Dimensions</span>
-                    <p className="text-sm text-[#1A1815] font-medium font-century">{selectedItem.area}</p>
+                    <p className="text-sm text-[#1A1815] font-medium ">{selectedItem.area}</p>
                   </div>
 
                   <div>
@@ -1031,7 +1031,7 @@ export default function SpatialShowcase() {
                       {selectedItem.materials.map((mat, idx) => (
                         <span 
                           key={idx}
-                          className="px-2.5 py-1 rounded-md bg-white border border-[#1A1815]/10 text-xs text-[#4A453F] font-century"
+                          className="px-2.5 py-1 rounded-md bg-white border border-[#1A1815]/10 text-xs text-[#4A453F] "
                         >
                           {mat}
                         </span>
@@ -1046,7 +1046,7 @@ export default function SpatialShowcase() {
                 <a
                   href="#packages"
                   onClick={() => setSelectedItem(null)}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-semibold text-sm transition-all shadow-lg hover:scale-[1.02] cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-sm transition-all shadow-lg hover:scale-[1.02] cursor-pointer"
                 >
                   <span>Get Quote on this Design</span>
                   <ArrowUpRight className="w-4 h-4 text-white" />

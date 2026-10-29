@@ -66,7 +66,7 @@ export default function GoogleReviewsSection() {
   // Stable avatar gradient generator
   const getAvatarGradient = (name: string): string => {
     const gradients = [
-      'from-[#FF8526] via-[#E79F30] to-[#b35900]',
+      'from-[#9C5427] via-[#E79F30] to-[#b35900]',
       'from-[#3B82F6] via-[#2563EB] to-[#1D4ED8]',
       'from-[#10B981] via-[#059669] to-[#047857]',
       'from-[#8B5CF6] via-[#7C3AED] to-[#6D28D9]',
@@ -272,11 +272,11 @@ export default function GoogleReviewsSection() {
           </div>
 
           {/* Right: Premium Google Trust Scoreboard Bento */}
-          <div className="lg:col-span-5 bg-white/95 border border-[#C47847]/20 p-5 sm:p-6 rounded-3xl shadow-[0_16px_40px_rgba(196,120,71,0.12)]">
+          <div className="lg:col-span-5 bg-white/95 border border-[#9C5427]/20 p-5 sm:p-6 rounded-3xl shadow-[0_16px_40px_rgba(196,120,71,0.12)]">
             <div className="flex items-center justify-between gap-4">
               {/* Google G Logo & Rating */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#FFF3E9] border border-[#C47847]/25 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-12 h-12 rounded-2xl bg-[#FFF3E9] border border-[#9C5427]/25 flex items-center justify-center shrink-0 shadow-xs">
                   <svg className="w-7 h-7" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fill="#4285F4"
@@ -305,11 +305,11 @@ export default function GoogleReviewsSection() {
                     <span className="text-xs text-[#7C6F5E] font-mono">/ 5.0</span>
                     <div className="flex items-center space-x-0.5 ml-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-[#FF8526] text-[#FF8526]" />
+                        <Star key={i} className="w-4 h-4 fill-[#9C5427] text-[#9C5427]" />
                       ))}
                     </div>
                   </div>
-                  <p className="text-xs text-[#5C564E] font-century mt-0.5">
+                  <p className="text-xs text-[#5C564E] mt-0.5">
                     Based on <strong className="text-[#1A1815] font-semibold">{placeInfo.userRatingsTotal || 82}+ verified Google reviews</strong>
                   </p>
                 </div>
@@ -320,7 +320,7 @@ export default function GoogleReviewsSection() {
                 href={placeInfo.googleWriteReviewUrl || 'https://g.co/kgs/VwVxACj'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e5741e] hover:to-[#ce5f08] text-white font-semibold text-xs transition-all shadow-md hover:scale-[1.02] shrink-0 cursor-pointer"
+                className="hidden sm:inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs transition-all shadow-md hover:scale-[1.02] shrink-0 cursor-pointer"
               >
                 <span>Write Review</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -338,7 +338,7 @@ export default function GoogleReviewsSection() {
                 <p className="text-[10px] text-[#7C6F5E] uppercase tracking-wider font-mono">Verified Works</p>
               </div>
               <div>
-                <p className="text-base font-bold text-[#FF8526] font-playfair">#1</p>
+                <p className="text-base font-bold text-[#9C5427] font-playfair">#1</p>
                 <p className="text-[10px] text-[#7C6F5E] uppercase tracking-wider font-mono">Odisha Studio</p>
               </div>
             </div>
@@ -359,7 +359,7 @@ export default function GoogleReviewsSection() {
                   className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all shrink-0 cursor-pointer ${
                     isActive
                       ? 'bg-[#1C1917] text-white font-semibold shadow-xs'
-                      : 'bg-white/90 hover:bg-white text-[#68625A] hover:text-[#1A1815] border border-[#C47847]/20'
+                      : 'bg-white/90 hover:bg-white text-[#68625A] hover:text-[#1A1815] border border-[#9C5427]/20'
                   }`}
                 >
                   {tag.label}
@@ -373,19 +373,19 @@ export default function GoogleReviewsSection() {
             <button
               type="button"
               onClick={() => setViewMode(viewMode === 'carousel' ? 'grid' : 'carousel')}
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white border border-[#C47847]/20 text-xs text-[#5C564E] hover:text-[#1A1815] transition-colors cursor-pointer shadow-xs"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white border border-[#9C5427]/20 text-xs text-[#5C564E] hover:text-[#1A1815] transition-colors cursor-pointer shadow-xs"
               title={viewMode === 'carousel' ? 'Switch to Wall of Love Grid' : 'Switch to Carousel Slider'}
             >
-              <LayoutGrid className="w-3.5 h-3.5 text-[#FF8526]" />
+              <LayoutGrid className="w-3.5 h-3.5 text-[#9C5427]" />
               <span>{viewMode === 'carousel' ? 'Wall of Love (Grid)' : 'Carousel View'}</span>
             </button>
 
             <button
               type="button"
               onClick={() => setShowAllModal(true)}
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white border border-[#C47847]/20 text-xs text-[#5C564E] hover:text-[#1A1815] transition-colors cursor-pointer shadow-xs"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/90 hover:bg-white border border-[#9C5427]/20 text-xs text-[#5C564E] hover:text-[#1A1815] transition-colors cursor-pointer shadow-xs"
             >
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#FF8526]" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#9C5427]" />
               <span>All ({reviews.length})</span>
             </button>
           </div>
@@ -412,7 +412,7 @@ export default function GoogleReviewsSection() {
             {filteredReviews.length > itemsPerPage && (
               <div className="w-full bg-[#1A1815]/10 h-1 mt-8 rounded-full overflow-hidden">
                 <div
-                  className="bg-gradient-to-r from-[#FF8526] via-[#ffa65c] to-[#E79F30] h-full transition-all duration-75 ease-linear"
+                  className="bg-gradient-to-r from-[#9C5427] via-[#ffa65c] to-[#E79F30] h-full transition-all duration-75 ease-linear"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -422,7 +422,7 @@ export default function GoogleReviewsSection() {
             {filteredReviews.length > itemsPerPage && (
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-6 pt-2">
                 {/* Status Indicator */}
-                <div className="flex items-center space-x-3 text-xs text-[#5C564E] font-century">
+                <div className="flex items-center space-x-3 text-xs text-[#5C564E] ">
                   <span>
                     Card <strong className="text-[#1A1815] font-semibold">{currentIndex + 1}</strong> to{' '}
                     <strong className="text-[#1A1815] font-semibold">
@@ -434,7 +434,7 @@ export default function GoogleReviewsSection() {
                   <button
                     type="button"
                     onClick={() => setIsPaused((prev) => !prev)}
-                    className="inline-flex items-center space-x-1.5 text-xs text-[#5C564E] hover:text-[#1A1815] px-3 py-1 rounded-full bg-white/90 hover:bg-white border border-[#C47847]/20 transition-colors shadow-xs cursor-pointer"
+                    className="inline-flex items-center space-x-1.5 text-xs text-[#5C564E] hover:text-[#1A1815] px-3 py-1 rounded-full bg-white/90 hover:bg-white border border-[#9C5427]/20 transition-colors shadow-xs cursor-pointer"
                   >
                     {isPaused ? (
                       <>
@@ -443,7 +443,7 @@ export default function GoogleReviewsSection() {
                       </>
                     ) : (
                       <>
-                        <Pause className="w-3 h-3 text-[#FF8526]" />
+                        <Pause className="w-3 h-3 text-[#9C5427]" />
                         <span>Autoplay Active</span>
                       </>
                     )}
@@ -464,7 +464,7 @@ export default function GoogleReviewsSection() {
                           setProgress(0);
                         }}
                         className={`h-2 rounded-full transition-all duration-300 shrink-0 cursor-pointer ${
-                          activeDot ? 'w-6 bg-[#FF8526]' : 'w-2 bg-[#C47847]/25 hover:bg-[#C47847]/50'
+                          activeDot ? 'w-6 bg-[#9C5427]' : 'w-2 bg-[#9C5427]/25 hover:bg-[#9C5427]/50'
                         }`}
                       />
                     );
@@ -476,7 +476,7 @@ export default function GoogleReviewsSection() {
                   <button
                     type="button"
                     onClick={handlePrev}
-                    className="w-10 h-10 rounded-full bg-white/90 hover:bg-white border border-[#C47847]/25 flex items-center justify-center text-[#1A1815] transition-all hover:scale-105 hover:border-[#FF8526] shadow-sm cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-white/90 hover:bg-white border border-[#9C5427]/25 flex items-center justify-center text-[#1A1815] transition-all hover:scale-105 hover:border-[#9C5427] shadow-sm cursor-pointer"
                     aria-label="Previous Google reviews"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -484,7 +484,7 @@ export default function GoogleReviewsSection() {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="w-10 h-10 rounded-full bg-white/90 hover:bg-white border border-[#C47847]/25 flex items-center justify-center text-[#1A1815] transition-all hover:scale-105 hover:border-[#FF8526] shadow-sm cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-white/90 hover:bg-white border border-[#9C5427]/25 flex items-center justify-center text-[#1A1815] transition-all hover:scale-105 hover:border-[#9C5427] shadow-sm cursor-pointer"
                     aria-label="Next Google reviews"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -496,34 +496,34 @@ export default function GoogleReviewsSection() {
         )}
 
         {/* Continuous Dynamic Marquee (Wall of Love Ticker) */}
-        <div className="relative my-10 py-3.5 bg-white/90 border-y border-[#C47847]/20 backdrop-blur-md overflow-hidden rounded-2xl shadow-xs">
+        <div className="relative my-10 py-3.5 bg-white/90 border-y border-[#9C5427]/20 backdrop-blur-md overflow-hidden rounded-2xl shadow-xs">
           <div className="flex items-center space-x-8 whitespace-nowrap animate-marquee">
             {marqueeQuotes.concat(marqueeQuotes).map((quote, idx) => (
               <div key={idx} className="inline-flex items-center space-x-3 text-xs sm:text-sm text-[#5C564E]">
-                <span className="text-[#FF8526] font-serif text-lg leading-none">&ldquo;</span>
+                <span className="text-[#9C5427] font-serif text-lg leading-none">&ldquo;</span>
                 <span className="font-playfair font-normal text-[#1A1815]">{quote}</span>
-                <span className="text-[#FF8526] font-serif text-lg leading-none">&rdquo;</span>
-                <div className="flex items-center space-x-0.5 text-[#FF8526] ml-1">
+                <span className="text-[#9C5427] font-serif text-lg leading-none">&rdquo;</span>
+                <div className="flex items-center space-x-0.5 text-[#9C5427] ml-1">
                   <Star className="w-3 h-3 fill-current inline" />
                   <Star className="w-3 h-3 fill-current inline" />
                   <Star className="w-3 h-3 fill-current inline" />
                   <Star className="w-3 h-3 fill-current inline" />
                   <Star className="w-3 h-3 fill-current inline" />
                 </div>
-                <span className="text-[#C47847]/30 ml-4">&bull;</span>
+                <span className="text-[#9C5427]/30 ml-4">&bull;</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Architectural Studio Location & Google Maps Bento Section */}
-        <div className="rounded-3xl bg-white/95 border border-[#C47847]/20 p-6 sm:p-8 lg:p-10 backdrop-blur-2xl shadow-[0_16px_45px_rgba(196,120,71,0.1)] text-[#1A1815]">
+        <div className="rounded-3xl bg-white/95 border border-[#9C5427]/20 p-6 sm:p-8 lg:p-10 backdrop-blur-2xl shadow-[0_16px_45px_rgba(196,120,71,0.1)] text-[#1A1815]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Column: Studio Trust Info */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#FFF3E9] border border-[#C47847]/20 text-xs">
-                <MapPin className="w-3.5 h-3.5 text-[#FF8526]" />
-                <span className="text-[#A85D2A] font-mono text-[11px] uppercase tracking-wider font-semibold">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#FFF3E9] border border-[#9C5427]/20 text-xs">
+                <MapPin className="w-3.5 h-3.5 text-[#9C5427]" />
+                <span className="text-[#9C5427] font-mono text-[11px] uppercase tracking-wider font-semibold">
                   Bhubaneswar Studio &bull; Verified Google Place
                 </span>
               </div>
@@ -532,22 +532,22 @@ export default function GoogleReviewsSection() {
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-normal text-[#1A1815] leading-tight">
                   Experience Our Design Studio in Person
                 </h3>
-                <p className="text-xs sm:text-sm text-[#5C564E] font-century leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5C564E] leading-relaxed">
                   Visit our design lounge along the Puri-NH Bypass to touch and feel live modular kitchen materials, architectural finishes, hardware catalogs, and 3D VR renders.
                 </p>
               </div>
 
               {/* Studio Key Features List */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="flex items-start space-x-2.5 p-3 rounded-2xl bg-[#FAF7F2] border border-[#C47847]/15">
-                  <Clock className="w-4 h-4 text-[#FF8526] shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-2.5 p-3 rounded-2xl bg-[#FAF7F2] border border-[#9C5427]/15">
+                  <Clock className="w-4 h-4 text-[#9C5427] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs font-semibold text-[#1A1815]">Opening Hours</p>
                     <p className="text-[11px] text-[#7C6F5E]">Mon - Sun: 10:00 AM - 8:30 PM</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-2.5 p-3 rounded-2xl bg-[#FAF7F2] border border-[#C47847]/15">
+                <div className="flex items-start space-x-2.5 p-3 rounded-2xl bg-[#FAF7F2] border border-[#9C5427]/15">
                   <ShieldCheck className="w-4 h-4 text-[#34A853] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs font-semibold text-[#1A1815]">Verified Business</p>
@@ -562,7 +562,7 @@ export default function GoogleReviewsSection() {
                   href="https://www.google.com/maps/place/Kalyan+Design+Studio/@20.2517472,85.8610613,15z/data=!4m8!3m7!1s0x3a19a76aa3db6109:0x9796e53a6bd98373!8m2!3d20.2517472!4d85.8610613!9m1!1b1!16s%2Fg%2F11b6s_w9_3?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                  className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                 >
                   <Navigation className="w-4 h-4" />
                   <span>Get Directions on Google Maps</span>
@@ -572,16 +572,16 @@ export default function GoogleReviewsSection() {
                   href={placeInfo.googleWriteReviewUrl || 'https://g.co/kgs/VwVxACj'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-4 py-3 rounded-full bg-white hover:bg-neutral-50 border border-[#C47847]/20 text-[#1A1815] text-xs sm:text-sm font-medium transition-colors shadow-xs cursor-pointer"
+                  className="inline-flex items-center space-x-2 px-4 py-3 rounded-full bg-white hover:bg-neutral-50 border border-[#9C5427]/20 text-[#1A1815] text-xs sm:text-sm font-medium transition-colors shadow-xs cursor-pointer"
                 >
-                  <Star className="w-3.5 h-3.5 text-[#FF8526] fill-current" />
+                  <Star className="w-3.5 h-3.5 text-[#9C5427] fill-current" />
                   <span>Write a Google Review</span>
                 </a>
               </div>
 
               {/* Address details */}
-              <div className="text-xs text-[#5C564E] pt-3 border-t border-[#1A1815]/10 flex items-start space-x-2 font-century">
-                <MapPin className="w-4 h-4 text-[#FF8526] shrink-0 mt-0.5" />
+              <div className="text-xs text-[#5C564E] pt-3 border-t border-[#1A1815]/10 flex items-start space-x-2 ">
+                <MapPin className="w-4 h-4 text-[#9C5427] shrink-0 mt-0.5" />
                 <span>
                   <strong className="text-[#1A1815]">Studio Address:</strong> Baragada, Puri-NH Bypass Road, Bhubaneswar, Odisha 751018
                 </span>
@@ -590,7 +590,7 @@ export default function GoogleReviewsSection() {
 
             {/* Right Column: Google Maps Frame */}
             <div className="lg:col-span-6">
-              <div className="relative w-full h-[320px] sm:h-[350px] rounded-3xl overflow-hidden border border-[#C47847]/25 bg-white shadow-xl group">
+              <div className="relative w-full h-[320px] sm:h-[350px] rounded-3xl overflow-hidden border border-[#9C5427]/25 bg-white shadow-xl group">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14703.497116044074!2d85.86106134999999!3d20.251747199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a76aa3db6109%3A0x9796e53a6bd98373!2sKalyan+Design+Studio!5e0!3m2!1sen!2sin!4v1633363360744!5m2!1sen!2sin"
                   width="100%"
@@ -603,7 +603,7 @@ export default function GoogleReviewsSection() {
                 />
 
                 {/* Floating Map Bottom Overlay */}
-                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md border border-[#C47847]/20 rounded-2xl px-4 py-2.5 flex items-center justify-between pointer-events-auto shadow-xl">
+                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md border border-[#9C5427]/20 rounded-2xl px-4 py-2.5 flex items-center justify-between pointer-events-auto shadow-xl">
                   <div className="flex items-center space-x-2.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#34A853] animate-pulse" />
                     <div>
@@ -616,7 +616,7 @@ export default function GoogleReviewsSection() {
                     href="https://www.google.com/maps/place/Kalyan+Design+Studio/@20.2517472,85.8610613,15z/data=!4m8!3m7!1s0x3a19a76aa3db6109:0x9796e53a6bd98373!8m2!3d20.2517472!4d85.8610613!9m1!1b1!16s%2Fg%2F11b6s_w9_3?entry=ttu"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1 text-xs text-[#FF8526] hover:text-[#d46614] font-semibold"
+                    className="inline-flex items-center space-x-1 text-xs text-[#9C5427] hover:text-[#d46614] font-semibold"
                   >
                     <span>Open Map ↗</span>
                   </a>
@@ -634,11 +634,11 @@ export default function GoogleReviewsSection() {
           aria-modal="true"
           className="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
         >
-          <div className="bg-[#FAF7F2] border border-[#C47847]/30 rounded-3xl w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in text-[#1A1815]">
+          <div className="bg-[#FAF7F2] border border-[#9C5427]/30 rounded-3xl w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in text-[#1A1815]">
             {/* Modal Header */}
             <div className="flex items-center justify-between p-6 border-b border-[#1A1815]/10 bg-white/50">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-2xl bg-white border border-[#C47847]/20 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-10 h-10 rounded-2xl bg-white border border-[#9C5427]/20 flex items-center justify-center shrink-0 shadow-xs">
                   <svg className="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fill="#4285F4"
@@ -662,7 +662,7 @@ export default function GoogleReviewsSection() {
                   <h3 className="text-lg font-playfair text-[#1A1815] font-bold">
                     All Verified Google Reviews ({reviews.length})
                   </h3>
-                  <p className="text-xs text-[#68625A] font-century">
+                  <p className="text-xs text-[#68625A] ">
                     Kalyan Design Studio &bull; 4.9 ★ Rating on Google Maps
                   </p>
                 </div>
@@ -694,14 +694,14 @@ export default function GoogleReviewsSection() {
 
             {/* Modal Footer */}
             <div className="p-4 sm:p-5 border-t border-[#1A1815]/10 bg-white/60 flex items-center justify-between">
-              <span className="text-xs text-[#68625A] font-century">
+              <span className="text-xs text-[#68625A] ">
                 All reviews verified directly on Google Maps
               </span>
               <a
                 href={placeInfo.googleBusinessUrl || 'https://g.co/kgs/VwVxACj'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-1.5 text-xs text-[#A85D2A] hover:text-[#FF8526] font-semibold"
+                className="inline-flex items-center space-x-1.5 text-xs text-[#9C5427] hover:text-[#9C5427] font-semibold"
               >
                 <span>Open Google Maps</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -723,10 +723,10 @@ interface ReviewCardProps {
 
 function ReviewCard({ review, getAvatarGradient, getInitials }: ReviewCardProps) {
   return (
-    <div className="group relative flex flex-col justify-between h-full rounded-3xl bg-white/95 border border-[#C47847]/20 hover:border-[#FF8526]/60 p-6 transition-all duration-300 shadow-[0_10px_30px_rgba(196,120,71,0.08)] hover:shadow-[0_20px_45px_rgba(196,120,71,0.18)] hover:-translate-y-1 text-[#1A1815]">
+    <div className="group relative flex flex-col justify-between h-full rounded-3xl bg-white/95 border border-[#9C5427]/20 hover:border-[#9C5427]/60 p-6 transition-all duration-300 shadow-[0_10px_30px_rgba(196,120,71,0.08)] hover:shadow-[0_20px_45px_rgba(196,120,71,0.18)] hover:-translate-y-1 text-[#1A1815]">
       {/* Decorative Quote Icon Watermark */}
       <div
-        className="absolute top-4 right-5 text-[#C47847]/10 group-hover:text-[#FF8526]/15 transition-colors pointer-events-none select-none font-serif text-6xl leading-none"
+        className="absolute top-4 right-5 text-[#9C5427]/10 group-hover:text-[#9C5427]/15 transition-colors pointer-events-none select-none font-serif text-6xl leading-none"
         aria-hidden="true"
       >
         &ldquo;
@@ -747,7 +747,7 @@ function ReviewCard({ review, getAvatarGradient, getInitials }: ReviewCardProps)
 
             <div>
               <div className="flex items-center space-x-1.5">
-                <h4 className="font-playfair font-bold text-base text-[#1A1815] group-hover:text-[#FF8526] transition-colors">
+                <h4 className="font-playfair font-bold text-base text-[#1A1815] group-hover:text-[#9C5427] transition-colors">
                   {review.authorName}
                 </h4>
                 <span title="Verified Google Review" className="inline-flex">
@@ -755,7 +755,7 @@ function ReviewCard({ review, getAvatarGradient, getInitials }: ReviewCardProps)
                 </span>
               </div>
 
-              <div className="flex items-center space-x-2 text-[11px] text-[#7C6F5E] mt-0.5 font-century">
+              <div className="flex items-center space-x-2 text-[11px] text-[#7C6F5E] mt-0.5 ">
                 {review.authorLocation && <span>{review.authorLocation}</span>}
                 {review.authorLocation && <span>&bull;</span>}
                 <span>{review.relativeTime}</span>
@@ -793,19 +793,19 @@ function ReviewCard({ review, getAvatarGradient, getInitials }: ReviewCardProps)
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center space-x-0.5" aria-label={`${review.rating} stars`}>
             {[...Array(review.rating)].map((_, i) => (
-              <Star key={i} className="w-3.5 h-3.5 fill-[#FF8526] text-[#FF8526]" />
+              <Star key={i} className="w-3.5 h-3.5 fill-[#9C5427] text-[#9C5427]" />
             ))}
           </div>
 
           {review.projectType && (
-            <span className="text-[10px] font-century font-semibold uppercase tracking-wider text-[#A85D2A] bg-[#FFF3E9] px-2.5 py-0.5 rounded-full border border-[#C47847]/20 truncate max-w-[170px]">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#9C5427] bg-[#FFF3E9] px-2.5 py-0.5 rounded-full border border-[#9C5427]/20 truncate max-w-[170px]">
               {review.projectType}
             </span>
           )}
         </div>
 
         {/* Review Quotation Text */}
-        <blockquote className="text-xs sm:text-sm text-[#3D3833] font-century leading-relaxed mb-4">
+        <blockquote className="text-xs sm:text-sm text-[#3D3833] leading-relaxed mb-4">
           &ldquo;{review.reviewText}&rdquo;
         </blockquote>
       </div>
@@ -817,7 +817,7 @@ function ReviewCard({ review, getAvatarGradient, getInitials }: ReviewCardProps)
             {review.highlights.map((tag, i) => (
               <span
                 key={i}
-                className="text-[10px] text-[#68625A] font-century bg-[#FAF7F2] px-2.5 py-0.5 rounded-full border border-[#1A1815]/10"
+                className="text-[10px] text-[#68625A] bg-[#FAF7F2] px-2.5 py-0.5 rounded-full border border-[#1A1815]/10"
               >
                 {tag}
               </span>
@@ -825,7 +825,7 @@ function ReviewCard({ review, getAvatarGradient, getInitials }: ReviewCardProps)
           </div>
         )}
 
-        <div className="flex items-center justify-between text-[11px] text-[#7C6F5E] pt-1 font-century">
+        <div className="flex items-center justify-between text-[11px] text-[#7C6F5E] pt-1 ">
           <span className="flex items-center space-x-1 text-[#25D366] font-semibold">
             <CheckCircle className="w-3 h-3" />
             <span>Verified Google Review</span>

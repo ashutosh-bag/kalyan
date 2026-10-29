@@ -7,22 +7,22 @@ import { Layers, Sun, ShieldCheck, Gem, Sparkles, CheckCircle, ArrowRight } from
 export default function AboutSection() {
   const principles = [
     {
-      icon: <Gem className="w-5 h-5 text-[#FF8526]" />,
+      icon: <Gem className="w-5 h-5 text-[#9C5427]" />,
       title: 'Material Honesty & Craft',
       desc: 'We prioritize natural Khandagiri sandstone, seasoned Indian teakwood, unlacquered brass, and moisture-resistant marine ply engineered for Odisha’s climate.',
     },
     {
-      icon: <Layers className="w-5 h-5 text-[#FF8526]" />,
+      icon: <Layers className="w-5 h-5 text-[#9C5427]" />,
       title: 'Tropical Spatial Flow',
       desc: 'Reinterpreting the traditional Odia courtyard (angan) and cross-ventilation with razor-sharp modernist geometry and expansive double-height volumes.',
     },
     {
-      icon: <Sun className="w-5 h-5 text-[#FF8526]" />,
+      icon: <Sun className="w-5 h-5 text-[#9C5427]" />,
       title: 'Circadian Illumination',
       desc: 'Concealed linear architectural lighting calibrated to solar cycles, sculpting serene warmth from morning light until midnight.',
     },
     {
-      icon: <ShieldCheck className="w-5 h-5 text-[#FF8526]" />,
+      icon: <ShieldCheck className="w-5 h-5 text-[#9C5427]" />,
       title: 'Turnkey Rigor in Odisha',
       desc: 'Seamless execution across Bhubaneswar, Cuttack, and Puri — from structural Vastu compliance and custom joinery to guaranteed 45-day handover.',
     },

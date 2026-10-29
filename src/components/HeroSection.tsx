@@ -20,25 +20,25 @@ const CATEGORIES: CategoryItem[] = [
   {
     id: 'lighting',
     name: 'Lighting',
-    image: '/images/casa-noir/lighting-plant.jpg',
+    image: '/images/hero/lighting.jpg',
     href: '#spatial-showcase',
   },
   {
     id: 'textiles',
     name: 'Textiles',
-    image: '/images/casa-noir/neutral-decor.jpg',
+    image: '/images/hero/textiles.jpg',
     href: '#packages',
   },
   {
     id: 'decor',
     name: 'Decor',
-    image: '/images/casa-noir/decor-pampas.jpg',
+    image: '/images/hero/decor.jpg',
     href: '#projects',
   },
   {
     id: 'atmosphere',
     name: 'Atmosphere',
-    image: '/images/casa-noir/floating-shelf.jpg',
+    image: '/images/hero/atmosphere.jpg',
     href: '#about',
   },
 ];
@@ -79,21 +79,21 @@ const SEASON_ITEMS = [
     season: 'Season',
     title: 'Autumn Collection',
     status: 'New collection now on site',
-    image: '/images/casa-noir/decor-pampas.jpg',
+    image: '/images/hero/atmosphere.jpg',
   },
   {
     id: 2,
     season: 'Signature',
     title: 'Turnkey 3 BHK Flat',
     status: 'Bespoke joinery & lighting',
-    image: '/images/casa-noir/floating-shelf.jpg',
+    image: '/images/hero/decor.jpg',
   },
   {
     id: 3,
     season: 'Bespoke',
     title: 'Minimalist Duplex',
     status: '45-Day handover guarantee',
-    image: '/images/casa-noir/urban-wood.jpg',
+    image: '/images/hero/textiles.jpg',
   },
 ];
 
@@ -213,7 +213,7 @@ export default function HeroSection() {
             {/* Centerpiece Image Container */}
             <div className="relative w-full max-w-[480px] xl:max-w-[530px] aspect-[4/4.8] sm:aspect-[4/4.5] rounded-[32px] sm:rounded-[38px] overflow-hidden shadow-[0_20px_50px_rgba(26,24,21,0.12)] border-2 border-white bg-white">
               <img
-                src="/images/casa-noir/cozy-living.jpg"
+                src="/images/hero/centerpiece.jpg"
                 alt="Organic Warm Interior Centerpiece"
                 className="w-full h-full object-cover object-center"
               />

@@ -123,8 +123,8 @@ export default function ProjectsSection() {
 
                 {/* Inspect Overlay */}
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="p-3.5 bg-white/95 border border-[#FF8526] rounded-full text-[#1A1815] transform scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                    <Maximize2 className="w-5 h-5 text-[#FF8526]" />
+                  <div className="p-3.5 bg-white/95 border border-[#9C5427] rounded-full text-[#1A1815] transform scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                    <Maximize2 className="w-5 h-5 text-[#9C5427]" />
                   </div>
                 </div>
               </div>
@@ -132,17 +132,17 @@ export default function ProjectsSection() {
               {/* Card Meta */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center space-x-2 text-xs text-[#68625A] font-century mb-2">
-                    <MapPin className="w-3.5 h-3.5 text-[#FF8526]" />
+                  <div className="flex items-center space-x-2 text-xs text-[#68625A] mb-2">
+                    <MapPin className="w-3.5 h-3.5 text-[#9C5427]" />
                     <span>{proj.location}</span>
                     <span>&bull;</span>
-                    <Calendar className="w-3.5 h-3.5 text-[#FF8526]" />
+                    <Calendar className="w-3.5 h-3.5 text-[#9C5427]" />
                     <span>{proj.year}</span>
                   </div>
-                  <h3 className="text-xl font-bounce text-[#1A1815] group-hover:text-[#FF8526] transition-colors leading-snug">
+                  <h3 className="text-xl font-bounce text-[#1A1815] group-hover:text-[#9C5427] transition-colors leading-snug">
                     {proj.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5C564E] font-century mt-2 line-clamp-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#5C564E] mt-2 line-clamp-2 leading-relaxed">
                     {proj.description}
                   </p>
                 </div>
@@ -151,18 +151,18 @@ export default function ProjectsSection() {
                 <div className="pt-4 mt-4 border-t border-[#1A1815]/10 flex items-center justify-between">
                   <div className="flex flex-wrap gap-1.5">
                     {(proj.materials || []).slice(0, 2).map((m, i) => (
-                      <span key={i} className="text-[11px] text-[#5C564E] font-century bg-[#FFF3E9] border border-[#FF8526]/15 px-2.5 py-0.5 rounded-lg">
+                      <span key={i} className="text-[11px] text-[#5C564E] bg-[#FFF3E9] border border-[#9C5427]/15 px-2.5 py-0.5 rounded-lg">
                         {m}
                       </span>
                     ))}
                     {(proj.materials || []).length > 2 && (
-                      <span className="text-[11px] text-[#5C564E] font-century bg-[#FFF3E9] border border-[#FF8526]/15 px-2 py-0.5 rounded-lg">
+                      <span className="text-[11px] text-[#5C564E] bg-[#FFF3E9] border border-[#9C5427]/15 px-2 py-0.5 rounded-lg">
                         +{(proj.materials || []).length - 2}
                       </span>
                     )}
                   </div>
 
-                  <span className="text-sm font-semibold text-[#FF8526] flex items-center group-hover:translate-x-1 transition-transform">
+                  <span className="text-sm font-semibold text-[#9C5427] flex items-center group-hover:translate-x-1 transition-transform">
                     View Case <ArrowRight className="w-3.5 h-3.5 ml-1" />
                   </span>
                 </div>
@@ -186,21 +186,21 @@ export default function ProjectsSection() {
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#1A1815]/15 text-[#1A1815] hover:text-[#FF8526] hover:border-[#FF8526]/50 transition-colors text-xs sm:text-sm font-century font-medium shadow-xs cursor-pointer active:scale-95"
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#1A1815]/15 text-[#1A1815] hover:text-[#9C5427] hover:border-[#9C5427]/50 transition-colors text-xs sm:text-sm font-medium shadow-xs cursor-pointer active:scale-95"
                   aria-label="Back to projects"
                 >
-                  <ArrowLeft className="w-4 h-4 text-[#FF8526]" />
+                  <ArrowLeft className="w-4 h-4 text-[#9C5427]" />
                   <span>Back to Projects</span>
                 </button>
 
                 <div className="flex items-center gap-2">
-                  <span className="hidden sm:inline-block text-[11px] uppercase tracking-wider font-century text-[#8B7355] font-semibold bg-white/80 px-2.5 py-1 rounded-md border border-[#1A1815]/10">
+                  <span className="hidden sm:inline-block text-[11px] uppercase tracking-wider text-[#8B7355] font-semibold bg-white/80 px-2.5 py-1 rounded-md border border-[#1A1815]/10">
                     {selectedProject.category}
                   </span>
                   <button
                     type="button"
                     onClick={() => setSelectedProject(null)}
-                    className="w-9 h-9 rounded-full bg-white border border-[#1A1815]/15 text-[#1A1815] hover:text-white hover:bg-[#FF8526] flex items-center justify-center transition-colors focus:outline-none shadow-xs cursor-pointer"
+                    className="w-9 h-9 rounded-full bg-white border border-[#1A1815]/15 text-[#1A1815] hover:text-white hover:bg-[#9C5427] flex items-center justify-center transition-colors focus:outline-none shadow-xs cursor-pointer"
                     aria-label="Close project modal"
                   >
                     <X className="w-5 h-5" />
@@ -231,7 +231,7 @@ export default function ProjectsSection() {
                       <button
                         onClick={() => setActiveGalleryIndex(0)}
                         className={`relative w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all cursor-pointer ${
-                          activeGalleryIndex === 0 ? 'border-[#FF8526] scale-102 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
+                          activeGalleryIndex === 0 ? 'border-[#9C5427] scale-102 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
                         }`}
                       >
                         <img src={selectedProject.image} alt="Thumbnail Cover" className="w-full h-full object-cover" />
@@ -241,7 +241,7 @@ export default function ProjectsSection() {
                           key={i}
                           onClick={() => setActiveGalleryIndex(i + 1)}
                           className={`relative w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all cursor-pointer ${
-                            activeGalleryIndex === i + 1 ? 'border-[#FF8526] scale-102 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
+                            activeGalleryIndex === i + 1 ? 'border-[#9C5427] scale-102 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
                           }`}
                         >
                           <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
@@ -253,18 +253,18 @@ export default function ProjectsSection() {
                   {/* Project Specs (Col 8-12) */}
                   <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                     <div>
-                      <span className="text-[11px] uppercase tracking-[0.25em] text-[#FF8526] font-semibold font-century">
+                      <span className="text-[11px] uppercase tracking-[0.25em] text-[#9C5427] font-semibold ">
                         {selectedProject.category}
                       </span>
                       <h3 className="text-2xl sm:text-3xl font-bounce text-[#1A1815] mt-1">
                         {selectedProject.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#FF8526] font-medium font-century mt-1">
+                      <p className="text-xs sm:text-sm text-[#9C5427] font-medium mt-1">
                         {selectedProject.location} {selectedProject.year ? `• ${selectedProject.year}` : ''} {selectedProject.areaSqFt ? `• ${selectedProject.areaSqFt.toLocaleString()} sq ft` : ''}
                       </p>
                     </div>
 
-                    <div className="space-y-4 text-[#5C564E] text-xs sm:text-sm font-century leading-relaxed border-t border-b border-[#1A1815]/10 py-4">
+                    <div className="space-y-4 text-[#5C564E] text-xs sm:text-sm leading-relaxed border-t border-b border-[#1A1815]/10 py-4">
                       <p>{selectedProject.description}</p>
                       {selectedProject.client && (
                         <div>
@@ -279,12 +279,12 @@ export default function ProjectsSection() {
                     {/* Materials palette */}
                     {(selectedProject.materials || []).length > 0 && (
                       <div>
-                        <span className="text-[11px] uppercase tracking-wider text-[#7A7369] font-semibold block mb-2 font-century">
+                        <span className="text-[11px] uppercase tracking-wider text-[#7A7369] font-semibold block mb-2 ">
                           Key Material Specifications:
                         </span>
                         <div className="flex flex-wrap gap-2">
                           {(selectedProject.materials || []).map((mat, i) => (
-                            <span key={i} className="text-xs bg-white border border-[#1A1815]/10 text-[#4A453F] px-3 py-1 rounded-lg font-century">
+                            <span key={i} className="text-xs bg-white border border-[#1A1815]/10 text-[#4A453F] px-3 py-1 rounded-lg ">
                               {mat}
                             </span>
                           ))}
@@ -296,15 +296,15 @@ export default function ProjectsSection() {
                       <button
                         type="button"
                         onClick={() => setSelectedProject(null)}
-                        className="inline-flex items-center justify-center py-3 px-4 bg-white border border-[#1A1815]/15 hover:bg-[#1A1815]/5 text-[#1A1815] font-century font-medium text-sm rounded-xl transition-all cursor-pointer"
+                        className="inline-flex items-center justify-center py-3 px-4 bg-white border border-[#1A1815]/15 hover:bg-[#1A1815]/5 text-[#1A1815] font-medium text-sm rounded-xl transition-all cursor-pointer"
                       >
-                        <ArrowLeft className="w-4 h-4 mr-2 text-[#FF8526]" />
+                        <ArrowLeft className="w-4 h-4 mr-2 text-[#9C5427]" />
                         Back to Projects
                       </button>
                       <a
                         href="#packages"
                         onClick={() => setSelectedProject(null)}
-                        className="flex-1 inline-flex items-center justify-center py-3.5 bg-[#FF8526] hover:bg-[#e87417] text-white font-semibold text-base rounded-xl transition-all shadow-lg hover:scale-[1.01] cursor-pointer text-center"
+                        className="flex-1 inline-flex items-center justify-center py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-base rounded-xl transition-all shadow-lg hover:scale-[1.01] cursor-pointer text-center"
                       >
                         Get Quote on this Project
                       </a>

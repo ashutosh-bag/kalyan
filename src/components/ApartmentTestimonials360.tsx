@@ -81,7 +81,7 @@ const APARTMENT_STORIES: ApartmentStory[] = [
         'Kalyan Design Studio turned our bare-shell 4 BHK penthouse into a true architectural masterpiece. From the Italian Statuario marble with zero-edge polish to the curved acoustic fluted walnut panels, the factory finish exceeded our wildest expectations. Their 3D walkthrough matched the actual handover 100%, and they completed everything in exactly 45 working days with zero cost escalation. Kalyan and his team are the absolute gold standard of luxury turnkey interiors in Odisha.',
       verifiedBadge: 'Verified Turnkey Handover • 45-Day Delivery',
     },
-    palette: ['#B68953', '#1A1815', '#F7F3EB', '#FF8526', '#3D342B'],
+    palette: ['#B68953', '#1A1815', '#F7F3EB', '#9C5427', '#3D342B'],
     keyFeatures: [
       'Book-matched Italian Statuario Marble Flooring',
       'Curved Acoustic Fluted American Walnut Paneling',
@@ -153,7 +153,7 @@ const APARTMENT_STORIES: ApartmentStory[] = [
         'The backlit honey onyx wall in our master suite is the centerpiece of our entire home—every guest who visits is completely spellbound. What stood out most was Kalyan’s absolute transparency in materials. They gave us physical samples of every European oak plank, veneer sheet, and Hafele fitting before manufacturing began. Living here feels like staying in a 7-star luxury resort right in Bhubaneswar.',
       verifiedBadge: 'Verified Turnkey Handover • Bespoke Luxury',
     },
-    palette: ['#FF8526', '#D4AF37', '#2A2521', '#EAE6DF', '#735B42'],
+    palette: ['#9C5427', '#D4AF37', '#2A2521', '#EAE6DF', '#735B42'],
     keyFeatures: [
       'Backlit Translucent Pakistani Honey Onyx Feature Wall',
       'Engineered European White Oak Chevron Parquet Flooring',
@@ -225,7 +225,7 @@ const APARTMENT_STORIES: ApartmentStory[] = [
         'Designing a high-traffic modular kitchen with a grand waterfall island counter requires meticulous engineering. Kalyan Design Studio’s in-house precision factory delivered laser-edge acrylic shutters, Blum soft-close hinges, and zero-stain Calacatta quartz that handles heavy Indian cooking effortlessly. Their tech-driven 3D visualization allowed us to walk through every inch virtually before execution.',
       verifiedBadge: 'Verified Turnkey Handover • Modular Precision',
     },
-    palette: ['#2F343B', '#D1A36B', '#F3EFEA', '#1E232A', '#FF8526'],
+    palette: ['#2F343B', '#D1A36B', '#F3EFEA', '#1E232A', '#9C5427'],
     keyFeatures: [
       'Calacatta Mitered Waterfall Quartz Kitchen Island',
       'Anti-Fingerprint Charcoal Matte Acrylic Shutters',
@@ -770,7 +770,7 @@ export default function ApartmentTestimonials360() {
               >
                 <div
                   className={`w-2 h-2 rounded-full ${
-                    isSelected ? 'bg-[#FF8526] animate-pulse' : 'bg-[#C47847]/50'
+                    isSelected ? 'bg-[#9C5427] animate-pulse' : 'bg-[#9C5427]/50'
                   }`}
                 />
                 <span className="whitespace-nowrap">{story.name.split(' ')[0]} {story.name.split(' ')[1]}</span>
@@ -785,7 +785,7 @@ export default function ApartmentTestimonials360() {
         {/* 360° Interactive Canvas Card */}
         <div
           ref={containerRef}
-          className={`relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#C47847]/30 bg-black shadow-2xl transition-all duration-300 ${
+          className={`relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#9C5427]/30 bg-black shadow-2xl transition-all duration-300 ${
             isFullscreen
               ? 'fixed inset-0 z-50 rounded-none border-none'
               : 'w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[340px] max-h-[660px]'
@@ -808,8 +808,8 @@ export default function ApartmentTestimonials360() {
           {/* Loading Indicator */}
           {!imageLoaded && (
             <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center gap-3 z-30">
-              <div className="w-12 h-12 border-3 border-[#FF8526] border-t-transparent rounded-full animate-spin" />
-              <span className="text-sm font-century text-[#D4CDC3]">Loading 360° Photorealistic Environment...</span>
+              <div className="w-12 h-12 border-3 border-[#9C5427] border-t-transparent rounded-full animate-spin" />
+              <span className="text-sm text-[#D4CDC3]">Loading 360° Photorealistic Environment...</span>
             </div>
           )}
 
@@ -838,22 +838,22 @@ export default function ApartmentTestimonials360() {
                       aria-label={`View details for ${hs.title}`}
                     >
                       {/* Radar Pulse Ring */}
-                      <span className="absolute w-10 h-10 rounded-full bg-[#FF8526]/30 animate-ping" />
-                      <span className="absolute w-8 h-8 rounded-full bg-[#FF8526]/40" />
+                      <span className="absolute w-10 h-10 rounded-full bg-[#9C5427]/30 animate-ping" />
+                      <span className="absolute w-8 h-8 rounded-full bg-[#9C5427]/40" />
 
                       {/* Center Beacon */}
                       <span
                         className={`relative w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${
                           isActive
-                            ? 'bg-white text-[#FF8526] scale-110'
-                            : 'bg-[#FF8526] text-white hover:scale-115'
+                            ? 'bg-white text-[#9C5427] scale-110'
+                            : 'bg-[#9C5427] text-white hover:scale-115'
                         }`}
                       >
                         <Eye className="w-3.5 h-3.5" />
                       </span>
 
                       {/* Hotspot Hover Tag */}
-                      <div className="absolute left-1/2 -translate-x-1/2 -top-8 opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap bg-black/90 text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-[#FF8526]/40 shadow-xl backdrop-blur-sm z-30">
+                      <div className="absolute left-1/2 -translate-x-1/2 -top-8 opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap bg-black/90 text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-[#9C5427]/40 shadow-xl backdrop-blur-sm z-30">
                         {hs.title}
                       </div>
                     </button>
@@ -872,15 +872,15 @@ export default function ApartmentTestimonials360() {
                 <p className="text-xs sm:text-sm font-semibold text-white leading-tight truncate">
                   {currentStory.name}
                 </p>
-                <p className="text-[10px] text-[#A8A196] flex items-center gap-1 font-century truncate">
-                  <MapPin className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#FF8526] shrink-0" /> {currentStory.location}
+                <p className="text-[10px] text-[#A8A196] flex items-center gap-1 truncate">
+                  <MapPin className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#9C5427] shrink-0" /> {currentStory.location}
                 </p>
               </div>
             </div>
 
             {/* Live Compass Heading */}
             <div className="pointer-events-auto flex items-center gap-1.5 sm:gap-2 bg-black/80 backdrop-blur-md px-2.5 sm:px-3 py-1.5 rounded-xl border border-white/10 text-[11px] sm:text-xs font-mono text-[#E79F30] shadow-lg shrink-0">
-              <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF8526] animate-spin-slow" />
+              <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#9C5427] animate-spin-slow" />
               <span>{Math.round(yaw)}° {getCardinal(yaw)}</span>
             </div>
           </div>
@@ -888,7 +888,7 @@ export default function ApartmentTestimonials360() {
           {/* Floating Interaction Prompt (fades out once user drags) */}
           {!isDragging && (
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs text-white/90 animate-pulse">
-              <RotateCw className="w-3.5 h-3.5 text-[#FF8526]" />
+              <RotateCw className="w-3.5 h-3.5 text-[#9C5427]" />
               <span>Drag to look 360° &bull; Click hotspots for finish specs</span>
             </div>
           )}
@@ -902,7 +902,7 @@ export default function ApartmentTestimonials360() {
                 onClick={() => setIsAutoOrbit(!isAutoOrbit)}
                 className={`p-1.5 sm:p-2 rounded-xl text-xs font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
                   isAutoOrbit
-                    ? 'bg-[#FF8526] text-white shadow-md'
+                    ? 'bg-[#9C5427] text-white shadow-md'
                     : 'bg-white/5 text-white/70 hover:text-white hover:bg-white/10'
                 }`}
                 title={isAutoOrbit ? 'Pause Orbit' : 'Play Orbit'}
@@ -932,7 +932,7 @@ export default function ApartmentTestimonials360() {
                 onClick={() => setShowHotspots(!showHotspots)}
                 className={`p-1.5 sm:p-2 rounded-xl text-xs transition-all cursor-pointer flex items-center gap-1.5 ${
                   showHotspots
-                    ? 'bg-white/15 text-[#FF8526] font-semibold'
+                    ? 'bg-white/15 text-[#9C5427] font-semibold'
                     : 'bg-white/5 text-white/50 hover:text-white'
                 }`}
                 title="Toggle Material Hotspots"
@@ -995,10 +995,10 @@ export default function ApartmentTestimonials360() {
 
           {/* Interactive Hotspot Modal Drawer */}
           {activeHotspot && (
-            <div className="absolute bottom-16 sm:bottom-20 left-3 sm:left-6 right-3 sm:right-auto sm:max-w-md bg-[#1C1815]/95 backdrop-blur-xl border border-[#FF8526]/40 p-4 sm:p-5 rounded-2xl shadow-2xl z-30 animate-in fade-in slide-in-from-bottom-4">
+            <div className="absolute bottom-16 sm:bottom-20 left-3 sm:left-6 right-3 sm:right-auto sm:max-w-md bg-[#1C1815]/95 backdrop-blur-xl border border-[#9C5427]/40 p-4 sm:p-5 rounded-2xl shadow-2xl z-30 animate-in fade-in slide-in-from-bottom-4">
               <div className="flex items-start justify-between gap-3 mb-2">
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest text-[#FF8526] font-semibold bg-[#FF8526]/10 px-2 py-0.5 rounded-sm">
+                  <span className="text-[10px] uppercase tracking-widest text-[#9C5427] font-semibold bg-[#9C5427]/10 px-2 py-0.5 rounded-sm">
                     {activeHotspot.category}
                   </span>
                   <h4 className="text-base sm:text-lg font-bold text-white mt-1">
@@ -1027,7 +1027,7 @@ export default function ApartmentTestimonials360() {
                   <span className="text-white/50 block">Surface Finish:</span>
                   <span className="text-white font-medium">{activeHotspot.finish}</span>
                 </div>
-                <div className="col-span-2 pt-1 border-t border-white/5 flex items-center justify-between text-[#FF8526]">
+                <div className="col-span-2 pt-1 border-t border-white/5 flex items-center justify-between text-[#9C5427]">
                   <span>{activeHotspot.warranty}</span>
                   <ShieldCheck className="w-4 h-4" />
                 </div>
@@ -1035,7 +1035,7 @@ export default function ApartmentTestimonials360() {
 
               <a
                 href="#packages"
-                className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#FF8526] hover:bg-[#e87417] text-white font-medium text-sm rounded-lg transition-all shadow-md active:scale-98"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-sm rounded-lg transition-all shadow-md active:scale-98"
               >
                 <span>Get Quote on this Finish</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -1045,43 +1045,43 @@ export default function ApartmentTestimonials360() {
         </div>
 
         {/* Integrated Homeowner Testimonial & Project Monograph */}
-        <div className="mt-10 sm:mt-14 bg-white/95 rounded-3xl p-6 sm:p-10 border border-[#C47847]/25 shadow-[0_16px_45px_rgba(196,120,71,0.12)] relative overflow-hidden text-[#1A1815]">
+        <div className="mt-10 sm:mt-14 bg-white/95 rounded-3xl p-6 sm:p-10 border border-[#9C5427]/25 shadow-[0_16px_45px_rgba(196,120,71,0.12)] relative overflow-hidden text-[#1A1815]">
           {/* Subtle Ambient Background Watermark */}
-          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#FF8526]/5 blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-[#9C5427]/5 blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Homeowner Portrait & Identity Card (4 Cols) */}
             <div className="lg:col-span-4 flex flex-col items-center text-center sm:text-left sm:flex-row lg:flex-col lg:items-start gap-5">
               <div className="relative flex-shrink-0">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-[#FF8526] shadow-[0_4px_24px_rgba(255,133,38,0.25)] relative">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-[#9C5427] shadow-[0_4px_24px_rgba(255,133,38,0.25)] relative">
                   <img
                     src={currentStory.homeowner.photo}
                     alt={currentStory.homeowner.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 -right-2 bg-[#FF8526] text-white p-1.5 rounded-full shadow-lg" title="Verified Homeowner">
+                <div className="absolute -bottom-2 -right-2 bg-[#9C5427] text-white p-1.5 rounded-full shadow-lg" title="Verified Homeowner">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
               </div>
 
               <div className="flex-1">
-                <div className="inline-flex items-center gap-1.5 text-xs text-[#A85D2A] font-semibold mb-1">
-                  <Award className="w-3.5 h-3.5 text-[#FF8526]" />
+                <div className="inline-flex items-center gap-1.5 text-xs text-[#9C5427] font-semibold mb-1">
+                  <Award className="w-3.5 h-3.5 text-[#9C5427]" />
                   <span>{currentStory.homeowner.verifiedBadge}</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold font-playfair text-[#1A1815]">
                   {currentStory.homeowner.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#68625A] font-century mt-0.5">
+                <p className="text-xs sm:text-sm text-[#68625A] mt-0.5">
                   {currentStory.homeowner.designation}
                 </p>
 
                 {/* Rating Stars */}
                 <div className="flex items-center gap-1 mt-2 justify-center sm:justify-start">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#FF8526] text-[#FF8526]" />
+                    <Star key={i} className="w-4 h-4 fill-[#9C5427] text-[#9C5427]" />
                   ))}
                   <span className="text-xs font-bold text-[#1A1815] ml-1.5">5.0 / 5.0</span>
                 </div>
@@ -1091,11 +1091,11 @@ export default function ApartmentTestimonials360() {
             {/* Right Column: In-Depth Testimonial & Turnkey Specs (8 Cols) */}
             <div className="lg:col-span-8 flex flex-col justify-between">
               {/* Quote narrative */}
-              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#FF8526]/50 mb-6 sm:mb-8">
-                <span className="absolute -left-3 top-0 text-3xl font-serif text-[#FF8526] leading-none">
+              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#9C5427]/50 mb-6 sm:mb-8">
+                <span className="absolute -left-3 top-0 text-3xl font-serif text-[#9C5427] leading-none">
                   &ldquo;
                 </span>
-                <p className="text-base sm:text-lg text-[#2D2824] font-century leading-relaxed">
+                <p className="text-base sm:text-lg text-[#2D2824] leading-relaxed">
                   {currentStory.homeowner.quote}
                 </p>
               </div>
@@ -1103,32 +1103,32 @@ export default function ApartmentTestimonials360() {
               {/* Turnkey Project Specification Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-t border-b border-[#1A1815]/10 mb-6">
                 <div>
-                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block ">
                     Project Scope
                   </span>
                   <span className="text-sm font-semibold text-[#1A1815]">{currentStory.type}</span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block ">
                     Carpet Area
                   </span>
                   <span className="text-sm font-semibold text-[#1A1815] flex items-center gap-1">
-                    <Ruler className="w-3 h-3 text-[#FF8526]" /> {currentStory.area}
+                    <Ruler className="w-3 h-3 text-[#9C5427]" /> {currentStory.area}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block ">
                     Handover Date
                   </span>
                   <span className="text-sm font-semibold text-[#1A1815] flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-[#FF8526]" /> {currentStory.handoverDate}
+                    <Calendar className="w-3 h-3 text-[#9C5427]" /> {currentStory.handoverDate}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block font-century">
+                  <span className="text-[11px] text-[#7C6F5E] uppercase tracking-wider block ">
                     Studio Assurance
                   </span>
-                  <span className="text-sm font-semibold text-[#FF8526] flex items-center gap-1">
+                  <span className="text-sm font-semibold text-[#9C5427] flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5" /> 10-Yr Warranty
                   </span>
                 </div>
@@ -1153,7 +1153,7 @@ export default function ApartmentTestimonials360() {
                 <div className="flex items-center gap-3">
                   <a
                     href="#packages"
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF8526] to-[#E26F14] hover:from-[#e87417] hover:to-[#ce5f08] text-white font-century font-semibold text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
                   >
                     <span>Get Similar Quote</span>
                     <ArrowUpRight className="w-4 h-4" />

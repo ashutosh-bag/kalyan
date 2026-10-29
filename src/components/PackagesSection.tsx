@@ -272,18 +272,18 @@ export default function PackagesSection() {
       {/* ========================================================================= */}
       {modalOpen && selectedPkg && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-200">
-          <div className="relative w-full max-w-xl bg-[#FFF3E9] rounded-2xl shadow-2xl border border-[#FF8526]/30 overflow-hidden my-8">
+          <div className="relative w-full max-w-xl bg-[#FFF3E9] rounded-2xl shadow-2xl border border-[#9C5427]/30 overflow-hidden my-8">
             
             {/* Header */}
-            <div className="bg-[#FF8526] p-5 sm:p-6 text-white flex items-center justify-between">
+            <div className="bg-[#9C5427] p-5 sm:p-6 text-white flex items-center justify-between">
               <div>
-                <span className="text-xs uppercase tracking-widest font-century font-medium text-white/90">
+                <span className="text-xs uppercase tracking-widest font-medium text-white/90">
                   Instant Cost Calculation
                 </span>
                 <h3 className="font-bounce text-2xl sm:text-3xl text-white">
                   Get Quote: {selectedPkg.bhk}
                 </h3>
-                <p className="font-century text-xs sm:text-sm text-white/90 mt-0.5">
+                <p className="text-xs sm:text-sm text-white/90 mt-0.5">
                   Package starting from <span className="font-bold">{selectedPkg.price}</span> (Turnkey All-Inclusive)
                 </p>
               </div>
@@ -301,19 +301,19 @@ export default function PackagesSection() {
             <div className="p-6 sm:p-8">
               {formSubmitted ? (
                 <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-[#FF8526]/20 text-[#FF8526] mx-auto flex items-center justify-center mb-4">
-                    <CheckCircle2 className="w-10 h-10 text-[#FF8526]" />
+                  <div className="w-16 h-16 rounded-full bg-[#9C5427]/20 text-[#9C5427] mx-auto flex items-center justify-center mb-4">
+                    <CheckCircle2 className="w-10 h-10 text-[#9C5427]" />
                   </div>
                   <h4 className="font-bounce text-2xl text-black mb-2">
                     Quote Request Received!
                   </h4>
-                  <p className="font-century text-sm text-[#5C564E] max-w-md mx-auto leading-relaxed">
+                  <p className="text-sm text-[#5C564E] max-w-md mx-auto leading-relaxed">
                     Thank you, <strong className="text-black">{formData.name || 'valued client'}</strong>. Our senior designer is preparing the itemized estimate for your {selectedPkg.bhk} and will call you on <strong className="text-black">{formData.phone}</strong> shortly.
                   </p>
                   <button
                     type="button"
                     onClick={() => setModalOpen(false)}
-                    className="mt-6 px-6 py-2.5 bg-[#FF8526] text-white font-semibold text-base rounded-xl shadow-md hover:bg-[#e87417]"
+                    className="mt-6 px-6 py-2.5 bg-[#9C5427] text-white font-semibold text-base rounded-xl shadow-md hover:bg-[#85451D]"
                   >
                     Done
                   </button>
@@ -321,7 +321,7 @@ export default function PackagesSection() {
               ) : (
                 <form onSubmit={handleSubmitQuote} className="space-y-4">
                   {/* Included Scope Summary */}
-                  <div className="p-3.5 rounded-xl bg-white border border-[#1A1815]/10 text-xs font-century space-y-1">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#1A1815]/10 text-xs space-y-1">
                     <div className="font-bold text-[#1A1815]">What is included in {selectedPkg.bhk}:</div>
                     <ul className="text-[#5C564E] list-disc list-inside space-y-0.5">
                       {selectedPkg.breakdown.map((item, i) => (
@@ -331,7 +331,7 @@ export default function PackagesSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-century font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
+                    <label className="block text-xs font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
                       Your Full Name *
                     </label>
                     <div className="relative">
@@ -342,14 +342,14 @@ export default function PackagesSection() {
                         placeholder="e.g. Soumya Ranjan"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#FF8526] focus:ring-2 focus:ring-[#FF8526]/20 font-century text-sm outline-none transition-all"
+                        className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] focus:ring-2 focus:ring-[#9C5427]/20 text-sm outline-none transition-all"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-century font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
                         Phone Number *
                       </label>
                       <div className="relative">
@@ -360,12 +360,12 @@ export default function PackagesSection() {
                           placeholder="e.g. 9876543210"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#FF8526] focus:ring-2 focus:ring-[#FF8526]/20 font-century text-sm outline-none transition-all"
+                          className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] focus:ring-2 focus:ring-[#9C5427]/20 text-sm outline-none transition-all"
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs font-century font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
                         Email Address
                       </label>
                       <div className="relative">
@@ -375,20 +375,20 @@ export default function PackagesSection() {
                           placeholder="yourname@gmail.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#FF8526] focus:ring-2 focus:ring-[#FF8526]/20 font-century text-sm outline-none transition-all"
+                          className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] focus:ring-2 focus:ring-[#9C5427]/20 text-sm outline-none transition-all"
                         />
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-century font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
+                    <label className="block text-xs font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
                       Project Location (Odisha)
                     </label>
                     <select
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#FF8526] font-century text-sm outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] text-sm outline-none"
                     >
                       <option value="Bhubaneswar">Bhubaneswar (Patia, Chandrasekharpur, Khandagiri, etc.)</option>
                       <option value="Cuttack">Cuttack (CDA, Link Road, Cantonment)</option>
@@ -398,7 +398,7 @@ export default function PackagesSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-century font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
+                    <label className="block text-xs font-bold text-[#1A1815] mb-1 uppercase tracking-wider">
                       Specific Requirements or Move-in Date
                     </label>
                     <textarea
@@ -406,7 +406,7 @@ export default function PackagesSection() {
                       placeholder="e.g. Looking for modular kitchen + false ceiling in living room within 45 days..."
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#FF8526] font-century text-sm outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] text-sm outline-none"
                     />
                   </div>
 
@@ -416,7 +416,7 @@ export default function PackagesSection() {
                   >
                     Submit & Download Free Estimate
                   </button>
-                  <p className="text-[11px] text-center font-century text-[#7A7369]">
+                  <p className="text-[11px] text-center text-[#7A7369]">
                     🔒 No spam. Our team will contact you within 2 business hours.
                   </p>
                 </form>

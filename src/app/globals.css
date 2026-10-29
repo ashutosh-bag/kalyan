@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #FFF3E9;
-  --bg-secondary: #F7EAE0;
-  --bg-tertiary: #EFE2D6;
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F5F0E8;
+  --bg-tertiary: #EFEAE2;
   --text-primary: #1A1815;
-  --text-muted: #5C564E;
-  --accent-gold: #FF8526;
-  --accent-gold-light: #FFA65C;
-  --kalyan-orange: #FF8526;
-  --kalyan-amber: #E79F30;
-  --kalyan-peach: #FFF3E9;
+  --text-muted: #68625A;
+  --accent-gold: #9C5427;
+  --accent-gold-light: #B86733;
+  --kalyan-orange: #9C5427;
+  --kalyan-amber: #9C5427;
+  --kalyan-peach: #FAF8F5;
   --border-subtle: rgba(26, 24, 21, 0.08);
-  --border-hover: rgba(255, 133, 38, 0.4);
+  --border-hover: rgba(156, 84, 39, 0.3);
 }
 
 @theme inline {
@@ -29,9 +29,9 @@
   --color-secondary: var(--bg-secondary);
   --color-gold: var(--accent-gold);
   --color-gold-light: var(--accent-gold-light);
-  --color-kalyan-orange: #FF8526;
-  --color-kalyan-peach: #FFF3E9;
-  --color-kalyan-amber: #E79F30;
+  --color-kalyan-orange: #9C5427;
+  --color-kalyan-peach: #FAF8F5;
+  --color-kalyan-amber: #9C5427;
 }
 
 /* Unified Website Typography (Consistent Across All Sections for SEO & Core Web Vitals) */
@@ -93,7 +93,7 @@ select {
 }
 
 .text-gradient-orange {
-  background: linear-gradient(135deg, #FF8526 0%, #E79F30 100%);
+  background: linear-gradient(135deg, #9C5427 0%, #B86733 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -101,7 +101,7 @@ select {
 html {
   scroll-behavior: smooth;
   color-scheme: light;
-  background-color: #FFF3E9;
+  background-color: #FAF8F5;
 }
 
 body {
@@ -115,7 +115,7 @@ p, span, h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 }
 
 ::selection {
-  background: #FF8526;
+  background: #9C5427;
   color: #FFFFFF;
 }
 
