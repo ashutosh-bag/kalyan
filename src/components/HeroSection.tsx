@@ -130,10 +130,10 @@ export default function HeroSection() {
         {/* ===================================================================== */}
         {/* 1. HERO MAIN ROW: EDITORIAL TYPOGRAPHY & FLOATING BENTO SHOWCASE     */}
         {/* ===================================================================== */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 lg:gap-8 items-center mb-10 sm:mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 lg:gap-10 items-center mb-12 sm:mb-16">
           
           {/* Left Column: Bold Architectural Headline, CTAs & Social Proof */}
-          <div className="md:col-span-6 flex flex-col justify-center text-center md:text-left items-center md:items-start pr-0 md:pr-2 lg:pr-4">
+          <div className="md:col-span-5 flex flex-col justify-center text-center md:text-left items-center md:items-start pr-0 md:pr-2 lg:pr-4 z-10">
             
             {/* Tagline with subtle hairline */}
             <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
@@ -207,22 +207,22 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: Transparent Sofa Merged Directly with Background + 2 Floating White Bento Cards */}
-          <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0 min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
+          {/* Right Column: Much Bigger Sofa Visual + Unobstructed Corner Bento Badges */}
+          <div className="md:col-span-7 relative flex items-center justify-center pt-8 pb-8 md:py-10 min-h-[440px] sm:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px]">
             
-            {/* Isolated Transparent Sofa merging directly into the background: NO Box, NO Borders, NO Blur Effect */}
-            <div className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[560px] xl:max-w-[620px] flex items-center justify-center pointer-events-none select-none py-4 sm:py-6">
+            {/* Grand, Large Transparent Sofa Merged with Background - Completely Unobstructed */}
+            <div className="relative w-full max-w-[540px] sm:max-w-[640px] md:max-w-[620px] lg:max-w-[760px] xl:max-w-[850px] flex items-center justify-center pointer-events-none select-none my-6 sm:my-8">
               <img
                 src="/images/hero/sofa.png"
                 alt="Curated Living Interior Sofa"
-                className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(26,24,21,0.12)] scale-100 sm:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-contain drop-shadow-[0_25px_45px_rgba(26,24,21,0.14)] scale-105 sm:scale-115 lg:scale-125 xl:scale-130 transition-transform duration-700"
               />
             </div>
 
-            {/* Floating Card 1: Top Right Season & Collection Card (Clean White, No Backdrop Blur) */}
-            <div className="absolute top-2 sm:top-4 right-2 sm:-right-4 lg:-right-6 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-[0_12px_32px_rgba(26,24,21,0.08)] border border-[#1A1815]/8 w-44 xs:w-48 sm:w-56 lg:w-60 z-20 transition-all">
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl overflow-hidden bg-[#FAF8F5] border border-[#1A1815]/10 flex-shrink-0">
+            {/* Floating Card 1: Top Right Corner - Moved Up & Away from Sofa Body */}
+            <div className="absolute top-0 sm:-top-2 lg:top-1 right-0 sm:right-1 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-[0_12px_32px_rgba(26,24,21,0.08)] border border-[#1A1815]/8 w-40 xs:w-44 sm:w-48 lg:w-52 z-20 transition-all pointer-events-auto">
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-[#FAF8F5] border border-[#1A1815]/10 flex-shrink-0">
                   <img 
                     src={currentSeason.image} 
                     alt={currentSeason.title} 
@@ -230,58 +230,58 @@ export default function HeroSection() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#7A7369] block font-medium">
+                  <span className="text-[9px] uppercase tracking-wider text-[#7A7369] block font-medium">
                     {currentSeason.season}
                   </span>
-                  <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[#1A1815] block truncate">
+                  <span className="text-[11px] sm:text-xs font-bold text-[#1A1815] block truncate">
                     {currentSeason.title}
                   </span>
-                  <span className="text-[9px] sm:text-[10px] text-[#9C5427] font-medium block truncate">
+                  <span className="text-[9px] text-[#9C5427] font-medium block truncate">
                     {currentSeason.status}
                   </span>
                 </div>
               </div>
 
               {/* Pagination Arrows */}
-              <div className="flex items-center justify-end gap-1.5 mt-2 sm:mt-3 pt-1.5 sm:pt-2 border-t border-[#1A1815]/8">
+              <div className="flex items-center justify-end gap-1.5 mt-1.5 sm:mt-2 pt-1 border-t border-[#1A1815]/8">
                 <button 
                   type="button" 
                   onClick={prevSeason}
                   aria-label="Previous item" 
-                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
+                  className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
                 >
-                  <ChevronLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                  <ChevronLeft className="w-3 h-3" />
                 </button>
                 <button 
                   type="button" 
                   onClick={nextSeason}
                   aria-label="Next item" 
-                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
+                  className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
                 >
-                  <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                  <ChevronRight className="w-3 h-3" />
                 </button>
               </div>
             </div>
 
-            {/* Floating Card 2: Bottom Right Shipping & Payment Trust Badges (Clean White, No Backdrop Blur) */}
-            <div className="absolute bottom-2 sm:bottom-6 right-2 sm:-right-4 lg:-right-6 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-[0_12px_32px_rgba(26,24,21,0.08)] border border-[#1A1815]/8 w-48 xs:w-52 sm:w-56 lg:w-64 z-20 space-y-1.5 sm:space-y-2.5">
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
-                  <Truck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            {/* Floating Card 2: Bottom Right Corner - Moved Down & Away from Sofa Body */}
+            <div className="absolute bottom-0 sm:-bottom-2 lg:bottom-1 right-0 sm:right-1 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-[0_12px_32px_rgba(26,24,21,0.08)] border border-[#1A1815]/8 w-44 xs:w-48 sm:w-52 lg:w-56 z-20 space-y-1.5 pointer-events-auto">
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
+                  <Truck className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <span className="block text-[11px] sm:text-xs font-bold text-[#1A1815]">Free Shipping</span>
-                  <span className="block text-[9px] sm:text-[11px] text-[#7A7369]">on orders over ₹4,999</span>
+                  <span className="block text-[10px] sm:text-xs font-bold text-[#1A1815]">Free Shipping</span>
+                  <span className="block text-[8px] sm:text-[10px] text-[#7A7369]">on orders over ₹4,999</span>
                 </div>
               </div>
               
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
-                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
+                  <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <span className="block text-[11px] sm:text-xs font-bold text-[#1A1815]">Secure Payment</span>
-                  <span className="block text-[9px] sm:text-[11px] text-[#7A7369]">100% protected</span>
+                  <span className="block text-[10px] sm:text-xs font-bold text-[#1A1815]">Secure Payment</span>
+                  <span className="block text-[8px] sm:text-[10px] text-[#7A7369]">100% protected</span>
                 </div>
               </div>
             </div>
