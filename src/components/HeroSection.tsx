@@ -207,19 +207,16 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: Centerpiece Visual + 2 Floating White Bento Cards */}
-          <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0">
+          {/* Right Column: Seamless Background Centerpiece + 2 Floating White Bento Cards (NO BOX) */}
+          <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0 min-h-[380px] sm:min-h-[440px] lg:min-h-[480px]">
             
-            {/* Centerpiece Image Container */}
-            <div className="relative w-full max-w-[340px] xs:max-w-[390px] sm:max-w-[440px] md:max-w-[380px] lg:max-w-[460px] xl:max-w-[490px] aspect-[4/4.7] sm:aspect-[4/4.5] rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-[0_20px_50px_rgba(26,24,21,0.12)] border-2 border-white bg-white mx-auto md:mx-0">
+            {/* Seamless Organic Centerpiece in the Background: NO Box, NO Borders, NO Box Shadow */}
+            <div className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[560px] xl:max-w-[620px] flex items-center justify-center pointer-events-none select-none">
               <img
-                src="/images/hero/centerpiece.jpg"
-                alt="Organic Warm Interior Centerpiece"
-                className="w-full h-full object-cover object-center"
+                src="/images/hero/centerpiece_seamless.png"
+                alt="Organic Warm Interior Atmosphere"
+                className="w-full h-auto object-contain mix-blend-multiply scale-105 sm:scale-110 lg:scale-115 transition-transform duration-700"
               />
-
-              {/* Soft Warm Radial Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Floating Card 1: Top Right Season & Collection Card */}
