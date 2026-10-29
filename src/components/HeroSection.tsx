@@ -207,20 +207,20 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: Seamless Background Centerpiece + 2 Floating White Bento Cards (NO BOX) */}
+          {/* Right Column: Sharp Background Centerpiece + 2 Floating White Bento Cards (NO Box, NO Blur Effect) */}
           <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0 min-h-[380px] sm:min-h-[440px] lg:min-h-[480px]">
             
-            {/* Seamless Organic Centerpiece in the Background: NO Box, NO Borders, NO Box Shadow */}
-            <div className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[560px] xl:max-w-[620px] flex items-center justify-center pointer-events-none select-none">
+            {/* Natural Organic Centerpiece: 100% Crisp & Sharp, Zero Blur Halo, Zero Box Container */}
+            <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[540px] xl:max-w-[580px] flex items-center justify-center pointer-events-none select-none">
               <img
-                src="/images/hero/centerpiece_seamless.png"
+                src="/images/hero/centerpiece_crisp.jpg"
                 alt="Organic Warm Interior Atmosphere"
-                className="w-full h-auto object-contain mix-blend-multiply scale-105 sm:scale-110 lg:scale-115 transition-transform duration-700"
+                className="w-full h-auto object-contain rounded-2xl sm:rounded-3xl"
               />
             </div>
 
-            {/* Floating Card 1: Top Right Season & Collection Card */}
-            <div className="absolute top-2 sm:top-4 right-2 sm:-right-4 lg:-right-6 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-44 xs:w-48 sm:w-56 lg:w-60 z-20 transition-all">
+            {/* Floating Card 1: Top Right Season & Collection Card (Clean White, No Backdrop Blur) */}
+            <div className="absolute top-2 sm:top-4 right-2 sm:-right-4 lg:-right-6 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-[0_12px_32px_rgba(26,24,21,0.08)] border border-[#1A1815]/8 w-44 xs:w-48 sm:w-56 lg:w-60 z-20 transition-all">
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl overflow-hidden bg-[#FAF8F5] border border-[#1A1815]/10 flex-shrink-0">
                   <img 
@@ -263,8 +263,8 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Floating Card 2: Bottom Right Shipping & Payment Trust Badges */}
-            <div className="absolute bottom-2 sm:bottom-6 right-2 sm:-right-4 lg:-right-6 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-48 xs:w-52 sm:w-56 lg:w-64 z-20 space-y-1.5 sm:space-y-2.5">
+            {/* Floating Card 2: Bottom Right Shipping & Payment Trust Badges (Clean White, No Backdrop Blur) */}
+            <div className="absolute bottom-2 sm:bottom-6 right-2 sm:-right-4 lg:-right-6 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-[0_12px_32px_rgba(26,24,21,0.08)] border border-[#1A1815]/8 w-48 xs:w-52 sm:w-56 lg:w-64 z-20 space-y-1.5 sm:space-y-2.5">
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
                   <Truck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
