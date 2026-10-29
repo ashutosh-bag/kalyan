@@ -123,83 +123,83 @@ export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="relative w-full bg-[#FAF8F5] pt-20 sm:pt-24 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8 select-none"
+      className="relative w-full bg-[#FAF8F5] pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-24 px-3.5 sm:px-6 lg:px-8 select-none overflow-x-clip"
     >
       <div className="max-w-6xl xl:max-w-7xl mx-auto">
         
         {/* ===================================================================== */}
         {/* 1. HERO MAIN ROW: EDITORIAL TYPOGRAPHY & FLOATING BENTO SHOWCASE     */}
         {/* ===================================================================== */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-center mb-10 sm:mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 lg:gap-8 items-center mb-10 sm:mb-14">
           
           {/* Left Column: Bold Architectural Headline, CTAs & Social Proof */}
-          <div className="lg:col-span-6 flex flex-col justify-center pr-0 lg:pr-2">
+          <div className="md:col-span-6 flex flex-col justify-center text-center md:text-left items-center md:items-start pr-0 md:pr-2 lg:pr-4">
             
             {/* Tagline with subtle hairline */}
-            <div className="flex items-center gap-2.5 mb-3">
+            <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
               <span className="w-6 h-[1.5px] bg-[#9C5427]" />
-              <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
                 A HOME THAT FEELS LIKE YOU
               </span>
             </div>
 
             {/* Massive Bold Grotesque Sans Headline (Ditto 3 lines with periods) */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[62px] font-black font-sans text-[#1A1815] uppercase tracking-[-0.03em] leading-[0.98] mb-4">
+            <h1 className="text-[32px] xs:text-4xl sm:text-5xl md:text-[40px] lg:text-[50px] xl:text-[60px] font-black font-sans text-[#1A1815] uppercase tracking-[-0.03em] leading-[1.02] sm:leading-[0.98] mb-3.5 sm:mb-4">
               DESIGN.<br />
               WARMTH.<br />
               A BETTER HOME.
             </h1>
 
             {/* Subtitle Description */}
-            <p className="text-sm sm:text-base text-[#68625A] font-normal leading-relaxed max-w-md mb-6">
+            <p className="text-xs sm:text-sm md:text-base text-[#68625A] font-normal leading-relaxed max-w-md mb-6">
               Curated home essentials that bring comfort, style and calm to your everyday life.
             </p>
 
             {/* Action Buttons: Solid Terracotta Pill + White Outline Pill */}
-            <div className="flex flex-wrap items-center gap-3.5 mb-8">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-3.5 mb-7 sm:mb-8 w-full sm:w-auto">
               <a
                 href="#packages"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-sm sm:text-base shadow-sm transition-all hover:gap-3 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-xs sm:text-sm md:text-base shadow-sm transition-all hover:gap-3 cursor-pointer"
               >
                 <span>Shop Collection</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#about"
-                className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-[#1A1815] border border-[#1A1815]/15 font-medium text-sm sm:text-base shadow-xs transition-all cursor-pointer"
+                className="inline-flex items-center justify-center px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-white hover:bg-neutral-50 text-[#1A1815] border border-[#1A1815]/15 font-medium text-xs sm:text-sm md:text-base shadow-xs transition-all cursor-pointer"
               >
                 <span>Our Story</span>
               </a>
             </div>
 
             {/* Social Proof: 4 Overlapping Avatars + 10K+ Happy Customers */}
-            <div className="flex items-center gap-3.5">
+            <div className="flex items-center justify-center md:justify-start gap-3 sm:gap-3.5">
               <div className="flex -space-x-2.5 overflow-hidden">
                 <img 
                   src="/images/kalyan/testimonials/client1.jpg" 
                   alt="Customer" 
-                  className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover" 
+                  className="inline-block h-8 w-8 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover" 
                 />
                 <img 
                   src="/images/kalyan/testimonials/client2.jpg" 
                   alt="Customer" 
-                  className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover" 
+                  className="inline-block h-8 w-8 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover" 
                 />
                 <img 
                   src="/images/kalyan/testimonials/client3.jpg" 
                   alt="Customer" 
-                  className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover" 
+                  className="inline-block h-8 w-8 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover" 
                 />
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EFEAE2] ring-2 ring-white flex items-center justify-center text-[10px] font-bold text-[#1A1815]">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#EFEAE2] ring-2 ring-white flex items-center justify-center text-[9px] sm:text-[10px] font-bold text-[#1A1815]">
                   +350
                 </div>
               </div>
 
-              <div>
-                <span className="block text-sm sm:text-base font-bold text-[#1A1815] leading-tight">
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm md:text-base font-bold text-[#1A1815] leading-tight">
                   10K+
                 </span>
-                <span className="text-xs text-[#7A7369] font-medium block">
+                <span className="text-[10px] sm:text-xs text-[#7A7369] font-medium block">
                   Happy Customers
                 </span>
               </div>
@@ -208,10 +208,10 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column: Centerpiece Visual + 2 Floating White Bento Cards */}
-          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-start pt-4 lg:pt-0">
+          <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0">
             
             {/* Centerpiece Image Container */}
-            <div className="relative w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[480px] aspect-[4/4.8] sm:aspect-[4/4.5] rounded-[32px] sm:rounded-[38px] overflow-hidden shadow-[0_20px_50px_rgba(26,24,21,0.12)] border-2 border-white bg-white">
+            <div className="relative w-full max-w-[340px] xs:max-w-[390px] sm:max-w-[440px] md:max-w-[380px] lg:max-w-[460px] xl:max-w-[490px] aspect-[4/4.7] sm:aspect-[4/4.5] rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-[0_20px_50px_rgba(26,24,21,0.12)] border-2 border-white bg-white mx-auto md:mx-0">
               <img
                 src="/images/hero/centerpiece.jpg"
                 alt="Organic Warm Interior Centerpiece"
@@ -223,9 +223,9 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 1: Top Right Season & Collection Card */}
-            <div className="absolute -top-3 sm:top-4 -right-2 sm:-right-4 lg:-right-8 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-52 sm:w-60 z-20 transition-all">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#FAF8F5] border border-[#1A1815]/10 flex-shrink-0">
+            <div className="absolute top-2 sm:top-4 right-2 sm:-right-4 lg:-right-6 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-44 xs:w-48 sm:w-56 lg:w-60 z-20 transition-all">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl overflow-hidden bg-[#FAF8F5] border border-[#1A1815]/10 flex-shrink-0">
                   <img 
                     src={currentSeason.image} 
                     alt={currentSeason.title} 
@@ -233,58 +233,58 @@ export default function HeroSection() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[10px] uppercase tracking-wider text-[#7A7369] block font-medium">
+                  <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#7A7369] block font-medium">
                     {currentSeason.season}
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-[#1A1815] block truncate">
+                  <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[#1A1815] block truncate">
                     {currentSeason.title}
                   </span>
-                  <span className="text-[10px] text-[#9C5427] font-medium block truncate">
+                  <span className="text-[9px] sm:text-[10px] text-[#9C5427] font-medium block truncate">
                     {currentSeason.status}
                   </span>
                 </div>
               </div>
 
               {/* Pagination Arrows */}
-              <div className="flex items-center justify-end gap-1.5 mt-3 pt-2 border-t border-[#1A1815]/8">
+              <div className="flex items-center justify-end gap-1.5 mt-2 sm:mt-3 pt-1.5 sm:pt-2 border-t border-[#1A1815]/8">
                 <button 
                   type="button" 
                   onClick={prevSeason}
                   aria-label="Previous item" 
-                  className="w-7 h-7 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
+                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
                 >
-                  <ChevronLeft className="w-3.5 h-3.5" />
+                  <ChevronLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </button>
                 <button 
                   type="button" 
                   onClick={nextSeason}
                   aria-label="Next item" 
-                  className="w-7 h-7 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
+                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FAF8F5] hover:bg-[#EFEAE2] flex items-center justify-center text-[#1A1815] transition-colors border border-[#1A1815]/10 text-xs cursor-pointer"
                 >
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </button>
               </div>
             </div>
 
             {/* Floating Card 2: Bottom Right Shipping & Payment Trust Badges */}
-            <div className="absolute bottom-4 sm:bottom-10 -right-2 sm:-right-4 lg:-right-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-56 sm:w-64 z-20 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
-                  <Truck className="w-4 h-4" />
+            <div className="absolute bottom-2 sm:bottom-6 right-2 sm:-right-4 lg:-right-6 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-[#1A1815]/8 w-48 xs:w-52 sm:w-56 lg:w-64 z-20 space-y-1.5 sm:space-y-2.5">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
+                  <Truck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <span className="block text-xs font-bold text-[#1A1815]">Free Shipping</span>
-                  <span className="block text-[11px] text-[#7A7369]">on orders over ₹4,999</span>
+                  <span className="block text-[11px] sm:text-xs font-bold text-[#1A1815]">Free Shipping</span>
+                  <span className="block text-[9px] sm:text-[11px] text-[#7A7369]">on orders over ₹4,999</span>
                 </div>
               </div>
               
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
-                  <ShieldCheck className="w-4 h-4" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-[#FAF8F5] flex items-center justify-center flex-shrink-0 text-[#9C5427]">
+                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <span className="block text-xs font-bold text-[#1A1815]">Secure Payment</span>
-                  <span className="block text-[11px] text-[#7A7369]">100% protected</span>
+                  <span className="block text-[11px] sm:text-xs font-bold text-[#1A1815]">Secure Payment</span>
+                  <span className="block text-[9px] sm:text-[11px] text-[#7A7369]">100% protected</span>
                 </div>
               </div>
             </div>
@@ -296,16 +296,16 @@ export default function HeroSection() {
         {/* ===================================================================== */}
         {/* 2. SUB-HERO CATEGORY ROW: 4 CLEAN ROUNDED CARDS IN WHITE CONTAINER    */}
         {/* ===================================================================== */}
-        <div className="bg-white rounded-[28px] sm:rounded-[36px] p-4 sm:p-6 lg:p-7 shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-[#1A1815]/5 mb-10 sm:mb-14">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        <div className="bg-white rounded-[24px] sm:rounded-[32px] lg:rounded-[36px] p-3 sm:p-5 lg:p-7 shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-[#1A1815]/5 mb-10 sm:mb-14">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5">
             {CATEGORIES.map((cat) => (
               <a
                 key={cat.id}
                 href={cat.href}
-                className="group relative rounded-2xl bg-[#FAF8F5] p-3 sm:p-4 flex flex-col justify-between hover:bg-[#F5F0E8] transition-all duration-300 cursor-pointer"
+                className="group relative rounded-xl sm:rounded-2xl bg-[#FAF8F5] p-2.5 sm:p-3.5 lg:p-4 flex flex-col justify-between hover:bg-[#F5F0E8] transition-all duration-300 cursor-pointer"
               >
                 {/* Category Image Area */}
-                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 flex items-center justify-center bg-white/70">
+                <div className="w-full aspect-[4/3] rounded-lg sm:rounded-xl overflow-hidden mb-2 sm:mb-3 flex items-center justify-center bg-white/70">
                   <img 
                     src={cat.image} 
                     alt={cat.name} 
@@ -314,11 +314,11 @@ export default function HeroSection() {
                 </div>
 
                 {/* Bottom Row: Category Name & Signature Arrow Pill */}
-                <div className="flex items-center justify-between pt-1">
-                  <span className="font-bold text-sm sm:text-base text-[#1A1815]">
+                <div className="flex items-center justify-between pt-0.5 sm:pt-1 gap-1">
+                  <span className="font-bold text-xs sm:text-sm lg:text-base text-[#1A1815] truncate">
                     {cat.name}
                   </span>
-                  <span className="w-7 h-7 rounded-full bg-white group-hover:bg-[#9C5427] group-hover:text-white flex items-center justify-center text-[#1A1815] transition-all shadow-xs text-xs">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white group-hover:bg-[#9C5427] group-hover:text-white flex items-center justify-center text-[#1A1815] transition-all shadow-xs text-xs flex-shrink-0">
                     →
                   </span>
                 </div>
@@ -330,21 +330,21 @@ export default function HeroSection() {
         {/* ===================================================================== */}
         {/* 3. FEATURED COLLECTION BENTO BANNER (DARK ESPRESSO ROUNDED CONTAINER) */}
         {/* ===================================================================== */}
-        <div className="rounded-[30px] sm:rounded-[38px] overflow-hidden bg-[#221C18] text-white p-6 sm:p-10 lg:p-12 relative shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="rounded-[24px] sm:rounded-[32px] lg:rounded-[38px] overflow-hidden bg-[#221C18] text-white p-5 sm:p-8 lg:p-12 relative shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-5 flex flex-col justify-between z-10 space-y-6 sm:space-y-8">
+            <div className="md:col-span-5 flex flex-col justify-between z-10 space-y-4 sm:space-y-6 lg:space-y-8">
               <div>
-                <span className="text-xs uppercase tracking-[0.2em] text-[#C49B7E] font-semibold block mb-2">
+                <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#C49B7E] font-semibold block mb-1.5 sm:mb-2">
                   {currentFeatured.tag}
                 </span>
                 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-sans text-white tracking-tight uppercase leading-tight mb-3">
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black font-sans text-white tracking-tight uppercase leading-tight mb-2 sm:mb-3">
                   {currentFeatured.title}
                 </h2>
                 
-                <p className="text-sm sm:text-base text-neutral-300 font-normal leading-relaxed max-w-sm">
+                <p className="text-xs sm:text-sm md:text-base text-neutral-300 font-normal leading-relaxed max-w-sm">
                   {currentFeatured.subtitle}
                 </p>
               </div>
@@ -353,7 +353,7 @@ export default function HeroSection() {
               <div>
                 <a
                   href={currentFeatured.ctaHref}
-                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white hover:bg-neutral-100 text-[#1A1815] font-semibold text-sm sm:text-base shadow-md transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-white hover:bg-neutral-100 text-[#1A1815] font-semibold text-xs sm:text-sm md:text-base shadow-md transition-all cursor-pointer"
                 >
                   <span>{currentFeatured.ctaText}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -361,12 +361,12 @@ export default function HeroSection() {
               </div>
 
               {/* Pagination Circular Arrow Controls */}
-              <div className="flex items-center gap-2.5 pt-2">
+              <div className="flex items-center gap-2 sm:gap-2.5 pt-1 sm:pt-2">
                 <button
                   type="button"
                   onClick={prevFeatured}
                   aria-label="Previous Slide"
-                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#9C5427] text-white flex items-center justify-center hover:bg-[#85451D] transition-colors cursor-pointer"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#9C5427] text-white flex items-center justify-center hover:bg-[#85451D] transition-colors cursor-pointer"
                 >
                   <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
@@ -374,7 +374,7 @@ export default function HeroSection() {
                   type="button"
                   onClick={nextFeatured}
                   aria-label="Next Slide"
-                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#1A1815] flex items-center justify-center hover:bg-neutral-200 transition-colors cursor-pointer"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white text-[#1A1815] flex items-center justify-center hover:bg-neutral-200 transition-colors cursor-pointer"
                 >
                   <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
@@ -382,7 +382,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Cinematic Interior Image */}
-            <div className="lg:col-span-7 relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] shadow-xl bg-neutral-900">
+            <div className="md:col-span-7 relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] shadow-xl bg-neutral-900">
               <img
                 src={currentFeatured.image}
                 alt={currentFeatured.title}
@@ -390,7 +390,7 @@ export default function HeroSection() {
               />
               
               {/* Subtle Gradient Fade from dark espresso left side */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#221C18]/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#221C18]/60 via-transparent to-transparent pointer-events-none" />
             </div>
 
           </div>
