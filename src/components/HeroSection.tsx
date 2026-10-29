@@ -79,7 +79,7 @@ const SEASON_ITEMS = [
     season: 'Season',
     title: 'Autumn Collection',
     status: 'New collection now on site',
-    image: '/images/hero/atmosphere.jpg',
+    image: '/images/hero/sofa.png',
   },
   {
     id: 2,
@@ -207,15 +207,15 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: Sharp Background Centerpiece + 2 Floating White Bento Cards (NO Box, NO Blur Effect) */}
-          <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0 min-h-[380px] sm:min-h-[440px] lg:min-h-[480px]">
+          {/* Right Column: Transparent Sofa Merged Directly with Background + 2 Floating White Bento Cards */}
+          <div className="md:col-span-6 relative flex items-center justify-center md:justify-start pt-2 md:pt-0 min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
             
-            {/* Natural Organic Centerpiece: 100% Crisp & Sharp, Zero Blur Halo, Zero Box Container */}
-            <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[540px] xl:max-w-[580px] flex items-center justify-center pointer-events-none select-none">
+            {/* Isolated Transparent Sofa merging directly into the background: NO Box, NO Borders, NO Blur Effect */}
+            <div className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[560px] xl:max-w-[620px] flex items-center justify-center pointer-events-none select-none py-4 sm:py-6">
               <img
-                src="/images/hero/centerpiece_crisp.jpg"
-                alt="Organic Warm Interior Atmosphere"
-                className="w-full h-auto object-contain rounded-2xl sm:rounded-3xl"
+                src="/images/hero/sofa.png"
+                alt="Curated Living Interior Sofa"
+                className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(26,24,21,0.12)] scale-100 sm:scale-105 transition-transform duration-700"
               />
             </div>
 
