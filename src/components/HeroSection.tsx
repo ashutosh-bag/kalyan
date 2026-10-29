@@ -274,7 +274,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <span className="block text-xs font-bold text-[#1A1815]">Free Shipping</span>
-                  <span className="block text-[11px] text-[#7A7369]">on orders over $50</span>
+                  <span className="block text-[11px] text-[#7A7369]">on orders over ₹4,999</span>
                 </div>
               </div>
               
