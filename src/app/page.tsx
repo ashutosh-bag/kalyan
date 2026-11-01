@@ -22,6 +22,9 @@ export default function Home() {
         {/* Hero Section with Responsive SVG KALYAN Letters & Multi-Directional Sliding Interior Photos */}
         <HeroSection />
 
+        {/* About Section & Studio Ethos of Kalyan Design Studio */}
+        <AboutSection />
+
         {/* Client's Signature Full Interior Packages Section (1 BHK, 2 BHK, 3 BHK) */}
         <PackagesSection />
 
@@ -30,9 +33,6 @@ export default function Home() {
 
         {/* 360° Virtual Apartment Tours & Real Homeowner Testimonials */}
         <ApartmentTestimonials360 />
-
-        {/* About Section & Studio Ethos */}
-        <AboutSection />
 
         {/* Projects Portfolio with Category Filtering & Interactive Modal */}
         <ProjectsSection />

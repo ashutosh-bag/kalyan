@@ -7,40 +7,6 @@ import {
   ChevronLeft
 } from 'lucide-react';
 
-interface CategoryItem {
-  id: string;
-  name: string;
-  image: string;
-  href: string;
-}
-
-const CATEGORIES: CategoryItem[] = [
-  {
-    id: 'lighting',
-    name: 'Lighting',
-    image: '/images/hero/lighting.jpg',
-    href: '#spatial-showcase',
-  },
-  {
-    id: 'textiles',
-    name: 'Textiles',
-    image: '/images/hero/textiles.jpg',
-    href: '#packages',
-  },
-  {
-    id: 'decor',
-    name: 'Decor',
-    image: '/images/hero/decor.jpg',
-    href: '#projects',
-  },
-  {
-    id: 'atmosphere',
-    name: 'Atmosphere',
-    image: '/images/hero/atmosphere.jpg',
-    href: '#about',
-  },
-];
-
 // Background slides requested by the user: herobg1.png and herobg2.png
 const HERO_BACKGROUNDS = [
   {
@@ -230,44 +196,6 @@ export default function HeroSection() {
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ===================================================================== */}
-      {/* 4. SUB-HERO CATEGORY QUICK NAVIGATION (LIGHT CREAM CONTAINER)          */}
-      {/* ===================================================================== */}
-      <section className="w-full bg-[#FAF8F5] py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-[#1A1815]/8 select-none">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-[24px] sm:rounded-[32px] p-3 sm:p-5 lg:p-6 shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-[#1A1815]/5">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5">
-              {CATEGORIES.map((cat) => (
-                <a
-                  key={cat.id}
-                  href={cat.href}
-                  className="group relative rounded-xl sm:rounded-2xl bg-[#FAF8F5] p-2.5 sm:p-3.5 lg:p-4 flex flex-col justify-between hover:bg-[#F5F0E8] transition-all duration-300 cursor-pointer"
-                >
-                  {/* Category Image Area */}
-                  <div className="w-full aspect-[4/3] rounded-lg sm:rounded-xl overflow-hidden mb-2 sm:mb-3 flex items-center justify-center bg-white/70">
-                    <img 
-                      src={cat.image} 
-                      alt={cat.name} 
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" 
-                    />
-                  </div>
-
-                  {/* Bottom Row: Category Name & Signature Arrow Pill */}
-                  <div className="flex items-center justify-between pt-0.5 sm:pt-1 gap-1">
-                    <span className="font-bold text-xs sm:text-sm lg:text-base text-[#1A1815] truncate">
-                      {cat.name}
-                    </span>
-                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white group-hover:bg-[#9C5427] group-hover:text-white flex items-center justify-center text-[#1A1815] transition-all shadow-xs text-xs flex-shrink-0">
-                      →
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </section>
