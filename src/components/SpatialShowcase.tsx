@@ -675,17 +675,14 @@ export default function SpatialShowcase() {
             <div>
               <div className="flex items-center gap-2.5 mb-2">
                 <span className="w-6 h-[1.5px] bg-[#9C5427]" />
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-bold text-[#9C5427]">
-                  GALLERY
-                </span>
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium text-[#7A7369]">
-                  &bull; KINETIC VISUAL STREAMS
+                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+                  KINETIC PORTFOLIO STREAM
                 </span>
               </div>
-              <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
-                Continuous Stream of <span className="text-copper-gradient">Curated Interiors</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-[#5C564E] mt-0.5">
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase text-[#1A1815] tracking-tight leading-tight">
+                GALLERY
+              </h2>
+              <p className="text-xs sm:text-sm text-[#5C564E] mt-1">
                 Live portfolio filmstrip of turnkey apartments, penthouses, and bespoke villas across Odisha.
               </p>
             </div>

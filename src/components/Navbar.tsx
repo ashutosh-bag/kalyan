@@ -44,7 +44,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       }
 
       // Track active section for indicator
-      const sections = ['home', 'about', 'packages', 'spatial-showcase', '360-view', 'testimonials-360', 'projects', 'services', 'blog', 'contact'];
+      const sections = ['home', 'about', 'packages', 'spatial-showcase', 'gallery', '360-view', 'testimonials-360', 'projects', 'services', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -68,8 +68,8 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     { name: 'About', href: '/about', id: 'about' },
     { name: 'Services', href: '/services', id: 'services' },
     { name: 'Projects', href: '/projects', id: 'projects' },
+    { name: 'Gallery', href: '/#gallery', id: 'gallery' },
     { name: '360° View', href: '/#360-view', id: '360-view' },
-    { name: 'Blog', href: '/#blog', id: 'blog' },
     { name: 'Contact', href: '/#contact', id: 'contact' },
   ];
 
