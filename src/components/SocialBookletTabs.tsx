@@ -93,7 +93,7 @@ export default function SocialBookletTabs() {
   return (
     <aside 
       aria-label="Studio Social Media Channels" 
-      className="fixed left-0 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-1.5 select-none pointer-events-auto"
+      className="fixed left-0 top-1/2 -translate-y-1/2 z-40 flex flex-col items-start gap-1.5 select-none pointer-events-auto"
     >
       {SOCIAL_TABS.map((tab) => (
         <a
@@ -102,18 +102,20 @@ export default function SocialBookletTabs() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={tab.ariaLabel}
-          className={`group relative flex items-center h-10 sm:h-11 pl-2.5 sm:pl-3 pr-2.5 rounded-r-2xl bg-white/95 backdrop-blur-md border-y border-r border-[#1A1815]/10 text-[#2C1E16]/75 shadow-[0_4px_16px_rgba(26,24,21,0.06)] hover:shadow-[0_8px_25px_rgba(44,30,22,0.14)] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:translate-x-0 cursor-pointer overflow-hidden ${tab.hoverBg} ${tab.hoverBorder}`}
+          className={`group relative flex items-center h-10 sm:h-11 rounded-r-2xl bg-white/95 backdrop-blur-md border-y border-r border-[#1A1815]/10 text-[#2C1E16]/75 shadow-[0_4px_14px_rgba(26,24,21,0.06)] hover:shadow-[0_8px_25px_rgba(44,30,22,0.18)] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:translate-x-1 hover:z-10 cursor-pointer overflow-hidden ${tab.hoverBg} ${tab.hoverBorder}`}
         >
           {/* Edge Bookmark Notch Indicator */}
           <span className="absolute left-0 top-0 bottom-0 w-1 bg-[#1A1815]/15 group-hover:bg-current transition-colors" />
 
-          {/* Social Brand Icon */}
-          <span className={`transition-colors duration-200 ${tab.iconColor}`}>
-            {tab.svg}
-          </span>
+          {/* Fixed-Width Icon Anchor (Keeps unhovered tabs perfectly compact and identical) */}
+          <div className="w-10 sm:w-11 h-full flex items-center justify-center flex-shrink-0">
+            <span className={`transition-colors duration-200 ${tab.iconColor}`}>
+              {tab.svg}
+            </span>
+          </div>
 
-          {/* Expandable Tab Label (Slide out smoothly like a booklet tab) */}
-          <div className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:opacity-100 group-hover:ml-2.5 group-hover:mr-1 transition-all duration-300 ease-out flex items-center gap-1.5">
+          {/* Expandable Tab Label (ONLY this hovered tab pops out to reveal name) */}
+          <div className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap group-hover:max-w-[150px] group-hover:opacity-100 group-hover:pr-3.5 transition-all duration-300 ease-out flex items-center gap-1.5">
             <span className={`text-[11px] font-bold uppercase tracking-wider transition-colors ${tab.hoverText}`}>
               {tab.name}
             </span>
@@ -124,3 +126,4 @@ export default function SocialBookletTabs() {
     </aside>
   );
 }
+
