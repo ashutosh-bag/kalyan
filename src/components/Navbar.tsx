@@ -139,28 +139,26 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           
-          {/* Logo: KALYAN Studio (White over dark hero, dark when scrolled or on services page) */}
+          {/* Logo: Kalyan Design Studio (Footer's Official Animated Logo) */}
           <Link
             href="/#home"
-            className="group flex items-center gap-2.5 focus:outline-none flex-shrink-0"
+            className="group flex items-center gap-2 sm:gap-2.5 focus:outline-none flex-shrink-0"
             aria-label="Kalyan Design Studio Home"
           >
-            <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-all flex-shrink-0 ${
-              effectiveScrolled 
-                ? 'bg-[#1A1815] text-white shadow-xs group-hover:bg-[#9C5427]' 
-                : 'bg-white/15 backdrop-blur-md text-white border border-white/20 group-hover:bg-white group-hover:text-[#1A1815]'
-            }`}>
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M12 3L2 12h3v8h5v-5h4v5h5v-8h3L12 3z"/>
-              </svg>
+            <div className="p-1 rounded-xl bg-white border border-[#9C5427]/30 shadow-xs overflow-hidden flex items-center justify-center">
+              <img
+                src="/images/kalyan/branding/logo.gif"
+                alt="Kalyan Design Studio Animated Logo"
+                className="h-8 sm:h-9 w-auto object-contain"
+              />
             </div>
             <div className="flex flex-col">
-              <span className={`font-black text-base sm:text-lg tracking-tight uppercase leading-none font-sans transition-colors ${
+              <span className={`font-black text-sm sm:text-base tracking-tight uppercase leading-none font-sans transition-colors ${
                 effectiveScrolled ? 'text-[#1A1815]' : 'text-white'
               }`}>
                 KALYAN
               </span>
-              <span className={`text-[10px] font-medium tracking-wider mt-0.5 uppercase transition-colors ${
+              <span className={`text-[9px] sm:text-[10px] font-medium tracking-wider mt-0.5 uppercase transition-colors ${
                 effectiveScrolled ? 'text-[#7A7369]' : 'text-white/75'
               }`}>
                 Design Studio
@@ -225,7 +223,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
               ))}
             </div>
 
-            {/* Quick Contact / Free Estimate Pill CTA */}
+            {/* Quick Contact / Schedule Free Site Visit Pill CTA */}
             <Link
               href="/#contact"
               onClick={(e) => {
@@ -240,7 +238,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                   : 'bg-white/90 hover:bg-white text-[#1A1815] backdrop-blur-sm'
               }`}
             >
-              <span>Get in Touch</span>
+              <span>Schedule Free Site Visit</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
 
@@ -301,7 +299,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-sm rounded-full shadow-sm uppercase tracking-wider"
               >
-                <span>Book Free Site Visit</span>
+                <span>Schedule Free Site Visit</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>

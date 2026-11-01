@@ -6,7 +6,6 @@ import {
   Sparkles, 
   Shield, 
   Clock, 
-  Calculator, 
   ArrowRight, 
   ChevronLeft,
   ChevronRight,
@@ -522,33 +521,6 @@ export default function PackagesSection() {
             ))}
           </div>
 
-        </div>
-
-        {/* =================================================================== */}
-        {/* 4. BOTTOM CUSTOM ESTIMATE CTA BANNER                                */}
-        {/* =================================================================== */}
-        <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-[30px] sm:rounded-[36px] bg-white border border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] flex flex-col md:flex-row items-center justify-between gap-6 hover:border-[#9C5427]/30 transition-colors">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/8 flex items-center justify-center flex-shrink-0 text-[#9C5427]">
-              <Calculator className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-bold uppercase tracking-tight text-[#1A1815]">
-                Need a Custom Duplex or Villa Quotation?
-              </h3>
-              <p className="text-xs sm:text-sm text-[#68625A] mt-0.5">
-                Our principal architects visit your Bhubaneswar/Cuttack site for free laser measurement and custom 3D layout.
-              </p>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={() => handleOpenQuote(PACKAGES[2])}
-            className="group/btn px-7 py-3.5 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white font-medium text-sm sm:text-base transition-all duration-300 shadow-sm whitespace-nowrap cursor-pointer hover:scale-102 flex items-center gap-2"
-          >
-            <span>Schedule Free Site Visit</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-          </button>
         </div>
 
       </div>
