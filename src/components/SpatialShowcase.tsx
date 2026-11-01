@@ -668,14 +668,19 @@ export default function SpatialShowcase() {
         {/* ================================================================= */}
         {/* 2. DUAL-TIER CONTINUOUS KINETIC STREAMS (SILKY MARQUEE GALLERIES) */}
         {/* ================================================================= */}
-        <div className="mb-28">
+        <div id="gallery" className="mb-28 scroll-mt-24">
           
           {/* Header & Speed Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#9C5427] tracking-widest uppercase mb-1">
-                <Layers className="w-3.5 h-3.5" /> 
-                <span>Kinetic Visual Streams</span>
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-bold text-[#9C5427]">
+                  GALLERY
+                </span>
+                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium text-[#7A7369]">
+                  &bull; KINETIC VISUAL STREAMS
+                </span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-playfair text-[#1A1815] tracking-tight">
                 Continuous Stream of <span className="text-copper-gradient">Curated Interiors</span>
