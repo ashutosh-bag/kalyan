@@ -94,14 +94,14 @@ export default function HeroSection() {
           
           {/* Top Line 1: INSPIRED SPACES (Left Aligned) */}
           <div className="w-full">
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[96px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
+            <h1 className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[96px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
               INSPIRED SPACES
             </h1>
           </div>
 
           {/* Stepped Line 2: ELEVATED LIVING (Offset to the Right) */}
           <div className="w-full flex justify-end mt-1.5 sm:mt-2.5 md:mt-3">
-            <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[96px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] text-right drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
+            <h2 className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[96px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] text-right drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
               ELEVATED LIVING
             </h2>
           </div>

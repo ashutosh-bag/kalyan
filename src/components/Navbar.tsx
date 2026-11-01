@@ -296,14 +296,14 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
 
             {/* Mobile Estimate Button */}
             <div className="pt-2">
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-sm rounded-full shadow-sm uppercase tracking-wider"
               >
                 <span>Book Free Site Visit</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

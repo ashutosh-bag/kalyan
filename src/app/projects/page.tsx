@@ -452,6 +452,23 @@ export default function ProjectsPage() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [imageLoadedMap, setImageLoadedMap] = useState<Record<string, boolean>>({});
   const thumbnailStripRef = useRef<HTMLDivElement>(null);
+  const touchStartXRef = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchEndX - touchStartXRef.current;
+    if (diff > 50) {
+      showPrev();
+    } else if (diff < -50) {
+      showNext();
+    }
+    touchStartXRef.current = null;
+  };
 
   // Filtered projects
   const filteredProjects = activeCategory === 'all' 
@@ -769,17 +786,17 @@ export default function ProjectsPage() {
         <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl flex flex-col justify-between animate-in fade-in duration-300 select-none">
           
           {/* Top Cinema Bar */}
-          <div className="p-4 sm:px-8 sm:py-6 flex items-center justify-between z-20 border-b border-white/10">
+          <div className="p-3 sm:px-8 sm:py-5 flex items-center justify-between z-20 border-b border-white/10 gap-2">
             {/* Left: Project title & count */}
-            <div className="flex items-center gap-4">
-              <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-mono">
+            <div className="flex items-center gap-2.5 sm:gap-4 min-w-0">
+              <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/10 text-white/80 text-[10px] sm:text-xs font-mono flex-shrink-0">
                 {String(selectedProjectIndex + 1).padStart(2, '0')} / {String(filteredProjects.length).padStart(2, '0')}
               </span>
-              <div>
-                <h2 className="text-white text-sm sm:text-base font-medium tracking-tight">
+              <div className="min-w-0">
+                <h2 className="text-white text-xs sm:text-base font-medium tracking-tight truncate max-w-[130px] xs:max-w-[180px] sm:max-w-md">
                   {currentProject.title}
                 </h2>
-                <p className="text-xs text-white/50 flex items-center gap-2">
+                <p className="text-[10px] sm:text-xs text-white/50 flex items-center gap-1.5 sm:gap-2 truncate">
                   <span>{currentProject.categoryLabel}</span>
                   <span>•</span>
                   <span>{currentProject.location}</span>
@@ -788,11 +805,11 @@ export default function ProjectsPage() {
             </div>
 
             {/* Right: Controls */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
               {/* Slideshow Play / Pause */}
               <button
                 onClick={() => setIsPlaying((prev) => !prev)}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold transition-all ${
                   isPlaying 
                     ? 'bg-[#9C5427] text-white shadow-lg shadow-[#9C5427]/30' 
                     : 'bg-white/10 hover:bg-white/20 text-white'
@@ -817,40 +834,44 @@ export default function ProjectsPage() {
                 href="/#contact"
                 className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-medium transition-all"
               >
-                <span>Inquire About This Look</span>
+                <span>Inquire</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#9C5427]" />
               </Link>
 
               {/* Close Button */}
               <button
                 onClick={closeLightbox}
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all ml-2"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all ml-1 sm:ml-2"
                 title="Close (Esc)"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
 
-          {/* Center Stage: The Cinema Viewer */}
-          <div className="flex-1 relative flex items-center justify-center p-4 sm:p-8 overflow-hidden">
+          {/* Center Stage: The Cinema Viewer with Swipe Navigation */}
+          <div 
+            className="flex-1 relative flex items-center justify-center p-2 sm:p-8 overflow-hidden touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             
             {/* Previous Navigation Button */}
             <button
               onClick={showPrev}
-              className="absolute left-4 sm:left-8 z-30 w-12 h-12 rounded-full bg-black/60 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center backdrop-blur-md transition-all border border-white/10 group"
-              title="Previous (Left Arrow)"
+              className="absolute left-2 sm:left-8 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/70 hover:bg-white/20 text-white/90 hover:text-white flex items-center justify-center backdrop-blur-md transition-all border border-white/15 group shadow-lg"
+              title="Previous (Left Arrow or Swipe Right)"
             >
-              <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
             </button>
 
             {/* Next Navigation Button */}
             <button
               onClick={showNext}
-              className="absolute right-4 sm:right-8 z-30 w-12 h-12 rounded-full bg-black/60 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center backdrop-blur-md transition-all border border-white/10 group"
-              title="Next (Right Arrow)"
+              className="absolute right-2 sm:right-8 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/70 hover:bg-white/20 text-white/90 hover:text-white flex items-center justify-center backdrop-blur-md transition-all border border-white/15 group shadow-lg"
+              title="Next (Right Arrow or Swipe Left)"
             >
-              <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
             </button>
 
             {/* Main Picture with Smooth Scaling */}

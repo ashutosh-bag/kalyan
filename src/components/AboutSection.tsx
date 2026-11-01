@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { Layers, Sun, ShieldCheck, Gem, ArrowRight } from 'lucide-react';
 
 // Smooth counting animation when page is loaded / refreshed
@@ -120,12 +121,12 @@ export default function AboutSection() {
               </p>
               <p>
                 At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves. Our portfolio allows us the opportunity to put our best foot forward. If you are interested in learning more, please get in touch or visit our{' '}
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
                   className="text-[#2C1E16] font-semibold underline underline-offset-4 decoration-[#9C5427] hover:text-[#9C5427] transition-colors"
                 >
                   Contact
-                </a>{' '}
+                </Link>{' '}
                 page.
               </p>
               <p>

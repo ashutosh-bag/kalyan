@@ -390,7 +390,7 @@ export default function SpatialShowcase() {
             </div>
 
             {/* Preset Buttons */}
-            <div className="flex items-center gap-1.5 self-start sm:self-auto">
+            <div className="flex flex-wrap items-center gap-1.5 self-start sm:self-auto">
               <button
                 type="button"
                 onClick={() => setSliderPosition(100)}
