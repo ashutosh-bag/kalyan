@@ -466,7 +466,7 @@ export default function SpatialShowcase() {
                 /* MODE 1 AFTER: ROOM FILLED WITH LUXURY INTERIOR DESIGN */
                 <div className="relative w-full h-full overflow-hidden">
                   <img
-                    src="/images/transformation/furnished-room.jpg"
+                    src="/images/hero/after.png"
                     alt="After: Room Filled with Luxury Interior Design"
                     className="w-full h-full object-cover object-center"
                   />
@@ -519,7 +519,7 @@ export default function SpatialShowcase() {
                   /* MODE 1 BEFORE: EMPTY BARE-SHELL ROOM */
                   <>
                     <img
-                      src="/images/transformation/empty-room.jpg"
+                      src="/images/hero/before.png"
                       alt="Before: Empty Bare-Shell Room"
                       className="w-full h-full object-cover object-center"
                     />
