@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Layers, Sun, ShieldCheck, Gem, ArrowRight } from 'lucide-react';
 
 // Smooth counting animation when page is loaded / refreshed
 function AnimatedStatCounter({ target, suffix = '+' }: { target: number; suffix?: string }) {
@@ -49,29 +48,6 @@ export default function AboutSection() {
     { target: 23160, suffix: '+', label: 'Hours of Craftsmanship' },
     { target: 150, suffix: '+', label: 'Turnkey Homes Delivered' },
     { target: 20, suffix: '+', label: 'Years of Combined Mastery' },
-  ];
-
-  const pillars = [
-    {
-      icon: <Gem className="w-5 h-5 text-[#9C5427]" />,
-      title: 'Material Honesty & Craft',
-      desc: 'Natural Khandagiri sandstone, seasoned Indian teakwood, unlacquered brass, and moisture-resistant marine ply engineered for tropical longevity.',
-    },
-    {
-      icon: <Layers className="w-5 h-5 text-[#9C5427]" />,
-      title: 'Tropical Spatial Flow',
-      desc: 'Reinterpreting the traditional Odia courtyard (angan) and natural cross-ventilation with razor-sharp modernist geometry and open volumes.',
-    },
-    {
-      icon: <Sun className="w-5 h-5 text-[#9C5427]" />,
-      title: 'Circadian Illumination',
-      desc: 'Concealed linear architectural lighting calibrated to solar cycles, sculpting serene warmth from morning light until midnight.',
-    },
-    {
-      icon: <ShieldCheck className="w-5 h-5 text-[#9C5427]" />,
-      title: 'Turnkey Rigor in Odisha',
-      desc: 'End-to-end execution across Bhubaneswar, Cuttack, and Puri — from structural compliance and custom joinery to guaranteed 45-day handover.',
-    },
   ];
 
   return (
@@ -176,30 +152,6 @@ export default function AboutSection() {
                 <span className="text-xs sm:text-sm text-[#7D6858] tracking-wide mt-1.5 font-medium">
                   {stat.label}
                 </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* ================================================================= */}
-        {/* 3. STUDIO PILLARS OF EXCELLENCE (SUBTLE SECONDARY LAYER)          */}
-        {/* ================================================================= */}
-        <div className="mt-16 sm:mt-20 pt-12 border-t border-[#2C1E16]/8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-            {pillars.map((pillar, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-[22px] bg-white/70 backdrop-blur-xs border border-[#2C1E16]/6 shadow-[0_4px_20px_rgba(44,30,22,0.03)] hover:bg-white hover:shadow-md transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#2C1E16]/8 flex items-center justify-center mb-4">
-                  {pillar.icon}
-                </div>
-                <h3 className="text-sm sm:text-base font-bold uppercase tracking-tight text-[#2C1E16] mb-1.5">
-                  {pillar.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#68625A] leading-relaxed">
-                  {pillar.desc}
-                </p>
               </div>
             ))}
           </div>
