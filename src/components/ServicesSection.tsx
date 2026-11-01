@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { SERVICES } from '@/lib/data';
 import { Compass, Palette, Sparkles, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
 
@@ -103,6 +104,17 @@ export default function ServicesSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Link to Full Dedicated Services Page with Editorial Representations */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg transition-all hover:gap-4 cursor-pointer"
+          >
+            <span>Explore Full Services Gallery &amp; Specifications</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
       </div>

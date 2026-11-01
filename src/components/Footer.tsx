@@ -4,15 +4,15 @@ import React from 'react';
 
 export default function Footer() {
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'Showcase', href: '#spatial-showcase' },
-    { name: '360° Tours', href: '#testimonials-360' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Services', href: '#services' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/#home' },
+    { name: 'Services', href: '/services' },
+    { name: 'Packages', href: '/#packages' },
+    { name: 'Showcase', href: '/#spatial-showcase' },
+    { name: '360° Tours', href: '/#testimonials-360' },
+    { name: 'About', href: '/#about' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Blog', href: '/#blog' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   const socialLinks = [
