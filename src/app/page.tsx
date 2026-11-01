@@ -4,7 +4,6 @@ import PackagesSection from '@/components/PackagesSection';
 import SpatialShowcase from '@/components/SpatialShowcase';
 import ApartmentTestimonials360 from '@/components/ApartmentTestimonials360';
 import AboutSection from '@/components/AboutSection';
-import ProjectsSection from '@/components/ProjectsSection';
 import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import GoogleReviewsSection from '@/components/GoogleReviewsSection';
@@ -32,9 +31,6 @@ export default function Home() {
 
         {/* 360° Virtual Apartment Tours & Real Homeowner Testimonials */}
         <ApartmentTestimonials360 />
-
-        {/* Projects Portfolio with Category Filtering & Interactive Modal */}
-        <ProjectsSection />
 
         {/* Services & Capabilities */}
         <ServicesSection />

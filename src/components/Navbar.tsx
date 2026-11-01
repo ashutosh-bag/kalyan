@@ -14,13 +14,19 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
   const isServicesPage = pathname === '/services';
   const isAboutPage = pathname === '/about';
   const isProjectsPage = pathname === '/projects';
+  const isGalleryPage = pathname === '/gallery';
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const effectiveScrolled = isScrolled || isServicesPage || isAboutPage || isProjectsPage;
+  const effectiveScrolled = isScrolled || isServicesPage || isAboutPage || isProjectsPage || isGalleryPage;
 
   useEffect(() => {
+    if (isGalleryPage) {
+      setActiveSection('gallery');
+      return;
+    }
+
     if (isProjectsPage) {
       setActiveSection('projects');
       return;
@@ -60,7 +66,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isServicesPage, isAboutPage, isProjectsPage]);
+  }, [isServicesPage, isAboutPage, isProjectsPage, isGalleryPage]);
 
   // Primary navigation items
   const navItems = [
@@ -68,7 +74,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     { name: 'About', href: '/about', id: 'about' },
     { name: 'Services', href: '/services', id: 'services' },
     { name: 'Projects', href: '/projects', id: 'projects' },
-    { name: 'Gallery', href: '/#gallery', id: 'gallery' },
+    { name: 'Gallery', href: '/gallery', id: 'gallery' },
     { name: '360° View', href: '/#360-view', id: '360-view' },
     { name: 'Contact', href: '/#contact', id: 'contact' },
   ];
