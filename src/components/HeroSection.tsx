@@ -110,34 +110,36 @@ export default function HeroSection() {
             );
           })}
 
-          {/* Cinematic Atmospheric Dark Overlays for Razor-Sharp Text Contrast */}
-          <div className="absolute inset-0 bg-black/35 z-10 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/50 z-10 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent z-10 pointer-events-none" />
+          {/* Minimal Gentle Vignettes ONLY at Top & Bottom edges: ZERO Center Tint */}
+          {/* Top Edge Vignette: Ensures navbar links are readable without darkening the room */}
+          <div className="absolute top-0 left-0 right-0 h-32 sm:h-40 bg-gradient-to-b from-black/50 via-black/15 to-transparent z-10 pointer-events-none" />
+          
+          {/* Bottom Edge Vignette: Soft anchor for the bottom text */}
+          <div className="absolute bottom-0 left-0 right-0 h-36 sm:h-48 bg-gradient-to-t from-black/60 via-black/15 to-transparent z-10 pointer-events-none" />
         </div>
 
         {/* =================================================================== */}
         {/* 2. MAIN EDITORIAL CONTENT: OFFSET STAGGERED HEADLINES               */}
         {/* =================================================================== */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 sm:pt-36 md:pt-40 lg:pt-44 flex-1 flex flex-col justify-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 sm:pt-32 md:pt-36 lg:pt-40 flex-1 flex flex-col justify-center">
           
           {/* Top Line 1: INSPIRED SPACES (Left Aligned) */}
           <div className="w-full">
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[98px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] drop-shadow-md">
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[98px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] drop-shadow-[0_4px_24px_rgba(0,0,0,0.65)]">
               INSPIRED SPACES
             </h1>
           </div>
 
           {/* Stepped Line 2: ELEVATED LIVING (Offset to the Right) */}
           <div className="w-full flex justify-end mt-2 sm:mt-3 md:mt-4">
-            <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[98px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] text-right drop-shadow-md">
+            <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[98px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] text-right drop-shadow-[0_4px_24px_rgba(0,0,0,0.65)]">
               ELEVATED LIVING
             </h2>
           </div>
 
           {/* Subtitle Description on the Left beneath Line 1 + CTA Buttons */}
           <div className="mt-6 sm:mt-8 md:mt-10 max-w-md lg:max-w-lg flex flex-col items-start">
-            <p className="text-xs sm:text-sm md:text-base text-neutral-200/95 font-normal leading-relaxed drop-shadow-sm">
+            <p className="text-xs sm:text-sm md:text-base text-white font-medium leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
               We design refined interiors that blend comfort and style, creating spaces that feel inviting and functional while reflecting your personality with thoughtful details and timeless elegance.
             </p>
 
@@ -145,90 +147,84 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-7">
               <a
                 href="#packages"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-lg transition-all hover:gap-3 cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-[0_10px_25px_rgba(156,84,39,0.4)] transition-all hover:gap-3 cursor-pointer"
               >
                 <span>Explore Packages</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold text-xs sm:text-sm uppercase tracking-wider backdrop-blur-sm shadow-sm transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/40 font-semibold text-xs sm:text-sm uppercase tracking-wider backdrop-blur-md shadow-md transition-all cursor-pointer"
               >
                 <span>Our Services</span>
               </a>
             </div>
           </div>
 
-          {/* Smooth Slide Switcher Control (01 / 02) */}
-          <div className="self-end mt-4 sm:mt-6 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
-            <span className="text-xs font-mono font-bold text-white tracking-widest">
-              0{activeSlide + 1} / 0{HERO_BACKGROUNDS.length}
-            </span>
-            <div className="w-8 h-[1.5px] bg-white/30 relative overflow-hidden rounded-full">
-              <div 
-                className="absolute inset-y-0 left-0 bg-[#9C5427] transition-all duration-500 rounded-full"
-                style={{ width: `${((activeSlide + 1) / HERO_BACKGROUNDS.length) * 100}%` }}
-              />
-            </div>
-            <div className="flex items-center gap-1">
-              <button
-                type="button"
-                onClick={prevSlide}
-                aria-label="Previous Slide"
-                className="p-1 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                type="button"
-                onClick={nextSlide}
-                aria-label="Next Slide"
-                className="p-1 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-
         </div>
 
         {/* =================================================================== */}
-        {/* 3. BOTTOM 3 ARCHITECTURAL HIGHLIGHTS (EXACT DITTO REFERENCE BOTTOM) */}
+        {/* 3. BOTTOM 3 ARCHITECTURAL HIGHLIGHTS & DISCREET SLIDE SWITCHER      */}
         {/* =================================================================== */}
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/15 pt-5 pb-7 sm:pb-9 mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-6 text-white">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-7 sm:pb-9 pt-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             
-            {/* Highlight 1: Functional Space Planning */}
-            <div className="flex items-center gap-3 group">
-              <span className="text-[11px] sm:text-xs font-mono font-bold text-[#C49B7E] tracking-widest">
-                01
-              </span>
-              <div className="w-4 h-[1px] bg-white/30" />
-              <span className="text-xs sm:text-sm md:text-[15px] font-semibold tracking-wide text-neutral-100 group-hover:text-white transition-colors">
-                Functional Space Planning
-              </span>
+            {/* 3 Highlights matching reference bottom */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-8 text-white flex-1">
+              {/* Highlight 1 */}
+              <div className="flex items-center gap-2.5 group">
+                <span className="text-[11px] sm:text-xs font-mono font-bold text-[#C49B7E] drop-shadow-sm">01</span>
+                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  Functional Space Planning
+                </span>
+              </div>
+
+              {/* Highlight 2 */}
+              <div className="flex items-center gap-2.5 group">
+                <span className="text-[11px] sm:text-xs font-mono font-bold text-[#C49B7E] drop-shadow-sm">02</span>
+                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  Stylish Material Selection
+                </span>
+              </div>
+
+              {/* Highlight 3 */}
+              <div className="flex items-center gap-2.5 group">
+                <span className="text-[11px] sm:text-xs font-mono font-bold text-[#C49B7E] drop-shadow-sm">03</span>
+                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  Tailored Design Concepts
+                </span>
+              </div>
             </div>
 
-            {/* Highlight 2: Stylish Material Selection */}
-            <div className="flex items-center gap-3 group">
-              <span className="text-[11px] sm:text-xs font-mono font-bold text-[#C49B7E] tracking-widest">
-                02
+            {/* Discreet Slide Switcher Controls (Bottom Right - Completely clear of the central room view) */}
+            <div className="flex items-center gap-2.5 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 self-start sm:self-auto shadow-md">
+              <span className="text-[11px] font-mono font-bold text-white tracking-widest">
+                0{activeSlide + 1} / 0{HERO_BACKGROUNDS.length}
               </span>
-              <div className="w-4 h-[1px] bg-white/30" />
-              <span className="text-xs sm:text-sm md:text-[15px] font-semibold tracking-wide text-neutral-100 group-hover:text-white transition-colors">
-                Stylish Material Selection
-              </span>
-            </div>
-
-            {/* Highlight 3: Tailored Design Concepts */}
-            <div className="flex items-center gap-3 group">
-              <span className="text-[11px] sm:text-xs font-mono font-bold text-[#C49B7E] tracking-widest">
-                03
-              </span>
-              <div className="w-4 h-[1px] bg-white/30" />
-              <span className="text-xs sm:text-sm md:text-[15px] font-semibold tracking-wide text-neutral-100 group-hover:text-white transition-colors">
-                Tailored Design Concepts
-              </span>
+              <div className="w-6 h-[1.5px] bg-white/30 relative overflow-hidden rounded-full">
+                <div 
+                  className="absolute inset-y-0 left-0 bg-[#9C5427] transition-all duration-500 rounded-full"
+                  style={{ width: `${((activeSlide + 1) / HERO_BACKGROUNDS.length) * 100}%` }}
+                />
+              </div>
+              <div className="flex items-center gap-0.5">
+                <button
+                  type="button"
+                  onClick={prevSlide}
+                  aria-label="Previous Slide"
+                  className="p-1 rounded-full text-white/80 hover:text-white hover:bg-white/15 transition-colors cursor-pointer"
+                >
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={nextSlide}
+                  aria-label="Next Slide"
+                  className="p-1 rounded-full text-white/80 hover:text-white hover:bg-white/15 transition-colors cursor-pointer"
+                >
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </div>
 
           </div>
