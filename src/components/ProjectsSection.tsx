@@ -1,11 +1,23 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Project } from '@/lib/types';
 import { PROJECTS } from '@/lib/data';
 import { getProjects } from '@/lib/api-client';
-import { X, ArrowRight, ArrowLeft, MapPin, Calendar, Maximize2, Sparkles, Filter } from 'lucide-react';
+import { 
+  X, 
+  ArrowRight, 
+  ArrowLeft, 
+  ChevronLeft, 
+  ChevronRight, 
+  MapPin, 
+  Calendar, 
+  Maximize2, 
+  Sparkles, 
+  Filter 
+} from 'lucide-react';
 
 export default function ProjectsSection() {
   const [projects, setProjects] = useState<Project[]>(PROJECTS);
@@ -13,6 +25,58 @@ export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState<number>(0);
   const [loading, setLoading] = useState(false);
+
+  // Smooth Horizontal Carousel State & Refs
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const scrollPrev = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  };
+
+  const scrollNext = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  };
+
+  const scrollToIndex = (index: number) => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const targetCard = container.children[index] as HTMLElement;
+    if (targetCard) {
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  };
+
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const scrollLeft = container.scrollLeft;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setActiveIndex(Math.min(Math.max(newIndex, 0), projects.length - 1));
+    setCanScrollLeft(scrollLeft > 15);
+    setCanScrollRight(scrollLeft < container.scrollWidth - container.clientWidth - 15);
+  };
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+      setActiveIndex(0);
+      setCanScrollLeft(false);
+      setCanScrollRight(sliderRef.current.scrollWidth > sliderRef.current.clientWidth);
+    }
+  }, [selectedCategory, projects.length]);
 
   useEffect(() => {
     async function loadFiltered() {
@@ -94,81 +158,144 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((proj) => (
-            <div
-              key={proj.id}
-              onClick={() => {
-                setSelectedProject(proj);
-                setActiveGalleryIndex(0);
-              }}
-              className="group cursor-pointer rounded-[30px] sm:rounded-[34px] bg-white border border-[#1A1815]/8 overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:shadow-xl flex flex-col p-4 sm:p-5"
-            >
-              {/* Image Preview with Hover Zoom */}
-              <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-[#1A1815]/5 mb-4">
-                <img
-                  src={proj.image}
-                  alt={proj.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                
-                {/* Floating Tag */}
-                <div className="absolute top-3 left-3">
-                  <span className="px-3 py-1 bg-white/95 backdrop-blur-md border border-[#1A1815]/5 text-[10px] uppercase tracking-wider font-bold text-[#1A1815] rounded-full shadow-xs">
-                    {proj.category}
-                  </span>
+        {/* =================================================================== */}
+        {/* SIDE-BY-SIDE SLIDING CAROUSEL WITH SMOOTH SNAP STOP & SIDE ARROW ARCS */}
+        {/* =================================================================== */}
+        <div className="relative group/slider">
+
+          {/* Left Side Arrow Arc Button */}
+          <button
+            type="button"
+            onClick={scrollPrev}
+            disabled={!canScrollLeft}
+            aria-label="Previous project"
+            className={`absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-[#9C5427] text-[#1A1815] hover:text-white shadow-[0_12px_36px_rgba(44,30,22,0.22)] border border-[#1A1815]/10 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-md group disabled:opacity-20 disabled:pointer-events-none disabled:hover:scale-100`}
+            title="Slide to Previous Project"
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
+          </button>
+
+          {/* Right Side Arrow Arc Button */}
+          <button
+            type="button"
+            onClick={scrollNext}
+            disabled={!canScrollRight}
+            aria-label="Next project"
+            className={`absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-[#9C5427] text-[#1A1815] hover:text-white shadow-[0_12px_36px_rgba(44,30,22,0.22)] border border-[#1A1815]/10 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-md group disabled:opacity-20 disabled:pointer-events-none disabled:hover:scale-100`}
+            title="Slide to Next Project"
+          >
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
+          </button>
+
+          {/* Side-by-Side Sliding Track with Snap Stops */}
+          <div
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex items-stretch gap-6 sm:gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-2 sm:px-3 no-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {projects.map((proj) => (
+              <div
+                key={proj.id}
+                onClick={() => {
+                  setSelectedProject(proj);
+                  setActiveGalleryIndex(0);
+                }}
+                className="snap-start w-[85vw] sm:w-[380px] md:w-[410px] lg:w-[420px] flex-shrink-0 group cursor-pointer rounded-[30px] sm:rounded-[34px] bg-white border border-[#1A1815]/8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:shadow-xl flex flex-col justify-between p-4 sm:p-5"
+              >
+                {/* Image Preview with Hover Zoom */}
+                <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-[#1A1815]/5 mb-4">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                    loading="lazy"
+                  />
+                  
+                  {/* Floating Tag */}
+                  <div className="absolute top-3 left-3">
+                    <span className="px-3 py-1 bg-white/95 backdrop-blur-md border border-[#1A1815]/5 text-[10px] uppercase tracking-wider font-bold text-[#1A1815] rounded-full shadow-xs">
+                      {proj.category}
+                    </span>
+                  </div>
+
+                  {/* Inspect Overlay */}
+                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="p-3.5 bg-white/95 border border-[#9C5427] rounded-full text-[#1A1815] transform scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                      <Maximize2 className="w-5 h-5 text-[#9C5427]" />
+                    </div>
+                  </div>
                 </div>
 
-                {/* Inspect Overlay */}
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="p-3.5 bg-white/95 border border-[#9C5427] rounded-full text-[#1A1815] transform scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                    <Maximize2 className="w-5 h-5 text-[#9C5427]" />
+                {/* Card Meta */}
+                <div className="p-2 sm:p-3 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center space-x-2 text-xs text-[#68625A] mb-2">
+                      <MapPin className="w-3.5 h-3.5 text-[#9C5427]" />
+                      <span>{proj.location}</span>
+                      <span>&bull;</span>
+                      <Calendar className="w-3.5 h-3.5 text-[#9C5427]" />
+                      <span>{proj.year}</span>
+                    </div>
+                    <h3 className="text-xl font-bounce text-[#1A1815] group-hover:text-[#9C5427] transition-colors leading-snug">
+                      {proj.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#5C564E] mt-2 line-clamp-2 leading-relaxed">
+                      {proj.description}
+                    </p>
+                  </div>
+
+                  {/* Materials preview */}
+                  <div className="pt-4 mt-4 border-t border-[#1A1815]/10 flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1.5">
+                      {(proj.materials || []).slice(0, 2).map((m, i) => (
+                        <span key={i} className="text-[11px] text-[#5C564E] bg-[#FFF3E9] border border-[#9C5427]/15 px-2.5 py-0.5 rounded-lg">
+                          {m}
+                        </span>
+                      ))}
+                      {(proj.materials || []).length > 2 && (
+                        <span className="text-[11px] text-[#5C564E] bg-[#FFF3E9] border border-[#9C5427]/15 px-2 py-0.5 rounded-lg">
+                          +{(proj.materials || []).length - 2}
+                        </span>
+                      )}
+                    </div>
+
+                    <span className="text-sm font-semibold text-[#9C5427] flex items-center group-hover:translate-x-1 transition-transform">
+                      View Case <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </span>
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
 
-              {/* Card Meta */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center space-x-2 text-xs text-[#68625A] mb-2">
-                    <MapPin className="w-3.5 h-3.5 text-[#9C5427]" />
-                    <span>{proj.location}</span>
-                    <span>&bull;</span>
-                    <Calendar className="w-3.5 h-3.5 text-[#9C5427]" />
-                    <span>{proj.year}</span>
-                  </div>
-                  <h3 className="text-xl font-bounce text-[#1A1815] group-hover:text-[#9C5427] transition-colors leading-snug">
-                    {proj.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#5C564E] mt-2 line-clamp-2 leading-relaxed">
-                    {proj.description}
-                  </p>
-                </div>
+          {/* Pagination Indicators */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {projects.map((proj, idx) => (
+              <button
+                key={proj.id}
+                onClick={() => scrollToIndex(idx)}
+                aria-label={`Go to ${proj.title}`}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  activeIndex === idx 
+                    ? 'w-8 bg-[#9C5427]' 
+                    : 'w-2 bg-[#1A1815]/20 hover:bg-[#1A1815]/40'
+                }`}
+              />
+            ))}
+          </div>
 
-                {/* Materials preview */}
-                <div className="pt-4 mt-4 border-t border-[#1A1815]/10 flex items-center justify-between">
-                  <div className="flex flex-wrap gap-1.5">
-                    {(proj.materials || []).slice(0, 2).map((m, i) => (
-                      <span key={i} className="text-[11px] text-[#5C564E] bg-[#FFF3E9] border border-[#9C5427]/15 px-2.5 py-0.5 rounded-lg">
-                        {m}
-                      </span>
-                    ))}
-                    {(proj.materials || []).length > 2 && (
-                      <span className="text-[11px] text-[#5C564E] bg-[#FFF3E9] border border-[#9C5427]/15 px-2 py-0.5 rounded-lg">
-                        +{(proj.materials || []).length - 2}
-                      </span>
-                    )}
-                  </div>
+        </div>
 
-                  <span className="text-sm font-semibold text-[#9C5427] flex items-center group-hover:translate-x-1 transition-transform">
-                    View Case <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Explore All Works in Dedicated Gallery Link */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md transition-all hover:gap-4 cursor-pointer"
+          >
+            <span>Explore Complete Projects Gallery (36+ Works)</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Modal: Project Detail & Gallery */}
