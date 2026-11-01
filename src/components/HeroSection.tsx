@@ -118,47 +118,42 @@ export default function HeroSection() {
           <div className="absolute bottom-0 left-0 right-0 h-36 sm:h-48 bg-gradient-to-t from-black/60 via-black/15 to-transparent z-10 pointer-events-none" />
         </div>
 
+        {/* Top Spacer matching the bottom bar height to lock the center text in exact 50% vertical center */}
+        <div className="relative z-10 h-20 sm:h-24 w-full pointer-events-none" aria-hidden="true" />
+
         {/* =================================================================== */}
-        {/* 2. MAIN EDITORIAL CONTENT: OFFSET STAGGERED HEADLINES               */}
+        {/* 2. MAIN CENTER EDITORIAL CONTENT (EXACT VERTICAL & HORIZONTAL CENTER) */}
         {/* =================================================================== */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 sm:pt-32 md:pt-36 lg:pt-40 flex-1 flex flex-col justify-center">
+        <div className="relative z-20 my-auto w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center py-6 sm:py-10">
           
-          {/* Top Line 1: INSPIRED SPACES (Left Aligned) */}
-          <div className="w-full">
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[98px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] drop-shadow-[0_4px_24px_rgba(0,0,0,0.65)]">
-              INSPIRED SPACES
+          {/* Main Headline: Two Lines Centered */}
+          <div className="w-full flex flex-col items-center justify-center text-center">
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.94] drop-shadow-[0_4px_28px_rgba(0,0,0,0.7)] text-center">
+              <span className="block">INSPIRED SPACES</span>
+              <span className="block mt-1 sm:mt-2.5">ELEVATED LIVING</span>
             </h1>
           </div>
 
-          {/* Stepped Line 2: ELEVATED LIVING (Offset to the Right) */}
-          <div className="w-full flex justify-end mt-2 sm:mt-3 md:mt-4">
-            <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[98px] font-black font-sans text-white uppercase tracking-[-0.03em] leading-[0.92] text-right drop-shadow-[0_4px_24px_rgba(0,0,0,0.65)]">
-              ELEVATED LIVING
-            </h2>
-          </div>
+          {/* Subtitle Description Exactly Centered */}
+          <p className="mt-6 sm:mt-8 md:mt-9 max-w-xl mx-auto text-xs sm:text-sm md:text-base text-white font-medium leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] text-center">
+            We design refined interiors that blend comfort and style, creating spaces that feel inviting and functional while reflecting your personality with thoughtful details and timeless elegance.
+          </p>
 
-          {/* Subtitle Description on the Left beneath Line 1 + CTA Buttons */}
-          <div className="mt-6 sm:mt-8 md:mt-10 max-w-md lg:max-w-lg flex flex-col items-start">
-            <p className="text-xs sm:text-sm md:text-base text-white font-medium leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
-              We design refined interiors that blend comfort and style, creating spaces that feel inviting and functional while reflecting your personality with thoughtful details and timeless elegance.
-            </p>
-
-            {/* Quick Action Pill Buttons */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-7">
-              <a
-                href="#packages"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-[0_10px_25px_rgba(156,84,39,0.4)] transition-all hover:gap-3 cursor-pointer"
-              >
-                <span>Explore Packages</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="#services"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/40 font-semibold text-xs sm:text-sm uppercase tracking-wider backdrop-blur-md shadow-md transition-all cursor-pointer"
-              >
-                <span>Our Services</span>
-              </a>
-            </div>
+          {/* Quick Action Pill Buttons Centered */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+            <a
+              href="#packages"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-[0_10px_25px_rgba(156,84,39,0.45)] transition-all hover:gap-3 cursor-pointer"
+            >
+              <span>Explore Packages</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="#services"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/40 font-semibold text-xs sm:text-sm uppercase tracking-wider backdrop-blur-md shadow-md transition-all cursor-pointer"
+            >
+              <span>Our Services</span>
+            </a>
           </div>
 
         </div>
