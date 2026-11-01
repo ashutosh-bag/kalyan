@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+import FloatingWidgets from "@/components/FloatingWidgets";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -133,6 +134,7 @@ export default function RootLayout({
         className="min-h-screen bg-[#FAF8F5] text-[#1A1815] flex flex-col font-lato selection:bg-[#9C5427] selection:text-white"
       >
         {children}
+        <FloatingWidgets />
       </body>
     </html>
   );
