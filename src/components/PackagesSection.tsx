@@ -1,10 +1,25 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle2, Sparkles, Shield, Clock, Calculator, ArrowRight, X, Phone, User, Mail, MessageSquare } from 'lucide-react';
+import { 
+  CheckCircle2, 
+  Sparkles, 
+  Shield, 
+  Clock, 
+  Calculator, 
+  ArrowRight, 
+  X, 
+  Phone, 
+  User, 
+  Mail, 
+  ChevronDown,
+  Layers,
+  Award
+} from 'lucide-react';
 
 interface PackageData {
   id: string;
+  category: 'apartment' | 'luxury' | 'compact';
   bhk: string;
   title: string;
   price: string;
@@ -18,7 +33,31 @@ interface PackageData {
 
 const PACKAGES: PackageData[] = [
   {
+    id: 'studio-smart',
+    category: 'compact',
+    bhk: 'STUDIO / 1 RK INTERIOR',
+    title: 'Studio & Compact Smart Interior',
+    price: 'RS. 1.8 LAKH',
+    rawPrice: 180000,
+    badge: 'QUICK 30-DAY',
+    image: '/images/casa-noir/urban-wood.jpg',
+    features: [
+      'Upto 5 years warranty',
+      'Rapid 30-Day handover',
+      'Multifunctional space-saving engineering',
+    ],
+    breakdown: [
+      'Compact modular straight kitchen with chimney ducting & stainless sink',
+      'Murphy wall fold-down bed or smart hydraulic storage bed base',
+      'Minimalist floating TV unit & work-from-home desk combo',
+      'Full-length 2-door wardrobe with sliding mirror panel',
+      'Circadian cove false ceiling with warm anti-glare downlights',
+      'Premium Asian Paints Royale luxury emulsion with putty primer',
+    ],
+  },
+  {
     id: '1-bhk',
+    category: 'apartment',
     bhk: '1 BHK INTERIOR',
     title: '1 BHK Complete Interior',
     price: 'RS. 2.5 LAKH',
@@ -30,15 +69,17 @@ const PACKAGES: PackageData[] = [
       'Get Free estimate site visit consultancy',
     ],
     breakdown: [
-      'Marine Plywood Modular Kitchen with soft-close drawers',
-      'Gypsum false ceiling in hall with warm LED cove profiles',
-      'Master bedroom sliding wardrobe (7x7 ft)',
-      'Designer TV unit console with concealed wiring',
-      'Premium Asian Paints Royale luxury emulsion',
+      'Marine Plywood Modular Kitchen with soft-close tandem drawers',
+      'Gypsum false ceiling in living room with warm LED cove profiles',
+      'Master bedroom sliding wardrobe (7x7 ft) with inner dressing vanity',
+      'Designer TV unit console with concealed wire management',
+      'Shoe rack entry console & foyer lighting accent point',
+      'Premium Asian Paints Royale luxury emulsion wash-resistant finish',
     ],
   },
   {
     id: '2-bhk',
+    category: 'apartment',
     bhk: '2 BHK INTERIOR',
     title: '2 BHK Luxury Interior',
     price: 'RS. 3.5 LAKH',
@@ -52,16 +93,17 @@ const PACKAGES: PackageData[] = [
       'Get Free estimate site visit consultancy',
     ],
     breakdown: [
-      'L-Shape / Parallel BWR Modular Kitchen + Tandem carousels',
+      'L-Shape / Parallel BWR Modular Kitchen with corner tandem carousels',
       'Living & Dining designer false ceiling with dual warm coves',
-      'Two full-height master wardrobes with inner vanity',
+      'Two full-height master wardrobes with built-in dresser & mirrors',
       'Modern floating TV entertainment wall with fluted louvers',
-      'Shoe rack foyer console & breakfast counter bar',
-      'Full electrical fittings & chandelier points setup',
+      'Shoe rack foyer console & breakfast counter bar extension',
+      'Full branded electrical fittings & chandelier suspension points',
     ],
   },
   {
     id: '3-bhk',
+    category: 'apartment',
     bhk: '3 BHK INTERIOR',
     title: '3 BHK Royal Interior',
     price: 'RS. 4.5 LAKH',
@@ -74,17 +116,65 @@ const PACKAGES: PackageData[] = [
       'Get Free estimate site visit consultancy',
     ],
     breakdown: [
-      'Island / Luxury Modular Kitchen with Quartz top & tall pantry',
-      'Full architectural false ceiling across all 3 bedrooms & living',
-      'Three master bedroom floor-to-ceiling wardrobes with sensor lights',
-      'Grand arched / fluted TV feature wall with vertical acrylic tubes',
-      'Puja room wooden mandir unit with CNC laser carving',
-      'Dedicated foyer partition & bar cabinet console',
+      'Island / Luxury Modular Kitchen with quartz countertop & tall pantry',
+      'Full architectural false ceiling across all 3 bedrooms, hall & dining',
+      'Three master bedroom floor-to-ceiling wardrobes with sensor LEDs',
+      'Grand arched / fluted TV feature wall with vertical acrylic accents',
+      'Puja room wooden mandir unit with CNC laser architectural carving',
+      'Dedicated foyer partition divider & luxury bar cabinet console',
+    ],
+  },
+  {
+    id: '4-bhk-penthouse',
+    category: 'luxury',
+    bhk: '4 BHK / PENTHOUSE',
+    title: '4 BHK Imperial Penthouse',
+    price: 'RS. 6.5 LAKH',
+    rawPrice: 650000,
+    badge: 'PREMIUM LUXURY',
+    image: '/images/kalyan/assets/oo5-D62wu78I.png',
+    features: [
+      'Upto 10 years warranty',
+      '50 Days delivery guarantee',
+      'Complete 3D VR walkthrough & Vastu site alignment',
+    ],
+    breakdown: [
+      'Grand double-height acrylic & natural veneer feature entertainment wall',
+      'Four master bedroom sliding & walk-in wardrobe suites with profile LEDs',
+      'Designer island culinary kitchen with imported quartz & built-in appliance tall unit',
+      'Architectural acoustic false ceilings with magnetic linear tracks & COBs',
+      'Handcrafted wooden temple sanctum with backlit brass jaali lattice',
+      'Private executive lounge bar counter & customized study library shelves',
+    ],
+  },
+  {
+    id: 'villa-duplex',
+    category: 'luxury',
+    bhk: 'DUPLEX & VILLA',
+    title: 'Villa & Duplex Signature',
+    price: 'RS. 8.5 LAKH',
+    rawPrice: 850000,
+    badge: 'ARCHITECTURAL',
+    image: '/images/hero/herobg2.png',
+    features: [
+      '10-Year Comprehensive Carcass Warranty',
+      'Turnkey 60-Day Handover with Penalty Clause',
+      'Dedicated Project Architect & Daily Site Logs',
+    ],
+    breakdown: [
+      'Bespoke floating staircase railing & vertical architectural wooden louvers',
+      'Full double-story living foyer ceiling with custom chandelier suspension',
+      'Italian marble floor crystal polish & Khandagiri natural stone wall cladding',
+      '5 custom wardrobe suites with tinted lacquered glass & integrated profile LEDs',
+      'Smart home automation ready: lighting scene controllers & motorized curtains',
+      'Outdoor terrace sit-out pergolas & vertical green botanical accent wall',
     ],
   },
 ];
 
 export default function PackagesSection() {
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'apartment' | 'luxury' | 'compact'>('all');
+  const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
   const [selectedPkg, setSelectedPkg] = useState<PackageData | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -96,26 +186,52 @@ export default function PackagesSection() {
     notes: '',
   });
 
+  const toggleExpand = (id: string) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   const handleOpenQuote = (pkg: PackageData) => {
     setSelectedPkg(pkg);
     setModalOpen(true);
     setFormSubmitted(false);
   };
 
-  const handleSubmitQuote = (e: React.FormEvent) => {
+  const handleSubmitQuote = async (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          service: `Package: ${selectedPkg?.bhk} - ${selectedPkg?.price}`,
+          location: formData.city,
+          message: formData.notes || `Inquiry for ${selectedPkg?.title} (${selectedPkg?.price}) in ${formData.city}`,
+        }),
+      });
+    } catch (err) {
+      console.error('Quote submission error', err);
+    }
     setFormSubmitted(true);
-    setTimeout(() => {
-      // In real scenario this syncs to API
-    }, 500);
   };
+
+  const filteredPackages = selectedCategory === 'all'
+    ? PACKAGES
+    : PACKAGES.filter((p) => p.category === selectedCategory);
 
   return (
     <section id="packages" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] relative overflow-hidden select-none border-t border-[#1A1815]/8">
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Header matching exact Hero Section typography & design language */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+        {/* =================================================================== */}
+        {/* 1. SECTION HEADER                                                   */}
+        {/* =================================================================== */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-6">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-[1.5px] bg-[#9C5427]" />
@@ -132,53 +248,93 @@ export default function PackagesSection() {
             </p>
           </div>
 
-          {/* Floating Trust Badges */}
+          {/* Floating Trust Badges with Subtle Pulse */}
           <div className="flex flex-wrap items-center gap-3">
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-[#1A1815]/8 shadow-xs">
+            <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-[#1A1815]/8 shadow-xs hover:border-[#9C5427]/40 transition-colors">
               <Shield className="w-4 h-4 text-[#9C5427]" />
               <span className="text-xs font-semibold text-[#1A1815]">10-Year Warranty</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-[#1A1815]/8 shadow-xs">
+            <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-[#1A1815]/8 shadow-xs hover:border-[#9C5427]/40 transition-colors">
               <Clock className="w-4 h-4 text-[#9C5427]" />
               <span className="text-xs font-semibold text-[#1A1815]">45-Day Handover</span>
             </div>
           </div>
         </div>
 
-        {/* 3 Package Cards matching Hero Bento Style */}
+        {/* =================================================================== */}
+        {/* 2. CATEGORY FILTER TABS WITH ANIMATED PILL SELECTION                */}
+        {/* =================================================================== */}
+        <div className="flex items-center gap-2.5 overflow-x-auto pb-4 mb-8 sm:mb-12 no-scrollbar">
+          {[
+            { id: 'all', label: 'All Packages (6)' },
+            { id: 'apartment', label: 'Apartments (1, 2, 3 BHK)' },
+            { id: 'luxury', label: 'Penthouses & Villas' },
+            { id: 'compact', label: 'Studio & Compact (1 RK)' },
+          ].map((tab) => {
+            const isActive = selectedCategory === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setSelectedCategory(tab.id as any)}
+                className={`relative px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase whitespace-nowrap transition-all duration-300 cursor-pointer ${
+                  isActive
+                    ? 'bg-[#1A1815] text-white shadow-md scale-102'
+                    : 'bg-white border border-[#1A1815]/10 text-[#68625A] hover:bg-[#F2ECE4] hover:text-[#1A1815]'
+                }`}
+              >
+                <span>{tab.label}</span>
+                {isActive && (
+                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full bg-[#9C5427]" />
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* =================================================================== */}
+        {/* 3. 6 PACKAGE CARDS WITH HOVER LIFT, SHIMMER & ACCORDION ANIMATIONS */}
+        {/* =================================================================== */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {PACKAGES.map((pkg) => {
+          {filteredPackages.map((pkg, idx) => {
             const isPop = pkg.popular;
+            const isExpanded = !!expandedCards[pkg.id];
+
             return (
               <div
                 key={pkg.id}
-                className={`group relative bg-white rounded-[30px] sm:rounded-[36px] overflow-hidden border transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between p-5 sm:p-6 ${
+                style={{ animationDelay: `${idx * 80}ms` }}
+                className={`group relative bg-white rounded-[32px] sm:rounded-[38px] overflow-hidden border transition-all duration-500 ease-out flex flex-col justify-between p-5 sm:p-6 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(156,84,39,0.14)] animate-in fade-in slide-in-from-bottom-4 ${
                   isPop
-                    ? 'border-[#9C5427]/40 shadow-[0_16px_45px_rgba(156,84,39,0.12)]'
-                    : 'border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:shadow-[0_16px_40px_rgba(26,24,21,0.08)]'
+                    ? 'border-[#9C5427]/50 shadow-[0_16px_45px_rgba(156,84,39,0.12)]'
+                    : 'border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:border-[#9C5427]/40'
                 }`}
               >
-                {/* Popular / Best Value Ribbon */}
+                {/* Diagonal Light Shimmer Sweep Animation on Hover */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none z-20" />
+
+                {/* Popular / Best Value Ribbon with Glowing Pulse */}
                 {pkg.badge && (
                   <div className="absolute top-8 right-8 z-20">
-                    <span className="px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-[#9C5427] text-white shadow-sm">
+                    <span className="relative inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-[#9C5427] text-white shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                       {pkg.badge}
                     </span>
                   </div>
                 )}
 
                 <div>
-                  {/* Image Container */}
+                  {/* Image Container with Smooth 700ms Scale Animation */}
                   <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#1A1815]/5 mb-5">
                     <img
                       src={pkg.image}
                       alt={pkg.bhk}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                     />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
                     {/* BHK Pill Tag */}
                     <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xs border border-[#1A1815]/5">
@@ -190,59 +346,85 @@ export default function PackagesSection() {
 
                   {/* Card Content */}
                   <div>
+                    {/* Title & Price Header */}
+                    <h3 className="font-bold text-lg text-[#1A1815] group-hover:text-[#9C5427] transition-colors mb-2">
+                      {pkg.title}
+                    </h3>
+
                     {/* Price Line */}
                     <div className="mb-4 pb-3 border-b border-[#1A1815]/8 flex items-baseline justify-between">
                       <span className="text-xs uppercase tracking-wider font-semibold text-[#7A7369]">
-                        Starting From
+                        Turnkey Starting From
                       </span>
-                      <span className="text-xl sm:text-2xl font-black text-[#9C5427]">
+                      <span className="text-xl sm:text-2xl font-black text-[#9C5427] tracking-tight">
                         {pkg.price}
                       </span>
                     </div>
 
                     {/* Feature Bullet Points */}
-                    <ul className="space-y-2.5 mb-6">
-                      {pkg.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-start text-xs sm:text-sm text-[#1A1815] leading-relaxed">
+                    <ul className="space-y-2.5 mb-5">
+                      {pkg.features.map((feat, fIdx) => (
+                        <li key={fIdx} className="flex items-start text-xs sm:text-sm text-[#1A1815] leading-relaxed">
                           <span className="text-[#9C5427] text-sm mr-2 font-bold leading-none select-none">•</span>
                           <span>{feat}</span>
                         </li>
                       ))}
                     </ul>
 
-                    {/* Detailed Specifications Preview Drawer */}
-                    <div className="p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/6 space-y-1 mb-6 text-xs text-[#68625A]">
-                      <div className="font-semibold text-[#1A1815] text-[11px] uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#9C5427]" />
-                        <span>Included Scope:</span>
+                    {/* Interactive Expandable Scope Drawer with Smooth Accordion Animation */}
+                    <div className="mb-6 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/6 overflow-hidden transition-all duration-300">
+                      <button
+                        type="button"
+                        onClick={() => toggleExpand(pkg.id)}
+                        className="w-full p-3.5 flex items-center justify-between text-left hover:bg-[#F2ECE4] transition-colors cursor-pointer"
+                        aria-expanded={isExpanded}
+                      >
+                        <div className="font-semibold text-[#1A1815] text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#9C5427]" />
+                          <span>Included Scope ({pkg.breakdown.length} Items)</span>
+                        </div>
+                        <div className="flex items-center gap-1 text-[11px] font-semibold text-[#9C5427]">
+                          <span>{isExpanded ? 'Hide' : 'View All'}</span>
+                          <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                        </div>
+                      </button>
+
+                      <div className={`px-3.5 pb-3.5 text-xs text-[#68625A] space-y-1.5 transition-all duration-300 ${
+                        isExpanded ? 'max-h-96 opacity-100 mt-1' : 'max-h-24 opacity-90'
+                      }`}>
+                        {(isExpanded ? pkg.breakdown : pkg.breakdown.slice(0, 3)).map((item, i) => (
+                          <p key={i} className="leading-snug flex items-start gap-1.5">
+                            <span className="text-[#9C5427] font-bold">✓</span>
+                            <span>{item}</span>
+                          </p>
+                        ))}
                       </div>
-                      {pkg.breakdown.slice(0, 3).map((item, i) => (
-                        <p key={i} className="line-clamp-1 leading-snug">
-                          ✓ {item}
-                        </p>
-                      ))}
                     </div>
+
                   </div>
                 </div>
 
-                {/* Button: Terracotta Pill matching Hero */}
-                <div>
+                {/* Button: Terracotta Pill with Animated Hover Arrow Slide */}
+                <div className="pt-1">
                   <button
                     type="button"
                     onClick={() => handleOpenQuote(pkg)}
-                    className="w-full rounded-full py-3.5 px-6 bg-[#9C5427] hover:bg-[#85451D] active:scale-98 text-white font-medium text-sm sm:text-base shadow-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    className="group/btn w-full rounded-full py-3.5 px-6 bg-[#9C5427] hover:bg-[#85451D] active:scale-98 text-white font-medium text-sm sm:text-base shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Get Free Estimate</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
                   </button>
                 </div>
+
               </div>
             );
           })}
         </div>
 
-        {/* Bottom Banner with Matching Bento Card */}
-        <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-[30px] sm:rounded-[36px] bg-white border border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* =================================================================== */}
+        {/* 4. BOTTOM CUSTOM ESTIMATE CTA BANNER                                */}
+        {/* =================================================================== */}
+        <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-[30px] sm:rounded-[36px] bg-white border border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] flex flex-col md:flex-row items-center justify-between gap-6 hover:border-[#9C5427]/30 transition-colors">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/8 flex items-center justify-center flex-shrink-0 text-[#9C5427]">
               <Calculator className="w-6 h-6" />
@@ -252,27 +434,28 @@ export default function PackagesSection() {
                 Need a Custom Duplex or Villa Quotation?
               </h3>
               <p className="text-xs sm:text-sm text-[#68625A] mt-0.5">
-                Our principal architects visit your Bhubaneswar/Cuttack site for free measurement and 3D layout.
+                Our principal architects visit your Bhubaneswar/Cuttack site for free laser measurement and custom 3D layout.
               </p>
             </div>
           </div>
           <button
             type="button"
-            onClick={() => handleOpenQuote(PACKAGES[1])}
-            className="px-7 py-3.5 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white font-medium text-sm sm:text-base transition-all duration-300 shadow-sm whitespace-nowrap cursor-pointer hover:scale-102"
+            onClick={() => handleOpenQuote(PACKAGES[2])}
+            className="group/btn px-7 py-3.5 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white font-medium text-sm sm:text-base transition-all duration-300 shadow-sm whitespace-nowrap cursor-pointer hover:scale-102 flex items-center gap-2"
           >
-            Schedule Free Site Visit
+            <span>Schedule Free Site Visit</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
           </button>
         </div>
 
       </div>
 
       {/* ========================================================================= */}
-      {/* INTERACTIVE QUOTE MODAL                                                    */}
+      {/* 5. INTERACTIVE QUOTE MODAL (ANIMATED POPUP)                                */}
       {/* ========================================================================= */}
       {modalOpen && selectedPkg && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-200">
-          <div className="relative w-full max-w-xl bg-[#FFF3E9] rounded-2xl shadow-2xl border border-[#9C5427]/30 overflow-hidden my-8">
+        <div className="fixed inset-0 z-50 bg-black/65 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-200">
+          <div className="relative w-full max-w-xl bg-[#FFF3E9] rounded-3xl shadow-2xl border border-[#9C5427]/30 overflow-hidden my-8 animate-in zoom-in-95 duration-200">
             
             {/* Header */}
             <div className="bg-[#9C5427] p-5 sm:p-6 text-white flex items-center justify-between">
@@ -280,11 +463,11 @@ export default function PackagesSection() {
                 <span className="text-xs uppercase tracking-widest font-medium text-white/90">
                   Instant Cost Calculation
                 </span>
-                <h3 className="font-bounce text-2xl sm:text-3xl text-white">
+                <h3 className="font-sans font-black uppercase text-2xl sm:text-3xl text-white tracking-tight">
                   Get Quote: {selectedPkg.bhk}
                 </h3>
                 <p className="text-xs sm:text-sm text-white/90 mt-0.5">
-                  Package starting from <span className="font-bold">{selectedPkg.price}</span> (Turnkey All-Inclusive)
+                  Package starting from <span className="font-bold underline">{selectedPkg.price}</span> (Turnkey All-Inclusive)
                 </p>
               </div>
               <button
@@ -300,11 +483,11 @@ export default function PackagesSection() {
             {/* Modal Body */}
             <div className="p-6 sm:p-8">
               {formSubmitted ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-[#9C5427]/20 text-[#9C5427] mx-auto flex items-center justify-center mb-4">
+                <div className="text-center py-8 space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-[#9C5427]/20 text-[#9C5427] mx-auto flex items-center justify-center">
                     <CheckCircle2 className="w-10 h-10 text-[#9C5427]" />
                   </div>
-                  <h4 className="font-bounce text-2xl text-black mb-2">
+                  <h4 className="font-sans font-black uppercase text-2xl text-black">
                     Quote Request Received!
                   </h4>
                   <p className="text-sm text-[#5C564E] max-w-md mx-auto leading-relaxed">
@@ -313,7 +496,7 @@ export default function PackagesSection() {
                   <button
                     type="button"
                     onClick={() => setModalOpen(false)}
-                    className="mt-6 px-6 py-2.5 bg-[#9C5427] text-white font-semibold text-base rounded-xl shadow-md hover:bg-[#85451D]"
+                    className="mt-6 px-7 py-3 bg-[#9C5427] hover:bg-[#85451D] text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-md transition-colors cursor-pointer"
                   >
                     Done
                   </button>
@@ -321,9 +504,9 @@ export default function PackagesSection() {
               ) : (
                 <form onSubmit={handleSubmitQuote} className="space-y-4">
                   {/* Included Scope Summary */}
-                  <div className="p-3.5 rounded-xl bg-white border border-[#1A1815]/10 text-xs space-y-1">
+                  <div className="p-3.5 rounded-2xl bg-white border border-[#1A1815]/10 text-xs space-y-1">
                     <div className="font-bold text-[#1A1815]">What is included in {selectedPkg.bhk}:</div>
-                    <ul className="text-[#5C564E] list-disc list-inside space-y-0.5">
+                    <ul className="text-[#5C564E] list-disc list-inside space-y-0.5 max-h-32 overflow-y-auto">
                       {selectedPkg.breakdown.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
@@ -406,15 +589,15 @@ export default function PackagesSection() {
                       placeholder="e.g. Looking for modular kitchen + false ceiling in living room within 45 days..."
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] text-sm outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#1A1815]/15 focus:border-[#9C5427] text-sm outline-none resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-medium text-base rounded-full shadow-sm transition-all cursor-pointer mt-2"
+                    className="w-full py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-md transition-all cursor-pointer mt-2"
                   >
-                    Submit & Download Free Estimate
+                    Submit &amp; Download Free Estimate
                   </button>
                   <p className="text-[11px] text-center text-[#7A7369]">
                     🔒 No spam. Our team will contact you within 2 business hours.
