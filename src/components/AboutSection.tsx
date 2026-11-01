@@ -1,14 +1,53 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Layers, Sun, ShieldCheck, Gem, ArrowRight } from 'lucide-react';
+
+// Smooth counting animation when page is loaded / refreshed
+function AnimatedStatCounter({ target, suffix = '+' }: { target: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let animationFrameId: number;
+    let startTimestamp: number | null = null;
+    const duration = 2200; // 2.2 seconds smooth exponential count
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const elapsed = timestamp - startTimestamp;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Ease-out exponential deceleration curve
+      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const current = Math.floor(ease * target);
+      setCount(current);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [target]);
+
+  return (
+    <span>
+      {count}
+      {suffix}
+    </span>
+  );
+}
 
 export default function AboutSection() {
   const stats = [
-    { value: '65250+', label: 'Sq. Ft. Designed & Crafted' },
-    { value: '23160+', label: 'Hours of Craftsmanship' },
-    { value: '150+', label: 'Turnkey Homes Delivered' },
-    { value: '20+', label: 'Years of Combined Mastery' },
+    { target: 65250, suffix: '+', label: 'Sq. Ft. Designed & Crafted' },
+    { target: 23160, suffix: '+', label: 'Hours of Craftsmanship' },
+    { target: 150, suffix: '+', label: 'Turnkey Homes Delivered' },
+    { target: 20, suffix: '+', label: 'Years of Combined Mastery' },
   ];
 
   const pillars = [
@@ -124,14 +163,14 @@ export default function AboutSection() {
         </div>
 
         {/* ================================================================= */}
-        {/* 2. STATS COUNTER ROW (65250+, 23160+, 150+, 20+)                  */}
+        {/* 2. STATS COUNTER ROW (ANIMATED COUNTING WHEN REFRESHED)           */}
         {/* ================================================================= */}
         <div className="mt-16 sm:mt-20 lg:mt-24 pt-10 sm:pt-14 border-t border-[#2C1E16]/12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col">
                 <span className="text-3xl sm:text-4xl lg:text-[46px] font-medium tracking-tight text-[#2C1E16] font-sans">
-                  {stat.value}
+                  <AnimatedStatCounter target={stat.target} suffix={stat.suffix} />
                 </span>
                 <span className="text-xs sm:text-sm text-[#7D6858] tracking-wide mt-1.5 font-medium">
                   {stat.label}

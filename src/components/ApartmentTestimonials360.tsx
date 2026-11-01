@@ -730,9 +730,10 @@ export default function ApartmentTestimonials360() {
 
   return (
     <section
-      id="testimonials-360"
-      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#FAF8F5] text-[#1A1815] border-t border-[#1A1815]/8 relative overflow-hidden select-none"
+      id="360-view"
+      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#FAF8F5] text-[#1A1815] border-t border-[#1A1815]/8 relative overflow-hidden select-none scroll-mt-20"
     >
+      <div id="testimonials-360" className="sr-only pointer-events-none" aria-hidden="true" />
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
