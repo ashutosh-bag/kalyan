@@ -6,7 +6,6 @@ import ApartmentTestimonials360 from '@/components/ApartmentTestimonials360';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ServicesSection from '@/components/ServicesSection';
-import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import GoogleReviewsSection from '@/components/GoogleReviewsSection';
 import Footer from '@/components/Footer';
@@ -39,9 +38,6 @@ export default function Home() {
 
         {/* Services & Capabilities */}
         <ServicesSection />
-
-        {/* Blog & Architectural Monograph */}
-        <BlogSection />
 
         {/* Contact & Consultation Form (API Connected) */}
         <ContactSection />

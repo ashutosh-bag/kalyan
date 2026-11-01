@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   Sparkles, 
   Maximize2, 
   X, 
   ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
   Sun, 
   Moon, 
   Layers, 
@@ -235,6 +237,58 @@ export default function SpatialShowcase() {
   const filteredItems = activeCategory === 'all' 
     ? SHOWCASE_ITEMS 
     : SHOWCASE_ITEMS.filter(item => item.category === activeCategory);
+
+  // Detailed Studies & Models Horizontal Slider
+  const studiesSliderRef = useRef<HTMLDivElement>(null);
+  const [canScrollStudiesLeft, setCanScrollStudiesLeft] = useState(false);
+  const [canScrollStudiesRight, setCanScrollStudiesRight] = useState(true);
+  const [activeStudiesIndex, setActiveStudiesIndex] = useState(0);
+
+  const scrollStudiesPrev = () => {
+    if (!studiesSliderRef.current) return;
+    const container = studiesSliderRef.current;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  };
+
+  const scrollStudiesNext = () => {
+    if (!studiesSliderRef.current) return;
+    const container = studiesSliderRef.current;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  };
+
+  const scrollStudiesToIndex = (index: number) => {
+    if (!studiesSliderRef.current) return;
+    const container = studiesSliderRef.current;
+    const targetCard = container.children[index] as HTMLElement;
+    if (targetCard) {
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  };
+
+  const handleStudiesScroll = () => {
+    if (!studiesSliderRef.current) return;
+    const container = studiesSliderRef.current;
+    const scrollLeft = container.scrollLeft;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setActiveStudiesIndex(Math.min(Math.max(newIndex, 0), filteredItems.length - 1));
+    setCanScrollStudiesLeft(scrollLeft > 15);
+    setCanScrollStudiesRight(scrollLeft < container.scrollWidth - container.clientWidth - 15);
+  };
+
+  useEffect(() => {
+    if (studiesSliderRef.current) {
+      studiesSliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+      setActiveStudiesIndex(0);
+      setCanScrollStudiesLeft(false);
+      setCanScrollStudiesRight(studiesSliderRef.current.scrollWidth > studiesSliderRef.current.clientWidth);
+    }
+  }, [activeCategory, filteredItems.length]);
 
   const getMarqueeDuration = () => {
     if (marqueeSpeed === 'slow') return '60s';
@@ -876,83 +930,133 @@ export default function SpatialShowcase() {
             </div>
           </div>
 
-          {/* Staggered Responsive 3D Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item) => {
-              const isHovered = hoveredCardId === item.id;
-              return (
-                <div
-                  key={item.id}
-                  onMouseMove={(e) => handleCardMouseMove(e, item.id)}
-                  onMouseLeave={handleCardMouseLeave}
-                  onClick={() => setSelectedItem(item)}
-                  className="perspective-1000 cursor-pointer"
-                >
+          {/* Side-by-Side Sliding Carousel with Side Arrow Arcs */}
+          <div className="relative group/slider">
+
+            {/* Left Side Arrow Arc Button */}
+            <button
+              type="button"
+              onClick={scrollStudiesPrev}
+              disabled={!canScrollStudiesLeft}
+              aria-label="Previous study"
+              className={`absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-[#9C5427] text-[#1A1815] hover:text-white shadow-[0_12px_36px_rgba(44,30,22,0.22)] border border-[#1A1815]/10 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-md group disabled:opacity-20 disabled:pointer-events-none disabled:hover:scale-100`}
+              title="Slide to Previous Study"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
+            </button>
+
+            {/* Right Side Arrow Arc Button */}
+            <button
+              type="button"
+              onClick={scrollStudiesNext}
+              disabled={!canScrollStudiesRight}
+              aria-label="Next study"
+              className={`absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-[#9C5427] text-[#1A1815] hover:text-white shadow-[0_12px_36px_rgba(44,30,22,0.22)] border border-[#1A1815]/10 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-md group disabled:opacity-20 disabled:pointer-events-none disabled:hover:scale-100`}
+              title="Slide to Next Study"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
+            </button>
+
+            {/* Side-by-Side Sliding Track with Snap Stops */}
+            <div
+              ref={studiesSliderRef}
+              onScroll={handleStudiesScroll}
+              className="flex items-stretch gap-6 sm:gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-2 sm:px-3 no-scrollbar"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {filteredItems.map((item) => {
+                const isHovered = hoveredCardId === item.id;
+                return (
                   <div
-                    className="relative w-full h-[430px] rounded-2xl overflow-hidden border border-[#9C5427]/20 bg-white transition-transform duration-200 ease-out shadow-lg transform-style-3d group hover:border-[#9C5427]/60 hover:shadow-2xl"
-                    style={{
-                      transform: isHovered
-                        ? `rotateX(${cardRotate.x}deg) rotateY(${cardRotate.y}deg) scale3d(1.02, 1.02, 1.02)`
-                        : 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
-                    }}
+                    key={item.id}
+                    onMouseMove={(e) => handleCardMouseMove(e, item.id)}
+                    onMouseLeave={handleCardMouseLeave}
+                    onClick={() => setSelectedItem(item)}
+                    className="snap-start w-[85vw] sm:w-[380px] md:w-[410px] lg:w-[420px] flex-shrink-0 perspective-1000 cursor-pointer"
                   >
-                    {/* Background Interior Image */}
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                      loading="lazy"
-                    />
+                    <div
+                      className="relative w-full h-[430px] rounded-2xl overflow-hidden border border-[#9C5427]/20 bg-white transition-transform duration-200 ease-out shadow-lg transform-style-3d group hover:border-[#9C5427]/60 hover:shadow-2xl"
+                      style={{
+                        transform: isHovered
+                          ? `rotateX(${cardRotate.x}deg) rotateY(${cardRotate.y}deg) scale3d(1.02, 1.02, 1.02)`
+                          : 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
+                      }}
+                    >
+                      {/* Background Interior Image */}
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                        loading="lazy"
+                      />
 
-                    {/* Gradient & Shading */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
+                      {/* Gradient & Shading */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
 
-                    {/* Top Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                      <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] font-mono text-[#FF9E4A]">
-                        {item.categoryLabel}
-                      </span>
-                      <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#9C5427] group-hover:text-white transition-colors shadow-sm">
-                        <ArrowUpRight className="w-4 h-4" />
-                      </span>
-                    </div>
-
-                    {/* Bottom Details */}
-                    <div className="absolute bottom-5 left-5 right-5 z-10 space-y-2">
-                      <div className="text-[11px] font-mono text-neutral-300 flex items-center justify-between">
-                        <span>{item.location}</span>
-                        <span className="text-[#FF9E4A]">{item.area}</span>
+                      {/* Top Badges */}
+                      <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
+                        <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] font-mono text-[#FF9E4A]">
+                          {item.categoryLabel}
+                        </span>
+                        <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#9C5427] group-hover:text-white transition-colors shadow-sm">
+                          <ArrowUpRight className="w-4 h-4" />
+                        </span>
                       </div>
 
-                      <h4 className="text-lg font-playfair text-white font-bold leading-snug group-hover:text-[#C49B7E] transition-colors">
-                        {item.title}
-                      </h4>
+                      {/* Bottom Details */}
+                      <div className="absolute bottom-5 left-5 right-5 z-10 space-y-2">
+                        <div className="text-[11px] font-mono text-neutral-300 flex items-center justify-between">
+                          <span>{item.location}</span>
+                          <span className="text-[#FF9E4A]">{item.area}</span>
+                        </div>
 
-                      <p className="text-xs text-neutral-300 line-clamp-2 leading-relaxed">
-                        {item.description}
-                      </p>
+                        <h4 className="text-lg font-playfair text-white font-bold leading-snug group-hover:text-[#C49B7E] transition-colors">
+                          {item.title}
+                        </h4>
 
-                      {/* Material Tags */}
-                      <div className="flex flex-wrap gap-1.5 pt-1">
-                        {item.materials.slice(0, 3).map((mat, mIdx) => (
-                          <span
-                            key={mIdx}
-                            className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-sm border border-white/20 text-[10px] text-white "
-                          >
-                            {mat}
-                          </span>
-                        ))}
-                        {item.materials.length > 3 && (
-                          <span className="px-1.5 py-0.5 rounded bg-white/10 text-[10px] text-neutral-300 ">
-                            +{item.materials.length - 3}
-                          </span>
-                        )}
+                        <p className="text-xs text-neutral-300 line-clamp-2 leading-relaxed">
+                          {item.description}
+                        </p>
+
+                        {/* Material Tags */}
+                        <div className="flex flex-wrap gap-1.5 pt-1">
+                          {item.materials.slice(0, 3).map((mat, mIdx) => (
+                            <span
+                              key={mIdx}
+                              className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-sm border border-white/20 text-[10px] text-white "
+                            >
+                              {mat}
+                            </span>
+                          ))}
+                          {item.materials.length > 3 && (
+                            <span className="px-1.5 py-0.5 rounded bg-white/10 text-[10px] text-neutral-300 ">
+                              +{item.materials.length - 3}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+
+            {/* Pagination Indicators */}
+            <div className="flex items-center justify-center gap-2 mt-8">
+              {filteredItems.map((item, idx) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollStudiesToIndex(idx)}
+                  aria-label={`Go to ${item.title}`}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    activeStudiesIndex === idx 
+                      ? 'w-8 bg-[#9C5427]' 
+                      : 'w-2 bg-[#1A1815]/20 hover:bg-[#1A1815]/40'
+                  }`}
+                />
+              ))}
+            </div>
+
           </div>
         </div>
 
