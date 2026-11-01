@@ -40,10 +40,11 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Requested navbar items: home, services, blog, contact
+  // Requested navbar items: home, services, projects, blog, contact
   const navItems = [
     { name: 'Home', href: '#home', id: 'home' },
     { name: 'Services', href: '#services', id: 'services' },
+    { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Blog', href: '#blog', id: 'blog' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
