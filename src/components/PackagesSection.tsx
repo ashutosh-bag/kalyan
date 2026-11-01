@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   CheckCircle2, 
   Sparkles, 
@@ -8,6 +8,8 @@ import {
   Clock, 
   Calculator, 
   ArrowRight, 
+  ChevronLeft,
+  ChevronRight,
   X, 
   Phone, 
   User, 
@@ -186,6 +188,62 @@ export default function PackagesSection() {
     notes: '',
   });
 
+  // Smooth Horizontal Carousel State & Refs
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const scrollPrev = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  };
+
+  const scrollNext = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  };
+
+  const scrollToIndex = (index: number) => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const targetCard = container.children[index] as HTMLElement;
+    if (targetCard) {
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  };
+
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const scrollLeft = container.scrollLeft;
+    const card = container.firstElementChild as HTMLElement;
+    const cardWidth = card ? card.offsetWidth + 24 : 400;
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setActiveIndex(Math.min(Math.max(newIndex, 0), filteredPackages.length - 1));
+    setCanScrollLeft(scrollLeft > 15);
+    setCanScrollRight(scrollLeft < container.scrollWidth - container.clientWidth - 15);
+  };
+
+  const filteredPackages = selectedCategory === 'all'
+    ? PACKAGES
+    : PACKAGES.filter((p) => p.category === selectedCategory);
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+      setActiveIndex(0);
+      setCanScrollLeft(false);
+      setCanScrollRight(sliderRef.current.scrollWidth > sliderRef.current.clientWidth);
+    }
+  }, [selectedCategory, filteredPackages.length]);
+
   const toggleExpand = (id: string) => {
     setExpandedCards((prev) => ({
       ...prev,
@@ -219,10 +277,6 @@ export default function PackagesSection() {
     }
     setFormSubmitted(true);
   };
-
-  const filteredPackages = selectedCategory === 'all'
-    ? PACKAGES
-    : PACKAGES.filter((p) => p.category === selectedCategory);
 
   return (
     <section id="packages" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] relative overflow-hidden select-none border-t border-[#1A1815]/8">
@@ -293,132 +347,181 @@ export default function PackagesSection() {
         </div>
 
         {/* =================================================================== */}
-        {/* 3. 6 PACKAGE CARDS WITH HOVER LIFT, SHIMMER & ACCORDION ANIMATIONS */}
+        {/* 3. SIDE-BY-SIDE SLIDING CAROUSEL WITH SMOOTH SNAP STOP & SIDE ARROW ARCS */}
         {/* =================================================================== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredPackages.map((pkg, idx) => {
-            const isPop = pkg.popular;
-            const isExpanded = !!expandedCards[pkg.id];
+        <div className="relative group/slider">
 
-            return (
-              <div
-                key={pkg.id}
-                style={{ animationDelay: `${idx * 80}ms` }}
-                className={`group relative bg-white rounded-[32px] sm:rounded-[38px] overflow-hidden border transition-all duration-500 ease-out flex flex-col justify-between p-5 sm:p-6 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(156,84,39,0.14)] animate-in fade-in slide-in-from-bottom-4 ${
-                  isPop
-                    ? 'border-[#9C5427]/50 shadow-[0_16px_45px_rgba(156,84,39,0.12)]'
-                    : 'border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:border-[#9C5427]/40'
-                }`}
-              >
-                {/* Diagonal Light Shimmer Sweep Animation on Hover */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none z-20" />
+          {/* Left Side Arrow Arc Button */}
+          <button
+            type="button"
+            onClick={scrollPrev}
+            disabled={!canScrollLeft}
+            aria-label="Previous package"
+            className={`absolute -left-3 sm:-left-5 lg:-left-7 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-[#9C5427] text-[#1A1815] hover:text-white shadow-[0_12px_36px_rgba(44,30,22,0.22)] border border-[#1A1815]/10 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-md group disabled:opacity-20 disabled:pointer-events-none disabled:hover:scale-100`}
+            title="Slide to Previous Package"
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
+          </button>
 
-                {/* Popular / Best Value Ribbon with Glowing Pulse */}
-                {pkg.badge && (
-                  <div className="absolute top-8 right-8 z-20">
-                    <span className="relative inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-[#9C5427] text-white shadow-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                      {pkg.badge}
-                    </span>
-                  </div>
-                )}
+          {/* Right Side Arrow Arc Button */}
+          <button
+            type="button"
+            onClick={scrollNext}
+            disabled={!canScrollRight}
+            aria-label="Next package"
+            className={`absolute -right-3 sm:-right-5 lg:-right-7 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/95 hover:bg-[#9C5427] text-[#1A1815] hover:text-white shadow-[0_12px_36px_rgba(44,30,22,0.22)] border border-[#1A1815]/10 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-md group disabled:opacity-20 disabled:pointer-events-none disabled:hover:scale-100`}
+            title="Slide to Next Package"
+          >
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
+          </button>
 
-                <div>
-                  {/* Image Container with Smooth 700ms Scale Animation */}
-                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#1A1815]/5 mb-5">
-                    <img
-                      src={pkg.image}
-                      alt={pkg.bhk}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
-                    />
+          {/* Side-by-Side Sliding Track */}
+          <div
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex items-stretch gap-6 sm:gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-2 sm:px-3 no-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {filteredPackages.map((pkg, idx) => {
+              const isPop = pkg.popular;
+              const isExpanded = !!expandedCards[pkg.id];
 
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+              return (
+                <div
+                  key={pkg.id}
+                  className={`snap-start w-[85vw] sm:w-[380px] md:w-[410px] lg:w-[420px] flex-shrink-0 group relative bg-white rounded-[32px] sm:rounded-[38px] overflow-hidden border transition-all duration-500 ease-out flex flex-col justify-between p-5 sm:p-6 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(156,84,39,0.14)] ${
+                    isPop
+                      ? 'border-[#9C5427]/50 shadow-[0_16px_45px_rgba(156,84,39,0.12)]'
+                      : 'border-[#1A1815]/8 shadow-[0_10px_35px_rgba(26,24,21,0.04)] hover:border-[#9C5427]/40'
+                  }`}
+                >
+                  {/* Diagonal Light Shimmer Sweep Animation on Hover */}
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none z-20" />
 
-                    {/* BHK Pill Tag */}
-                    <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xs border border-[#1A1815]/5">
-                      <span className="text-xs font-bold tracking-wide text-[#1A1815] uppercase">
-                        {pkg.bhk}
+                  {/* Popular / Best Value Ribbon with Glowing Pulse */}
+                  {pkg.badge && (
+                    <div className="absolute top-8 right-8 z-20">
+                      <span className="relative inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-[#9C5427] text-white shadow-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                        {pkg.badge}
                       </span>
                     </div>
-                  </div>
+                  )}
 
-                  {/* Card Content */}
                   <div>
-                    {/* Title & Price Header */}
-                    <h3 className="font-bold text-lg text-[#1A1815] group-hover:text-[#9C5427] transition-colors mb-2">
-                      {pkg.title}
-                    </h3>
+                    {/* Image Container with Smooth 700ms Scale Animation */}
+                    <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#1A1815]/5 mb-5">
+                      <img
+                        src={pkg.image}
+                        alt={pkg.bhk}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                      />
 
-                    {/* Price Line */}
-                    <div className="mb-4 pb-3 border-b border-[#1A1815]/8 flex items-baseline justify-between">
-                      <span className="text-xs uppercase tracking-wider font-semibold text-[#7A7369]">
-                        Turnkey Starting From
-                      </span>
-                      <span className="text-xl sm:text-2xl font-black text-[#9C5427] tracking-tight">
-                        {pkg.price}
-                      </span>
-                    </div>
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
-                    {/* Feature Bullet Points */}
-                    <ul className="space-y-2.5 mb-5">
-                      {pkg.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start text-xs sm:text-sm text-[#1A1815] leading-relaxed">
-                          <span className="text-[#9C5427] text-sm mr-2 font-bold leading-none select-none">•</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Interactive Expandable Scope Drawer with Smooth Accordion Animation */}
-                    <div className="mb-6 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/6 overflow-hidden transition-all duration-300">
-                      <button
-                        type="button"
-                        onClick={() => toggleExpand(pkg.id)}
-                        className="w-full p-3.5 flex items-center justify-between text-left hover:bg-[#F2ECE4] transition-colors cursor-pointer"
-                        aria-expanded={isExpanded}
-                      >
-                        <div className="font-semibold text-[#1A1815] text-[11px] uppercase tracking-wider flex items-center gap-1.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#9C5427]" />
-                          <span>Included Scope ({pkg.breakdown.length} Items)</span>
-                        </div>
-                        <div className="flex items-center gap-1 text-[11px] font-semibold text-[#9C5427]">
-                          <span>{isExpanded ? 'Hide' : 'View All'}</span>
-                          <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
-                        </div>
-                      </button>
-
-                      <div className={`px-3.5 pb-3.5 text-xs text-[#68625A] space-y-1.5 transition-all duration-300 ${
-                        isExpanded ? 'max-h-96 opacity-100 mt-1' : 'max-h-24 opacity-90'
-                      }`}>
-                        {(isExpanded ? pkg.breakdown : pkg.breakdown.slice(0, 3)).map((item, i) => (
-                          <p key={i} className="leading-snug flex items-start gap-1.5">
-                            <span className="text-[#9C5427] font-bold">✓</span>
-                            <span>{item}</span>
-                          </p>
-                        ))}
+                      {/* BHK Pill Tag */}
+                      <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xs border border-[#1A1815]/5">
+                        <span className="text-xs font-bold tracking-wide text-[#1A1815] uppercase">
+                          {pkg.bhk}
+                        </span>
                       </div>
                     </div>
 
+                    {/* Card Content */}
+                    <div>
+                      {/* Title & Price Header */}
+                      <h3 className="font-bold text-lg text-[#1A1815] group-hover:text-[#9C5427] transition-colors mb-2">
+                        {pkg.title}
+                      </h3>
+
+                      {/* Price Line */}
+                      <div className="mb-4 pb-3 border-b border-[#1A1815]/8 flex items-baseline justify-between">
+                        <span className="text-xs uppercase tracking-wider font-semibold text-[#7A7369]">
+                          Turnkey Starting From
+                        </span>
+                        <span className="text-xl sm:text-2xl font-black text-[#9C5427] tracking-tight">
+                          {pkg.price}
+                        </span>
+                      </div>
+
+                      {/* Feature Bullet Points */}
+                      <ul className="space-y-2.5 mb-5">
+                        {pkg.features.map((feat, fIdx) => (
+                          <li key={fIdx} className="flex items-start text-xs sm:text-sm text-[#1A1815] leading-relaxed">
+                            <span className="text-[#9C5427] text-sm mr-2 font-bold leading-none select-none">•</span>
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Interactive Expandable Scope Drawer with Smooth Accordion Animation */}
+                      <div className="mb-6 rounded-2xl bg-[#FAF8F5] border border-[#1A1815]/6 overflow-hidden transition-all duration-300">
+                        <button
+                          type="button"
+                          onClick={() => toggleExpand(pkg.id)}
+                          className="w-full p-3.5 flex items-center justify-between text-left hover:bg-[#F2ECE4] transition-colors cursor-pointer"
+                          aria-expanded={isExpanded}
+                        >
+                          <div className="font-semibold text-[#1A1815] text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#9C5427]" />
+                            <span>Included Scope ({pkg.breakdown.length} Items)</span>
+                          </div>
+                          <div className="flex items-center gap-1 text-[11px] font-semibold text-[#9C5427]">
+                            <span>{isExpanded ? 'Hide' : 'View All'}</span>
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                          </div>
+                        </button>
+
+                        <div className={`px-3.5 pb-3.5 text-xs text-[#68625A] space-y-1.5 transition-all duration-300 ${
+                          isExpanded ? 'max-h-96 opacity-100 mt-1' : 'max-h-24 opacity-90'
+                        }`}>
+                          {(isExpanded ? pkg.breakdown : pkg.breakdown.slice(0, 3)).map((item, i) => (
+                            <p key={i} className="leading-snug flex items-start gap-1.5">
+                              <span className="text-[#9C5427] font-bold">✓</span>
+                              <span>{item}</span>
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
-                </div>
 
-                {/* Button: Terracotta Pill with Animated Hover Arrow Slide */}
-                <div className="pt-1">
-                  <button
-                    type="button"
-                    onClick={() => handleOpenQuote(pkg)}
-                    className="group/btn w-full rounded-full py-3.5 px-6 bg-[#9C5427] hover:bg-[#85451D] active:scale-98 text-white font-medium text-sm sm:text-base shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <span>Get Free Estimate</span>
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
-                  </button>
-                </div>
+                  {/* Button: Terracotta Pill with Animated Hover Arrow Slide */}
+                  <div className="pt-1">
+                    <button
+                      type="button"
+                      onClick={() => handleOpenQuote(pkg)}
+                      className="group/btn w-full rounded-full py-3.5 px-6 bg-[#9C5427] hover:bg-[#85451D] active:scale-98 text-white font-medium text-sm sm:text-base shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>Get Free Estimate</span>
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
+                    </button>
+                  </div>
 
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Pagination Indicators & Slide Counter */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {filteredPackages.map((pkg, idx) => (
+              <button
+                key={pkg.id}
+                onClick={() => scrollToIndex(idx)}
+                aria-label={`Go to ${pkg.bhk}`}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  activeIndex === idx 
+                    ? 'w-8 bg-[#9C5427]' 
+                    : 'w-2 bg-[#1A1815]/20 hover:bg-[#1A1815]/40'
+                }`}
+              />
+            ))}
+          </div>
+
         </div>
 
         {/* =================================================================== */}
