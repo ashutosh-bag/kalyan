@@ -12,13 +12,19 @@ interface NavbarProps {
 export default function Navbar({ onOpenConsultation }: NavbarProps) {
   const pathname = usePathname();
   const isServicesPage = pathname === '/services';
+  const isAboutPage = pathname === '/about';
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const effectiveScrolled = isScrolled || isServicesPage;
+  const effectiveScrolled = isScrolled || isServicesPage || isAboutPage;
 
   useEffect(() => {
+    if (isAboutPage) {
+      setActiveSection('about');
+      return;
+    }
+
     if (isServicesPage) {
       setActiveSection('services');
       return;
@@ -48,11 +54,12 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isServicesPage]);
+  }, [isServicesPage, isAboutPage]);
 
   // Primary navigation items
   const navItems = [
     { name: 'Home', href: '/#home', id: 'home' },
+    { name: 'About', href: '/about', id: 'about' },
     { name: 'Services', href: '/services', id: 'services' },
     { name: 'Projects', href: '/#projects', id: 'projects' },
     { name: '360° View', href: '/#360-view', id: '360-view' },
