@@ -10,7 +10,7 @@ export default function Footer() {
     { name: 'Showcase', href: '/#spatial-showcase' },
     { name: '360° Tours', href: '/#testimonials-360' },
     { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/#projects' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Blog', href: '/#blog' },
     { name: 'Contact', href: '/#contact' },
   ];
