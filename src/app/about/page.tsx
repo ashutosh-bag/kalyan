@@ -141,70 +141,74 @@ export default function AboutPage() {
           </div>
 
           {/* =============================================================== */}
-          {/* 3. FOUNDER & CLIENT SPOTLIGHT (WITH owner.jpeg)                 */}
+          {/* 3. EDITORIAL SHOWCASE (WE'RE COMMITTED TO TURNING YOUR VISION INTO REALITY) */}
           {/* =============================================================== */}
           <div className="mb-20 sm:mb-28 p-6 sm:p-10 lg:p-12 rounded-[34px] sm:rounded-[44px] bg-[#F5EFEB] border border-[#2C1E16]/8 shadow-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
               
-              {/* Founder / Client Portrait Image (owner.jpeg) */}
-              <div className="lg:col-span-5 w-full flex justify-center">
-                <div className="relative w-full max-w-md aspect-[3/3.8] sm:aspect-[3/3.7] rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-[0_20px_50px_rgba(44,30,22,0.12)] border-2 border-white group bg-[#E8E0D7]">
+              {/* Column 1: Vertical Portrait Interior Visual (Left) */}
+              <div className="lg:col-span-4 w-full">
+                <div className="relative w-full aspect-[3/3.8] sm:aspect-[4/5] lg:aspect-[3/3.9] rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-[0_16px_40px_rgba(44,30,22,0.08)] border border-[#2C1E16]/10 group bg-[#ECE5DE]">
                   <img
-                    src="/images/hero/owner.jpeg"
-                    alt="Debakalyan Mohanty - Founder & Principal Designer, Kalyan Design Studio"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                    src="/images/hero/lamp.jpg"
+                    alt="Kalyan Design Studio Architectural Brass Sconce Lighting & Fluted Wall Panelling"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1E16]/40 via-transparent to-transparent pointer-events-none" />
-                  
-                  {/* Floating Experience Badge */}
-                  <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-[#2C1E16]/8 flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#7D6858] block">Leadership</span>
-                      <span className="text-xs sm:text-sm font-black text-[#2C1E16] uppercase">Kalyan Design Studio</span>
-                    </div>
-                    <span className="text-xs font-bold text-[#9C5427] bg-[#FAF7F2] px-3 py-1 rounded-full border border-[#9C5427]/20">
-                      Bhubaneswar
-                    </span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1E16]/30 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
 
-              {/* Founder Story & Vision Message */}
-              <div className="lg:col-span-7 space-y-6">
-                <div>
-                  <span className="text-xs uppercase tracking-widest font-bold text-[#9C5427] block mb-2">
-                    FOUNDER &amp; PRINCIPAL ARCHITECTURAL DESIGNER
-                  </span>
-                  <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#2C1E16] tracking-tight leading-tight">
-                    DEBAKALYAN MOHANTY
-                  </h2>
-                  <p className="text-xs uppercase tracking-wider text-[#7D6858] font-semibold mt-1">
-                    Visionary Design Director &bull; Turnkey Specialist
+              {/* Column 2: Big Bold Heading (Center) */}
+              <div className="lg:col-span-4 flex flex-col justify-start pt-1 sm:pt-2">
+                <span className="text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold text-[#7D6858] block mb-4 sm:mb-6">
+                  ABOUT US
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[52px] font-black uppercase text-[#2C1E16] leading-[1.02] tracking-[-0.03em] font-sans">
+                  <span className="block">WE&apos;RE</span>
+                  <span className="block">COMMITTED TO</span>
+                  <span className="block">TURNING YOUR</span>
+                  <span className="block">VISION INTO</span>
+                  <span className="block">REALITY</span>
+                </h2>
+              </div>
+
+              {/* Column 3: Editorial Paragraphs & Elegant Signature (Right) */}
+              <div className="lg:col-span-4 flex flex-col justify-between pt-1 sm:pt-3">
+                <div className="space-y-4 text-[#5C534A] text-sm sm:text-[15px] leading-relaxed font-normal">
+                  <p>
+                    Our full service, residential offering covers every detail of your house&apos;s interior designs. From space planning to furnishings, and everything between, we will transform your space into something that is individual to you.
+                  </p>
+                  <p>
+                    At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves. Our portfolio allows us the opportunity to put our best foot forward. If you are interested in learning more, please get in touch or visit our{' '}
+                    <Link
+                      href="/contact"
+                      className="text-[#2C1E16] font-semibold underline underline-offset-4 decoration-[#9C5427] hover:text-[#9C5427] transition-colors"
+                    >
+                      Contact
+                    </Link>{' '}
+                    page.
+                  </p>
+                  <p>
+                    Our home interior design services are comprehensive and include everything - from space planning to custom furniture design, lighting design, material selection, and more. Our team works closely with you to create spaces that resonate a sense of comfort, luxury, and, most importantly, belongingness.
                   </p>
                 </div>
 
-                <blockquote className="border-l-3 border-[#9C5427] pl-5 sm:pl-6 text-base sm:text-lg text-[#2C1E16] italic font-serif leading-relaxed">
-                  &ldquo;Interior design is not merely about decorating an enclosure; it is the art of curating atmosphere, human emotion, and belongingness. In every villa, apartment, and commercial space we sculpt across Odisha, our promise is absolute craftsmanship, uncompromising material honesty, and spaces that feel uniquely yours.&rdquo;
-                </blockquote>
-
-                <p className="text-sm sm:text-base text-[#5C534A] leading-relaxed">
-                  Under Debakalyan Mohanty&apos;s leadership, Kalyan Design Studio has evolved into Bhubaneswar&apos;s most sought-after interior architecture firm. With an unwavering commitment to precision, transparency, and client collaboration, the studio bridges traditional Odia architectural sensibilities with cutting-edge global design trends.
-                </p>
-
-                {/* Signature Flourish */}
-                <div className="pt-4 flex items-center justify-between border-t border-[#2C1E16]/10">
+                {/* Signature & Studio Mark */}
+                <div className="pt-6 mt-6 border-t border-[#2C1E16]/10 flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest text-[#7D6858] font-bold block">
-                      Founder&apos;s Signature
+                    <span className="text-[10px] uppercase tracking-widest text-[#7D6858] font-medium block">
+                      Design Studio
                     </span>
                     <span className="text-sm font-bold text-[#2C1E16]">
-                      Debakalyan Mohanty
+                      Kalyan Studio
                     </span>
                   </div>
 
-                  <div className="relative flex items-center pr-2">
+                  {/* Elegant Artistic Signature Flourish */}
+                  <div className="relative flex items-center">
                     <svg 
-                      className="w-32 sm:w-36 h-10 text-[#2C1E16]/80 fill-none stroke-current" 
+                      className="w-28 sm:w-32 h-10 text-[#2C1E16]/80 fill-none stroke-current" 
                       viewBox="0 0 160 50" 
                       strokeWidth="2.2" 
                       strokeLinecap="round" 
@@ -214,86 +218,6 @@ export default function AboutPage() {
                       <path d="M15 38 C 22 15, 30 8, 38 25 C 42 35, 48 40, 56 26 C 62 16, 68 20, 74 28 C 80 36, 85 30, 92 22 C 98 14, 108 20, 116 30 C 122 38, 134 32, 146 24 M 30 38 Q 85 46 150 28" />
                     </svg>
                   </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-          {/* =============================================================== */}
-          {/* 4. THREE CORE ETHOS CARDS (EXACT CONTENT FROM OFFICIAL ABOUT)    */}
-          {/* =============================================================== */}
-          <div className="mb-20 sm:mb-28">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs uppercase tracking-widest font-bold text-[#9C5427] block mb-2">
-                WHAT DEFINES OUR PRACTICE
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#2C1E16] tracking-tight">
-                OUR CORE PHILOSOPHY &amp; APPROACH.
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              
-              {/* Ethos Card 1: Residential Offering */}
-              <div className="p-8 sm:p-9 rounded-[30px] bg-white border border-[#2C1E16]/8 shadow-[0_10px_35px_rgba(44,30,22,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF7F2] border border-[#2C1E16]/8 flex items-center justify-center text-[#9C5427] mb-6 group-hover:scale-105 transition-transform">
-                    <Compass className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold uppercase tracking-tight text-[#2C1E16] mb-3 group-hover:text-[#9C5427] transition-colors">
-                    FULL-SERVICE RESIDENTIAL
-                  </h3>
-                  <p className="text-sm text-[#5C534A] leading-relaxed">
-                    Our full service, residential offering covers every detail of your house&apos;s interior designs. From space planning to furnishings, and everything between, we will transform your space into something that is individual to you.
-                  </p>
-                </div>
-                <div className="pt-6 mt-6 border-t border-[#2C1E16]/8 text-xs font-semibold uppercase tracking-wider text-[#9C5427] flex items-center gap-1.5">
-                  <span>Space Planning &bull; Furnishings</span>
-                </div>
-              </div>
-
-              {/* Ethos Card 2: Cohesive Environments */}
-              <div className="p-8 sm:p-9 rounded-[30px] bg-white border border-[#2C1E16]/8 shadow-[0_10px_35px_rgba(44,30,22,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF7F2] border border-[#2C1E16]/8 flex items-center justify-center text-[#9C5427] mb-6 group-hover:scale-105 transition-transform">
-                    <Sparkles className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold uppercase tracking-tight text-[#2C1E16] mb-3 group-hover:text-[#9C5427] transition-colors">
-                    COHESIVE &amp; BEAUTIFUL
-                  </h3>
-                  <p className="text-sm text-[#5C534A] leading-relaxed">
-                    At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves. Our portfolio allows us the opportunity to put our best foot forward. If you are interested in learning more, please get in touch or visit our{' '}
-                    <Link
-                      href="/contact"
-                      className="text-[#9C5427] font-semibold underline underline-offset-4 hover:text-[#85451D]"
-                    >
-                      Contact
-                    </Link>{' '}
-                    page.
-                  </p>
-                </div>
-                <div className="pt-6 mt-6 border-t border-[#2C1E16]/8 text-xs font-semibold uppercase tracking-wider text-[#9C5427] flex items-center gap-1.5">
-                  <span>Tailored Environments</span>
-                </div>
-              </div>
-
-              {/* Ethos Card 3: Comprehensive Turnkey */}
-              <div className="p-8 sm:p-9 rounded-[30px] bg-white border border-[#2C1E16]/8 shadow-[0_10px_35px_rgba(44,30,22,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF7F2] border border-[#2C1E16]/8 flex items-center justify-center text-[#9C5427] mb-6 group-hover:scale-105 transition-transform">
-                    <ShieldCheck className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold uppercase tracking-tight text-[#2C1E16] mb-3 group-hover:text-[#9C5427] transition-colors">
-                    END-TO-END TURNKEY
-                  </h3>
-                  <p className="text-sm text-[#5C534A] leading-relaxed">
-                    Our home interior design services are comprehensive and include everything — from space planning to custom furniture design, lighting design, material selection, and more. Our team works closely with you to create spaces that resonate a sense of comfort, luxury, and, most importantly, belongingness.
-                  </p>
-                </div>
-                <div className="pt-6 mt-6 border-t border-[#2C1E16]/8 text-xs font-semibold uppercase tracking-wider text-[#9C5427] flex items-center gap-1.5">
-                  <span>Comfort &bull; Luxury &bull; Belonging</span>
                 </div>
               </div>
 
