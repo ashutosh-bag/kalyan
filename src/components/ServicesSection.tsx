@@ -80,11 +80,11 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section id="services" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none">
+    <section id="services" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <div className="flex items-center justify-center gap-2.5 mb-3">
             <span className="w-6 h-[1.5px] bg-[#9C5427]" />
             <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
@@ -215,7 +215,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Link to Full Dedicated Services Page with Editorial Representations */}
-        <div className="mt-12 sm:mt-16 text-center">
+        <div className="mt-8 sm:mt-10 text-center">
           <Link
             href="/services"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#1A1815] hover:bg-[#9C5427] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg transition-all hover:gap-4 cursor-pointer"

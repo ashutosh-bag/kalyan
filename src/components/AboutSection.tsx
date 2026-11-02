@@ -53,7 +53,7 @@ export default function AboutSection() {
   return (
     <section 
       id="about" 
-      className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-[#F5EFEB] text-[#2C1E16] select-none overflow-hidden border-t border-[#2C1E16]/8"
+      className="relative py-10 sm:py-12 lg:py-14 px-4 sm:px-6 lg:px-12 bg-[#F5EFEB] text-[#2C1E16] select-none overflow-hidden border-t border-[#2C1E16]/8"
     >
       <div className="max-w-7xl mx-auto">
         
@@ -142,7 +142,7 @@ export default function AboutSection() {
         {/* ================================================================= */}
         {/* 2. STATS COUNTER ROW (ANIMATED COUNTING WHEN REFRESHED)           */}
         {/* ================================================================= */}
-        <div className="mt-16 sm:mt-20 lg:mt-24 pt-10 sm:pt-14 border-t border-[#2C1E16]/12">
+        <div className="mt-8 sm:mt-10 lg:mt-12 pt-8 sm:pt-10 border-t border-[#2C1E16]/12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col">

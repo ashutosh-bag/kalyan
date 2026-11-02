@@ -731,13 +731,13 @@ export default function ApartmentTestimonials360() {
   return (
     <section
       id="360-view"
-      className="py-20 sm:py-28 px-3 sm:px-6 lg:px-8 bg-[#FAF8F5] text-[#1A1815] border-t border-[#1A1815]/8 relative overflow-hidden select-none scroll-mt-20"
+      className="py-10 sm:py-14 px-3 sm:px-6 lg:px-8 bg-[#FAF8F5] text-[#1A1815] border-t border-[#1A1815]/8 relative overflow-hidden select-none scroll-mt-20"
     >
       <div id="testimonials-360" className="sr-only pointer-events-none" aria-hidden="true" />
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-2.5 mb-3">
             <span className="w-6 h-[1.5px] bg-[#9C5427]" />
             <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">

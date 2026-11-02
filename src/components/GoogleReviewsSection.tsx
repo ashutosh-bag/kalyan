@@ -207,13 +207,13 @@ export default function GoogleReviewsSection() {
     <section
       id="google-reviews"
       aria-label="Google Reviews of Kalyan Design Studio"
-      className="scroll-mt-24 relative bg-[#FAF8F5] text-[#1A1815] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-[#1A1815]/8 overflow-hidden select-none"
+      className="scroll-mt-24 relative bg-[#FAF8F5] text-[#1A1815] py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-t border-[#1A1815]/8 overflow-hidden select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Top Header Badge & Live Sync Button */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
           <div className="flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white border border-[#1A1815]/8 shadow-xs">
               <span className="w-2.5 h-2.5 rounded-full bg-[#34A853] animate-pulse" />
@@ -254,7 +254,7 @@ export default function GoogleReviewsSection() {
         </div>
 
         {/* Main Title & Hero Google Trust Scoreboard */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-8">
           {/* Left Title and Description */}
           <div className="lg:col-span-7 space-y-4">
             <div className="flex items-center gap-2.5 mb-1">

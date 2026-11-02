@@ -302,7 +302,7 @@ export default function SpatialShowcase() {
   return (
     <section 
       id="spatial-showcase" 
-      className="relative w-full bg-[#FAF8F5] text-[#1A1815] pt-8 sm:pt-12 pb-20 sm:pb-24 overflow-hidden border-t border-[#1A1815]/8 select-none"
+      className="relative w-full bg-[#FAF8F5] text-[#1A1815] pt-6 sm:pt-8 pb-10 sm:pb-12 overflow-hidden border-t border-[#1A1815]/8 select-none"
       aria-label="Interior Spatial Design Architecture Showcase"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -310,7 +310,7 @@ export default function SpatialShowcase() {
         {/* ================================================================= */}
         {/* SECTION HEADER                                                    */}
         {/* ================================================================= */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-[1.5px] bg-[#9C5427]" />
