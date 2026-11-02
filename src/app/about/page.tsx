@@ -148,14 +148,13 @@ export default function AboutPage() {
               
               {/* Column 1: Vertical Portrait Interior Visual (Left) */}
               <div className="lg:col-span-4 w-full">
-                <div className="relative w-full aspect-[3/3.8] sm:aspect-[4/5] lg:aspect-[3/3.9] rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-[0_16px_40px_rgba(44,30,22,0.08)] border border-[#2C1E16]/10 group bg-[#ECE5DE]">
+                <div className="relative w-full rounded-2xl sm:rounded-3xl shadow-[0_16px_40px_rgba(44,30,22,0.08)] border border-[#2C1E16]/10 bg-white p-1 sm:p-1.5 transition-shadow duration-300 hover:shadow-2xl">
                   <img
                     src="/images/hero/vision.PNG"
-                    alt="Kalyan Design Studio Architectural Vision & Execution"
-                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    alt="Kalyan Design Studio - Bedroom Interiors Commission at Assotech, Cuttack"
+                    className="w-full h-auto object-contain rounded-xl sm:rounded-2xl block"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1E16]/30 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
 
