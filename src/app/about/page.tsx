@@ -152,8 +152,10 @@ export default function AboutPage() {
                   <img
                     src="/images/hero/vision.PNG"
                     alt="Kalyan Design Studio - Bedroom Interiors Commission at Assotech, Cuttack"
+                    width={1199}
+                    height={1312}
                     className="w-full h-auto object-contain rounded-xl sm:rounded-2xl block"
-                    loading="lazy"
+                    fetchPriority="high"
                   />
                 </div>
               </div>
