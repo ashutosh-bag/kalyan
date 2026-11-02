@@ -150,8 +150,8 @@ export default function AboutPage() {
               <div className="lg:col-span-4 w-full">
                 <div className="relative w-full aspect-[3/3.8] sm:aspect-[4/5] lg:aspect-[3/3.9] rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-[0_16px_40px_rgba(44,30,22,0.08)] border border-[#2C1E16]/10 group bg-[#ECE5DE]">
                   <img
-                    src="/images/hero/lamp.jpg"
-                    alt="Kalyan Design Studio Architectural Brass Sconce Lighting & Fluted Wall Panelling"
+                    src="/images/hero/vision.PNG"
+                    alt="Kalyan Design Studio Architectural Vision & Execution"
                     className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
                   />
