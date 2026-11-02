@@ -302,7 +302,7 @@ export default function SpatialShowcase() {
   return (
     <section 
       id="spatial-showcase" 
-      className="relative w-full bg-[#FAF8F5] text-[#1A1815] py-20 sm:py-28 overflow-hidden border-t border-[#1A1815]/8 select-none"
+      className="relative w-full bg-[#FAF8F5] text-[#1A1815] pt-8 sm:pt-12 pb-20 sm:pb-24 overflow-hidden border-t border-[#1A1815]/8 select-none"
       aria-label="Interior Spatial Design Architecture Showcase"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

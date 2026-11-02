@@ -278,7 +278,7 @@ export default function PackagesSection() {
   };
 
   return (
-    <section id="packages" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] relative overflow-hidden select-none border-t border-[#1A1815]/8">
+    <section id="packages" className="pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] relative overflow-hidden select-none border-t border-[#1A1815]/8">
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* =================================================================== */}

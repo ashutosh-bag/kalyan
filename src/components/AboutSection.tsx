@@ -53,7 +53,7 @@ export default function AboutSection() {
   return (
     <section 
       id="about" 
-      className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-[#F5EFEB] text-[#2C1E16] select-none overflow-hidden border-t border-[#2C1E16]/8"
+      className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-[#F5EFEB] text-[#2C1E16] select-none overflow-hidden border-t border-[#2C1E16]/8"
     >
       <div className="max-w-7xl mx-auto">
         
