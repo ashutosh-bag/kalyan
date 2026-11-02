@@ -90,30 +90,6 @@ export default function ContactSection() {
     }
   };
 
-  const offices = [
-    {
-      city: 'Kalyan Design Studio — Bhubaneswar HQ',
-      address: '3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018',
-      phone: '+91-750404104 / +91 75040 41040',
-      email: 'info@kalyandesignstudio.com',
-      hours: 'Mon – Sat: 10:00 AM – 8:00 PM',
-    },
-    {
-      city: 'Cuttack Regional Execution Atelier',
-      address: 'Serving CDA Sectors, Cantonment Road & Riverfront, Cuttack, Odisha',
-      phone: '+91 75040 41040',
-      email: 'info@kalyandesignstudio.com',
-      hours: 'By Site Appointment',
-    },
-    {
-      city: 'Koraput & Puri Project Operations',
-      address: 'Turnkey Residential, Corporate & Hospitality Projects across Odisha',
-      phone: '+91 75040 41040',
-      email: 'info@kalyandesignstudio.com',
-      hours: 'By Site Appointment',
-    },
-  ];
-
   return (
     <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none">
       <div className="max-w-7xl mx-auto">
@@ -332,55 +308,88 @@ export default function ContactSection() {
             </form>
           </div>
 
-          {/* Global Presence & Direct Contacts (Col 8-12) */}
+          {/* Direct Studio Inquiries & Contact Channels (Col 8-12) */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
 
-            {/* Odisha Studios */}
-            <div className="bg-white/95 border border-[#9C5427]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#9C5427] font-bold mb-6">
-                Our Studios in Odisha
-              </h4>
-              <div className="space-y-6">
-                {offices.map((off, idx) => (
-                  <div key={idx} className="border-b border-[#1A1815]/10 pb-4 last:border-none last:pb-0">
-                    <span className="text-base font-playfair text-[#1A1815] font-bold block">
-                      {off.city}
-                    </span>
-                    <div className="flex items-start space-x-2 text-xs text-[#5C564E] mt-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#9C5427] shrink-0 mt-0.5" />
-                      <span>{off.address}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-xs text-[#5C564E] font-mono mt-1">
-                      <Phone className="w-3.5 h-3.5 text-[#9C5427]" />
-                      <span>{off.phone}</span>
-                    </div>
-                  </div>
-                ))}
+            {/* Direct Studio Inquiries Card */}
+            <div className="bg-white border border-[#1A1815]/8 p-7 sm:p-8 rounded-[32px] sm:rounded-[36px] shadow-[0_10px_35px_rgba(26,24,21,0.04)] space-y-6">
+              <div>
+                <span className="text-[11px] uppercase tracking-[0.22em] text-[#9C5427] font-bold block mb-2">
+                  STUDIO HEADQUARTERS
+                </span>
+                <h4 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-[#1A1815]">
+                  Kalyan Design Studio
+                </h4>
+                <p className="text-xs text-[#68625A] mt-1">
+                  Premier interior architecture &amp; turnkey execution across Odisha.
+                </p>
               </div>
-            </div>
 
-            {/* Direct Channel */}
-            <div className="bg-white/95 border border-[#9C5427]/20 p-8 rounded-3xl shadow-[0_12px_36px_rgba(196,120,71,0.08)]">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#9C5427] font-bold mb-4">
-                Direct Inquiries
-              </h4>
-              <div className="space-y-3 text-xs sm:text-sm text-[#1A1815]">
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-[#9C5427]" />
-                  <span>info@kalyandesignstudio.com</span>
+              {/* Contact Details List */}
+              <div className="space-y-4 text-xs sm:text-sm text-[#1A1815] pt-2 border-t border-[#1A1815]/8">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-[#9C5427]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4 text-[#9C5427]" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-[#8A847C] block">Visit Our Studio</span>
+                    <span className="text-xs sm:text-sm text-[#1A1815] font-medium leading-relaxed">
+                      3181/5466, Puri-NH Bypass, Baragada, Bhubaneswar, Odisha 751018
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#9C5427]" />
-                  <span>+91 75040 41040 (Bhubaneswar Studio)</span>
+
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-[#9C5427]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Phone className="w-4 h-4 text-[#9C5427]" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-[#8A847C] block">Direct Consultation Hotline</span>
+                    <a href="tel:+917504041040" className="text-xs sm:text-sm text-[#1A1815] hover:text-[#9C5427] font-bold transition-colors">
+                      +91 75040 41040 / 075040 41040
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#9C5427]" />
-                  <span>+91 75040 41040 (Client Direct Hotline)</span>
+
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-[#9C5427]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Mail className="w-4 h-4 text-[#9C5427]" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-[#8A847C] block">Email Us</span>
+                    <a href="mailto:info@kalyandesignstudio.com" className="text-xs sm:text-sm text-[#1A1815] hover:text-[#9C5427] font-bold transition-colors">
+                      info@kalyandesignstudio.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-[#9C5427]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Clock className="w-4 h-4 text-[#9C5427]" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-[#8A847C] block">Studio Timings</span>
+                    <span className="text-xs sm:text-sm text-[#1A1815] font-medium">
+                      Monday – Saturday: 10:00 AM – 8:00 PM
+                    </span>
+                  </div>
                 </div>
               </div>
-              <p className="text-[11px] text-[#5C564E] mt-4 leading-relaxed">
-                For architectural design consultations, structural drawings review, or site evaluation visits across Odisha, please schedule an in-person session at our Bhubaneswar studio.
-              </p>
+
+              {/* WhatsApp Quick Chat Button */}
+              <div className="pt-2 border-t border-[#1A1815]/8">
+                <a
+                  href="https://wa.me/917504041040?text=Hello%20Kalyan%20Design%20Studio%2C%20I%20am%20interested%20in%20an%20interior%20design%20consultation."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2.5 py-3 px-5 rounded-full bg-[#25D366] hover:bg-[#20BA5C] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all duration-200"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                  </svg>
+                  <span>Chat on WhatsApp: 075040 41040</span>
+                </a>
+              </div>
             </div>
 
           </div>
