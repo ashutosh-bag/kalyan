@@ -98,7 +98,7 @@ export default function AboutSection() {
               <p>
                 At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves. Our portfolio allows us the opportunity to put our best foot forward. If you are interested in learning more, please get in touch or visit our{' '}
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="text-[#2C1E16] font-semibold underline underline-offset-4 decoration-[#9C5427] hover:text-[#9C5427] transition-colors"
                 >
                   Contact

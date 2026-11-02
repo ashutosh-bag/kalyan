@@ -5,7 +5,6 @@ import SpatialShowcase from '@/components/SpatialShowcase';
 import ApartmentTestimonials360 from '@/components/ApartmentTestimonials360';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
-import ContactSection from '@/components/ContactSection';
 import GoogleReviewsSection from '@/components/GoogleReviewsSection';
 import Footer from '@/components/Footer';
 
@@ -34,9 +33,6 @@ export default function Home() {
 
         {/* Services & Capabilities */}
         <ServicesSection />
-
-        {/* Contact & Consultation Form (API Connected) */}
-        <ContactSection />
 
         {/* Real Verified Google Reviews of Kalyan Design Studio */}
         <GoogleReviewsSection />

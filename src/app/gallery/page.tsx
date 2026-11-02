@@ -255,7 +255,7 @@ export default function GalleryPage() {
                 </p>
                 <div className="flex items-center gap-3">
                   <Link
-                    href="/#contact"
+                    href="/contact"
                     className="flex-1 text-center py-2.5 px-4 bg-[#9C5427] hover:bg-[#85451D] text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
                   >
                     Schedule Free Visit
@@ -595,7 +595,7 @@ export default function GalleryPage() {
                           </button>
 
                           <Link
-                            href="/#contact"
+                            href="/contact"
                             className="px-5 py-3 rounded-full bg-[#FAF7F2] hover:bg-white text-[#9C5427] border border-[#9C5427]/30 hover:border-[#9C5427] text-xs font-bold uppercase tracking-wider transition-all duration-200 flex items-center gap-1.5 cursor-pointer shadow-xs"
                           >
                             <span>Consult Similar Design</span>
@@ -757,7 +757,7 @@ export default function GalleryPage() {
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="px-8 py-4 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-lg hover:scale-105"
                 >
                   Schedule Free Site Visit
@@ -877,7 +877,7 @@ export default function GalleryPage() {
             {/* CTA in Modal */}
             <div className="flex items-center gap-3">
               <Link
-                href="/#contact"
+                href="/contact"
                 onClick={() => setLightboxOpen(false)}
                 className="px-5 py-2.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white text-xs font-bold uppercase tracking-wider transition-all"
               >

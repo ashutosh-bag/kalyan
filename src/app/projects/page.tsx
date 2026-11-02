@@ -767,7 +767,7 @@ export default function ProjectsPage() {
                   Explore Services
                 </Link>
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="px-7 py-3 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white text-xs font-semibold uppercase tracking-wider text-center shadow-lg transition-all flex items-center justify-center gap-2 group"
                 >
                   <span>Book Free Consultation</span>
@@ -831,7 +831,7 @@ export default function ProjectsPage() {
 
               {/* Inquire Button */}
               <Link
-                href="/#contact"
+                href="/contact"
                 className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-medium transition-all"
               >
                 <span>Inquire</span>

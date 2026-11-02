@@ -15,13 +15,19 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
   const isAboutPage = pathname === '/about';
   const isProjectsPage = pathname === '/projects';
   const isGalleryPage = pathname === '/gallery';
+  const isContactPage = pathname === '/contact';
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const effectiveScrolled = isScrolled || isServicesPage || isAboutPage || isProjectsPage || isGalleryPage;
+  const effectiveScrolled = isScrolled || isServicesPage || isAboutPage || isProjectsPage || isGalleryPage || isContactPage;
 
   useEffect(() => {
+    if (isContactPage) {
+      setActiveSection('contact');
+      return;
+    }
+
     if (isGalleryPage) {
       setActiveSection('gallery');
       return;
@@ -66,7 +72,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isServicesPage, isAboutPage, isProjectsPage, isGalleryPage]);
+  }, [isServicesPage, isAboutPage, isProjectsPage, isGalleryPage, isContactPage]);
 
   // Primary navigation items
   const navItems = [
@@ -76,7 +82,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     { name: 'Projects', href: '/projects', id: 'projects' },
     { name: 'Gallery', href: '/gallery', id: 'gallery' },
     { name: '360° View', href: '/#360-view', id: '360-view' },
-    { name: 'Contact', href: '/#contact', id: 'contact' },
+    { name: 'Contact', href: '/contact', id: 'contact' },
   ];
 
   return (
@@ -155,7 +161,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             
             {/* Quick Contact / Schedule Free Site Visit Pill CTA */}
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={(e) => {
                 if (onOpenConsultation) {
                   e.preventDefault();
@@ -208,7 +214,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             {/* Mobile Estimate Button */}
             <div className="pt-2">
               <Link
-                href="/#contact"
+                href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 bg-[#9C5427] hover:bg-[#85451D] text-white font-semibold text-sm rounded-full shadow-sm uppercase tracking-wider"
               >

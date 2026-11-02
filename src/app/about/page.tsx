@@ -266,7 +266,7 @@ export default function AboutPage() {
                   <p className="text-sm text-[#5C534A] leading-relaxed">
                     At Interiors by Kalyan Design Studio, we aspire to create cohesive and beautiful environments that are as individual as the clients themselves. Our portfolio allows us the opportunity to put our best foot forward. If you are interested in learning more, please get in touch or visit our{' '}
                     <Link
-                      href="/#contact"
+                      href="/contact"
                       className="text-[#9C5427] font-semibold underline underline-offset-4 hover:text-[#85451D]"
                     >
                       Contact
@@ -420,7 +420,7 @@ export default function AboutPage() {
                 Explore Services
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#9C5427] hover:bg-[#85451D] text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all text-center flex items-center justify-center gap-2"
               >
                 <span>Book Free Site Visit</span>

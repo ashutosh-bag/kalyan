@@ -11,7 +11,7 @@ export default function Footer() {
     { name: 'Projects', href: '/projects' },
     { name: 'Gallery', href: '/gallery' },
     { name: '360° View', href: '/#360-view' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const socialLinks = [
