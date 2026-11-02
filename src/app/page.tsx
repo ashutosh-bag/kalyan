@@ -29,7 +29,7 @@ export default function Home() {
         {/* Spatial Architecture & Dynamic Interior Visual Showcase */}
         <SpatialShowcase />
 
-        {/* Curated Portfolio & Completed Commissions */}
+        {/* Our Projects Section */}
         <ProjectsSection />
 
         {/* 360° Virtual Apartment Tours & Real Homeowner Testimonials */}

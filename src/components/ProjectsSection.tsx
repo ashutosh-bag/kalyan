@@ -140,10 +140,7 @@ export default function ProjectsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-8 border-b border-[#1A1815]/10 mb-8">
           <div className="lg:col-span-8 space-y-4">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-[#1A1815] tracking-tight leading-[1.05]">
-              CURATED PORTFOLIO <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C5427] via-[#B86835] to-[#7A3F1B] italic font-serif lowercase font-normal">
-                &amp; completed commissions.
-              </span>
+              OUR PROJECTS
             </h2>
             <p className="text-[#5C564E] text-sm sm:text-base max-w-2xl leading-relaxed pt-1">
               Inspect authentic turnkey interior executions crafted with precision joinery, 
@@ -170,7 +167,7 @@ export default function ProjectsSection() {
                   Schedule Free Visit
                 </Link>
                 <a
-                  href="https://wa.me/917504041040?text=Hi%20Kalyan%20Design%20Studio%2C%20I%20am%20exploring%20your%20Curated%20Portfolio%20and%20would%20like%20a%20site%20consultation."
+                  href="https://wa.me/917504041040?text=Hi%20Kalyan%20Design%20Studio%2C%20I%20am%20exploring%20your%20projects%20and%20would%20like%20a%20site%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 rounded-full transition-colors"
