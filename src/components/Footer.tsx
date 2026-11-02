@@ -1,17 +1,16 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   const navLinks = [
     { name: 'Home', href: '/#home' },
-    { name: 'Services', href: '/services' },
-    { name: 'Packages', href: '/#packages' },
-    { name: 'Showcase', href: '/#spatial-showcase' },
-    { name: '360° Tours', href: '/#testimonials-360' },
     { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/projects' },
     { name: 'Gallery', href: '/gallery' },
+    { name: '360° View', href: '/#360-view' },
     { name: 'Contact', href: '/#contact' },
   ];
 
@@ -139,34 +138,14 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {navLinks.map((item) => (
                 <li key={item.name}>
-                  <a
+                  <Link
                     href={item.href}
-                    className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#9C5427] transition-colors "
+                    className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#9C5427] transition-colors"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://kalyandesignstudio.com/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs sm:text-sm uppercase tracking-wider text-[#9C5427] hover:text-[#9C5427] transition-colors font-semibold"
-                >
-                  WordPress Blog ↗
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://g.co/kgs/VwVxACj"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs sm:text-sm uppercase tracking-wider text-[#68625A] hover:text-[#9C5427] transition-colors "
-                >
-                  Google Reviews (4.9 ★) ↗
-                </a>
-              </li>
             </ul>
           </div>
 
