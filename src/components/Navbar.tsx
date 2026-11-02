@@ -100,23 +100,23 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
           {/* Logo: Kalyan Design Studio (Footer's Official Animated Logo) */}
           <Link
             href="/#home"
-            className="group flex items-center gap-2 sm:gap-2.5 focus:outline-none flex-shrink-0"
+            className="group flex items-center gap-2.5 sm:gap-3 focus:outline-none flex-shrink-0"
             aria-label="Kalyan Design Studio Home"
           >
-            <div className="p-1 rounded-xl bg-white border border-[#9C5427]/30 shadow-xs overflow-hidden flex items-center justify-center">
+            <div className="p-1.5 rounded-xl bg-white border border-[#9C5427]/30 shadow-xs overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
               <img
                 src="/images/kalyan/branding/logo.gif"
                 alt="Kalyan Design Studio Animated Logo"
-                className="h-8 sm:h-9 w-auto object-contain"
+                className="h-10 sm:h-11 md:h-12 w-auto object-contain"
               />
             </div>
             <div className="flex flex-col">
-              <span className={`font-black text-sm sm:text-base tracking-tight uppercase leading-none font-sans transition-colors ${
+              <span className={`font-black text-base sm:text-lg tracking-tight uppercase leading-none font-sans transition-colors ${
                 effectiveScrolled ? 'text-[#1A1815]' : 'text-white'
               }`}>
                 KALYAN
               </span>
-              <span className={`text-[9px] sm:text-[10px] font-medium tracking-wider mt-0.5 uppercase transition-colors ${
+              <span className={`text-[10px] sm:text-xs font-semibold tracking-wider mt-0.5 uppercase transition-colors ${
                 effectiveScrolled ? 'text-[#7A7369]' : 'text-white/75'
               }`}>
                 Design Studio
