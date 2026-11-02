@@ -35,7 +35,9 @@ import {
   Home,
   Bed,
   UtensilsCrossed,
-  Sparkle
+  Sparkle,
+  Play,
+  Pause
 } from 'lucide-react';
 
 // Enhanced Project representation with curated architectural specifications
@@ -88,7 +90,35 @@ const PROJECT_EXTENDED_SPECS: Record<string, EnhancedProjectSpecs> = {
   },
 };
 
+const STREAM_ROW_1 = [
+  { url: '/images/casa-noir/hero-living.jpg', title: 'Curved Lounge & Greenery', loc: 'Bhubaneswar Villa' },
+  { url: '/images/casa-noir/bedroom.jpg', title: 'Fluted Acoustic Bed Suite', loc: 'Patia Duplex' },
+  { url: '/images/kalyan/gallery/photo4.png', title: 'Monolithic Calacatta Chef Kitchen', loc: 'Chandrasekharpur' },
+  { url: '/images/casa-noir/urban-wood.jpg', title: 'Solid Oak Dining & Olive Foliage', loc: 'Cuttack Penthouse' },
+  { url: '/images/kalyan/gallery/photo19.png', title: 'Mahanadi Riverfront Living Room', loc: 'CDA Cuttack' },
+  { url: '/images/casa-noir/cozy-living.jpg', title: 'Sunlit Reading Nook & Monstera', loc: 'Puri Beachside' },
+];
+
+const STREAM_ROW_2 = [
+  { url: '/images/casa-noir/floating-shelf.jpg', title: 'Artisanal Ceramic & Oak Console', loc: 'Kalyan Craft Archive' },
+  { url: '/images/kalyan/gallery/photo15.png', title: 'Open-Air Coastal Spa Bath', loc: 'Puri Marine Drive' },
+  { url: '/images/casa-noir/decor-pampas.jpg', title: 'Pampas Botanical Console Corner', loc: 'Saheed Nagar' },
+  { url: '/images/kalyan/gallery/photo6.png', title: 'Fluted Teak Wall & Library Niche', loc: 'Bhubaneswar' },
+  { url: '/images/casa-noir/lighting-plant.jpg', title: 'Circadian Pendant & Foliage Studio', loc: 'Jaydev Vihar' },
+  { url: '/images/kalyan/gallery/photo11.png', title: 'Cantilevered Teak & Glass Staircase', loc: 'Patia Duplex' },
+];
+
 export default function GalleryPage() {
+  // Kinetic Marquee Filmstrip State
+  const [marqueeSpeed, setMarqueeSpeed] = useState<'slow' | 'normal' | 'fast'>('normal');
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
+
+  const getMarqueeDuration = () => {
+    if (marqueeSpeed === 'slow') return '60s';
+    if (marqueeSpeed === 'fast') return '28s';
+    return '42s';
+  };
+
   // Category Filtering for Curated Projects
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -212,7 +242,7 @@ export default function GalleryPage() {
       <main className="relative pt-28 sm:pt-36 pb-24">
         
         {/* =================================================================== */}
-        {/* HERO SECTION: Editorial Monograph Header */}
+        {/* 1. KINETIC PORTFOLIO STREAM SHOWCASE (GALLERY)                      */}
         {/* =================================================================== */}
         <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16 sm:mb-20">
           
@@ -220,79 +250,167 @@ export default function GalleryPage() {
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#9C5427]/10 border border-[#9C5427]/25 text-[#9C5427] text-xs font-bold uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5 text-[#9C5427]" />
-              ATELIER ARCHIVE & PORTFOLIO
+              ATELIER ARCHIVE &amp; PORTFOLIO
             </span>
             <span className="text-xs uppercase tracking-wider text-[#68625A] font-semibold">
               Bhubaneswar • Cuttack • Puri • Koraput
             </span>
           </div>
 
-          {/* Editorial Title */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-10 border-b border-[#1A1815]/10">
-            <div className="lg:col-span-8 space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase text-[#1A1815] tracking-tight leading-[1.05]">
-                CURATED PORTFOLIO <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9C5427] via-[#B86835] to-[#7A3F1B] italic font-serif lowercase font-normal">
-                  &amp; completed commissions.
+          {/* Header & Speed Controls */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-8 border-b border-[#1A1815]/10">
+            <div>
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="w-6 h-[1.5px] bg-[#9C5427]" />
+                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
+                  KINETIC PORTFOLIO STREAM
                 </span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-[#1A1815] tracking-tight leading-tight">
+                GALLERY
               </h1>
-              <p className="text-[#5C564E] text-base sm:text-lg max-w-2xl leading-relaxed pt-2">
-                Inspect authentic turnkey interior executions crafted with precision joinery, 
-                BWR marine ply, Italian statuario marble, and acoustic architectural ceiling systems. 
-                Every commission represents 100% on-site completion across Odisha.
+              <p className="text-xs sm:text-sm text-[#5C564E] mt-1.5 max-w-xl">
+                Live portfolio filmstrip of turnkey apartments, penthouses, and bespoke villas across Odisha.
               </p>
             </div>
 
-            {/* Quick Consultation Callout */}
-            <div className="lg:col-span-4 flex flex-col justify-end space-y-4">
-              <div className="p-6 rounded-3xl bg-white border border-[#9C5427]/20 shadow-md">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#9C5427]">Free Site Assessment</span>
-                  <Award className="w-4 h-4 text-[#9C5427]" />
-                </div>
-                <p className="text-xs text-[#68625A] mb-4">
-                  Planning an interior renovation or villa build? Talk directly with our principal interior architect.
-                </p>
-                <div className="flex items-center gap-3">
-                  <Link
-                    href="/contact"
-                    className="flex-1 text-center py-2.5 px-4 bg-[#9C5427] hover:bg-[#85451D] text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
+            {/* Marquee Controls */}
+            <div className="flex items-center gap-3">
+              <div className="flex items-center bg-white border border-[#9C5427]/20 rounded-full p-1 text-xs shadow-xs">
+                {(['slow', 'normal', 'fast'] as const).map((spd) => (
+                  <button
+                    key={spd}
+                    type="button"
+                    onClick={() => setMarqueeSpeed(spd)}
+                    className={`px-3 py-1 rounded-full capitalize transition-colors cursor-pointer ${
+                      marqueeSpeed === spd 
+                        ? 'bg-[#1C1917] text-white font-medium shadow-xs' 
+                        : 'text-[#68625A] hover:text-[#1A1815]'
+                    }`}
                   >
-                    Schedule Free Visit
-                  </Link>
-                  <a
-                    href="https://wa.me/917504041040?text=Hi%20Kalyan%20Design%20Studio%2C%20I%20am%20exploring%20your%20Curated%20Portfolio%20and%20would%20like%20a%20site%20consultation."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 rounded-full transition-colors"
-                    title="Chat on WhatsApp"
-                  >
-                    <MessageSquare className="w-4 h-4" />
-                  </a>
-                </div>
+                    {spd === 'slow' ? '0.6x' : spd === 'normal' ? '1.0x' : '1.4x'}
+                  </button>
+                ))}
               </div>
+
+              <button
+                type="button"
+                onClick={() => setIsMarqueePaused(!isMarqueePaused)}
+                aria-label={isMarqueePaused ? 'Play stream' : 'Pause stream'}
+                className="w-8 h-8 rounded-full bg-white border border-[#9C5427]/20 flex items-center justify-center text-[#1A1815] hover:bg-[#9C5427] hover:text-white transition-colors shadow-xs cursor-pointer"
+                title={isMarqueePaused ? 'Play Stream' : 'Pause Stream'}
+              >
+                {isMarqueePaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5" />}
+              </button>
             </div>
           </div>
 
-          {/* Architectural Metrics Ribbon */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-8">
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/80 border border-[#1A1815]/8 shadow-xs">
-              <div className="text-2xl sm:text-3xl font-black text-[#1A1815] tracking-tight">46,000+</div>
-              <div className="text-xs uppercase tracking-wider text-[#68625A] font-semibold mt-1">Sq. Ft. Transformed</div>
-            </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/80 border border-[#1A1815]/8 shadow-xs">
-              <div className="text-2xl sm:text-3xl font-black text-[#9C5427] tracking-tight">100%</div>
-              <div className="text-xs uppercase tracking-wider text-[#68625A] font-semibold mt-1">Turnkey Execution</div>
-            </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/80 border border-[#1A1815]/8 shadow-xs">
-              <div className="text-2xl sm:text-3xl font-black text-[#1A1815] tracking-tight">10-Year</div>
-              <div className="text-xs uppercase tracking-wider text-[#68625A] font-semibold mt-1">Carcass Warranty</div>
-            </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/80 border border-[#1A1815]/8 shadow-xs">
-              <div className="text-2xl sm:text-3xl font-black text-[#1A1815] tracking-tight">45-90</div>
-              <div className="text-xs uppercase tracking-wider text-[#68625A] font-semibold mt-1">Days Handover SLA</div>
+          {/* Marquee Row 1 (Sliding Left) with Soft Edge Vignette Masks */}
+          <div className="relative w-full overflow-hidden mb-5">
+            {/* Side Fade Gradient Masks */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10" />
+
+            <div 
+              className="animate-marquee-left gap-5"
+              style={{ 
+                animationDuration: getMarqueeDuration(),
+                animationPlayState: isMarqueePaused ? 'paused' : 'running'
+              }}
+            >
+              {[...STREAM_ROW_1, ...STREAM_ROW_1].map((img, index) => (
+                <div
+                  key={`r1-${index}`}
+                  onClick={() => openPhotoLightbox({
+                    id: 1000 + index,
+                    title: `${img.title} (${img.loc})`,
+                    image: img.url,
+                    category: 'living',
+                  })}
+                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#9C5427]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#9C5427]/60 hover:shadow-xl"
+                >
+                  <img
+                    src={img.url}
+                    alt={img.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                  
+                  {/* Floating Eye Inspect Pill */}
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#1A1815] flex items-center justify-center shadow-md">
+                      <Eye className="w-4 h-4" />
+                    </span>
+                  </div>
+
+                  {/* Bottom Text Pill */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="text-[10px] font-mono text-[#FF9E4A] uppercase tracking-wider block mb-0.5">
+                      {img.loc}
+                    </span>
+                    <h5 className="text-sm font-playfair font-bold text-white truncate drop-shadow">
+                      {img.title}
+                    </h5>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
+          {/* Marquee Row 2 (Sliding Right) with Soft Edge Vignette Masks */}
+          <div className="relative w-full overflow-hidden">
+            {/* Side Fade Gradient Masks */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10" />
+
+            <div 
+              className="animate-marquee-right gap-5"
+              style={{ 
+                animationDuration: getMarqueeDuration(),
+                animationPlayState: isMarqueePaused ? 'paused' : 'running'
+              }}
+            >
+              {[...STREAM_ROW_2, ...STREAM_ROW_2].map((img, index) => (
+                <div
+                  key={`r2-${index}`}
+                  onClick={() => openPhotoLightbox({
+                    id: 2000 + index,
+                    title: `${img.title} (${img.loc})`,
+                    image: img.url,
+                    category: 'kitchen',
+                  })}
+                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#9C5427]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#9C5427]/60 hover:shadow-xl"
+                >
+                  <img
+                    src={img.url}
+                    alt={img.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                  
+                  {/* Floating Eye Inspect Pill */}
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#1A1815] flex items-center justify-center shadow-md">
+                      <Eye className="w-4 h-4" />
+                    </span>
+                  </div>
+
+                  {/* Bottom Text Pill */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="text-[10px] font-mono text-[#FF9E4A] uppercase tracking-wider block mb-0.5">
+                      {img.loc}
+                    </span>
+                    <h5 className="text-sm font-playfair font-bold text-white truncate drop-shadow">
+                      {img.title}
+                    </h5>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </section>
 
         {/* =================================================================== */}

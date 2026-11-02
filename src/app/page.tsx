@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import PackagesSection from '@/components/PackagesSection';
 import SpatialShowcase from '@/components/SpatialShowcase';
+import ProjectsSection from '@/components/ProjectsSection';
 import ApartmentTestimonials360 from '@/components/ApartmentTestimonials360';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
@@ -27,6 +28,9 @@ export default function Home() {
 
         {/* Spatial Architecture & Dynamic Interior Visual Showcase */}
         <SpatialShowcase />
+
+        {/* Curated Portfolio & Completed Commissions */}
+        <ProjectsSection />
 
         {/* 360° Virtual Apartment Tours & Real Homeowner Testimonials */}
         <ApartmentTestimonials360 />

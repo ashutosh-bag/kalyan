@@ -11,8 +11,6 @@ import {
   Sun, 
   Moon, 
   Layers, 
-  Play, 
-  Pause, 
   ArrowUpRight,
   Eye,
   SlidersHorizontal,
@@ -166,25 +164,6 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
   }
 ];
 
-// Marquee Stream Photos (Row 1 and Row 2)
-const STREAM_ROW_1 = [
-  { url: '/images/casa-noir/hero-living.jpg', title: 'Curved Lounge & Greenery', loc: 'Bhubaneswar Villa' },
-  { url: '/images/casa-noir/bedroom.jpg', title: 'Fluted Acoustic Bed Suite', loc: 'Patia Duplex' },
-  { url: '/images/kalyan/gallery/photo4.png', title: 'Monolithic Calacatta Chef Kitchen', loc: 'Chandrasekharpur' },
-  { url: '/images/casa-noir/urban-wood.jpg', title: 'Solid Oak Dining & Olive Foliage', loc: 'Cuttack Penthouse' },
-  { url: '/images/kalyan/gallery/photo19.png', title: 'Mahanadi Riverfront Living Room', loc: 'CDA Cuttack' },
-  { url: '/images/casa-noir/cozy-living.jpg', title: 'Sunlit Reading Nook & Monstera', loc: 'Puri Beachside' },
-];
-
-const STREAM_ROW_2 = [
-  { url: '/images/casa-noir/floating-shelf.jpg', title: 'Artisanal Ceramic & Oak Console', loc: 'Kalyan Craft Archive' },
-  { url: '/images/kalyan/gallery/photo15.png', title: 'Open-Air Coastal Spa Bath', loc: 'Puri Marine Drive' },
-  { url: '/images/casa-noir/decor-pampas.jpg', title: 'Pampas Botanical Console Corner', loc: 'Saheed Nagar' },
-  { url: '/images/kalyan/gallery/photo6.png', title: 'Fluted Teak Wall & Library Niche', loc: 'Bhubaneswar' },
-  { url: '/images/casa-noir/lighting-plant.jpg', title: 'Circadian Pendant & Foliage Studio', loc: 'Jaydev Vihar' },
-  { url: '/images/kalyan/gallery/photo11.png', title: 'Cantilevered Teak & Glass Staircase', loc: 'Patia Duplex' },
-];
-
 export default function SpatialShowcase() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'living' | 'kitchen' | 'bedroom' | 'details'>('all');
   
@@ -195,8 +174,6 @@ export default function SpatialShowcase() {
   // Default at 50% for 50/50 split comparison
   const [sliderPosition, setSliderPosition] = useState<number>(50);
   const [isDraggingSlider, setIsDraggingSlider] = useState<boolean>(false);
-  const [isMarqueePaused, setIsMarqueePaused] = useState<boolean>(false);
-  const [marqueeSpeed, setMarqueeSpeed] = useState<'slow' | 'normal' | 'fast'>('normal');
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
   const [showHotspots, setShowHotspots] = useState<boolean>(true);
   const [selectedItem, setSelectedItem] = useState<ShowcaseItem | null>(null);
@@ -289,12 +266,6 @@ export default function SpatialShowcase() {
       setCanScrollStudiesRight(studiesSliderRef.current.scrollWidth > studiesSliderRef.current.clientWidth);
     }
   }, [activeCategory, filteredItems.length]);
-
-  const getMarqueeDuration = () => {
-    if (marqueeSpeed === 'slow') return '60s';
-    if (marqueeSpeed === 'fast') return '28s';
-    return '42s';
-  };
 
   // Calculated Kelvin for circadian mode
   const currentKelvin = Math.round(2400 + (sliderPosition / 100) * (5500 - 2400));
@@ -720,178 +691,7 @@ export default function SpatialShowcase() {
         </div>
 
         {/* ================================================================= */}
-        {/* 2. DUAL-TIER CONTINUOUS KINETIC STREAMS (SILKY MARQUEE GALLERIES) */}
-        {/* ================================================================= */}
-        <div id="gallery" className="mb-28 scroll-mt-24">
-          
-          {/* Header & Speed Controls */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-            <div>
-              <div className="flex items-center gap-2.5 mb-2">
-                <span className="w-6 h-[1.5px] bg-[#9C5427]" />
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C5427]">
-                  KINETIC PORTFOLIO STREAM
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black uppercase text-[#1A1815] tracking-tight leading-tight">
-                GALLERY
-              </h2>
-              <p className="text-xs sm:text-sm text-[#5C564E] mt-1">
-                Live portfolio filmstrip of turnkey apartments, penthouses, and bespoke villas across Odisha.
-              </p>
-            </div>
-
-            {/* Marquee Controls */}
-            <div className="flex items-center gap-3">
-              <div className="flex items-center bg-white/95 border border-[#9C5427]/20 rounded-full p-1 text-xs shadow-xs ">
-                {(['slow', 'normal', 'fast'] as const).map((spd) => (
-                  <button
-                    key={spd}
-                    type="button"
-                    onClick={() => setMarqueeSpeed(spd)}
-                    className={`px-3 py-1 rounded-full capitalize transition-colors cursor-pointer ${
-                      marqueeSpeed === spd 
-                        ? 'bg-[#1C1917] text-white font-medium shadow-xs' 
-                        : 'text-[#68625A] hover:text-[#1A1815]'
-                    }`}
-                  >
-                    {spd === 'slow' ? '0.6x' : spd === 'normal' ? '1.0x' : '1.4x'}
-                  </button>
-                ))}
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setIsMarqueePaused(!isMarqueePaused)}
-                aria-label={isMarqueePaused ? 'Play stream' : 'Pause stream'}
-                className="w-8 h-8 rounded-full bg-white/95 border border-[#9C5427]/20 flex items-center justify-center text-[#1A1815] hover:bg-[#9C5427] hover:text-white transition-colors shadow-xs cursor-pointer"
-                title={isMarqueePaused ? 'Play Stream' : 'Pause Stream'}
-              >
-                {isMarqueePaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5" />}
-              </button>
-            </div>
-          </div>
-
-          {/* Marquee Row 1 (Sliding Left) with Soft Edge Vignette Masks */}
-          <div className="relative w-full overflow-hidden mb-5">
-            {/* Side Fade Gradient Masks */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10" />
-
-            <div 
-              className="animate-marquee-left gap-5"
-              style={{ 
-                animationDuration: getMarqueeDuration(),
-                animationPlayState: isMarqueePaused ? 'paused' : 'running'
-              }}
-            >
-              {[...STREAM_ROW_1, ...STREAM_ROW_1].map((img, index) => (
-                <div
-                  key={`r1-${index}`}
-                  onClick={() => setSelectedItem({
-                    id: `stream-1-${index}`,
-                    title: img.title,
-                    category: 'living',
-                    categoryLabel: 'Curated Stream',
-                    location: img.loc,
-                    area: 'Turnkey Commission',
-                    materials: ['Natural Stone', 'Seasoned Teak', 'Circadian Lighting', 'BWP Ply'],
-                    image: img.url,
-                    description: `${img.title} designed and executed in ${img.loc}, Odisha with bespoke turnkey finishes.`
-                  })}
-                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#9C5427]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#9C5427]/60 hover:shadow-xl"
-                >
-                  <img
-                    src={img.url}
-                    alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
-                  
-                  {/* Floating Eye Inspect Pill */}
-                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#1A1815] flex items-center justify-center shadow-md">
-                      <Eye className="w-4 h-4" />
-                    </span>
-                  </div>
-
-                  {/* Bottom Text Pill */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="text-[10px] font-mono text-[#FF9E4A] uppercase tracking-wider block mb-0.5">
-                      {img.loc}
-                    </span>
-                    <h5 className="text-sm font-playfair font-bold text-white truncate drop-shadow">
-                      {img.title}
-                    </h5>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Marquee Row 2 (Sliding Right) with Soft Edge Vignette Masks */}
-          <div className="relative w-full overflow-hidden">
-            {/* Side Fade Gradient Masks */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF7F2] to-transparent z-10" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF7F2] to-transparent z-10" />
-
-            <div 
-              className="animate-marquee-right gap-5"
-              style={{ 
-                animationDuration: getMarqueeDuration(),
-                animationPlayState: isMarqueePaused ? 'paused' : 'running'
-              }}
-            >
-              {[...STREAM_ROW_2, ...STREAM_ROW_2].map((img, index) => (
-                <div
-                  key={`r2-${index}`}
-                  onClick={() => setSelectedItem({
-                    id: `stream-2-${index}`,
-                    title: img.title,
-                    category: 'kitchen',
-                    categoryLabel: 'Curated Stream',
-                    location: img.loc,
-                    area: 'Turnkey Commission',
-                    materials: ['Artisanal Joinery', 'Calacatta Marble', 'Brushed Brass', 'Fluted Oak'],
-                    image: img.url,
-                    description: `${img.title} executed with master-grade materials in ${img.loc}, Odisha.`
-                  })}
-                  className="group relative w-72 sm:w-80 md:w-96 h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#9C5427]/20 flex-shrink-0 cursor-pointer shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#9C5427]/60 hover:shadow-xl"
-                >
-                  <img
-                    src={img.url}
-                    alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
-                  
-                  {/* Floating Eye Inspect Pill */}
-                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#1A1815] flex items-center justify-center shadow-md">
-                      <Eye className="w-4 h-4" />
-                    </span>
-                  </div>
-
-                  {/* Bottom Text Pill */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="text-[10px] font-mono text-[#FF9E4A] uppercase tracking-wider block mb-0.5">
-                      {img.loc}
-                    </span>
-                    <h5 className="text-sm font-playfair font-bold text-white truncate drop-shadow">
-                      {img.title}
-                    </h5>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-
-        {/* ================================================================= */}
-        {/* 3. INTERACTIVE 3D PERSPECTIVE CARDS WITH ROOM CATEGORY FILTER     */}
+        {/* 2. INTERACTIVE 3D PERSPECTIVE CARDS WITH ROOM CATEGORY FILTER     */}
         {/* ================================================================= */}
         <div>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
