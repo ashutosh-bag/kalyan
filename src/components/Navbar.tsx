@@ -55,17 +55,46 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
         setIsScrolled(false);
       }
 
-      // Track active section for indicator
-      const sections = ['home', 'about', 'packages', 'spatial-showcase', 'gallery', '360-view', 'testimonials-360', 'projects', 'services', 'contact'];
-      for (const section of sections) {
-        const el = document.getElementById(section);
+      if (window.scrollY < 120) {
+        setActiveSection('home');
+        return;
+      }
+
+      // Check if user is scrolled near bottom of page
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+        setActiveSection('360-view');
+        return;
+      }
+
+      // Ordered list of section IDs in page flow and their target navbar item id
+      const sectionFlow: { id: string; navId: string }[] = [
+        { id: '360-view', navId: '360-view' },
+        { id: 'testimonials-360', navId: '360-view' },
+        { id: 'spatial-showcase', navId: 'projects' },
+        { id: 'projects', navId: 'projects' },
+        { id: 'packages', navId: 'services' },
+        { id: 'services', navId: 'services' },
+        { id: 'about', navId: 'about' },
+        { id: 'home', navId: 'home' },
+      ];
+
+      // Trigger line in viewport: 260px from top (comfortably below navbar)
+      const triggerY = 260;
+      let matchedNav: string | null = null;
+
+      for (const item of sectionFlow) {
+        const el = document.getElementById(item.id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(section);
+          if (rect.top <= triggerY && rect.bottom > triggerY) {
+            matchedNav = item.navId;
             break;
           }
         }
+      }
+
+      if (matchedNav) {
+        setActiveSection(matchedNav);
       }
     };
 

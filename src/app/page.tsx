@@ -23,20 +23,20 @@ export default function Home() {
         {/* About Section & Studio Ethos of Kalyan Design Studio */}
         <AboutSection />
 
+        {/* Services & Capabilities */}
+        <ServicesSection />
+
         {/* Client's Signature Full Interior Packages Section (1 BHK, 2 BHK, 3 BHK) */}
         <PackagesSection />
-
-        {/* Spatial Architecture & Dynamic Interior Visual Showcase */}
-        <SpatialShowcase />
 
         {/* Our Projects Section */}
         <ProjectsSection />
 
+        {/* Spatial Architecture & Dynamic Interior Visual Showcase */}
+        <SpatialShowcase />
+
         {/* 360° Virtual Apartment Tours & Real Homeowner Testimonials */}
         <ApartmentTestimonials360 />
-
-        {/* Services & Capabilities */}
-        <ServicesSection />
 
         {/* Real Verified Google Reviews of Kalyan Design Studio */}
         <GoogleReviewsSection />

@@ -122,7 +122,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none">
+    <section id="projects" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#1A1815]/8 relative select-none scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         
         {/* Top Breadcrumb & Badge */}
