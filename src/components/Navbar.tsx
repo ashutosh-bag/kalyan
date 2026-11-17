@@ -110,14 +110,14 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 className="h-10 sm:h-11 md:h-12 w-auto object-contain"
               />
             </div>
-            <div className="flex flex-col">
-              <span className={`font-black text-base sm:text-lg tracking-tight uppercase leading-none font-sans transition-colors ${
+            <div className="flex flex-col justify-center">
+              <span className={`font-black text-lg sm:text-xl lg:text-[22px] tracking-tight uppercase leading-none font-sans transition-colors ${
                 effectiveScrolled ? 'text-[#1A1815]' : 'text-white'
               }`}>
                 KALYAN
               </span>
-              <span className={`text-[10px] sm:text-xs font-semibold tracking-wider mt-0.5 uppercase transition-colors ${
-                effectiveScrolled ? 'text-[#7A7369]' : 'text-white/75'
+              <span className={`text-xs sm:text-[13px] font-bold tracking-wider mt-0.5 sm:mt-1 uppercase transition-colors ${
+                effectiveScrolled ? 'text-[#68625A]' : 'text-white/80'
               }`}>
                 Design Studio
               </span>
