@@ -66,6 +66,11 @@ export interface Project {
   client?: string;
   featured?: boolean;
   materials?: string[];
+  structureType?: string;
+  exterior3D?: string;
+  gallery3D?: string[];
+  interiorHero?: string;
+  galleryInteriors?: string[];
 }
 
 export interface GalleryPhoto {
